@@ -32,11 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -171,12 +166,6 @@
     <Compile Include="GUI\PartidaEdicion.Designer.cs">
       <DependentUpon>PartidaEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\VisorReporteOperaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\VisorReporteOperaciones.Designer.cs">
-      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
@@ -232,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PartidaEdicion.resx">
       <DependentUpon>PartidaEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\VisorReporteOperaciones.resx">
-      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
