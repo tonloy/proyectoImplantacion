@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23102E6F-17B5-494D-8315-2161C5E331F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestionBasica</RootNamespace>
+    <AssemblyName>GestionBasica</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS\Empleado.cs" />
+    <Compile Include="CLS\Infante.cs" />
+    <Compile Include="CLS\Informante.cs" />
+    <Compile Include="CLS\Padres.cs" />
+    <Compile Include="CLS\Usuario.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CambiarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CambiarPassword.Designer.cs">
+      <DependentUpon>CambiarPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionEmpleado.Designer.cs">
+      <DependentUpon>EdicionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionMarginacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionMarginacion.Designer.cs">
+      <DependentUpon>EdicionMarginacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionNuevoEscaneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionNuevoEscaneo.Designer.cs">
+      <DependentUpon>EdicionNuevoEscaneo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionUsuario.Designer.cs">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionaPartidasEscaneadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionaPartidasEscaneadas.Designer.cs">
+      <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionEmpleados.Designer.cs">
+      <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionInfantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionInfantes.Designer.cs">
+      <DependentUpon>GestionInfantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionInformantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionInformantes.Designer.cs">
+      <DependentUpon>GestionInformantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionPadres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionPadres.Designer.cs">
+      <DependentUpon>GestionPadres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionPartidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionPartidas.Designer.cs">
+      <DependentUpon>GestionPartidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionPermisos.Designer.cs">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionUsuarios.Designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IInfante.cs" />
+    <Compile Include="GUI\InfanteEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfanteEdicion.Designer.cs">
+      <DependentUpon>InfanteEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InformanteEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InformanteEdicion.Designer.cs">
+      <DependentUpon>InformanteEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MadreEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MadreEdicion.Designer.cs">
+      <DependentUpon>MadreEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PadreEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PadreEdicion.Designer.cs">
+      <DependentUpon>PadreEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PartidaEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PartidaEdicion.Designer.cs">
+      <DependentUpon>PartidaEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VisorReporteOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VisorReporteOperaciones.Designer.cs">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CambiarPassword.resx">
+      <DependentUpon>CambiarPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
+      <DependentUpon>EdicionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionMarginacion.resx">
+      <DependentUpon>EdicionMarginacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionNuevoEscaneo.resx">
+      <DependentUpon>EdicionNuevoEscaneo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionUsuario.resx">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionaPartidasEscaneadas.resx">
+      <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionEmpleados.resx">
+      <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionInfantes.resx">
+      <DependentUpon>GestionInfantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionInformantes.resx">
+      <DependentUpon>GestionInformantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionPadres.resx">
+      <DependentUpon>GestionPadres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionPartidas.resx">
+      <DependentUpon>GestionPartidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionPermisos.resx">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfanteEdicion.resx">
+      <DependentUpon>InfanteEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InformanteEdicion.resx">
+      <DependentUpon>InformanteEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MadreEdicion.resx">
+      <DependentUpon>MadreEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PadreEdicion.resx">
+      <DependentUpon>PadreEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PartidaEdicion.resx">
+      <DependentUpon>PartidaEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VisorReporteOperaciones.resx">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CacheManager1\CacheManager1.csproj">
+      <Project>{6ab65b1f-21d1-44e1-ad0c-b746bf6e1e6b}</Project>
+      <Name>CacheManager1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer1\DataLayer1.csproj">
+      <Project>{9932c7d2-0811-4408-97bd-c62eec171847}</Project>
+      <Name>DataLayer1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{8c7c537e-322e-48c8-a4fb-3ad2523d2b2f}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
