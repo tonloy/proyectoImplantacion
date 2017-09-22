@@ -58,7 +58,7 @@ namespace GestionBasica.GUI
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            IPadre miInterfaz = this.Owner as IPadre;
+            IInformante miInterfaz = this.Owner as IInformante;
             if (miInterfaz != null)
             {
                 miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdInformante"].Value.ToString());
