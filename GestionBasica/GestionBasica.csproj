@@ -153,6 +153,7 @@
     <Compile Include="GUI\InformanteEdicion.Designer.cs">
       <DependentUpon>InformanteEdicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IPadre.cs" />
     <Compile Include="GUI\MadreEdicion.cs">
       <SubType>Form</SubType>
     </Compile>

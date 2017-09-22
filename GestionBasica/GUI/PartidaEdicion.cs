@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI
 {
-    public partial class PartidaEdicion : Form,IInfante
+    public partial class PartidaEdicion : Form,IInfante,IPadre
     {
         public PartidaEdicion()
         {
             InitializeComponent();
         }
 
+        //Infantes
         public void cambiarIdInfante(String idInfante)
         {
             txbIdInfante.Text = idInfante;
@@ -25,6 +26,41 @@ namespace GestionBasica.GUI
         {
             txbInfante.Text = infante;
         }
+
+        //padres
+        public void cambiarIdPadre(String idPadre)
+        {
+            txtIdPadre.Text = idPadre;
+        }
+        public void cambiarPadre(String Padre)
+        {
+            txtNombrePadre.Text = Padre;
+        }
+
+
+        //madres
+        public void cambiarIdMadre(String idMadre)
+        {
+           txtIdMadre.Text = idMadre;
+        }
+        public void cambiarMadre(String Madre)
+        {
+            txtNombreMadre.Text = Madre;
+        }
+
+
+        //Informante
+        public void cambiarIdInformante(String idInformante)
+        {
+            txtIdInformante.Text = idInformante;
+        }
+        public void cambiarInformante(String Informante)
+        {
+           txtNombreInformante.Text = Informante;
+        }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {

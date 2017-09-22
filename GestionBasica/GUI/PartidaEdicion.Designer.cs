@@ -37,16 +37,16 @@
             this.txbInfante = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtNombreMadre = new System.Windows.Forms.TextBox();
+            this.txtIdMadre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNombrePadre = new System.Windows.Forms.TextBox();
+            this.txtIdPadre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtNombreInformante = new System.Windows.Forms.TextBox();
+            this.txtIdInformante = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -131,21 +131,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox5
+            // txtNombreMadre
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 158);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(175, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtNombreMadre.Location = new System.Drawing.Point(119, 158);
+            this.txtNombreMadre.Name = "txtNombreMadre";
+            this.txtNombreMadre.ReadOnly = true;
+            this.txtNombreMadre.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreMadre.TabIndex = 10;
             // 
-            // textBox6
+            // txtIdMadre
             // 
-            this.textBox6.Location = new System.Drawing.Point(83, 158);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(30, 20);
-            this.textBox6.TabIndex = 9;
+            this.txtIdMadre.Location = new System.Drawing.Point(83, 158);
+            this.txtIdMadre.Name = "txtIdMadre";
+            this.txtIdMadre.ReadOnly = true;
+            this.txtIdMadre.Size = new System.Drawing.Size(30, 20);
+            this.txtIdMadre.TabIndex = 9;
             // 
             // label4
             // 
@@ -166,21 +166,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox7
+            // txtNombrePadre
             // 
-            this.textBox7.Location = new System.Drawing.Point(119, 197);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(175, 20);
-            this.textBox7.TabIndex = 14;
+            this.txtNombrePadre.Location = new System.Drawing.Point(119, 197);
+            this.txtNombrePadre.Name = "txtNombrePadre";
+            this.txtNombrePadre.ReadOnly = true;
+            this.txtNombrePadre.Size = new System.Drawing.Size(175, 20);
+            this.txtNombrePadre.TabIndex = 14;
             // 
-            // textBox8
+            // txtIdPadre
             // 
-            this.textBox8.Location = new System.Drawing.Point(83, 197);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(30, 20);
-            this.textBox8.TabIndex = 13;
+            this.txtIdPadre.Location = new System.Drawing.Point(83, 197);
+            this.txtIdPadre.Name = "txtIdPadre";
+            this.txtIdPadre.ReadOnly = true;
+            this.txtIdPadre.Size = new System.Drawing.Size(30, 20);
+            this.txtIdPadre.TabIndex = 13;
             // 
             // label5
             // 
@@ -201,21 +201,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox9
+            // txtNombreInformante
             // 
-            this.textBox9.Location = new System.Drawing.Point(119, 235);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(175, 20);
-            this.textBox9.TabIndex = 18;
+            this.txtNombreInformante.Location = new System.Drawing.Point(119, 235);
+            this.txtNombreInformante.Name = "txtNombreInformante";
+            this.txtNombreInformante.ReadOnly = true;
+            this.txtNombreInformante.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreInformante.TabIndex = 18;
             // 
-            // textBox10
+            // txtIdInformante
             // 
-            this.textBox10.Location = new System.Drawing.Point(83, 235);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(30, 20);
-            this.textBox10.TabIndex = 17;
+            this.txtIdInformante.Location = new System.Drawing.Point(83, 235);
+            this.txtIdInformante.Name = "txtIdInformante";
+            this.txtIdInformante.ReadOnly = true;
+            this.txtIdInformante.Size = new System.Drawing.Size(30, 20);
+            this.txtIdInformante.TabIndex = 17;
             // 
             // label6
             // 
@@ -271,16 +271,16 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtNombreInformante);
+            this.Controls.Add(this.txtIdInformante);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtNombrePadre);
+            this.Controls.Add(this.txtIdPadre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtNombreMadre);
+            this.Controls.Add(this.txtIdMadre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txbInfante);
@@ -318,12 +318,12 @@
         public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.TextBox txbIdInfante;
         public System.Windows.Forms.TextBox txbInfante;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox8;
-        public System.Windows.Forms.TextBox textBox9;
-        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox txtNombreMadre;
+        public System.Windows.Forms.TextBox txtIdMadre;
+        public System.Windows.Forms.TextBox txtNombrePadre;
+        public System.Windows.Forms.TextBox txtIdPadre;
+        public System.Windows.Forms.TextBox txtNombreInformante;
+        public System.Windows.Forms.TextBox txtIdInformante;
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
     }
