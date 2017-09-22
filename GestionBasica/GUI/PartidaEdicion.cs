@@ -50,11 +50,11 @@ namespace GestionBasica.GUI
 
 
         //Informante
-        public void cambiarIdInformante(String idInformante)
+        public void cambiarIdInformantes(String idInformante)
         {
             txtIdInformante.Text = idInformante;
         }
-        public void cambiarInformante(String Informante)
+        public void cambiarInformantes(String Informante)
         {
            txtNombreInformante.Text = Informante;
         }

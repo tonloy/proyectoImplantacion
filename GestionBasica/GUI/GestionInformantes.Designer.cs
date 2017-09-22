@@ -142,6 +142,7 @@
             // 
             // IdInformante
             // 
+            this.IdInformante.DataPropertyName = "idInformante";
             this.IdInformante.HeaderText = "ID";
             this.IdInformante.Name = "IdInformante";
             this.IdInformante.ReadOnly = true;
