@@ -66,5 +66,10 @@ namespace GestionBasica.GUI
             }
             this.Dispose();
         }
+
+        private void txbFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarLocalmente();
+        }
     }
 }

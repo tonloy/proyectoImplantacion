@@ -16,8 +16,5 @@ namespace GestionBasica.GUI
         void cambiarIdMadre(String idMadre);
         void cambiarMadre(String madre);
 
-
-
-
     }
 }

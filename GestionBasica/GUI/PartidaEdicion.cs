@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI
 {
-    public partial class PartidaEdicion : Form,IInfante,IPadre
+    public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante
     {
         public PartidaEdicion()
         {

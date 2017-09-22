@@ -127,6 +127,23 @@ namespace CacheManager1
 
             return Datos;
         }
+        public static DataTable TODOS_LOS_PARENTESCOS()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT idParentesco, Parentesco FROM registro_familiar.parentescos;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
         public static DataTable TODOS_LOS_PADRES()
         {
             DataTable Datos = new DataTable();
