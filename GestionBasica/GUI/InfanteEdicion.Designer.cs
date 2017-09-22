@@ -40,13 +40,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.rbtnFemenino = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbIdInfante = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txbIdInfante = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.txtLugarNac.Location = new System.Drawing.Point(131, 92);
             this.txtLugarNac.Name = "txtLugarNac";
-            this.txtLugarNac.Size = new System.Drawing.Size(237, 20);
+            this.txtLugarNac.Size = new System.Drawing.Size(228, 20);
             this.txtLugarNac.TabIndex = 1;
             // 
             // label6
@@ -122,11 +122,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(390, 95);
+            this.label9.Location = new System.Drawing.Point(379, 95);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.Size = new System.Drawing.Size(42, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Sexo";
+            this.label9.Text = "Género";
             // 
             // rbtnFemenino
             // 
@@ -162,6 +162,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Recien Nacido";
             // 
+            // txbIdInfante
+            // 
+            this.txbIdInfante.Location = new System.Drawing.Point(131, 19);
+            this.txbIdInfante.Name = "txbIdInfante";
+            this.txbIdInfante.ReadOnly = true;
+            this.txbIdInfante.Size = new System.Drawing.Size(50, 20);
+            this.txbIdInfante.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(96, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "ID";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Fecha de nacimiento";
+            // 
             // dtpFecha
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
@@ -193,35 +219,9 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Fecha de nacimiento";
-            // 
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
-            // 
-            // txbIdInfante
-            // 
-            this.txbIdInfante.Location = new System.Drawing.Point(131, 19);
-            this.txbIdInfante.Name = "txbIdInfante";
-            this.txbIdInfante.ReadOnly = true;
-            this.txbIdInfante.Size = new System.Drawing.Size(50, 20);
-            this.txbIdInfante.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "ID";
             // 
             // InfanteEdicion
             // 
