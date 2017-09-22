@@ -141,6 +141,7 @@
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\IInfante.cs" />
+    <Compile Include="GUI\IInformante.cs" />
     <Compile Include="GUI\InfanteEdicion.cs">
       <SubType>Form</SubType>
     </Compile>

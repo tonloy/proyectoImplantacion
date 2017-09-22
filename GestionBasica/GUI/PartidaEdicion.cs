@@ -76,14 +76,15 @@ namespace GestionBasica.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GestionPadres frm = new GestionPadres();
-            frm.Show(this);
+            //Madres
+           // GestionPadres frm = new GestionPadres();
+           // frm.Show(this);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             GestionPadres frm = new GestionPadres();
-            frm.ShowDialog();
+            frm.Show(this);
         }
 
         private void button4_Click(object sender, EventArgs e)
