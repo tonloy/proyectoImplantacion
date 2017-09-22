@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{E11242E2-9621-4140-BA10-5CDB9B794F16}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheManager1", "CacheManager1\CacheManager1.csproj", "{6AB65B1F-21D1-44E1-AD0C-B746BF6E1E6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionBasica", "GestionBasica\GestionBasica.csproj", "{23102E6F-17B5-494D-8315-2161C5E331F9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "prototipo1", "prototipo1\prototipo1.vdproj", "{5FE353EE-4566-416C-BA9F-6972ACED3868}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,8 @@ Global
 		{23102E6F-17B5-494D-8315-2161C5E331F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23102E6F-17B5-494D-8315-2161C5E331F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23102E6F-17B5-494D-8315-2161C5E331F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE353EE-4566-416C-BA9F-6972ACED3868}.Debug|Any CPU.ActiveCfg = Debug
+		{5FE353EE-4566-416C-BA9F-6972ACED3868}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
