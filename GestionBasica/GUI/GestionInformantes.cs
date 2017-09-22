@@ -55,5 +55,16 @@ namespace GestionBasica.GUI
             InformanteEdicion frm = new InformanteEdicion();
             frm.ShowDialog();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IPadre miInterfaz = this.Owner as IPadre;
+            if (miInterfaz != null)
+            {
+                miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdInformante"].Value.ToString());
+                miInterfaz.cambiarInformantes(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+            }
+            this.Dispose();
+        }
     }
 }

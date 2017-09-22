@@ -89,10 +89,15 @@ namespace GestionBasica.GUI
         private void button4_Click(object sender, EventArgs e)
         {
             GestionInformantes frm = new GestionInformantes();
-            frm.ShowDialog();
+            frm.Show(this);
         }
 
         private void PartidaEdicion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

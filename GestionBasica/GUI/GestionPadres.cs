@@ -60,5 +60,16 @@ namespace GestionBasica.GUI
             MadreEdicion frm = new MadreEdicion();
             frm.ShowDialog();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IPadre miInterfaz = this.Owner as IPadre;
+            if (miInterfaz != null)
+            {
+                miInterfaz.cambiarIdPadre(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                miInterfaz.cambiarPadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+            }
+            this.Dispose();
+        }
     }
 }
