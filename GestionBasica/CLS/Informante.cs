@@ -16,6 +16,13 @@ namespace GestionBasica.CLS
         private string Observaciones;
         private string DUI;
         private string idParentesco;
+        private string _Profesion;
+
+        public string Profesion
+        {
+            get { return _Profesion; }
+            set { _Profesion = value; }
+        }
 
         //pro
         public string IdInformante
@@ -67,7 +74,32 @@ namespace GestionBasica.CLS
             StringBuilder Sentencia = new StringBuilder();
 
             Sentencia.Append("INSERT INTO registro_familiar.informantes (NombreCompleto, ConocidoPor, FechaInscripcion, Observaciones, DUI, idParentesco) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + FechaInscripcion + "','" + Observaciones + "','" + DUI + "','" + idParentesco + "' );  ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', now(),'" + Observaciones + "','" + DUI + "','" + idParentesco + "' );  ");
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    guardado = true;
+                }
+                else
+                {
+                    guardado = false;
+                }
+            }
+            catch
+            {
+                guardado = false;
+            }
+
+            return guardado;        
+        }
+        public bool Actualizar()
+        {
+            Boolean guardado = false;
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("UPDATE informantes SET NombreCompleto='"+this.NombreCompleto+"', ConocidoPor='"+this.ConocidoPor+"', Observaciones='"+this.Observaciones+"' WHERE idInformante='"+this.idInformante+"';");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -86,7 +118,6 @@ namespace GestionBasica.CLS
             }
 
             return guardado;
-        
         }
 
     }
