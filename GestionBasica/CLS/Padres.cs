@@ -21,10 +21,10 @@ namespace GestionBasica.CLS
 
 
         //prop
-        public string IdProfesion
+        public string Profesion
         {
-            get { return idProfesion; }
-            set { idProfesion = value; }
+            get { return Profesion; }
+            set { Profesion = value; }
         }
 
         public string IdMunicipio

@@ -235,11 +235,31 @@ namespace CacheManager1
             return Datos;
         }
 
+
         public static DataTable TODOS_LOS_ROLES()
         {
             DataTable Datos = new DataTable();
             String Consulta;
             Consulta = "SELECT idRol, Rol, FechaCreacion FROM roles;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+
+        public static DataTable TODOS_LOS_MUNICIPIOS()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT * FROM registro_familiar.municipios;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
