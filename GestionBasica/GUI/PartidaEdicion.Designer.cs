@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbNumPartida = new System.Windows.Forms.TextBox();
+            this.txbLibro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbIdInfante = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,45 +50,49 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbIdPartida = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txbFolio = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 82);
+            this.label1.Location = new System.Drawing.Point(20, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "No Partida";
             // 
-            // textBox1
+            // txbNumPartida
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 20);
-            this.textBox1.TabIndex = 1;
+            this.txbNumPartida.Location = new System.Drawing.Point(83, 107);
+            this.txbNumPartida.Name = "txbNumPartida";
+            this.txbNumPartida.Size = new System.Drawing.Size(49, 20);
+            this.txbNumPartida.TabIndex = 1;
             // 
-            // textBox2
+            // txbLibro
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2.TabIndex = 3;
+            this.txbLibro.Location = new System.Drawing.Point(83, 53);
+            this.txbLibro.Name = "txbLibro";
+            this.txbLibro.Size = new System.Drawing.Size(49, 20);
+            this.txbLibro.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Folio";
+            this.label2.Text = "Libro";
             // 
             // txbIdInfante
             // 
-            this.txbIdInfante.Location = new System.Drawing.Point(83, 119);
+            this.txbIdInfante.Location = new System.Drawing.Point(83, 138);
             this.txbIdInfante.Name = "txbIdInfante";
             this.txbIdInfante.ReadOnly = true;
             this.txbIdInfante.Size = new System.Drawing.Size(30, 20);
@@ -97,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 122);
+            this.label3.Location = new System.Drawing.Point(37, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 4;
@@ -105,7 +109,7 @@
             // 
             // txbInfante
             // 
-            this.txbInfante.Location = new System.Drawing.Point(119, 119);
+            this.txbInfante.Location = new System.Drawing.Point(119, 138);
             this.txbInfante.Name = "txbInfante";
             this.txbInfante.ReadOnly = true;
             this.txbInfante.Size = new System.Drawing.Size(175, 20);
@@ -113,7 +117,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(300, 117);
+            this.button1.Location = new System.Drawing.Point(300, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -123,7 +127,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 156);
+            this.button2.Location = new System.Drawing.Point(300, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -133,7 +137,7 @@
             // 
             // txtNombreMadre
             // 
-            this.txtNombreMadre.Location = new System.Drawing.Point(119, 158);
+            this.txtNombreMadre.Location = new System.Drawing.Point(119, 177);
             this.txtNombreMadre.Name = "txtNombreMadre";
             this.txtNombreMadre.ReadOnly = true;
             this.txtNombreMadre.Size = new System.Drawing.Size(175, 20);
@@ -141,7 +145,7 @@
             // 
             // txtIdMadre
             // 
-            this.txtIdMadre.Location = new System.Drawing.Point(83, 158);
+            this.txtIdMadre.Location = new System.Drawing.Point(83, 177);
             this.txtIdMadre.Name = "txtIdMadre";
             this.txtIdMadre.ReadOnly = true;
             this.txtIdMadre.Size = new System.Drawing.Size(30, 20);
@@ -150,7 +154,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 161);
+            this.label4.Location = new System.Drawing.Point(40, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 8;
@@ -158,7 +162,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(300, 195);
+            this.button3.Location = new System.Drawing.Point(300, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -168,7 +172,7 @@
             // 
             // txtNombrePadre
             // 
-            this.txtNombrePadre.Location = new System.Drawing.Point(119, 197);
+            this.txtNombrePadre.Location = new System.Drawing.Point(119, 216);
             this.txtNombrePadre.Name = "txtNombrePadre";
             this.txtNombrePadre.ReadOnly = true;
             this.txtNombrePadre.Size = new System.Drawing.Size(175, 20);
@@ -176,7 +180,7 @@
             // 
             // txtIdPadre
             // 
-            this.txtIdPadre.Location = new System.Drawing.Point(83, 197);
+            this.txtIdPadre.Location = new System.Drawing.Point(83, 216);
             this.txtIdPadre.Name = "txtIdPadre";
             this.txtIdPadre.ReadOnly = true;
             this.txtIdPadre.Size = new System.Drawing.Size(30, 20);
@@ -185,7 +189,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 200);
+            this.label5.Location = new System.Drawing.Point(42, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 12;
@@ -193,7 +197,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(300, 233);
+            this.button4.Location = new System.Drawing.Point(300, 252);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -203,7 +207,7 @@
             // 
             // txtNombreInformante
             // 
-            this.txtNombreInformante.Location = new System.Drawing.Point(119, 235);
+            this.txtNombreInformante.Location = new System.Drawing.Point(119, 254);
             this.txtNombreInformante.Name = "txtNombreInformante";
             this.txtNombreInformante.ReadOnly = true;
             this.txtNombreInformante.Size = new System.Drawing.Size(175, 20);
@@ -211,7 +215,7 @@
             // 
             // txtIdInformante
             // 
-            this.txtIdInformante.Location = new System.Drawing.Point(83, 235);
+            this.txtIdInformante.Location = new System.Drawing.Point(83, 254);
             this.txtIdInformante.Name = "txtIdInformante";
             this.txtIdInformante.ReadOnly = true;
             this.txtIdInformante.Size = new System.Drawing.Size(30, 20);
@@ -220,7 +224,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 238);
+            this.label6.Location = new System.Drawing.Point(20, 257);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 16;
@@ -228,7 +232,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(219, 286);
+            this.button5.Location = new System.Drawing.Point(219, 293);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
@@ -238,7 +242,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(300, 286);
+            this.button6.Location = new System.Drawing.Point(300, 293);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 5;
@@ -246,12 +250,13 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox3
+            // txbIdPartida
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(49, 20);
-            this.textBox3.TabIndex = 20;
+            this.txbIdPartida.Location = new System.Drawing.Point(83, 26);
+            this.txbIdPartida.Name = "txbIdPartida";
+            this.txbIdPartida.ReadOnly = true;
+            this.txbIdPartida.Size = new System.Drawing.Size(49, 20);
+            this.txbIdPartida.TabIndex = 20;
             // 
             // label7
             // 
@@ -262,12 +267,41 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "ID";
             // 
+            // txbFolio
+            // 
+            this.txbFolio.Location = new System.Drawing.Point(83, 80);
+            this.txbFolio.Name = "txbFolio";
+            this.txbFolio.Size = new System.Drawing.Size(49, 20);
+            this.txbFolio.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(48, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Folio";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "C:\\Users\\Choche\\Pictures\\Partidas\\Nacimiento\\partida1.jpg";
+            this.pictureBox1.Location = new System.Drawing.Point(275, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // PartidaEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 336);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(399, 340);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txbFolio);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txbIdPartida);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -287,15 +321,16 @@
             this.Controls.Add(this.txbInfante);
             this.Controls.Add(this.txbIdInfante);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbLibro);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbNumPartida);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PartidaEdicion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sistema de Registro Familiar";
             this.Load += new System.EventHandler(this.PartidaEdicion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,8 +350,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txbNumPartida;
+        public System.Windows.Forms.TextBox txbLibro;
         public System.Windows.Forms.TextBox txbIdInfante;
         public System.Windows.Forms.TextBox txbInfante;
         public System.Windows.Forms.TextBox txtNombreMadre;
@@ -325,7 +360,10 @@
         public System.Windows.Forms.TextBox txtIdPadre;
         public System.Windows.Forms.TextBox txtNombreInformante;
         public System.Windows.Forms.TextBox txtIdInformante;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txbIdPartida;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox txbFolio;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

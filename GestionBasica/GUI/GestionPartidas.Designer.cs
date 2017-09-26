@@ -40,7 +40,9 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbImprimir = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +56,6 @@
             this.IdInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdJefeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -150,6 +151,7 @@
             this.dtgPartidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPartidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumPartida,
+            this.Ruta,
             this.idPartida,
             this.Folio,
             this.Libro,
@@ -172,6 +174,17 @@
             this.dtgPartidas.Size = new System.Drawing.Size(1056, 491);
             this.dtgPartidas.TabIndex = 2;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(267, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // NumPartida
             // 
             this.NumPartida.DataPropertyName = "NumPartida";
@@ -179,6 +192,14 @@
             this.NumPartida.Name = "NumPartida";
             this.NumPartida.ReadOnly = true;
             this.NumPartida.Width = 50;
+            // 
+            // Ruta
+            // 
+            this.Ruta.DataPropertyName = "Ruta";
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.Name = "Ruta";
+            this.Ruta.ReadOnly = true;
+            this.Ruta.Visible = false;
             // 
             // idPartida
             // 
@@ -285,17 +306,6 @@
             this.IdJefeRegistro.ReadOnly = true;
             this.IdJefeRegistro.Visible = false;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // GestionPartidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +344,9 @@
         private System.Windows.Forms.DataGridView dtgPartidas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton txbImprimir;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
@@ -348,6 +360,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdInformante;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInformante;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdJefeRegistro;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

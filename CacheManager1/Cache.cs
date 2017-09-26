@@ -32,6 +32,7 @@ namespace CacheManager1
             DataTable Datos = new DataTable();
             String Consulta;
             Consulta = @"SELECT idPartida,
+             p.Ruta,
              p.idMadre,
              ma.NombreCompleto as madre,
              p.idPadre,
