@@ -41,17 +41,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtConocidapor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
-            this.cbxMunicipio = new System.Windows.Forms.ComboBox();
-            this.tdsdxtID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.mskTEdad = new System.Windows.Forms.MaskedTextBox();
             this.txtProfesion = new System.Windows.Forms.TextBox();
             this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
-            this.mskTEdad = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.tdsdxtID = new System.Windows.Forms.Label();
+            this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
@@ -161,12 +161,12 @@
             this.label6.TabIndex = 47;
             this.label6.Text = "Conocida por:";
             // 
-            // txtNombreCompleto
+            // txbNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(177, 76);
-            this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(440, 20);
-            this.txtNombreCompleto.TabIndex = 0;
+            this.txbNombreCompleto.Location = new System.Drawing.Point(177, 76);
+            this.txbNombreCompleto.Name = "txbNombreCompleto";
+            this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
+            this.txbNombreCompleto.TabIndex = 0;
             // 
             // label5
             // 
@@ -196,47 +196,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Padre";
             // 
-            // mtxtDUI
+            // mskTEdad
             // 
-            this.mtxtDUI.Location = new System.Drawing.Point(145, 177);
-            this.mtxtDUI.Mask = "00000000 - 0";
-            this.mtxtDUI.Name = "mtxtDUI";
-            this.mtxtDUI.Size = new System.Drawing.Size(157, 20);
-            this.mtxtDUI.TabIndex = 2;
-            // 
-            // cbxMunicipio
-            // 
-            this.cbxMunicipio.FormattingEnabled = true;
-            this.cbxMunicipio.Location = new System.Drawing.Point(463, 99);
-            this.cbxMunicipio.Name = "cbxMunicipio";
-            this.cbxMunicipio.Size = new System.Drawing.Size(122, 21);
-            this.cbxMunicipio.TabIndex = 0;
-            // 
-            // tdsdxtID
-            // 
-            this.tdsdxtID.AutoSize = true;
-            this.tdsdxtID.Location = new System.Drawing.Point(94, 27);
-            this.tdsdxtID.Name = "tdsdxtID";
-            this.tdsdxtID.Size = new System.Drawing.Size(18, 13);
-            this.tdsdxtID.TabIndex = 3;
-            this.tdsdxtID.Text = "ID";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(145, 19);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(44, 20);
-            this.txtID.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Departamento";
+            this.mskTEdad.Location = new System.Drawing.Point(145, 99);
+            this.mskTEdad.Mask = "000";
+            this.mskTEdad.Name = "mskTEdad";
+            this.mskTEdad.Size = new System.Drawing.Size(44, 20);
+            this.mskTEdad.TabIndex = 66;
             // 
             // txtProfesion
             // 
@@ -253,13 +219,47 @@
             this.cbxDepartamentos.Size = new System.Drawing.Size(120, 21);
             this.cbxDepartamentos.TabIndex = 64;
             // 
-            // mskTEdad
+            // label1
             // 
-            this.mskTEdad.Location = new System.Drawing.Point(145, 99);
-            this.mskTEdad.Mask = "000";
-            this.mskTEdad.Name = "mskTEdad";
-            this.mskTEdad.Size = new System.Drawing.Size(44, 20);
-            this.mskTEdad.TabIndex = 66;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(195, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Departamento";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(145, 19);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(44, 20);
+            this.txtID.TabIndex = 63;
+            // 
+            // tdsdxtID
+            // 
+            this.tdsdxtID.AutoSize = true;
+            this.tdsdxtID.Location = new System.Drawing.Point(94, 27);
+            this.tdsdxtID.Name = "tdsdxtID";
+            this.tdsdxtID.Size = new System.Drawing.Size(18, 13);
+            this.tdsdxtID.TabIndex = 3;
+            this.tdsdxtID.Text = "ID";
+            // 
+            // mtxtDUI
+            // 
+            this.mtxtDUI.Location = new System.Drawing.Point(145, 177);
+            this.mtxtDUI.Mask = "00000000 - 0";
+            this.mtxtDUI.Name = "mtxtDUI";
+            this.mtxtDUI.Size = new System.Drawing.Size(157, 20);
+            this.mtxtDUI.TabIndex = 2;
+            // 
+            // cbxMunicipio
+            // 
+            this.cbxMunicipio.FormattingEnabled = true;
+            this.cbxMunicipio.Location = new System.Drawing.Point(463, 99);
+            this.cbxMunicipio.Name = "cbxMunicipio";
+            this.cbxMunicipio.Size = new System.Drawing.Size(122, 21);
+            this.cbxMunicipio.TabIndex = 0;
             // 
             // Notificador
             // 
@@ -280,7 +280,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtConocidapor);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtNombreCompleto);
+            this.Controls.Add(this.txbNombreCompleto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -310,7 +310,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtConocidapor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombreCompleto;
+        private System.Windows.Forms.TextBox txbNombreCompleto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox mtxtDUI;

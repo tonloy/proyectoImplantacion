@@ -47,9 +47,10 @@ namespace DataLayer1
                 {
                     NumeroFilasAfectadas = Comando.ExecuteNonQuery();
                 }
-                catch
+                catch(Exception e)
                 {
                     NumeroFilasAfectadas = 0;
+                    MessageBox.Show(e.Message);
                 }
             }
 

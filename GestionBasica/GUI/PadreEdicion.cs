@@ -56,7 +56,7 @@ namespace GestionBasica.GUI
             CLS.Padres oPadre = new CLS.Padres();
 
             oPadre.IdPadre = txtID.Text;
-            oPadre.NombreCompleto1 = txtNombreCompleto.Text;
+            oPadre.NombreCompleto1 = txbNombreCompleto.Text;
             oPadre.ConocidoPor1 = txtConocidapor.Text;
             oPadre.Edad1 = mskTEdad.Text;
             oPadre.IdMunicipio = cbxMunicipio.SelectedValue.ToString();
@@ -99,9 +99,9 @@ namespace GestionBasica.GUI
                 Notificador.SetError(txbNombreCompleto, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
-            if (cbxCargos.SelectedItem == null)
+            if (cbxDepartamentos.SelectedItem == null)
             {
-                Notificador.SetError(cbxCargos, "Seleccione un cargo de la lista.");
+                Notificador.SetError(cbxDepartamentos, "Seleccione un departamento de la lista.");
                 Validado = false;
             }
 

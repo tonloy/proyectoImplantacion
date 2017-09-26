@@ -46,6 +46,7 @@
             this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +55,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnEliminar,
             this.txbModificar,
             this.toolStripSeparator1,
             this.txbNueva,
@@ -72,6 +74,7 @@
             this.txbModificar.Name = "txbModificar";
             this.txbModificar.Size = new System.Drawing.Size(78, 22);
             this.txbModificar.Text = "Modificar";
+            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -203,6 +206,16 @@
             this.Parentesco.Name = "Parentesco";
             this.Parentesco.ReadOnly = true;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // GestionInformantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +225,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "GestionInformantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Informantes";
@@ -245,5 +259,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DUI;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdParentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
     }
 }

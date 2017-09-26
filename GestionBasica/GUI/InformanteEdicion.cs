@@ -64,7 +64,6 @@ namespace GestionBasica.GUI
             oUsuario.IdParentesco = cbxParentesco.SelectedValue.ToString();
             oUsuario.ConocidoPor1 = txtConocidapor.Text;
             oUsuario.DUI1 = mtxtDUI.Text;
-            oUsuario.Profesion = txtProfesionUoficio.Text;
 
             if (ValidarDatos())
             {
@@ -119,11 +118,6 @@ namespace GestionBasica.GUI
             if (txtNombreCompleto.TextLength == 0)
             {
                 Notificador.SetError(txtNombreCompleto, "Este campo no puede quedar vacio.");
-                Validado = false;
-            }
-            if (txtProfesionUoficio.TextLength == 0)
-            {
-                Notificador.SetError(txtProfesionUoficio, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
             if (txtObservaciones.TextLength == 0)

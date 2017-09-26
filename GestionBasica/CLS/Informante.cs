@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GestionBasica.CLS
 {
@@ -74,7 +75,7 @@ namespace GestionBasica.CLS
             StringBuilder Sentencia = new StringBuilder();
 
             Sentencia.Append("INSERT INTO registro_familiar.informantes (NombreCompleto, ConocidoPor, FechaInscripcion, Observaciones, DUI, idParentesco) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', now(),'" + Observaciones + "','" + DUI + "','" + idParentesco + "' );  ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', now(),'" + Observaciones + "','" + DUI + "'," + idParentesco + ");  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -87,7 +88,7 @@ namespace GestionBasica.CLS
                     guardado = false;
                 }
             }
-            catch
+            catch(Exception e)
             {
                 guardado = false;
             }
