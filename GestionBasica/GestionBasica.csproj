@@ -173,6 +173,12 @@
     <Compile Include="GUI\PartidaEdicion.Designer.cs">
       <DependentUpon>PartidaEdicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SeleccionImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SeleccionImagen.Designer.cs">
+      <DependentUpon>SeleccionImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VisorReporteOperaciones.cs">
       <SubType>Form</SubType>
     </Compile>
