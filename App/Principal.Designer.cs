@@ -45,12 +45,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblNombreEmpleado = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.conectado = new System.Windows.Forms.ToolStripStatusLabel();
             this.desconectado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
@@ -183,16 +183,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(60, 17);
             this.lblUsuario.Text = "lblUsuario";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 538);
-            this.panel1.TabIndex = 4;
-            // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
@@ -228,6 +218,16 @@
             this.desconectado.Text = "Desconectado";
             this.desconectado.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(817, 538);
+            this.panel1.TabIndex = 4;
+            // 
             // SegundoPlano
             // 
             this.SegundoPlano.WorkerReportsProgress = true;
@@ -238,7 +238,7 @@
             // 
             // tmpConexion
             // 
-            this.tmpConexion.Interval = 10000;
+            this.tmpConexion.Interval = 60000;
             this.tmpConexion.Tick += new System.EventHandler(this.tmpConexion_Tick);
             // 
             // Principal
