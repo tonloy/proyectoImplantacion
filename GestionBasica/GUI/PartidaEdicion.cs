@@ -111,7 +111,7 @@ namespace GestionBasica.GUI
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             SeleccionImagen frm = new SeleccionImagen();
-            frm.ShowDialog();
+            frm.Show(this);
         }
     }
 }

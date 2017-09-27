@@ -72,14 +72,14 @@
             this.txbNumPartida.Location = new System.Drawing.Point(83, 107);
             this.txbNumPartida.Name = "txbNumPartida";
             this.txbNumPartida.Size = new System.Drawing.Size(49, 20);
-            this.txbNumPartida.TabIndex = 1;
+            this.txbNumPartida.TabIndex = 2;
             // 
             // txbLibro
             // 
             this.txbLibro.Location = new System.Drawing.Point(83, 53);
             this.txbLibro.Name = "txbLibro";
             this.txbLibro.Size = new System.Drawing.Size(49, 20);
-            this.txbLibro.TabIndex = 3;
+            this.txbLibro.TabIndex = 0;
             // 
             // label2
             // 
@@ -120,7 +120,7 @@
             this.button1.Location = new System.Drawing.Point(300, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Seleccionar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -130,7 +130,7 @@
             this.button2.Location = new System.Drawing.Point(300, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Seleccionar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -165,7 +165,7 @@
             this.button3.Location = new System.Drawing.Point(300, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Seleccionar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -200,7 +200,7 @@
             this.button4.Location = new System.Drawing.Point(300, 252);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 6;
             this.button4.Text = "Seleccionar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -235,7 +235,7 @@
             this.button5.Location = new System.Drawing.Point(219, 293);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
+            this.button5.TabIndex = 7;
             this.button5.Text = "Guardar";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -245,7 +245,7 @@
             this.button6.Location = new System.Drawing.Point(300, 293);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
+            this.button6.TabIndex = 8;
             this.button6.Text = "Cancelar";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -272,7 +272,7 @@
             this.txbFolio.Location = new System.Drawing.Point(83, 80);
             this.txbFolio.Name = "txbFolio";
             this.txbFolio.Size = new System.Drawing.Size(49, 20);
-            this.txbFolio.TabIndex = 22;
+            this.txbFolio.TabIndex = 1;
             // 
             // label8
             // 
