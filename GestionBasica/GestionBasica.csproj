@@ -56,6 +56,7 @@
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Padres.cs" />
     <Compile Include="CLS\Usuario.cs" />
+    <Compile Include="CLS\WIAScanner.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +141,7 @@
     <Compile Include="GUI\GestionUsuarios.Designer.cs">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IImagen.cs" />
     <Compile Include="GUI\IInfante.cs" />
     <Compile Include="GUI\IInformante.cs" />
     <Compile Include="GUI\InfanteEdicion.cs">
@@ -241,6 +243,9 @@
     <EmbeddedResource Include="GUI\PartidaEdicion.resx">
       <DependentUpon>PartidaEdicion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SeleccionImagen.resx">
+      <DependentUpon>SeleccionImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\VisorReporteOperaciones.resx">
       <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +284,20 @@
       <Project>{8c7c537e-322e-48c8-a4fb-3ad2523d2b2f}</Project>
       <Name>SessionManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Interop.WIA.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

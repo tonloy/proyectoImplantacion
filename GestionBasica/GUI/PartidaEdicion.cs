@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI
 {
-    public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante
+    public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante,IImagen
     {
         public PartidaEdicion()
         {
             InitializeComponent();
+        }
+        //Imagen
+        public void cambiarImagen(String ruta)
+        {
+            pictureBox1.ImageLocation = ruta;
         }
 
         //Infantes
@@ -101,6 +106,12 @@ namespace GestionBasica.GUI
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            SeleccionImagen frm = new SeleccionImagen();
+            frm.ShowDialog();
         }
     }
 }
