@@ -16,6 +16,7 @@ namespace GestionBasica.GUI
         public GestionPadres()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionPadres_Load(object sender, EventArgs e)
@@ -71,6 +72,21 @@ namespace GestionBasica.GUI
                 miInterfaz.cambiarPadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
             }
             this.Dispose();
+        }
+
+        private void txbModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
     }
 }

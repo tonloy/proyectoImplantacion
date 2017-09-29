@@ -16,6 +16,7 @@ namespace GestionBasica.GUI
         public GestionInformantes()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionInformantes_Load(object sender, EventArgs e)
@@ -102,6 +103,11 @@ namespace GestionBasica.GUI
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
     }
 }

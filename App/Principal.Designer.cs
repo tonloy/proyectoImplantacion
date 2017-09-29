@@ -74,6 +74,7 @@
             // 
             // gestionarToolStripMenuItem
             // 
+            this.gestionarToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarEmpleadosToolStripMenuItem,
             this.gestionarUsuariosToolStripMenuItem});
@@ -85,15 +86,17 @@
             // 
             // gestionarEmpleadosToolStripMenuItem
             // 
+            this.gestionarEmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
-            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.gestionarEmpleadosToolStripMenuItem.Text = "Empleados";
             this.gestionarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.gestionarEmpleadosToolStripMenuItem_Click);
             // 
             // gestionarUsuariosToolStripMenuItem
             // 
+            this.gestionarUsuariosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.gestionarUsuariosToolStripMenuItem.Text = "Usuarios";
             this.gestionarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuariosToolStripMenuItem_Click);
             // 

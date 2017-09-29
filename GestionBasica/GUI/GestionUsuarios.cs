@@ -16,6 +16,7 @@ namespace GestionBasica.GUI
         public GestionUsuarios()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void txbNueva_Click(object sender, EventArgs e)
@@ -110,6 +111,11 @@ namespace GestionBasica.GUI
                     MessageBox.Show("Por favor seleccione un usuario");
                 }
             }
+        }
+
+        private void dtgUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
     }
 }

@@ -17,6 +17,7 @@ namespace GestionBasica.GUI
         public GestionPartidas()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionPartidas_Load(object sender, EventArgs e)
@@ -86,6 +87,11 @@ namespace GestionBasica.GUI
             dtgPartidas.AutoGenerateColumns = false;
             dtgPartidas.DataSource = _GRUPOS;
             lblNumeroFilas.Text = dtgPartidas.Rows.Count.ToString() + " Registros Encontrados";
+        }
+
+        private void dtgPartidas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
     }
 }

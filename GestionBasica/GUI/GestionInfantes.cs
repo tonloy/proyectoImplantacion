@@ -16,6 +16,7 @@ namespace GestionBasica.GUI
         public GestionInfantes()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionInfantes_Load(object sender, EventArgs e)
@@ -104,6 +105,11 @@ namespace GestionBasica.GUI
                 miInterfaz.cambiarInfante(dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString());
             }
             this.Dispose();
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
     }
 }
