@@ -18,26 +18,7 @@ namespace GestionBasica.GUI
         {
             InitializeComponent();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
-            List<TextBox> tList = new List<TextBox>();
-            List<string> sList = new List<string>();
-            tList.Add(txbFiltrar);
-            sList.Add("Busqueda por Nombre...");
-            SetCueBanner(ref tList, sList);
-
         }
-
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
-        private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr i, string str);
-
-        void SetCueBanner(ref List<TextBox> textbox, List<string> CueText)
-        {
-            for (int x = 0; x < textbox.Count; x++)
-            {
-                SendMessage(textbox[x].Handle, 0x1501, (IntPtr)1, CueText[x]);
-            }
-        }
-
         private void GestionPadres_Load(object sender, EventArgs e)
         {
             CargarPadres();
