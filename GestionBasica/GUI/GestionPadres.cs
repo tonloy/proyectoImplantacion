@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace GestionBasica.GUI
 {
@@ -17,6 +18,24 @@ namespace GestionBasica.GUI
         {
             InitializeComponent();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
+            List<TextBox> tList = new List<TextBox>();
+            List<string> sList = new List<string>();
+            tList.Add(txbFiltrar);
+            sList.Add("Busqueda por Nombre...");
+            SetCueBanner(ref tList, sList);
+
+        }
+
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr i, string str);
+
+        void SetCueBanner(ref List<TextBox> textbox, List<string> CueText)
+        {
+            for (int x = 0; x < textbox.Count; x++)
+            {
+                SendMessage(textbox[x].Handle, 0x1501, (IntPtr)1, CueText[x]);
+            }
         }
 
         private void GestionPadres_Load(object sender, EventArgs e)
@@ -113,9 +132,21 @@ namespace GestionBasica.GUI
 
         }
 
+
+
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
+        }
+
+        private void txbFiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarLocalmente();
         }
     }
 }
