@@ -17,12 +17,12 @@ namespace GestionBasica.GUI
         public PadreEdicion()
         {
             InitializeComponent();
+            CargarMunicipios();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InformanteEdicion frm = new InformanteEdicion();
-            frm.ShowDialog();
+            Procesar();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -47,7 +47,6 @@ namespace GestionBasica.GUI
 
             }
         }
-
 
 
 
@@ -99,6 +98,49 @@ namespace GestionBasica.GUI
                 Notificador.SetError(txbNombreCompleto, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
+
+            if (txtConocidapor.TextLength == 0)
+            {
+                Notificador.SetError(txtConocidapor, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (mskTEdad.TextLength == 0 || !mskTEdad.MaskCompleted)
+            {
+                Notificador.SetError(mskTEdad, "Este campo no puede ir vacio o incompleto.");
+                Validado = false;
+            }
+
+            if (cbxMunicipio.SelectedItem == null)
+            {
+                Notificador.SetError(cbxMunicipio, "Seleccione un rol de la lista.");
+                Validado = false;
+            }
+
+            if (txtDomicilio.TextLength == 0)
+            {
+                Notificador.SetError(txtDomicilio, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtProfesion.TextLength == 0)
+            {
+                Notificador.SetError(txtProfesion, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtNacionalidad.TextLength == 0)
+            {
+                Notificador.SetError(txtNacionalidad, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (mtxtDUI.TextLength == 0 || !mtxtDUI.MaskCompleted)
+            {
+                Notificador.SetError(mtxtDUI, "Este campo no puede ir vacio o incompleto.");
+                Validado = false;
+            }
+
             if (cbxDepartamentos.SelectedItem == null)
             {
                 Notificador.SetError(cbxDepartamentos, "Seleccione un departamento de la lista.");
@@ -107,11 +149,6 @@ namespace GestionBasica.GUI
 
             return Validado;
         }
-
-
-
-
-
 
     }
 }
