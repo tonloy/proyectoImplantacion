@@ -63,7 +63,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -74,7 +74,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 35);
-            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button2_Click);
@@ -91,16 +91,16 @@
             // 
             // txtNacionalidad
             // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(612, 237);
+            this.txtNacionalidad.Location = new System.Drawing.Point(612, 233);
             this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(264, 26);
-            this.txtNacionalidad.TabIndex = 4;
+            this.txtNacionalidad.TabIndex = 7;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(543, 288);
+            this.label11.Location = new System.Drawing.Point(543, 281);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 20);
@@ -119,11 +119,11 @@
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(266, 237);
+            this.txtDomicilio.Location = new System.Drawing.Point(217, 192);
             this.txtDomicilio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(658, 26);
-            this.txtDomicilio.TabIndex = 3;
+            this.txtDomicilio.TabIndex = 5;
             // 
             // label9
             // 
@@ -138,7 +138,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(608, 157);
+            this.label8.Location = new System.Drawing.Point(617, 156);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
@@ -157,7 +157,7 @@
             // 
             // txtConocidapor
             // 
-            this.txtConocidapor.Location = new System.Drawing.Point(266, 157);
+            this.txtConocidapor.Location = new System.Drawing.Point(217, 114);
             this.txtConocidapor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtConocidapor.Name = "txtConocidapor";
             this.txtConocidapor.Size = new System.Drawing.Size(658, 26);
@@ -175,7 +175,7 @@
             // 
             // txbNombreCompleto
             // 
-            this.txbNombreCompleto.Location = new System.Drawing.Point(266, 117);
+            this.txbNombreCompleto.Location = new System.Drawing.Point(217, 74);
             this.txbNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbNombreCompleto.Name = "txbNombreCompleto";
             this.txbNombreCompleto.Size = new System.Drawing.Size(658, 26);
@@ -198,17 +198,20 @@
             this.groupBox1.Controls.Add(this.cbxDepartamentos);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNacionalidad);
+            this.groupBox1.Controls.Add(this.txtDomicilio);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.tdsdxtID);
             this.groupBox1.Controls.Add(this.mtxtDUI);
+            this.groupBox1.Controls.Add(this.txtConocidapor);
             this.groupBox1.Controls.Add(this.cbxMunicipio);
             this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(48, 45);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Size = new System.Drawing.Size(906, 338);
-            this.groupBox1.TabIndex = 62;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Padre";
             // 
@@ -219,7 +222,7 @@
             this.mskTEdad.Mask = "00";
             this.mskTEdad.Name = "mskTEdad";
             this.mskTEdad.Size = new System.Drawing.Size(64, 26);
-            this.mskTEdad.TabIndex = 66;
+            this.mskTEdad.TabIndex = 2;
             // 
             // txtProfesion
             // 
@@ -227,21 +230,21 @@
             this.txtProfesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProfesion.Name = "txtProfesion";
             this.txtProfesion.Size = new System.Drawing.Size(230, 26);
-            this.txtProfesion.TabIndex = 63;
+            this.txtProfesion.TabIndex = 6;
             // 
             // cbxDepartamentos
             // 
             this.cbxDepartamentos.FormattingEnabled = true;
-            this.cbxDepartamentos.Location = new System.Drawing.Point(399, 151);
+            this.cbxDepartamentos.Location = new System.Drawing.Point(426, 151);
             this.cbxDepartamentos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxDepartamentos.Name = "cbxDepartamentos";
             this.cbxDepartamentos.Size = new System.Drawing.Size(178, 28);
-            this.cbxDepartamentos.TabIndex = 64;
+            this.cbxDepartamentos.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(292, 155);
+            this.label1.Location = new System.Drawing.Point(317, 155);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
@@ -274,7 +277,7 @@
             this.mtxtDUI.Mask = "00000000-0";
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(234, 26);
-            this.mtxtDUI.TabIndex = 2;
+            this.mtxtDUI.TabIndex = 8;
             // 
             // cbxMunicipio
             // 
@@ -283,7 +286,7 @@
             this.cbxMunicipio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxMunicipio.Name = "cbxMunicipio";
             this.cbxMunicipio.Size = new System.Drawing.Size(181, 28);
-            this.cbxMunicipio.TabIndex = 0;
+            this.cbxMunicipio.TabIndex = 4;
             // 
             // Notificador
             // 
@@ -299,12 +302,9 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtDomicilio);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtConocidapor);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txbNombreCompleto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
