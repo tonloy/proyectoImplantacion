@@ -69,6 +69,7 @@
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
@@ -83,6 +84,7 @@
             // 
             // txbModificar
             // 
+            this.txbModificar.ForeColor = System.Drawing.Color.White;
             this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
             this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbModificar.Name = "txbModificar";
@@ -97,6 +99,7 @@
             // 
             // txbNueva
             // 
+            this.txbNueva.ForeColor = System.Drawing.Color.White;
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
@@ -115,6 +118,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel1.Text = "Buscar";
@@ -158,6 +162,7 @@
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEmpleados.Size = new System.Drawing.Size(532, 333);
             this.dtgEmpleados.TabIndex = 6;
+            this.dtgEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmpleados_CellFormatting);
             // 
             // IdEmpleado
             // 

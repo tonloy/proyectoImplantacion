@@ -17,6 +17,7 @@ namespace App
         public Principal()
         {
             InitializeComponent();
+            menuStrip1.BackColor = Color.FromArgb(6,0,88);
         }
 
         private void gestionarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)

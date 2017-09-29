@@ -16,6 +16,7 @@ namespace GestionBasica.GUI
         public GestionEmpleados()
         {
             InitializeComponent();
+            toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void CargarEmpleados()
@@ -108,6 +109,11 @@ namespace GestionBasica.GUI
                     MessageBox.Show("Por favor seleccione un empleado");
                 }
             }
+        }
+
+        private void dtgEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6,0,88);
         }
     }
 }

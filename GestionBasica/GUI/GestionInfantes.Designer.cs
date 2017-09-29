@@ -65,6 +65,7 @@
             // 
             // txbModificar
             // 
+            this.txbModificar.ForeColor = System.Drawing.Color.White;
             this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
             this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbModificar.Name = "txbModificar";
@@ -79,6 +80,7 @@
             // 
             // txbNueva
             // 
+            this.txbNueva.ForeColor = System.Drawing.Color.White;
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
@@ -96,6 +98,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel1.Text = "Buscar";
@@ -138,6 +141,7 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // IdInfante
             // 

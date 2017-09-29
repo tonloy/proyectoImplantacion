@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionInformantes));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.txbModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txbNueva = new System.Windows.Forms.ToolStripButton();
@@ -46,7 +47,6 @@
             this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,8 +67,19 @@
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // txbModificar
             // 
+            this.txbModificar.ForeColor = System.Drawing.Color.White;
             this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
             this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbModificar.Name = "txbModificar";
@@ -83,6 +94,7 @@
             // 
             // txbNueva
             // 
+            this.txbNueva.ForeColor = System.Drawing.Color.White;
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
@@ -101,6 +113,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel1.Text = "Buscar";
@@ -144,6 +157,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1007, 607);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // IdInformante
             // 
@@ -205,16 +219,6 @@
             this.Parentesco.HeaderText = "Parentesco";
             this.Parentesco.Name = "Parentesco";
             this.Parentesco.ReadOnly = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Visible = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // GestionInformantes
             // 

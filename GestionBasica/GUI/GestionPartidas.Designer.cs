@@ -40,7 +40,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbImprimir = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +55,7 @@
             this.IdInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdJefeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -95,6 +95,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
@@ -109,6 +110,7 @@
             // 
             // btnNueva
             // 
+            this.btnNueva.ForeColor = System.Drawing.Color.White;
             this.btnNueva.Image = ((System.Drawing.Image)(resources.GetObject("btnNueva.Image")));
             this.btnNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNueva.Name = "btnNueva";
@@ -127,6 +129,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel1.Text = "Buscar";
@@ -138,6 +141,7 @@
             // 
             // txbImprimir
             // 
+            this.txbImprimir.ForeColor = System.Drawing.Color.White;
             this.txbImprimir.Image = ((System.Drawing.Image)(resources.GetObject("txbImprimir.Image")));
             this.txbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbImprimir.Name = "txbImprimir";
@@ -173,17 +177,7 @@
             this.dtgPartidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgPartidas.Size = new System.Drawing.Size(1056, 491);
             this.dtgPartidas.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
             // 
             // NumPartida
             // 
@@ -306,6 +300,19 @@
             this.IdJefeRegistro.ReadOnly = true;
             this.IdJefeRegistro.Visible = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(267, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // GestionPartidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +322,7 @@
             this.Controls.Add(this.dtgPartidas);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "GestionPartidas";
