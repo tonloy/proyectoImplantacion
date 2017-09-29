@@ -105,13 +105,115 @@ namespace GestionBasica.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Procesar();
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             SeleccionImagen frm = new SeleccionImagen();
             frm.Show(this);
+        }
+
+        private void Procesar()
+        {
+            CLS.PartidaNac oUsuario = new CLS.PartidaNac();
+
+            oUsuario.IdInfante = txbIdInfante.Text;
+            oUsuario.IdMadre = txtIdMadre.Text;
+            oUsuario.IdPadre = txtIdPadre.Text;
+            oUsuario.IdInformante = txtIdInformante.Text;
+            oUsuario.Folio = txbFolio.Text;
+            oUsuario.Libro = txbLibro.Text;
+            oUsuario.NumPartida = txbNumPartida.Text;
+            oUsuario.IdPartida = txbIdPartida.Text;
+            oUsuario.Ruta = pictureBox1.ImageLocation;
+
+            if (ValidarDatos())
+            {
+                if (txbIdPartida.TextLength > 0)
+                {
+                    /*Actualizando
+                    try
+                    {
+                        if (oUsuario.Actualizar())
+                        {
+                            MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }*/
+                }
+                else
+                {
+                    //Insertando
+                    try
+                    {
+                        if (oUsuario.Guardar())
+                        {
+                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (txbFolio.TextLength == 0)
+            {
+                Notificador.SetError(txbFolio, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txbLibro.TextLength == 0)
+            {
+                Notificador.SetError(txbLibro, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txbNumPartida.TextLength == 0)
+            {
+                Notificador.SetError(txbNumPartida, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txbIdInfante.TextLength == 0)
+            {
+                Notificador.SetError(button1, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtIdMadre.TextLength == 0)
+            {
+                Notificador.SetError(button2, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtIdPadre.TextLength == 0)
+            {
+                Notificador.SetError(button3, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtIdInformante.TextLength == 0)
+            {
+                Notificador.SetError(button4, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+
+            return Validado;
         }
     }
 }
