@@ -47,26 +47,27 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(260, 116);
+            this.pictureBox2.Location = new System.Drawing.Point(260, 117);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(260, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(132, 193);
+            this.btnSalir.Location = new System.Drawing.Point(161, 185);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(36, 133);
+            this.txbPassword.Location = new System.Drawing.Point(36, 125);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(200, 20);
             this.txbPassword.TabIndex = 1;
@@ -86,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 116);
+            this.label2.Location = new System.Drawing.Point(33, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 11;
@@ -102,7 +103,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(36, 193);
+            this.btnEntrar.Location = new System.Drawing.Point(36, 185);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 2;
@@ -122,7 +123,7 @@
             // chkContrasena
             // 
             this.chkContrasena.AutoSize = true;
-            this.chkContrasena.Location = new System.Drawing.Point(40, 165);
+            this.chkContrasena.Location = new System.Drawing.Point(40, 157);
             this.chkContrasena.Name = "chkContrasena";
             this.chkContrasena.Size = new System.Drawing.Size(117, 17);
             this.chkContrasena.TabIndex = 16;
@@ -144,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(337, 253);
+            this.ClientSize = new System.Drawing.Size(337, 231);
             this.Controls.Add(this.pbxFranja);
             this.Controls.Add(this.chkContrasena);
             this.Controls.Add(this.pictureBox2);
