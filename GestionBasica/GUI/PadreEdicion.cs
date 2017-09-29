@@ -66,7 +66,7 @@ namespace GestionBasica.GUI
 
             }
         }
-       
+
 
 
         private void Procesar()
@@ -87,6 +87,28 @@ namespace GestionBasica.GUI
             if (ValidarDatos())
             {
 
+                if (txtID.TextLength > 0)
+                {
+                    //Actualizando
+                    try
+                    {
+                        if (oPadre.Actualizar())
+                        {
+                            MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
                     //Insertando
                     try
                     {
@@ -105,8 +127,13 @@ namespace GestionBasica.GUI
                         MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            
+            }
         }
+
+
+
+
+       
 
         private Boolean ValidarDatos()
         {

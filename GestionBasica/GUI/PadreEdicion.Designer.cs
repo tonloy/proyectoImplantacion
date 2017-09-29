@@ -171,7 +171,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 20);
             this.label6.TabIndex = 47;
-            this.label6.Text = "Conocida por:";
+            this.label6.Text = "Conocido por:";
             // 
             // txbNombreCompleto
             // 
@@ -326,26 +326,26 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtConocidapor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbNombreCompleto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox mtxtDUI;
-        private System.Windows.Forms.ComboBox cbxMunicipio;
-        private System.Windows.Forms.TextBox txtProfesion;
-        private System.Windows.Forms.ComboBox cbxDepartamentos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label tdsdxtID;
-        private System.Windows.Forms.MaskedTextBox mskTEdad;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txtNacionalidad;
+        public System.Windows.Forms.TextBox txtDomicilio;
+        public System.Windows.Forms.TextBox txtConocidapor;
+        public System.Windows.Forms.TextBox txbNombreCompleto;
+        public System.Windows.Forms.MaskedTextBox mtxtDUI;
+        public System.Windows.Forms.ComboBox cbxMunicipio;
+        public System.Windows.Forms.TextBox txtProfesion;
+        public System.Windows.Forms.ComboBox cbxDepartamentos;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.MaskedTextBox mskTEdad;
     }
 }

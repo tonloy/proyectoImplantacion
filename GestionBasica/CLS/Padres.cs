@@ -104,5 +104,39 @@ namespace GestionBasica.CLS
             return guardado;
 
         }
+
+
+        public Boolean Actualizar()
+        {
+            Boolean actualizado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            
+            Sentencia.Append("update registro_familiar.padres set NombreCompleto = '");
+            Sentencia.Append(NombreCompleto1 + "',ConocidoPor='");
+            Sentencia.Append(ConocidoPor1 + "',Profesion='");
+            Sentencia.Append(Profesion1 + "' where idPadre=" + IdPadre + ";");
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    actualizado = true;
+                }
+                else
+                {
+                    actualizado = false;
+                }
+            }
+            catch
+            {
+                actualizado = false;
+            }
+
+            return actualizado;
+        }
+
+
+
     }
 }
