@@ -13,6 +13,7 @@ namespace App
 {
     public partial class Login : Form
     {
+        Color miColor = Color.FromArgb(6,0,88);
         Boolean _Autorizado = false;
 
         public Boolean Autorizado
@@ -49,6 +50,8 @@ namespace App
         public Login()
         {
             InitializeComponent();
+            pbxFranja.BackColor = miColor;
+
         }
 
         private void Login_Load(object sender, EventArgs e)

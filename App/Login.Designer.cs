@@ -38,8 +38,10 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.chkContrasena = new System.Windows.Forms.CheckBox();
+            this.pbxFranja = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFranja)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -55,9 +57,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(260, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -128,12 +130,22 @@
             this.chkContrasena.UseVisualStyleBackColor = true;
             this.chkContrasena.CheckStateChanged += new System.EventHandler(this.chkContrasena_CheckStateChanged);
             // 
+            // pbxFranja
+            // 
+            this.pbxFranja.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pbxFranja.Location = new System.Drawing.Point(-1, 0);
+            this.pbxFranja.Name = "pbxFranja";
+            this.pbxFranja.Size = new System.Drawing.Size(338, 41);
+            this.pbxFranja.TabIndex = 17;
+            this.pbxFranja.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(337, 261);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(337, 253);
+            this.Controls.Add(this.pbxFranja);
             this.Controls.Add(this.chkContrasena);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -143,7 +155,8 @@
             this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -152,6 +165,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFranja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +182,6 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkContrasena;
+        private System.Windows.Forms.PictureBox pbxFranja;
     }
 }

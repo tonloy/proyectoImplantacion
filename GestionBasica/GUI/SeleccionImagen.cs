@@ -21,7 +21,7 @@ namespace GestionBasica.GUI
         {
             pictureBox1.ImageLocation = ruta;
         }
-
+        //holo
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
