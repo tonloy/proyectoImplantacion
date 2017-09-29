@@ -124,6 +124,12 @@
     <Compile Include="GUI\GestionInformantes.Designer.cs">
       <DependentUpon>GestionInformantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GestionMadres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionMadres.Designer.cs">
+      <DependentUpon>GestionMadres.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GestionPadres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionInformantes.resx">
       <DependentUpon>GestionInformantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionMadres.resx">
+      <DependentUpon>GestionMadres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionPadres.resx">
       <DependentUpon>GestionPadres.cs</DependentUpon>
