@@ -13,11 +13,13 @@ namespace GestionBasica.GUI
     public partial class PadreEdicion : Form {
 
         BindingSource _Municipio = new BindingSource();
+        BindingSource _Departamentos = new BindingSource();
 
         public PadreEdicion()
         {
             InitializeComponent();
             CargarMunicipios();
+            CargarDepartamentos();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,6 +50,23 @@ namespace GestionBasica.GUI
             }
         }
 
+        private void CargarDepartamentos()
+        {
+            try
+            {
+                _Departamentos.DataSource = CacheManager1.Cache.TODOS_LOS_DEPARTAMENTOS();
+                cbxDepartamentos.DataSource = null;
+                cbxDepartamentos.DataSource = _Departamentos;
+                cbxDepartamentos.DisplayMember = "Departamento";
+                cbxDepartamentos.ValueMember = "idDepartamento";
+                cbxDepartamentos.Text = "Elija un Departamento";
+            }
+            catch
+            {
+
+            }
+        }
+       
 
 
         private void Procesar()
@@ -60,7 +79,7 @@ namespace GestionBasica.GUI
             oPadre.Edad1 = mskTEdad.Text;
             oPadre.IdMunicipio = cbxMunicipio.SelectedValue.ToString();
             oPadre.Domicilio1 = txtDomicilio.Text;
-            oPadre.Profesion = txtProfesion.Text;
+            oPadre.Profesion1 = txtProfesion.Text;
             oPadre.Nacionalidad1 = txtNacionalidad.Text;
             oPadre.DUI1 = mtxtDUI.Text;
 

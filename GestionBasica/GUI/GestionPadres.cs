@@ -53,6 +53,7 @@ namespace GestionBasica.GUI
         {
             PadreEdicion frm = new PadreEdicion();
             frm.ShowDialog();
+            CargarPadres();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

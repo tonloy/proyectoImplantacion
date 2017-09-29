@@ -216,7 +216,7 @@
             // 
             this.mskTEdad.Location = new System.Drawing.Point(218, 152);
             this.mskTEdad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.mskTEdad.Mask = "000";
+            this.mskTEdad.Mask = "00";
             this.mskTEdad.Name = "mskTEdad";
             this.mskTEdad.Size = new System.Drawing.Size(64, 26);
             this.mskTEdad.TabIndex = 66;
@@ -271,7 +271,7 @@
             // 
             this.mtxtDUI.Location = new System.Drawing.Point(218, 272);
             this.mtxtDUI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.mtxtDUI.Mask = "00000000 - 0";
+            this.mtxtDUI.Mask = "00000000-0";
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(234, 26);
             this.mtxtDUI.TabIndex = 2;
