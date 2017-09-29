@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Devices = new System.Windows.Forms.ListBox();
             this.img = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,23 +61,15 @@
             this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 0;
             // 
-            // Devices
+            // btnEnviar
             // 
-            this.Devices.FormattingEnabled = true;
-            this.Devices.Location = new System.Drawing.Point(12, 12);
-            this.Devices.Name = "Devices";
-            this.Devices.Size = new System.Drawing.Size(194, 134);
-            this.Devices.TabIndex = 0;
-            // 
-            // img
-            // 
-            this.img.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img.Location = new System.Drawing.Point(0, 0);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(432, 511);
-            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img.TabIndex = 0;
-            this.img.TabStop = false;
+            this.btnEnviar.Location = new System.Drawing.Point(12, 164);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
+            this.btnEnviar.TabIndex = 2;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // button1
             // 
@@ -89,15 +81,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnEnviar
+            // Devices
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(12, 164);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 2;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.Devices.FormattingEnabled = true;
+            this.Devices.Location = new System.Drawing.Point(12, 12);
+            this.Devices.Name = "Devices";
+            this.Devices.Size = new System.Drawing.Size(194, 134);
+            this.Devices.TabIndex = 0;
+            // 
+            // img
+            // 
+            this.img.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img.Image = global::GestionBasica.Properties.Resources.Imagen_no_disponible;
+            this.img.Location = new System.Drawing.Point(0, 0);
+            this.img.Name = "img";
+            this.img.Size = new System.Drawing.Size(432, 511);
+            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img.TabIndex = 0;
+            this.img.TabStop = false;
             // 
             // EscanearImagen
             // 

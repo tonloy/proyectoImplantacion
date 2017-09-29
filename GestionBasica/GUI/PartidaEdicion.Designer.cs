@@ -285,7 +285,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\Choche\\Pictures\\Partidas\\Nacimiento\\partida1.jpg";
+            this.pictureBox1.Image = global::GestionBasica.Properties.Resources.Imagen_no_disponible;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(275, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 101);
