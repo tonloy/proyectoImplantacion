@@ -49,7 +49,7 @@
             // 
             // btnExaminar
             // 
-            this.btnExaminar.Location = new System.Drawing.Point(128, 310);
+            this.btnExaminar.Location = new System.Drawing.Point(129, 310);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(75, 23);
             this.btnExaminar.TabIndex = 0;
