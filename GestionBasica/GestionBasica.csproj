@@ -55,6 +55,7 @@
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Padres.cs" />
+    <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
