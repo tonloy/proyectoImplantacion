@@ -127,7 +127,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(_Folio + ",");
             Sentencia.Append(_idInfante + ",");
             Sentencia.Append(_Libro + ",");
-            Sentencia.Append(_NumPartida + ",'");
+            Sentencia.Append(_NumPartida + ",\'");
             Sentencia.Append(_Ruta + "',");
             Sentencia.Append("1);");
 
