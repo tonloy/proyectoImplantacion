@@ -33,7 +33,7 @@ namespace GestionBasica.GUI
         }
 
 
-        private void CargarMunicipios()
+      /*  private void CargarMunicipios()
         {
             try
             {
@@ -49,6 +49,7 @@ namespace GestionBasica.GUI
 
             }
         }
+       */ 
 
         private void CargarDepartamentos()
         {
@@ -194,6 +195,25 @@ namespace GestionBasica.GUI
             }
 
             return Validado;
+        }
+
+        private void CargarMunicipios()
+        {
+            DataView dv = new DataView(CacheManager1.Cache.TODOS_LOS_MUNICIPIOS());
+            dv.RowFilter = "idDepartamento = " + (cbxDepartamentos.SelectedIndex + 1);
+            cbxMunicipio.DataSource = dv.ToTable();
+            cbxMunicipio.DisplayMember = "municipio";
+            cbxMunicipio.ValueMember = "idMunicipio";
+        }
+
+
+        private void cbxDepartamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxDepartamentos.Items.Count > 0)
+            {
+                CargarMunicipios();
+            }
+            
         }
 
     }
