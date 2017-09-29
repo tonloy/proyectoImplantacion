@@ -8,7 +8,7 @@ namespace GestionBasica.CLS
 {
     public class Padres
     {   
-        //atr
+        //atributos
         private string idPadre;
         private string NombreCompleto;
         private string ConocidoPor;
