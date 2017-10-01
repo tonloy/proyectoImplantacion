@@ -115,12 +115,12 @@
             this.txbInfante.Location = new System.Drawing.Point(119, 138);
             this.txbInfante.Name = "txbInfante";
             this.txbInfante.ReadOnly = true;
-            this.txbInfante.Size = new System.Drawing.Size(175, 20);
+            this.txbInfante.Size = new System.Drawing.Size(211, 20);
             this.txbInfante.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(300, 136);
+            this.button1.Location = new System.Drawing.Point(336, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -130,7 +130,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 175);
+            this.button2.Location = new System.Drawing.Point(336, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.txtNombreMadre.Location = new System.Drawing.Point(119, 177);
             this.txtNombreMadre.Name = "txtNombreMadre";
             this.txtNombreMadre.ReadOnly = true;
-            this.txtNombreMadre.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreMadre.Size = new System.Drawing.Size(211, 20);
             this.txtNombreMadre.TabIndex = 10;
             // 
             // txtIdMadre
@@ -165,7 +165,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(300, 214);
+            this.button3.Location = new System.Drawing.Point(336, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -178,7 +178,7 @@
             this.txtNombrePadre.Location = new System.Drawing.Point(119, 216);
             this.txtNombrePadre.Name = "txtNombrePadre";
             this.txtNombrePadre.ReadOnly = true;
-            this.txtNombrePadre.Size = new System.Drawing.Size(175, 20);
+            this.txtNombrePadre.Size = new System.Drawing.Size(211, 20);
             this.txtNombrePadre.TabIndex = 14;
             // 
             // txtIdPadre
@@ -200,7 +200,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(300, 252);
+            this.button4.Location = new System.Drawing.Point(336, 252);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 6;
@@ -213,7 +213,7 @@
             this.txtNombreInformante.Location = new System.Drawing.Point(119, 254);
             this.txtNombreInformante.Name = "txtNombreInformante";
             this.txtNombreInformante.ReadOnly = true;
-            this.txtNombreInformante.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreInformante.Size = new System.Drawing.Size(211, 20);
             this.txtNombreInformante.TabIndex = 18;
             // 
             // txtIdInformante
@@ -245,7 +245,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(300, 293);
+            this.button6.Location = new System.Drawing.Point(336, 293);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 8;
@@ -290,7 +290,7 @@
             // 
             this.pictureBox1.Image = global::GestionBasica.Properties.Resources.Imagen_no_disponible;
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(275, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(311, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -306,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 340);
+            this.ClientSize = new System.Drawing.Size(437, 340);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txbFolio);
             this.Controls.Add(this.label8);
@@ -374,7 +374,7 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txbFolio;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }

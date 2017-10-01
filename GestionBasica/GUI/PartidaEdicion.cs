@@ -12,6 +12,7 @@ namespace GestionBasica.GUI
 {
     public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante,IImagen
     {
+        String ruta_imagen;
         public PartidaEdicion()
         {
             InitializeComponent();
@@ -64,8 +65,11 @@ namespace GestionBasica.GUI
            txtNombreInformante.Text = Informante;
         }
 
-
-
+        private String obtenerRuta(String rtpbx)
+        {
+            ruta_imagen = rtpbx.Replace("\\","\\\\");
+            return ruta_imagen;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -162,7 +166,7 @@ namespace GestionBasica.GUI
             oUsuario.Libro = txbLibro.Text;
             oUsuario.NumPartida = txbNumPartida.Text;
             oUsuario.IdPartida = txbIdPartida.Text;
-            oUsuario.Ruta = pictureBox1.ImageLocation;
+            oUsuario.Ruta = obtenerRuta(pictureBox1.ImageLocation);
 
             if (ValidarDatos())
             {
@@ -246,6 +250,11 @@ namespace GestionBasica.GUI
             if (txtIdInformante.TextLength == 0)
             {
                 Notificador.SetError(button4, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (pictureBox1.ImageLocation.Length == 0)
+            {
+                Notificador.SetError(pictureBox1, "Seleccione una imagen");
                 Validado = false;
             }
 

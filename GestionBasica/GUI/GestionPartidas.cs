@@ -78,6 +78,7 @@ namespace GestionBasica.GUI
                 frm.txtNombreInformante.Text = dtgPartidas.CurrentRow.Cells["NombreInformante"].Value.ToString();
                 frm.txbIdInfante.Text = dtgPartidas.CurrentRow.Cells["IdInfante"].Value.ToString();
                 frm.txbInfante.Text = dtgPartidas.CurrentRow.Cells["NombreInfante"].Value.ToString();
+                frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
                 frm.ShowDialog();
                 EdicionMarginacion frm1 = new EdicionMarginacion();
                 frm1.ShowDialog();
