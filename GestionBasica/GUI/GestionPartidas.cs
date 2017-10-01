@@ -65,7 +65,19 @@ namespace GestionBasica.GUI
         {
             if (_SESION.Grupo == "Administrador")
             {
-                InfanteEdicion frm = new InfanteEdicion();
+                PartidaEdicion frm = new PartidaEdicion();
+                frm.txbIdPartida.Text = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
+                frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
+                frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
+                frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
+                frm.txtNombreMadre.Text = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();
+                frm.txtIdPadre.Text = dtgPartidas.CurrentRow.Cells["IdPadre"].Value.ToString();
+                frm.txtNombrePadre.Text = dtgPartidas.CurrentRow.Cells["NombrePadre"].Value.ToString();
+                frm.txtIdInformante.Text = dtgPartidas.CurrentRow.Cells["IdInformante"].Value.ToString();
+                frm.txtNombreInformante.Text = dtgPartidas.CurrentRow.Cells["NombreInformante"].Value.ToString();
+                frm.txbIdInfante.Text = dtgPartidas.CurrentRow.Cells["IdInfante"].Value.ToString();
+                frm.txbInfante.Text = dtgPartidas.CurrentRow.Cells["NombreInfante"].Value.ToString();
                 frm.ShowDialog();
                 EdicionMarginacion frm1 = new EdicionMarginacion();
                 frm1.ShowDialog();

@@ -153,6 +153,7 @@
             // 
             this.dtgPartidas.AllowUserToAddRows = false;
             this.dtgPartidas.AllowUserToDeleteRows = false;
+            this.dtgPartidas.AllowUserToResizeRows = false;
             this.dtgPartidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPartidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumPartida,

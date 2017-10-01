@@ -69,8 +69,17 @@ namespace GestionBasica.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GestionInfantes frm = new GestionInfantes();
-            frm.Show(this);
+            if (txbIdInfante.TextLength > 0)
+            {
+                GestionInfantes frm = new GestionInfantes();
+                frm.IdInfante1 = txbIdInfante.Text;                
+                frm.Show(this);
+            }
+            else
+            {
+                GestionInfantes frm = new GestionInfantes();
+                frm.Show(this);
+            }
 
         }
 
@@ -82,20 +91,47 @@ namespace GestionBasica.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             //Madres
-            GestionMadres frm = new GestionMadres();
-            frm.Show(this);
+            if (txtIdMadre.TextLength > 0)
+            {
+                GestionMadres frm = new GestionMadres();
+                frm.IdMadre = txtIdMadre.Text;
+                frm.Show(this);
+            }
+            else
+            {
+                GestionMadres frm = new GestionMadres();
+                frm.Show(this);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            GestionPadres frm = new GestionPadres();
-            frm.Show(this);
+            if (txtIdPadre.TextLength > 0)
+            {
+                GestionPadres frm = new GestionPadres();
+                frm.IdPadre1 = txtIdPadre.Text;
+                frm.Show(this);
+            }
+            else
+            {
+                GestionPadres frm = new GestionPadres();
+                frm.Show(this);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            GestionInformantes frm = new GestionInformantes();
-            frm.Show(this);
+            if (txtIdInformante.TextLength > 0)
+            {
+                GestionInformantes frm = new GestionInformantes();
+                frm.IdInformante1 = txtIdInformante.Text;
+                frm.Show(this);
+            }
+            else
+            {
+                GestionInformantes frm = new GestionInformantes();
+                frm.Show(this);
+            }
         }
 
         private void PartidaEdicion_Load(object sender, EventArgs e)

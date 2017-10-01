@@ -14,14 +14,32 @@ namespace GestionBasica.GUI
     public partial class GestionPadres : Form
     {
         BindingSource _GRUPOS = new BindingSource();
+        string _idPadre;
+
+        public string IdPadre1
+        {
+            get { return _idPadre; }
+            set { _idPadre = value; }
+        }
         public GestionPadres()
         {
             InitializeComponent();
+            CargarPadres();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
         private void GestionPadres_Load(object sender, EventArgs e)
         {
-            CargarPadres();
+            if (_idPadre != null)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["IdPadre"].Value.ToString() == _idPadre)
+                    {
+                        dataGridView1.ClearSelection();
+                        dataGridView1.Rows[row.Index].Selected = true;
+                    }
+                }
+            }
         }
         private void CargarPadres()
         {

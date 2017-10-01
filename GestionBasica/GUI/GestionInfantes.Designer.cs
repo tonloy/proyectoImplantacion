@@ -124,6 +124,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdInfante,
@@ -226,12 +227,12 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNumeroFilas;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdInfante;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn LugarNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

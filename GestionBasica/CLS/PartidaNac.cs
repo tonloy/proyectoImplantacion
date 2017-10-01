@@ -149,5 +149,32 @@ namespace GestionBasica.CLS
             }
             return guardado;
         }
+
+        public Boolean Actualizar()
+        {
+            Boolean actualizado = false;
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("update registro_familiar.partidas_nacimiento set NombreCompleto = '");
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    actualizado = true;
+                }
+                else
+                {
+                    actualizado = false;
+                }
+            }
+            catch
+            {
+                actualizado = false;
+            }
+
+            return actualizado;
+        }
     }
 }

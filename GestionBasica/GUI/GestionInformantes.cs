@@ -13,15 +13,33 @@ namespace GestionBasica.GUI
     public partial class GestionInformantes : Form
     {
         BindingSource _GRUPOS = new BindingSource();
+        String _idInformante;
+
+        public String IdInformante1
+        {
+            get { return _idInformante; }
+            set { _idInformante = value; }
+        }
         public GestionInformantes()
         {
             InitializeComponent();
+            CargarInformantes();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionInformantes_Load(object sender, EventArgs e)
         {
-            CargarInformantes();
+            if (_idInformante != null)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["IdInformante"].Value.ToString() == _idInformante)
+                    {
+                        dataGridView1.ClearSelection();
+                        dataGridView1.Rows[row.Index].Selected = true;
+                    }
+                }
+            }
         }
 
         private void CargarInformantes()

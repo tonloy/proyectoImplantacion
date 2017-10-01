@@ -13,15 +13,33 @@ namespace GestionBasica.GUI
     public partial class GestionInfantes : Form
     {
         BindingSource _GRUPOS = new BindingSource();
+        String _idInfante;
+
+        public String IdInfante1
+        {
+            get { return _idInfante; }
+            set { _idInfante = value; }
+        }
         public GestionInfantes()
         {
             InitializeComponent();
+            CargarInfantes();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
         }
 
         private void GestionInfantes_Load(object sender, EventArgs e)
         {
-            CargarInfantes();
+            if (_idInfante != null)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["IdInfante"].Value.ToString() == _idInfante)
+                    {
+                        dataGridView1.ClearSelection();
+                        dataGridView1.Rows[row.Index].Selected = true;
+                    }
+                }
+            }
         }
 
         private void CargarInfantes()
