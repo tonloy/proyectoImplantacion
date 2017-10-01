@@ -34,6 +34,10 @@ namespace DataLayer1
         {
             return EjecutarSentencia(pSentencia);
         }
+        public Int32 Transaccion(String pSentencia1, String pSentencia2, String pSentencia3)
+        {
+            return EjecutarTransaccion(pSentencia1, pSentencia2, pSentencia3);
+        }
         private Int32 EjecutarSentencia(String pSentencia)
         {
             Int32 NumeroFilasAfectadas = 0;
@@ -84,6 +88,39 @@ namespace DataLayer1
             }
 
             return Resultado;
+        }
+
+        private Int32 EjecutarTransaccion(String pSentencia1,String pSentencia2,String pSentencia3)
+        {
+            Int32 NumeroFilasAfectadas = 0;
+            if (base.Conectar())
+            {
+                MySqlTransaction tran = null;
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = base._CONEXION;
+                command.CommandType = CommandType.Text;
+                command.CommandTimeout = 0;
+                command.CommandText = pSentencia1;
+
+                try
+                {
+                    tran = base._CONEXION.BeginTransaction();
+                    command.Transaction = tran;
+                    NumeroFilasAfectadas += command.ExecuteNonQuery();
+                    command.CommandText = pSentencia2;
+                    NumeroFilasAfectadas += command.ExecuteNonQuery();
+                    command.CommandText = pSentencia3;
+                    NumeroFilasAfectadas += command.ExecuteNonQuery();
+                    tran.Commit();
+                }
+                catch(Exception e)
+                {
+                    tran.Rollback();
+                    NumeroFilasAfectadas = 0;
+                    MessageBox.Show(e.Message);
+                }
+            }
+            return NumeroFilasAfectadas;
         }
         public void Desconectar()
         {
