@@ -56,7 +56,7 @@ namespace CacheManager1
              infantes i,
              empleados e,
              tipo_partidas t where p.idInfante=i.idInfante and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
-             and p.idInformante=inf.idInformante;";
+             and p.idInformante=inf.idInformante and Modificada=0;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
