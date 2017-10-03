@@ -98,6 +98,8 @@ namespace GestionBasica.GUI
                 //frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
                 frm.ShowDialog();
                 EdicionMarginacion frm1 = new EdicionMarginacion();
+                frm1.txtIdPartida.Text = _Datos.IdPartidaVieja;
+                frm1.txtNumPartida.Text = _Datos.NumPartida;
                 frm1.ShowDialog();
             }
             else
