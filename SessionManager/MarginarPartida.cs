@@ -11,6 +11,13 @@ namespace SessionManager
         private static volatile MarginarPartida _Instancia = null;
         private static object Bloqueador = new Object();
 
+        String _numPartida;
+
+        public String NumPartida
+        {
+            get { return _numPartida; }
+            set { _numPartida = value; }
+        }
         String _idPartidaVieja;
 
         public String IdPartidaVieja

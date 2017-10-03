@@ -70,13 +70,15 @@ namespace GestionBasica.GUI
                 frm.button2.Enabled = false;
                 frm.button3.Enabled = false;
                 frm.button4.Enabled = false;
+                frm.Marginando = true;
                 //frm.txbIdPartida.Text = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
                 _Datos.IdPartidaVieja = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
                 //frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
                 _Datos.Libro = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
                 //frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
                 _Datos.Folio = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
-                //frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();                
+                //frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();   
+                _Datos.NumPartida = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
                 frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
                 _Datos.IdMadre = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
                 frm.txtNombreMadre.Text = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();

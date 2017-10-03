@@ -12,6 +12,13 @@ namespace GestionBasica.GUI
 {
     public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante,IImagen
     {
+        Boolean marginando = false;
+
+        public Boolean Marginando
+        {
+            get { return marginando; }
+            set { marginando = value; }
+        }
         String ruta_imagen;
         public PartidaEdicion()
         {
@@ -170,25 +177,9 @@ namespace GestionBasica.GUI
 
             if (ValidarDatos())
             {
-                if (txbIdPartida.TextLength > 0)
+                if (marginando)
                 {
-                    /*Actualizando
-                    try
-                    {
-                        if (oUsuario.Actualizar())
-                        {
-                            MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }*/
+                    Close();
                 }
                 else
                 {
