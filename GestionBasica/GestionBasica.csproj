@@ -54,6 +54,7 @@
     <Compile Include="CLS\Empleado.cs" />
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
+    <Compile Include="CLS\Marginacion.cs" />
     <Compile Include="CLS\Padres.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Scanner.cs" />

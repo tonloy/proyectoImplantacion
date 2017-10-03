@@ -13,6 +13,7 @@ namespace GestionBasica.GUI
     public partial class GestionPartidas : Form
     {
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
         BindingSource _GRUPOS = new BindingSource();
         public GestionPartidas()
         {
@@ -63,22 +64,36 @@ namespace GestionBasica.GUI
 
         private void txbModificar_Click(object sender, EventArgs e)
         {
-            if (_SESION.Grupo == "Administrador")
+            if (_SESION.Grupo == "Administrador" && (MessageBox.Show("¿Realmente desea marginar esta partida?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 PartidaEdicion frm = new PartidaEdicion();
-                frm.txbIdPartida.Text = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
-                frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
-                frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
-                frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
+                frm.button2.Enabled = false;
+                frm.button3.Enabled = false;
+                frm.button4.Enabled = false;
+                //frm.txbIdPartida.Text = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                _Datos.IdPartidaVieja = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                //frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
+                _Datos.Libro = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
+                //frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
+                _Datos.Folio = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
+                //frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();                
                 frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
+                _Datos.IdMadre = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
                 frm.txtNombreMadre.Text = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();
+                _Datos.Madre = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();
                 frm.txtIdPadre.Text = dtgPartidas.CurrentRow.Cells["IdPadre"].Value.ToString();
+                _Datos.IdPadre = dtgPartidas.CurrentRow.Cells["IdPadre"].Value.ToString();
                 frm.txtNombrePadre.Text = dtgPartidas.CurrentRow.Cells["NombrePadre"].Value.ToString();
+                _Datos.Padre = dtgPartidas.CurrentRow.Cells["NombrePadre"].Value.ToString();
                 frm.txtIdInformante.Text = dtgPartidas.CurrentRow.Cells["IdInformante"].Value.ToString();
+                _Datos.IdInformante = dtgPartidas.CurrentRow.Cells["IdInformante"].Value.ToString();
                 frm.txtNombreInformante.Text = dtgPartidas.CurrentRow.Cells["NombreInformante"].Value.ToString();
+                _Datos.Informante = dtgPartidas.CurrentRow.Cells["NombreInformante"].Value.ToString();
                 frm.txbIdInfante.Text = dtgPartidas.CurrentRow.Cells["IdInfante"].Value.ToString();
+                _Datos.IdInfante = dtgPartidas.CurrentRow.Cells["IdInfante"].Value.ToString();
                 frm.txbInfante.Text = dtgPartidas.CurrentRow.Cells["NombreInfante"].Value.ToString();
-                frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+                _Datos.Infante = dtgPartidas.CurrentRow.Cells["NombreInfante"].Value.ToString();
+                //frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
                 frm.ShowDialog();
                 EdicionMarginacion frm1 = new EdicionMarginacion();
                 frm1.ShowDialog();
@@ -87,6 +102,7 @@ namespace GestionBasica.GUI
             {
                 MessageBox.Show("¡No tiene permisos para realizar esta acción!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            CargarPartidas();
         }
 
         private void txbFiltrar_TextChanged(object sender, EventArgs e)
