@@ -13,6 +13,7 @@ namespace GestionBasica.GUI
     public partial class PartidaEdicion : Form,IInfante,IPadre,IInformante,IImagen
     {
         Boolean marginando = false;
+        SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
 
         public Boolean Marginando
         {
@@ -179,6 +180,11 @@ namespace GestionBasica.GUI
             {
                 if (marginando)
                 {
+                    _Datos.Folio = txbFolio.Text;
+                    _Datos.Libro = txbLibro.Text;
+                    _Datos.NumPartida = txbNumPartida.Text;
+                    _Datos.Ruta = obtenerRuta(pictureBox1.ImageLocation);
+
                     Close();
                 }
                 else

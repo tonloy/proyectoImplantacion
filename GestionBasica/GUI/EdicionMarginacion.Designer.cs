@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdPartida = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtExplicacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxJuzgados = new System.Windows.Forms.ComboBox();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,13 +74,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // txtExplicacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 173);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(417, 133);
-            this.textBox2.TabIndex = 1;
+            this.txtExplicacion.Location = new System.Drawing.Point(15, 173);
+            this.txtExplicacion.Multiline = true;
+            this.txtExplicacion.Name = "txtExplicacion";
+            this.txtExplicacion.Size = new System.Drawing.Size(417, 133);
+            this.txtExplicacion.TabIndex = 1;
             // 
             // label2
             // 
@@ -168,11 +171,15 @@
             this.cbxJuzgados.Size = new System.Drawing.Size(288, 21);
             this.cbxJuzgados.TabIndex = 12;
             // 
+            // Notificador
+            // 
+            this.Notificador.ContainerControl = this;
+            // 
             // EdicionMarginacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 351);
+            this.ClientSize = new System.Drawing.Size(454, 351);
             this.Controls.Add(this.cbxJuzgados);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNumPartida);
@@ -182,7 +189,7 @@
             this.Controls.Add(this.mtxtHoraSentencia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtExplicacion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdPartida);
@@ -193,6 +200,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Justificación de la Marginación";
             this.Load += new System.EventHandler(this.EdicionMarginacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +210,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtExplicacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
@@ -214,5 +222,6 @@
         private System.Windows.Forms.ComboBox cbxJuzgados;
         public System.Windows.Forms.TextBox txtIdPartida;
         public System.Windows.Forms.TextBox txtNumPartida;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

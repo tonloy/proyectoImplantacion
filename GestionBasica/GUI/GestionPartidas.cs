@@ -74,11 +74,11 @@ namespace GestionBasica.GUI
                 //frm.txbIdPartida.Text = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
                 _Datos.IdPartidaVieja = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
                 //frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
-                _Datos.Libro = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
+                
                 //frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
-                _Datos.Folio = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
+               
                 //frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();   
-                _Datos.NumPartida = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
+                
                 frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
                 _Datos.IdMadre = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
                 frm.txtNombreMadre.Text = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();
@@ -99,7 +99,7 @@ namespace GestionBasica.GUI
                 frm.ShowDialog();
                 EdicionMarginacion frm1 = new EdicionMarginacion();
                 frm1.txtIdPartida.Text = _Datos.IdPartidaVieja;
-                frm1.txtNumPartida.Text = _Datos.NumPartida;
+                frm1.txtNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
                 frm1.ShowDialog();
             }
             else

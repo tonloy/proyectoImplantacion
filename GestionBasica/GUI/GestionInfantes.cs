@@ -25,6 +25,7 @@ namespace GestionBasica.GUI
             InitializeComponent();
             CargarInfantes();
             toolStrip1.BackColor = Color.FromArgb(6, 0, 88);
+
         }
 
         private void GestionInfantes_Load(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace GestionBasica.GUI
                     if (row.Cells["IdInfante"].Value.ToString() == _idInfante)
                     {
                         dataGridView1.ClearSelection();
-                        dataGridView1.Rows[row.Index].Selected = true;
+                        dataGridView1.CurrentCell = dataGridView1.Rows[row.Index].Cells[0];
                     }
                 }
             }
@@ -47,6 +48,7 @@ namespace GestionBasica.GUI
             try
             {
                 _GRUPOS.DataSource = CacheManager1.Cache.TODOS_LOS_INFANTES();
+                dataGridView1.ClearSelection();
                 FiltrarLocalmente();
             }
             catch
@@ -66,6 +68,7 @@ namespace GestionBasica.GUI
             }
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = _GRUPOS;
+            dataGridView1.ClearSelection();
             lblNumeroFilas.Text = dataGridView1.Rows.Count.ToString() + " Registros Encontrados";
         }
 
