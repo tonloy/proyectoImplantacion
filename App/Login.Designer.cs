@@ -45,8 +45,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::App.Properties.Resources.erick_rico;
-            this.pictureBox2.Location = new System.Drawing.Point(390, 180);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::App.Properties.Resources.pass;
+            this.pictureBox2.Location = new System.Drawing.Point(390, 184);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 48);
@@ -56,7 +57,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::App.Properties.Resources.ss;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::App.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(390, 108);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
