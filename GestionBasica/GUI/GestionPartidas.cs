@@ -126,5 +126,10 @@ namespace GestionBasica.GUI
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
+
+        private void txbImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

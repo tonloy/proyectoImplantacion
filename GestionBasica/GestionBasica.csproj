@@ -204,6 +204,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\VisorPartidaNac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaNac.Designer.cs">
+      <DependentUpon>VisorPartidaNac.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +286,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\VisorPartidaNac.resx">
+      <DependentUpon>VisorPartidaNac.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -321,6 +330,10 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAT\" />
+    <Folder Include="REP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

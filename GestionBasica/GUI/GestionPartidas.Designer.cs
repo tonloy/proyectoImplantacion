@@ -148,6 +148,7 @@
             this.txbImprimir.Name = "txbImprimir";
             this.txbImprimir.Size = new System.Drawing.Size(87, 22);
             this.txbImprimir.Text = "Vista previa";
+            this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
             // dtgPartidas
             // 
