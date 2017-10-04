@@ -36,7 +36,8 @@ namespace GestionBasica.GUI
                     if (row.Cells["IdPadre"].Value.ToString() == _idPadre)
                     {
                         dataGridView1.ClearSelection();
-                        dataGridView1.Rows[row.Index].Selected = true;
+                        dataGridView1.CurrentCell = dataGridView1.Rows[row.Index].Cells[0];
+                        dataGridView1.CurrentCell.Selected = true;
                     }
                 }
             }

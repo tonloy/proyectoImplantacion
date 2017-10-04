@@ -38,6 +38,7 @@ namespace GestionBasica.GUI
                     {
                         dataGridView1.ClearSelection();
                         dataGridView1.CurrentCell = dataGridView1.Rows[row.Index].Cells[0];
+                        dataGridView1.CurrentCell.Selected = true;
                     }
                 }
             }
