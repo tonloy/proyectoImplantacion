@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosPartidaNac" targetNamespace="http://tempuri.org/DatosPartidaNac.xsd" xmlns:mstns="http://tempuri.org/DatosPartidaNac.xsd" xmlns="http://tempuri.org/DatosPartidaNac.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosPartidaNac" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosPartidaNac" msprop:Generator_UserDSName="DatosPartidaNac">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="partidas_nacimiento" msprop:Generator_TableClassName="partidas_nacimientoDataTable" msprop:Generator_TableVarName="tablepartidas_nacimiento" msprop:Generator_TablePropName="partidas_nacimiento" msprop:Generator_RowDeletingName="partidas_nacimientoRowDeleting" msprop:Generator_RowChangingName="partidas_nacimientoRowChanging" msprop:Generator_RowEvHandlerName="partidas_nacimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="partidas_nacimientoRowDeleted" msprop:Generator_UserTableName="partidas_nacimiento" msprop:Generator_RowChangedName="partidas_nacimientoRowChanged" msprop:Generator_RowEvArgName="partidas_nacimientoRowChangeEvent" msprop:Generator_RowClassName="partidas_nacimientoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPartida" msprop:Generator_ColumnVarNameInTable="columnidPartida" msprop:Generator_ColumnPropNameInRow="idPartida" msprop:Generator_ColumnPropNameInTable="idPartidaColumn" msprop:Generator_UserColumnName="idPartida" type="xs:string" minOccurs="0" />
+              <xs:element name="idMadre" msprop:Generator_ColumnVarNameInTable="columnidMadre" msprop:Generator_ColumnPropNameInRow="idMadre" msprop:Generator_ColumnPropNameInTable="idMadreColumn" msprop:Generator_UserColumnName="idMadre" type="xs:string" minOccurs="0" />
+              <xs:element name="idPadre" msprop:Generator_ColumnVarNameInTable="columnidPadre" msprop:Generator_ColumnPropNameInRow="idPadre" msprop:Generator_ColumnPropNameInTable="idPadreColumn" msprop:Generator_UserColumnName="idPadre" type="xs:string" minOccurs="0" />
+              <xs:element name="idInformante" msprop:Generator_ColumnVarNameInTable="columnidInformante" msprop:Generator_ColumnPropNameInRow="idInformante" msprop:Generator_ColumnPropNameInTable="idInformanteColumn" msprop:Generator_UserColumnName="idInformante" type="xs:string" minOccurs="0" />
+              <xs:element name="idJefeRegistro" msprop:Generator_ColumnVarNameInTable="columnidJefeRegistro" msprop:Generator_ColumnPropNameInRow="idJefeRegistro" msprop:Generator_ColumnPropNameInTable="idJefeRegistroColumn" msprop:Generator_UserColumnName="idJefeRegistro" type="xs:string" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:string" minOccurs="0" />
+              <xs:element name="idInfante" msprop:Generator_ColumnVarNameInTable="columnidInfante" msprop:Generator_ColumnPropNameInRow="idInfante" msprop:Generator_ColumnPropNameInTable="idInfanteColumn" msprop:Generator_UserColumnName="idInfante" type="xs:string" minOccurs="0" />
+              <xs:element name="Libro" msprop:Generator_ColumnVarNameInTable="columnLibro" msprop:Generator_ColumnPropNameInRow="Libro" msprop:Generator_ColumnPropNameInTable="LibroColumn" msprop:Generator_UserColumnName="Libro" type="xs:string" minOccurs="0" />
+              <xs:element name="NumPartida" msprop:Generator_ColumnVarNameInTable="columnNumPartida" msprop:Generator_ColumnPropNameInRow="NumPartida" msprop:Generator_ColumnPropNameInTable="NumPartidaColumn" msprop:Generator_UserColumnName="NumPartida" type="xs:string" minOccurs="0" />
+              <xs:element name="Hora_sentencia" msprop:Generator_ColumnVarNameInTable="columnHora_sentencia" msprop:Generator_ColumnPropNameInRow="Hora_sentencia" msprop:Generator_ColumnPropNameInTable="Hora_sentenciaColumn" msprop:Generator_UserColumnName="Hora_sentencia" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_sentencia" msprop:Generator_ColumnVarNameInTable="columnFecha_sentencia" msprop:Generator_ColumnPropNameInRow="Fecha_sentencia" msprop:Generator_ColumnPropNameInTable="Fecha_sentenciaColumn" msprop:Generator_UserColumnName="Fecha_sentencia" type="xs:string" minOccurs="0" />
+              <xs:element name="idJuzgado" msprop:Generator_ColumnVarNameInTable="columnidJuzgado" msprop:Generator_ColumnPropNameInRow="idJuzgado" msprop:Generator_ColumnPropNameInTable="idJuzgadoColumn" msprop:Generator_UserColumnName="idJuzgado" type="xs:string" minOccurs="0" />
+              <xs:element name="Ruta" msprop:Generator_ColumnVarNameInTable="columnRuta" msprop:Generator_ColumnPropNameInRow="Ruta" msprop:Generator_ColumnPropNameInTable="RutaColumn" msprop:Generator_UserColumnName="Ruta" type="xs:string" minOccurs="0" />
+              <xs:element name="idTipo_partida" msprop:Generator_ColumnVarNameInTable="columnidTipo_partida" msprop:Generator_ColumnPropNameInRow="idTipo_partida" msprop:Generator_ColumnPropNameInTable="idTipo_partidaColumn" msprop:Generator_UserColumnName="idTipo_partida" type="xs:string" minOccurs="0" />
+              <xs:element name="Modificada" msprop:Generator_ColumnVarNameInTable="columnModificada" msprop:Generator_ColumnPropNameInRow="Modificada" msprop:Generator_ColumnPropNameInTable="ModificadaColumn" msprop:Generator_UserColumnName="Modificada" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

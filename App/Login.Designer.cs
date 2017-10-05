@@ -47,10 +47,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::App.Properties.Resources.pass;
-            this.pictureBox2.Location = new System.Drawing.Point(390, 184);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(260, 120);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -59,10 +58,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::App.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(390, 108);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -74,10 +72,10 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalir.Location = new System.Drawing.Point(242, 285);
+            this.btnSalir.Location = new System.Drawing.Point(170, 185);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(0);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 35);
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -85,10 +83,9 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(54, 192);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbPassword.Location = new System.Drawing.Point(45, 125);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(298, 26);
+            this.txbPassword.Size = new System.Drawing.Size(200, 20);
             this.txbPassword.TabIndex = 1;
             this.txbPassword.UseSystemPasswordChar = true;
             this.txbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbPassword_KeyDown);
@@ -99,19 +96,17 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(50, 166);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(42, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Contraseña";
             // 
             // txbUsuario
             // 
-            this.txbUsuario.Location = new System.Drawing.Point(54, 117);
-            this.txbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbUsuario.Location = new System.Drawing.Point(45, 76);
             this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.Size = new System.Drawing.Size(298, 26);
+            this.txbUsuario.Size = new System.Drawing.Size(200, 20);
             this.txbUsuario.TabIndex = 0;
             this.txbUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbUsuario_KeyDown);
             // 
@@ -121,10 +116,9 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEntrar.Location = new System.Drawing.Point(54, 285);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEntrar.Location = new System.Drawing.Point(45, 185);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(112, 35);
+            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -136,10 +130,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(50, 91);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(42, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Usuario";
             // 
@@ -149,10 +142,9 @@
             this.chkContrasena.BackColor = System.Drawing.Color.Transparent;
             this.chkContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkContrasena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chkContrasena.Location = new System.Drawing.Point(60, 242);
-            this.chkContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkContrasena.Location = new System.Drawing.Point(49, 157);
             this.chkContrasena.Name = "chkContrasena";
-            this.chkContrasena.Size = new System.Drawing.Size(191, 24);
+            this.chkContrasena.Size = new System.Drawing.Size(135, 17);
             this.chkContrasena.TabIndex = 16;
             this.chkContrasena.Text = "Mostrar contraseña";
             this.chkContrasena.UseVisualStyleBackColor = false;
@@ -161,20 +153,19 @@
             // pbxFranja
             // 
             this.pbxFranja.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pbxFranja.Location = new System.Drawing.Point(-2, 0);
-            this.pbxFranja.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbxFranja.Location = new System.Drawing.Point(-1, 0);
             this.pbxFranja.Name = "pbxFranja";
-            this.pbxFranja.Size = new System.Drawing.Size(507, 63);
+            this.pbxFranja.Size = new System.Drawing.Size(338, 41);
             this.pbxFranja.TabIndex = 17;
             this.pbxFranja.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::App.Properties.Resources.fondo;
-            this.ClientSize = new System.Drawing.Size(506, 355);
+            this.ClientSize = new System.Drawing.Size(337, 231);
             this.Controls.Add(this.pbxFranja);
             this.Controls.Add(this.chkContrasena);
             this.Controls.Add(this.pictureBox2);
@@ -187,7 +178,6 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

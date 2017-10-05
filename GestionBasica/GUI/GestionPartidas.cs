@@ -129,7 +129,9 @@ namespace GestionBasica.GUI
 
         private void txbImprimir_Click(object sender, EventArgs e)
         {
-
+            Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
+            frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+            frm.ShowDialog();
         }
     }
 }

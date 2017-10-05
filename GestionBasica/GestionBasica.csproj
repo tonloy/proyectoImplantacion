@@ -60,6 +60,11 @@
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
+    <Compile Include="DAT\DatosPartidaNac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +215,12 @@
     <Compile Include="Reportes\VisorPartidaNac.Designer.cs">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </Compile>
+    <Compile Include="REP\VistaPreviaPartidaNac.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaPreviaPartidaNac.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +300,21 @@
     <EmbeddedResource Include="Reportes\VisorPartidaNac.resx">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REP\VistaPreviaPartidaNac.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VistaPreviaPartidaNac.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DAT\DatosPartidaNac.xsc">
+      <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\DatosPartidaNac.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosPartidaNac.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\DatosPartidaNac.xss">
+      <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -331,9 +357,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DAT\" />
-    <Folder Include="REP\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
