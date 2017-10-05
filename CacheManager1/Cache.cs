@@ -13,7 +13,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "SELECT a.idUsuario,a.Usuario,a.Credencial,a.idEmpleado,e.NombreCompleto,a.idRol,g.Rol FROM usuarios a,empleados e,roles g WHERE a.idEmpleado=e.idEmpleado AND a.idRol=g.idRol AND a.Usuario='" + pUsuario + "' AND a.Credencial=md5('" + pCredencial + "')";
+            Consulta = "SELECT a.idUsuario,a.Usuario,a.Credencial,a.idEmpleado,e.NombreCompleto,a.idRol,g.Rol FROM usuarios a,empleados e,roles g WHERE a.idEmpleado=e.idEmpleado AND a.idRol=g.idRol AND binary a.Usuario='" + pUsuario + "' AND a.Credencial=md5('" + pCredencial + "')";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
