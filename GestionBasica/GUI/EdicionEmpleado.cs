@@ -122,5 +122,18 @@ namespace GestionBasica.GUI
         {
             Procesar();
         }
+
+        private void txbNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space)) {
+                Notificador.SetError(txbNombreCompleto, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
     }
 }

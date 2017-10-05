@@ -94,8 +94,8 @@
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(110, 28);
-            this.txbNueva.Text = "Agregar Padre";
+            this.txbNueva.Size = new System.Drawing.Size(114, 28);
+            this.txbNueva.Text = "Agregar Madre";
             this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar

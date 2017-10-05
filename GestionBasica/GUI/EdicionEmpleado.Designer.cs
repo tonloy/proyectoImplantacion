@@ -62,8 +62,9 @@
             // 
             this.txbNombreCompleto.Location = new System.Drawing.Point(25, 75);
             this.txbNombreCompleto.Name = "txbNombreCompleto";
-            this.txbNombreCompleto.Size = new System.Drawing.Size(192, 20);
+            this.txbNombreCompleto.Size = new System.Drawing.Size(246, 20);
             this.txbNombreCompleto.TabIndex = 0;
+            this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
             // 
             // label2
             // 
@@ -88,12 +89,12 @@
             this.cbxCargos.FormattingEnabled = true;
             this.cbxCargos.Location = new System.Drawing.Point(25, 114);
             this.cbxCargos.Name = "cbxCargos";
-            this.cbxCargos.Size = new System.Drawing.Size(192, 21);
+            this.cbxCargos.Size = new System.Drawing.Size(246, 21);
             this.cbxCargos.TabIndex = 1;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(54, 167);
+            this.btnGuardar.Location = new System.Drawing.Point(108, 155);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 2;
@@ -103,7 +104,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(142, 167);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 155);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 3;
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(247, 213);
+            this.ClientSize = new System.Drawing.Size(297, 203);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cbxCargos);

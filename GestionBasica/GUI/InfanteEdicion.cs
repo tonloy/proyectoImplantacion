@@ -19,7 +19,7 @@ namespace GestionBasica.GUI
             List<TextBox> tList = new List<TextBox>();
             List<string> sList = new List<string>();
             tList.Add(txtHora);
-            sList.Add("e.j ocho horas veinte minutos del dia diez de enero de dos mil diesiocho");
+            sList.Add("p. ej. ocho horas veinte minutos del dia diez de enero de dos mil diesiocho");
             SetCueBanner(ref tList, sList);
         }
 
@@ -144,6 +144,20 @@ namespace GestionBasica.GUI
         private void InfanteEdicion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtNombreCompleto, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
         }
     }
 }

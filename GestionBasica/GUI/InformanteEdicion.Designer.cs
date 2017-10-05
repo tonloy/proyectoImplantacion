@@ -111,6 +111,7 @@
             this.txtConocidapor.Name = "txtConocidapor";
             this.txtConocidapor.Size = new System.Drawing.Size(440, 20);
             this.txtConocidapor.TabIndex = 2;
+            this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
             // 
             // label6
             // 
@@ -119,7 +120,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 73;
-            this.label6.Text = "Conocida por:";
+            this.label6.Text = "Conocido por:";
             // 
             // txtNombreCompleto
             // 
@@ -127,6 +128,7 @@
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(440, 20);
             this.txtNombreCompleto.TabIndex = 1;
+            this.txtNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCompleto_KeyPress);
             // 
             // label5
             // 
@@ -207,7 +209,7 @@
             this.MaximizeBox = false;
             this.Name = "InformanteEdicion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edicion de Partida de Nacimiento";
+            this.Text = "Edición de Partida de Nacimiento";
             this.Load += new System.EventHandler(this.InformanteEdicion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

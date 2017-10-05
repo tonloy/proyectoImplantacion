@@ -143,6 +143,34 @@ namespace GestionBasica.GUI
 
             return Validado;
         }
+
+        private void txtNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtNombreCompleto, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txtConocidapor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtConocidapor, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
     }
 
 }

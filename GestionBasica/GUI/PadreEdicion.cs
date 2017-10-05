@@ -216,5 +216,66 @@ namespace GestionBasica.GUI
             
         }
 
+        private void PadreEdicion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txbNombreCompleto, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txtConocidapor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtConocidapor, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txtProfesion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtProfesion, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txtNacionalidad, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
     }
 }
