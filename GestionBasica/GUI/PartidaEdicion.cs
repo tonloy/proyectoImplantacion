@@ -154,6 +154,27 @@ namespace GestionBasica.GUI
         private void button5_Click(object sender, EventArgs e)
         {
             Procesar();
+            Operaciones();
+        }
+
+        private void Operaciones()
+        {
+            CLS.Operaciones oUsuario = new CLS.Operaciones();
+            try
+            {
+                if (oUsuario.Guardar(1))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)

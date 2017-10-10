@@ -12,7 +12,13 @@ namespace GestionBasica.Reportes
 {
     public partial class VisorPartidaNac : Form
     {
-        
+        String _idPartida;
+
+        public String IdPartida
+        {
+            get { return _idPartida; }
+            set { _idPartida = value; }
+        }
         public VisorPartidaNac()
         {
             InitializeComponent();
@@ -33,7 +39,29 @@ namespace GestionBasica.Reportes
 
             if (myPrinDialog1.ShowDialog() == DialogResult.OK)
             {
-                myPrintDocument1.Print();
+               myPrintDocument1.Print();
+            }
+            Operaciones();
+        }
+
+        private void Operaciones()
+        {
+            CLS.Operaciones oUsuario = new CLS.Operaciones();
+            oUsuario.IdPartida = _idPartida;
+            try
+            {
+                if (oUsuario.Guardar(2))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

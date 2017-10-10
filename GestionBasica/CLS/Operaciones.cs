@@ -65,12 +65,45 @@ namespace GestionBasica.CLS
             set { _Costo = value; }
         }
 
-        public Boolean Guardar()
+        public Boolean Guardar(Int32 ope)
         {
+            //1 nueva partida de nacimiento
+            //2 imprimir partida de nacimiento
+            //3 nueva partida de matrimonio
+            //4 imprimir partida de matrimonio
+            //5 nueva partida de divorcio
+            //6 imprimir partida de divorcio
+            //7 nueva partida de defuncion
+            //8 imprimir partida de defuncion
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
+            switch (ope)
+            {
+                case 1:
+                    Sentencia.Append("INSERT INTO operaciones(Tipo, idPartida, Costo) VALUES(");
+                    Sentencia.Append("'Nueva partida de nacimiento',(SELECT idPartida FROM registro_familiar.partidas_nacimiento order by idPartida desc limit 1),0);");
+                    break;
+                case 2:
+                    Sentencia.Append("INSERT INTO operaciones(Tipo, idPartida, Costo) VALUES(");
+                    Sentencia.Append("'Impresión de partida de nacimiento'," + _idPartida + ",(SELECT Monto FROM registro_familiar.costos where idTipo_partida=1));");
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                default:
+                    Sentencia.Append("INSERT INTO operaciones(Tipo, idPartida, Costo) VALUES(");
+                    break;
 
-            Sentencia.Append("INSERT INTO empleados(NombreCompleto,idCargo) VALUES(");
+            }            
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

@@ -131,6 +131,7 @@ namespace GestionBasica.GUI
         {
             Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
             frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+            frm.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
             frm.ShowDialog();
         }
     }
