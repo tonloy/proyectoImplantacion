@@ -47,9 +47,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::App.Properties.Resources.pass;
-            this.pictureBox2.Location = new System.Drawing.Point(260, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(260, 116);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -58,9 +58,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::App.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
