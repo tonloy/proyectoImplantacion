@@ -133,5 +133,10 @@ namespace GestionBasica.GUI
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
         }
+
+        private void txbFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarLocalmente();
+        }
     }
 }

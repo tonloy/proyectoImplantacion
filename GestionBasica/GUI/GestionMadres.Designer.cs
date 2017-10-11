@@ -104,6 +104,7 @@
             this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltrar.Name = "txbFiltrar";
             this.txbFiltrar.Size = new System.Drawing.Size(200, 31);
+            this.txbFiltrar.TextChanged += new System.EventHandler(this.txbFiltrar_TextChanged);
             // 
             // toolStripLabel1
             // 
