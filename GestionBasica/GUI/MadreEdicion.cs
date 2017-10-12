@@ -254,5 +254,29 @@ namespace GestionBasica.GUI
                 Notificador.Clear();
             }
         }
+
+        private void txbNombreCompleto_Leave(object sender, EventArgs e)
+        {
+            if (txbNombreCompleto.TextLength > 0)
+            {
+                txbNombreCompleto.Text = txbNombreCompleto.Text.ToUpper();
+            }
+        }
+
+        private void txtConocidapor_Leave(object sender, EventArgs e)
+        {
+            if (txtConocidapor.TextLength > 0)
+            {
+                txtConocidapor.Text = txtConocidapor.Text.ToUpper();
+            }
+        }
+
+        private void txtDomicilio_Leave(object sender, EventArgs e)
+        {
+            if (txtDomicilio.TextLength > 0)
+            {
+                txtDomicilio.Text = txtDomicilio.Text.ToUpper();
+            }
+        }
     }
 }

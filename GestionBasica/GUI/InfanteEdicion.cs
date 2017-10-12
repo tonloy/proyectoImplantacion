@@ -13,6 +13,7 @@ namespace GestionBasica.GUI
 {
     public partial class InfanteEdicion : Form
     {
+        public static Boolean marginando = false;
         Int32 _revisado = 0;
         BindingSource _Municipio = new BindingSource();
         BindingSource _Departamentos = new BindingSource();
@@ -171,7 +172,10 @@ namespace GestionBasica.GUI
 
         private void InfanteEdicion_Load(object sender, EventArgs e)
         {
-
+            if (marginando)
+            {
+                txtNombreCompleto.ReadOnly = false;
+            }
         }
 
         private void txtNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)

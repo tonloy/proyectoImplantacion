@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.button3 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDomicilio = new System.Windows.Forms.TextBox();
@@ -43,8 +42,10 @@
             this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxPaises = new System.Windows.Forms.ComboBox();
+            this.cbxProfesiones = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.mskTEdad = new System.Windows.Forms.MaskedTextBox();
-            this.txtProfesion = new System.Windows.Forms.TextBox();
             this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -76,14 +76,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtNacionalidad
-            // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(408, 151);
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(177, 20);
-            this.txtNacionalidad.TabIndex = 7;
-            this.txtNacionalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNacionalidad_KeyPress);
             // 
             // label11
             // 
@@ -109,6 +101,7 @@
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(440, 20);
             this.txtDomicilio.TabIndex = 5;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // label9
             // 
@@ -141,9 +134,10 @@
             // 
             this.txtConocidapor.Location = new System.Drawing.Point(145, 74);
             this.txtConocidapor.Name = "txtConocidapor";
-            this.txtConocidapor.Size = new System.Drawing.Size(440, 20);
+            this.txtConocidapor.Size = new System.Drawing.Size(157, 20);
             this.txtConocidapor.TabIndex = 1;
             this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
+            this.txtConocidapor.Leave += new System.EventHandler(this.txtConocidapor_Leave);
             // 
             // label6
             // 
@@ -161,6 +155,7 @@
             this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
             this.txbNombreCompleto.TabIndex = 0;
             this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
+            this.txbNombreCompleto.Leave += new System.EventHandler(this.txbNombreCompleto_Leave);
             // 
             // label5
             // 
@@ -173,12 +168,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxPaises);
+            this.groupBox1.Controls.Add(this.cbxProfesiones);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.mskTEdad);
-            this.groupBox1.Controls.Add(this.txtProfesion);
             this.groupBox1.Controls.Add(this.cbxDepartamentos);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtNacionalidad);
             this.groupBox1.Controls.Add(this.txtDomicilio);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.tdsdxtID);
@@ -194,6 +189,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Padre";
             // 
+            // cbxPaises
+            // 
+            this.cbxPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPaises.FormattingEnabled = true;
+            this.cbxPaises.Location = new System.Drawing.Point(408, 150);
+            this.cbxPaises.Name = "cbxPaises";
+            this.cbxPaises.Size = new System.Drawing.Size(177, 21);
+            this.cbxPaises.TabIndex = 89;
+            // 
+            // cbxProfesiones
+            // 
+            this.cbxProfesiones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProfesiones.FormattingEnabled = true;
+            this.cbxProfesiones.Location = new System.Drawing.Point(145, 150);
+            this.cbxProfesiones.Name = "cbxProfesiones";
+            this.cbxProfesiones.Size = new System.Drawing.Size(157, 21);
+            this.cbxProfesiones.TabIndex = 88;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(32, 174);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 26);
+            this.label12.TabIndex = 87;
+            this.label12.Text = "Documento Unico \r\nde Identidad (DUI):";
+            // 
             // mskTEdad
             // 
             this.mskTEdad.Location = new System.Drawing.Point(145, 99);
@@ -202,27 +224,20 @@
             this.mskTEdad.Size = new System.Drawing.Size(44, 20);
             this.mskTEdad.TabIndex = 2;
             // 
-            // txtProfesion
-            // 
-            this.txtProfesion.Location = new System.Drawing.Point(145, 151);
-            this.txtProfesion.Name = "txtProfesion";
-            this.txtProfesion.Size = new System.Drawing.Size(155, 20);
-            this.txtProfesion.TabIndex = 6;
-            this.txtProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfesion_KeyPress);
-            // 
             // cbxDepartamentos
             // 
+            this.cbxDepartamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDepartamentos.FormattingEnabled = true;
-            this.cbxDepartamentos.Location = new System.Drawing.Point(284, 98);
+            this.cbxDepartamentos.Location = new System.Drawing.Point(278, 98);
             this.cbxDepartamentos.Name = "cbxDepartamentos";
-            this.cbxDepartamentos.Size = new System.Drawing.Size(120, 21);
+            this.cbxDepartamentos.Size = new System.Drawing.Size(126, 21);
             this.cbxDepartamentos.TabIndex = 3;
             this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 101);
+            this.label1.Location = new System.Drawing.Point(205, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 65;
@@ -255,6 +270,7 @@
             // 
             // cbxMunicipio
             // 
+            this.cbxMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMunicipio.FormattingEnabled = true;
             this.cbxMunicipio.Location = new System.Drawing.Point(463, 99);
             this.cbxMunicipio.Name = "cbxMunicipio";
@@ -264,15 +280,6 @@
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 174);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 26);
-            this.label12.TabIndex = 87;
-            this.label12.Text = "Documento Unico \r\nde Identidad (DUI):";
             // 
             // PadreEdicion
             // 
@@ -317,16 +324,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tdsdxtID;
         private System.Windows.Forms.ErrorProvider Notificador;
-        public System.Windows.Forms.TextBox txtNacionalidad;
         public System.Windows.Forms.TextBox txtDomicilio;
         public System.Windows.Forms.TextBox txtConocidapor;
         public System.Windows.Forms.TextBox txbNombreCompleto;
         public System.Windows.Forms.MaskedTextBox mtxtDUI;
         public System.Windows.Forms.ComboBox cbxMunicipio;
-        public System.Windows.Forms.TextBox txtProfesion;
         public System.Windows.Forms.ComboBox cbxDepartamentos;
         public System.Windows.Forms.TextBox txtID;
         public System.Windows.Forms.MaskedTextBox mskTEdad;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ComboBox cbxPaises;
+        public System.Windows.Forms.ComboBox cbxProfesiones;
     }
 }

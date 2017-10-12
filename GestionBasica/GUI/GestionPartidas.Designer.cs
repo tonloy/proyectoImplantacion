@@ -174,6 +174,7 @@
             this.IdJefeRegistro});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
+            this.dtgPartidas.MultiSelect = false;
             this.dtgPartidas.Name = "dtgPartidas";
             this.dtgPartidas.ReadOnly = true;
             this.dtgPartidas.RowHeadersVisible = false;
@@ -277,7 +278,7 @@
             this.NombrePadre.HeaderText = "Nombre Padre";
             this.NombrePadre.Name = "NombrePadre";
             this.NombrePadre.ReadOnly = true;
-            this.NombrePadre.Width = 180;
+            this.NombrePadre.Width = 200;
             // 
             // IdInformante
             // 

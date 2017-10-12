@@ -1,6 +1,6 @@
 ﻿namespace GestionBasica.GUI
 {
-    partial class GestionEmpleados
+    partial class GestionPaises
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionEmpleados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionPaises));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbNueva = new System.Windows.Forms.ToolStripButton();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtgEmpleados = new System.Windows.Forms.DataGridView();
-            this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nacionalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.txbModificar = new System.Windows.Forms.ToolStripButton();
+            this.txbNueva = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).BeginInit();
@@ -64,56 +63,26 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
-            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Size = new System.Drawing.Size(540, 25);
+            this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(70, 22);
-            this.toolStripButton1.Text = "Eliminar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // txbModificar
-            // 
-            this.txbModificar.ForeColor = System.Drawing.Color.White;
-            this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
-            this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbModificar.Name = "txbModificar";
-            this.txbModificar.Size = new System.Drawing.Size(78, 22);
-            this.txbModificar.Text = "Modificar";
-            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // txbNueva
-            // 
-            this.txbNueva.ForeColor = System.Drawing.Color.White;
-            this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
-            this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(69, 22);
-            this.txbNueva.Text = "Agregar";
-            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
             // 
             this.txbFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltrar.Name = "txbFiltrar";
-            this.txbFiltrar.Size = new System.Drawing.Size(200, 25);
+            this.txbFiltrar.Size = new System.Drawing.Size(150, 25);
             this.txbFiltrar.TextChanged += new System.EventHandler(this.txbFiltrar_TextChanged);
             // 
             // toolStripLabel1
@@ -133,10 +102,10 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 311);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(532, 22);
-            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Size = new System.Drawing.Size(540, 22);
+            this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblNumeroFilas
@@ -152,10 +121,9 @@
             this.dtgEmpleados.AllowUserToResizeRows = false;
             this.dtgEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdEmpleado,
-            this.NombreCompleto,
-            this.IdCargo,
-            this.Cargo});
+            this.IdPais,
+            this.Pais,
+            this.Nacionalidad});
             this.dtgEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgEmpleados.Location = new System.Drawing.Point(0, 25);
             this.dtgEmpleados.MultiSelect = false;
@@ -163,56 +131,78 @@
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(532, 333);
-            this.dtgEmpleados.TabIndex = 6;
+            this.dtgEmpleados.Size = new System.Drawing.Size(540, 286);
+            this.dtgEmpleados.TabIndex = 8;
             this.dtgEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmpleados_CellFormatting);
             // 
-            // IdEmpleado
+            // IdPais
             // 
-            this.IdEmpleado.DataPropertyName = "idEmpleado";
-            this.IdEmpleado.HeaderText = "ID";
-            this.IdEmpleado.Name = "IdEmpleado";
-            this.IdEmpleado.ReadOnly = true;
-            this.IdEmpleado.Width = 50;
+            this.IdPais.DataPropertyName = "idPais";
+            this.IdPais.HeaderText = "ID";
+            this.IdPais.Name = "IdPais";
+            this.IdPais.ReadOnly = true;
+            this.IdPais.Width = 50;
             // 
-            // NombreCompleto
+            // Pais
             // 
-            this.NombreCompleto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NombreCompleto.DataPropertyName = "NombreCompleto";
-            this.NombreCompleto.HeaderText = "Nombre completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
+            this.Pais.DataPropertyName = "Pais";
+            this.Pais.HeaderText = "País";
+            this.Pais.Name = "Pais";
+            this.Pais.ReadOnly = true;
+            this.Pais.Width = 200;
             // 
-            // IdCargo
+            // Nacionalidad
             // 
-            this.IdCargo.DataPropertyName = "idCargo";
-            this.IdCargo.HeaderText = "IdCargo";
-            this.IdCargo.Name = "IdCargo";
-            this.IdCargo.ReadOnly = true;
-            this.IdCargo.Visible = false;
+            this.Nacionalidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nacionalidad.DataPropertyName = "Nacionalidad";
+            this.Nacionalidad.HeaderText = "Nacionalidad";
+            this.Nacionalidad.Name = "Nacionalidad";
+            this.Nacionalidad.ReadOnly = true;
             // 
-            // Cargo
+            // toolStripButton1
             // 
-            this.Cargo.DataPropertyName = "Cargo";
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.ReadOnly = true;
-            this.Cargo.Width = 200;
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButton1.Text = "Eliminar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // GestionEmpleados
+            // txbModificar
+            // 
+            this.txbModificar.ForeColor = System.Drawing.Color.White;
+            this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
+            this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txbModificar.Name = "txbModificar";
+            this.txbModificar.Size = new System.Drawing.Size(78, 22);
+            this.txbModificar.Text = "Modificar";
+            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
+            // 
+            // txbNueva
+            // 
+            this.txbNueva.ForeColor = System.Drawing.Color.White;
+            this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
+            this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txbNueva.Name = "txbNueva";
+            this.txbNueva.Size = new System.Drawing.Size(69, 22);
+            this.txbNueva.Text = "Agregar";
+            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
+            // 
+            // GestionPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 380);
+            this.ClientSize = new System.Drawing.Size(540, 333);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.Name = "GestionEmpleados";
+            this.Name = "GestionPaises";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestión de Empleados";
-            this.Load += new System.EventHandler(this.GestionEmpleados_Load);
+            this.Text = "GestionPaises";
+            this.Load += new System.EventHandler(this.GestionPaises_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -226,20 +216,19 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton txbModificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton txbNueva;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNumeroFilas;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.DataGridView dtgEmpleados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nacionalidad;
     }
 }

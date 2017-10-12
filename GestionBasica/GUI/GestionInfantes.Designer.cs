@@ -167,7 +167,7 @@
             this.Nombre.HeaderText = "Nombre completo";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
+            this.Nombre.Width = 300;
             // 
             // LugarNac
             // 
@@ -175,7 +175,7 @@
             this.LugarNac.HeaderText = "Lugar de nacimiento";
             this.LugarNac.Name = "LugarNac";
             this.LugarNac.ReadOnly = true;
-            this.LugarNac.Width = 150;
+            this.LugarNac.Width = 200;
             // 
             // Sexo
             // 

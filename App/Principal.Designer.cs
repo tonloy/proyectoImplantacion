@@ -43,16 +43,18 @@
             this.permisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblNombreEmpleado = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.conectado = new System.Windows.Forms.ToolStripStatusLabel();
-            this.desconectado = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
+            this.profesionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.conectado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.desconectado = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,9 @@
             this.gestionarToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarEmpleadosToolStripMenuItem,
-            this.gestionarUsuariosToolStripMenuItem});
+            this.gestionarUsuariosToolStripMenuItem,
+            this.profesionesToolStripMenuItem,
+            this.nacionalidadesToolStripMenuItem});
             this.gestionarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.gestionarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
@@ -88,7 +92,7 @@
             // 
             this.gestionarEmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
-            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.gestionarEmpleadosToolStripMenuItem.Text = "Empleados";
             this.gestionarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.gestionarEmpleadosToolStripMenuItem_Click);
             // 
@@ -96,7 +100,7 @@
             // 
             this.gestionarUsuariosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.gestionarUsuariosToolStripMenuItem.Text = "Usuarios";
             this.gestionarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuariosToolStripMenuItem_Click);
             // 
@@ -114,14 +118,14 @@
             // agregarPartidaToolStripMenuItem
             // 
             this.agregarPartidaToolStripMenuItem.Name = "agregarPartidaToolStripMenuItem";
-            this.agregarPartidaToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.agregarPartidaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.agregarPartidaToolStripMenuItem.Text = "Gestionar partidas";
             this.agregarPartidaToolStripMenuItem.Click += new System.EventHandler(this.agregarPartidaToolStripMenuItem_Click);
             // 
             // partidasEscaneadasToolStripMenuItem
             // 
             this.partidasEscaneadasToolStripMenuItem.Name = "partidasEscaneadasToolStripMenuItem";
-            this.partidasEscaneadasToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.partidasEscaneadasToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.partidasEscaneadasToolStripMenuItem.Text = "Partidas escaneadas";
             this.partidasEscaneadasToolStripMenuItem.Click += new System.EventHandler(this.partidasEscaneadasToolStripMenuItem_Click);
             // 
@@ -138,7 +142,7 @@
             // reporteDeOperacionesToolStripMenuItem
             // 
             this.reporteDeOperacionesToolStripMenuItem.Name = "reporteDeOperacionesToolStripMenuItem";
-            this.reporteDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.reporteDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.reporteDeOperacionesToolStripMenuItem.Text = "Reporte de operaciones";
             this.reporteDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeOperacionesToolStripMenuItem_Click);
             // 
@@ -155,7 +159,7 @@
             // permisosToolStripMenuItem
             // 
             this.permisosToolStripMenuItem.Name = "permisosToolStripMenuItem";
-            this.permisosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.permisosToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.permisosToolStripMenuItem.Text = "Permisos";
             this.permisosToolStripMenuItem.Click += new System.EventHandler(this.permisosToolStripMenuItem_Click);
             // 
@@ -183,26 +187,12 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(66, 17);
-            this.toolStripStatusLabel1.Text = "Usuario:";
-            // 
             // lblUsuario
             // 
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(0, 3, 7, 2);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(60, 17);
             this.lblUsuario.Text = "lblUsuario";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(142, 17);
-            this.toolStripStatusLabel2.Text = "Nombre de empleado:";
             // 
             // lblNombreEmpleado
             // 
@@ -216,6 +206,57 @@
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(48, 17);
             this.toolStripStatusLabel3.Text = "Estado: ";
+            // 
+            // SegundoPlano
+            // 
+            this.SegundoPlano.WorkerReportsProgress = true;
+            this.SegundoPlano.WorkerSupportsCancellation = true;
+            this.SegundoPlano.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SegundoPlano_DoWork);
+            this.SegundoPlano.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.SegundoPlano_ProgressChanged);
+            this.SegundoPlano.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SegundoPlano_RunWorkerCompleted);
+            // 
+            // tmpConexion
+            // 
+            this.tmpConexion.Interval = 60000;
+            this.tmpConexion.Tick += new System.EventHandler(this.tmpConexion_Tick);
+            // 
+            // profesionesToolStripMenuItem
+            // 
+            this.profesionesToolStripMenuItem.Name = "profesionesToolStripMenuItem";
+            this.profesionesToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.profesionesToolStripMenuItem.Text = "Profesiones";
+            this.profesionesToolStripMenuItem.Click += new System.EventHandler(this.profesionesToolStripMenuItem_Click);
+            // 
+            // nacionalidadesToolStripMenuItem
+            // 
+            this.nacionalidadesToolStripMenuItem.Name = "nacionalidadesToolStripMenuItem";
+            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
+            this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadesToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(817, 508);
+            this.panel1.TabIndex = 4;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(66, 17);
+            this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(142, 17);
+            this.toolStripStatusLabel2.Text = "Nombre de empleado:";
             // 
             // conectado
             // 
@@ -231,29 +272,6 @@
             this.desconectado.Size = new System.Drawing.Size(98, 17);
             this.desconectado.Text = "Desconectado";
             this.desconectado.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 508);
-            this.panel1.TabIndex = 4;
-            // 
-            // SegundoPlano
-            // 
-            this.SegundoPlano.WorkerReportsProgress = true;
-            this.SegundoPlano.WorkerSupportsCancellation = true;
-            this.SegundoPlano.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SegundoPlano_DoWork);
-            this.SegundoPlano.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.SegundoPlano_ProgressChanged);
-            this.SegundoPlano.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SegundoPlano_RunWorkerCompleted);
-            // 
-            // tmpConexion
-            // 
-            this.tmpConexion.Interval = 60000;
-            this.tmpConexion.Tick += new System.EventHandler(this.tmpConexion_Tick);
             // 
             // Principal
             // 
@@ -308,5 +326,7 @@
         private System.Windows.Forms.ToolStripStatusLabel desconectado;
         private System.ComponentModel.BackgroundWorker SegundoPlano;
         private System.Windows.Forms.Timer tmpConexion;
+        private System.Windows.Forms.ToolStripMenuItem profesionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nacionalidadesToolStripMenuItem;
     }
 }

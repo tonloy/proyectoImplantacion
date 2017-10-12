@@ -114,7 +114,12 @@ namespace GestionBasica.CLS
             Sentencia.Append("update registro_familiar.padres set NombreCompleto = '");
             Sentencia.Append(NombreCompleto1 + "',ConocidoPor='");
             Sentencia.Append(ConocidoPor1 + "',Profesion='");
-            Sentencia.Append(Profesion1 + "' where idPadre=" + IdPadre + ";");
+            Sentencia.Append(Profesion1 + "',Edad=");
+            Sentencia.Append(Edad + ",Domicilio='");
+            Sentencia.Append(Domicilio + "',Nacionalidad=");
+            Sentencia.Append(Nacionalidad + ",DUI='");
+            Sentencia.Append(DUI + "',idMunicipio=");
+            Sentencia.Append(idMunicipio + " where idPadre=" + IdPadre + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

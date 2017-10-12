@@ -146,6 +146,7 @@
             // 
             this.dtgUsuarios.AllowUserToAddRows = false;
             this.dtgUsuarios.AllowUserToDeleteRows = false;
+            this.dtgUsuarios.AllowUserToResizeRows = false;
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdUsuario,
@@ -158,6 +159,7 @@
             this.Credencial});
             this.dtgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgUsuarios.Location = new System.Drawing.Point(0, 25);
+            this.dtgUsuarios.MultiSelect = false;
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.RowHeadersVisible = false;

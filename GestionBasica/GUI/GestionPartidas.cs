@@ -66,6 +66,7 @@ namespace GestionBasica.GUI
         {
             if (_SESION.Grupo == "Administrador" && (MessageBox.Show("¿Realmente desea marginar esta partida?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
+                InfanteEdicion.marginando = true;
                 PartidaEdicion frm = new PartidaEdicion();
                 frm.button2.Enabled = false;
                 frm.button3.Enabled = false;

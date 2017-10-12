@@ -129,5 +129,17 @@ namespace App
         {
             SegundoPlano.RunWorkerAsync();
         }
+
+        private void profesionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionProfesiones frm = new GestionBasica.GUI.GestionProfesiones();
+            frm.ShowDialog();
+        }
+
+        private void nacionalidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionPaises frm = new GestionBasica.GUI.GestionPaises();
+            frm.ShowDialog();
+        }
     }
 }

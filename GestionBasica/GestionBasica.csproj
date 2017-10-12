@@ -57,7 +57,9 @@
     <Compile Include="CLS\Marginacion.cs" />
     <Compile Include="CLS\Operaciones.cs" />
     <Compile Include="CLS\Padres.cs" />
+    <Compile Include="CLS\Pais.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
+    <Compile Include="CLS\Profesion.cs" />
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
@@ -95,6 +97,18 @@
     </Compile>
     <Compile Include="GUI\EdicionNuevoEscaneo.Designer.cs">
       <DependentUpon>EdicionNuevoEscaneo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionPais.Designer.cs">
+      <DependentUpon>EdicionPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionProfesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionProfesion.Designer.cs">
+      <DependentUpon>EdicionProfesion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EdicionUsuario.cs">
       <SubType>Form</SubType>
@@ -144,6 +158,12 @@
     <Compile Include="GUI\GestionPadres.Designer.cs">
       <DependentUpon>GestionPadres.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GestionPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionPaises.Designer.cs">
+      <DependentUpon>GestionPaises.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GestionPartidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +175,12 @@
     </Compile>
     <Compile Include="GUI\GestionPermisos.Designer.cs">
       <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionProfesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionProfesiones.Designer.cs">
+      <DependentUpon>GestionProfesiones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionUsuarios.cs">
       <SubType>Form</SubType>
@@ -234,6 +260,12 @@
     <EmbeddedResource Include="GUI\EdicionNuevoEscaneo.resx">
       <DependentUpon>EdicionNuevoEscaneo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionPais.resx">
+      <DependentUpon>EdicionPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionProfesion.resx">
+      <DependentUpon>EdicionProfesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionUsuario.resx">
       <DependentUpon>EdicionUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,11 +290,17 @@
     <EmbeddedResource Include="GUI\GestionPadres.resx">
       <DependentUpon>GestionPadres.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionPaises.resx">
+      <DependentUpon>GestionPaises.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionPartidas.resx">
       <DependentUpon>GestionPartidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionPermisos.resx">
       <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionProfesiones.resx">
+      <DependentUpon>GestionProfesiones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>

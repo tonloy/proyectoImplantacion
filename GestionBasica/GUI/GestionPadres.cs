@@ -107,16 +107,10 @@ namespace GestionBasica.GUI
                     frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString());
                     frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString());
                     frm.txtDomicilio.Text = dataGridView1.CurrentRow.Cells["Domicilio"].Value.ToString();
-                    frm.txtProfesion.Text = dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString();
-                    frm.txtNacionalidad.Text = dataGridView1.CurrentRow.Cells["Nacionalidad"].Value.ToString();
+                    frm.cbxProfesiones.SelectedIndex = frm.cbxProfesiones.FindStringExact(dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString());
+                    frm.cbxPaises.SelectedIndex = frm.cbxPaises.FindStringExact(dataGridView1.CurrentRow.Cells["Nacionalidad"].Value.ToString());
                     frm.mtxtDUI.Text = dataGridView1.CurrentRow.Cells["DUI"].Value.ToString();
 
-                    frm.mskTEdad.ReadOnly = true;
-                    frm.cbxDepartamentos.Enabled = false;
-                    frm.cbxMunicipio.Enabled = false;
-                    frm.txtDomicilio.ReadOnly = true;
-                    frm.txtNacionalidad.ReadOnly = true;
-                    frm.mtxtDUI.ReadOnly = true;
                     frm.ShowDialog();
                     CargarPadres();
                 }

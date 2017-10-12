@@ -14,12 +14,16 @@ namespace GestionBasica.GUI
 
         BindingSource _Municipio = new BindingSource();
         BindingSource _Departamentos = new BindingSource();
+        BindingSource _Profesiones = new BindingSource();
+        BindingSource _Nacionalidades = new BindingSource();
 
         public PadreEdicion()
         {
-            InitializeComponent();
-            CargarMunicipios();
+            InitializeComponent();            
             CargarDepartamentos();
+            CargarMunicipios();
+            CargarProfesiones();
+            CargarPaises();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,7 +72,38 @@ namespace GestionBasica.GUI
             }
         }
 
+        private void CargarProfesiones()
+        {
+            try
+            {
+                _Profesiones.DataSource = CacheManager1.Cache.TODOS_LOS_PROFESIONES();
+                cbxProfesiones.DataSource = null;
+                cbxProfesiones.DataSource = _Profesiones;
+                cbxProfesiones.DisplayMember = "Profesion";
+                cbxProfesiones.ValueMember = "idProfesion";
+                cbxProfesiones.Text = "Elija una profesión";
+            }
+            catch
+            {
 
+            }
+        }
+        private void CargarPaises()
+        {
+            try
+            {
+                _Nacionalidades.DataSource = CacheManager1.Cache.TODOS_LOS_PAISES();
+                cbxPaises.DataSource = null;
+                cbxPaises.DataSource = _Nacionalidades;
+                cbxPaises.DisplayMember = "Nacionalidad";
+                cbxPaises.ValueMember = "idPais";
+                cbxPaises.Text = "Elija una nacionalidad";
+            }
+            catch
+            {
+
+            }
+        }
 
         private void Procesar()
         {
@@ -80,8 +115,8 @@ namespace GestionBasica.GUI
             oPadre.Edad1 = mskTEdad.Text;
             oPadre.IdMunicipio = cbxMunicipio.SelectedValue.ToString();
             oPadre.Domicilio1 = txtDomicilio.Text;
-            oPadre.Profesion1 = txtProfesion.Text;
-            oPadre.Nacionalidad1 = txtNacionalidad.Text;
+            oPadre.Profesion1 = cbxProfesiones.SelectedValue.ToString();
+            oPadre.Nacionalidad1 = cbxPaises.SelectedValue.ToString();
             oPadre.DUI1 = mtxtDUI.Text;
 
 
@@ -170,15 +205,15 @@ namespace GestionBasica.GUI
                 Validado = false;
             }
 
-            if (txtProfesion.TextLength == 0)
+            if (cbxProfesiones.SelectedItem == null)
             {
-                Notificador.SetError(txtProfesion, "Este campo no puede quedar vacio.");
+                Notificador.SetError(cbxProfesiones, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
 
-            if (txtNacionalidad.TextLength == 0)
+            if (cbxPaises.SelectedItem == null)
             {
-                Notificador.SetError(txtNacionalidad, "Este campo no puede quedar vacio.");
+                Notificador.SetError(cbxPaises, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
 
@@ -251,29 +286,35 @@ namespace GestionBasica.GUI
 
         private void txtProfesion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
-            {
-                Notificador.SetError(txtProfesion, "Solo se permiten letras");
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                Notificador.Clear();
-            }
+            
         }
 
         private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            
+        }
+
+        private void txbNombreCompleto_Leave(object sender, EventArgs e)
+        {
+            if (txbNombreCompleto.Text.Length > 0)
             {
-                Notificador.SetError(txtNacionalidad, "Solo se permiten letras");
-                e.Handled = true;
-                return;
+                txbNombreCompleto.Text = txbNombreCompleto.Text.ToUpper();
             }
-            else
+        }
+
+        private void txtConocidapor_Leave(object sender, EventArgs e)
+        {
+            if (txtConocidapor.Text.Length > 0)
             {
-                Notificador.Clear();
+                txtConocidapor.Text = txtConocidapor.Text.ToUpper();
+            }
+        }
+
+        private void txtDomicilio_Leave(object sender, EventArgs e)
+        {
+            if (txtDomicilio.Text.Length > 0)
+            {
+                txtDomicilio.Text = txtDomicilio.Text.ToUpper();
             }
         }
 

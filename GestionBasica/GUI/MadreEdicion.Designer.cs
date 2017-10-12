@@ -211,6 +211,7 @@
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(440, 20);
             this.txtDomicilio.TabIndex = 5;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // txtID
             // 
@@ -244,6 +245,7 @@
             this.txtConocidapor.Size = new System.Drawing.Size(440, 20);
             this.txtConocidapor.TabIndex = 1;
             this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
+            this.txtConocidapor.Leave += new System.EventHandler(this.txtConocidapor_Leave);
             // 
             // cbxMunicipio
             // 
@@ -269,6 +271,7 @@
             this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
             this.txbNombreCompleto.TabIndex = 0;
             this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
+            this.txbNombreCompleto.Leave += new System.EventHandler(this.txbNombreCompleto_Leave);
             // 
             // Notificador
             // 

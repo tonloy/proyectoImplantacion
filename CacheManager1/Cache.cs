@@ -150,9 +150,9 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, dep.Departamento, p.idMunicipio,m.Municipio, Profesion 
-                        FROM registro_familiar.padres p, municipios m, departamentos dep
-                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento; ";
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, pa.Nacionalidad, DUI, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion 
+                        FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa
+                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion; ";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -297,6 +297,41 @@ namespace CacheManager1
             DataTable Datos = new DataTable();
             String Consulta;
             Consulta = "SELECT * FROM registro_familiar.departamentos;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable TODOS_LOS_PROFESIONES()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT * FROM registro_familiar.profesiones;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+        public static DataTable TODOS_LOS_PAISES()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT * FROM registro_familiar.paises;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
