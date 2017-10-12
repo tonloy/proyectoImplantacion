@@ -13,26 +13,56 @@ namespace GestionBasica.GUI
 {
     public partial class InfanteEdicion : Form
     {
+        Int32 _revisado = 0;
+        BindingSource _Municipio = new BindingSource();
+        BindingSource _Departamentos = new BindingSource();
+
         public InfanteEdicion()
         {
-            InitializeComponent();
-            List<TextBox> tList = new List<TextBox>();
-            List<string> sList = new List<string>();
-            tList.Add(txtHora);
-            sList.Add("p. ej. ocho horas veinte minutos del dia diez de enero de dos mil diesiocho");
-            SetCueBanner(ref tList, sList);
+            InitializeComponent();            
+            CargarDepartamentos();
+            CargarMunicipios();
+            //List<TextBox> tList = new List<TextBox>();
+            //List<string> sList = new List<string>();
+            //tList.Add(txtHora);
+            //sList.Add("p. ej. ocho horas veinte minutos del dia diez de enero de dos mil diesiocho");
+            //SetCueBanner(ref tList, sList);
         }
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
-        private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr i, string str);
-
-        void SetCueBanner(ref List<TextBox> textbox, List<string> CueText)
+        private void CargarDepartamentos()
         {
-            for (int x = 0; x < textbox.Count; x++)
+            try
             {
-                SendMessage(textbox[x].Handle, 0x1501, (IntPtr)1, CueText[x]);
+                _Departamentos.DataSource = CacheManager1.Cache.TODOS_LOS_DEPARTAMENTOS();
+                cbxDepartamentos.DataSource = null;
+                cbxDepartamentos.DataSource = _Departamentos;
+                cbxDepartamentos.DisplayMember = "Departamento";
+                cbxDepartamentos.ValueMember = "idDepartamento";
+                cbxDepartamentos.Text = "Elija un Departamento";
+            }
+            catch
+            {
+
             }
         }
+        private void CargarMunicipios()
+        {
+            DataView dv = new DataView(CacheManager1.Cache.TODOS_LOS_MUNICIPIOS());
+            dv.RowFilter = "idDepartamento = " + (cbxDepartamentos.SelectedIndex + 1);
+            cbxMunicipio.DataSource = dv.ToTable();
+            cbxMunicipio.DisplayMember = "municipio";
+            cbxMunicipio.ValueMember = "idMunicipio";
+        }
+
+        //[DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+        //private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr i, string str);
+
+        //void SetCueBanner(ref List<TextBox> textbox, List<string> CueText)
+        //{
+        //    for (int x = 0; x < textbox.Count; x++)
+        //    {
+        //        SendMessage(textbox[x].Handle, 0x1501, (IntPtr)1, CueText[x]);
+        //    }
+        //}
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -46,7 +76,7 @@ namespace GestionBasica.GUI
             oUsuario.IdInfante = txbIdInfante.Text;
             oUsuario.Hora1 = txtHora.Text;
             oUsuario.NombreCompleto1 = txtNombreCompleto.Text;
-            oUsuario.LugarNac1 = txtLugarNac.Text;
+            oUsuario.LugarNac1 = cbxMunicipio.SelectedValue.ToString();
             oUsuario.FechaNac1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
 
             if (ValidarDatos())
@@ -59,12 +89,15 @@ namespace GestionBasica.GUI
                 {
                     oUsuario.Sexo1 = "M";
                 }
+                if(chbxRevisado.Checked){
+                    _revisado = 1;
+                }
                 if (txbIdInfante.TextLength > 0)
                 {
                     //Actualizando
                     try
                     {
-                        if (oUsuario.Actualizar())
+                        if (oUsuario.Actualizar(_revisado))
                         {
                             MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
@@ -84,7 +117,7 @@ namespace GestionBasica.GUI
                     //Insertando
                     try
                     {
-                        if (oUsuario.Insertar())
+                        if (oUsuario.Insertar(_revisado))
                         {
                             MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
@@ -111,12 +144,7 @@ namespace GestionBasica.GUI
                 Notificador.SetError(txtNombreCompleto, "Este campo no puede quedar vacío.");
                 Validado = false;
             }
-            if (txtLugarNac.TextLength == 0)
-            {
-                Notificador.SetError(txtLugarNac, "Este campo no puede quedar vacío.");
-                Validado = false;
-            }
-            if (txtHora.TextLength == 0)
+            if (txtHora.TextLength == 0 || !txtHora.MaskCompleted)
             {
                 Notificador.SetError(txtHora, "Este campo no puede quedar vacío.");
                 Validado = false;
@@ -156,7 +184,24 @@ namespace GestionBasica.GUI
             }
             else
             {
+                e.KeyChar.ToString().ToUpper();
                 Notificador.Clear();
+            }
+        }
+
+        private void cbxDepartamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxDepartamentos.Items.Count > 0)
+            {
+                CargarMunicipios();
+            }
+        }
+
+        private void txtNombreCompleto_Leave(object sender, EventArgs e)
+        {
+            if (txtNombreCompleto.Text.Length > 0)
+            {
+                txtNombreCompleto.Text = txtNombreCompleto.Text.ToUpper();
             }
         }
     }

@@ -55,13 +55,13 @@ namespace GestionBasica.CLS
 
 
         //metodos
-        public bool Insertar() {
+        public bool Insertar(Int32 revisado) {
 
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
             
-            Sentencia.Append("INSERT INTO registro_familiar.infantes (NombreCompleto, LugarNac, Sexo, Hora, FechaNac) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.infantes (NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "',"+revisado+" );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -82,13 +82,13 @@ namespace GestionBasica.CLS
             return guardado;
             
         }
-        public bool Actualizar()
+        public bool Actualizar(Int32 pRevisado)
         {
 
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("UPDATE registro_familiar.infantes SET NombreCompleto='"+NombreCompleto+"', Hora='"+Hora+"', FechaNac='"+FechaNac+"' WHERE idInfante='"+idInfante+"';");
+            Sentencia.Append("UPDATE registro_familiar.infantes SET NombreCompleto='" + NombreCompleto + "',LugarNac='" + LugarNac + "',Sexo='" + Sexo + "', Hora='" + Hora + "',Revisado='" + pRevisado + "', FechaNac='" + FechaNac + "' WHERE idInfante='" + idInfante + "';");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

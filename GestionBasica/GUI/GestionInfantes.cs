@@ -94,7 +94,8 @@ namespace GestionBasica.GUI
                     InfanteEdicion frm = new InfanteEdicion();
                     frm.txbIdInfante.Text = dataGridView1.CurrentRow.Cells["IdInfante"].Value.ToString();
                     frm.txtNombreCompleto.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                    frm.txtLugarNac.Text = dataGridView1.CurrentRow.Cells["LugarNac"].Value.ToString();
+                    frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString());
+                    frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dataGridView1.CurrentRow.Cells["LugarNac"].Value.ToString());
                     frm.txtHora.Text = dataGridView1.CurrentRow.Cells["Hora"].Value.ToString();
                     frm.dtpFecha.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["Fecha"].Value.ToString());
                     if (dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString() == "M")
@@ -105,9 +106,18 @@ namespace GestionBasica.GUI
                     {
                         frm.rbtnFemenino.Checked = true;
                     }
-                    frm.txtLugarNac.ReadOnly = true;
-                    frm.rbtnMasculino.Enabled = false;
-                    frm.rbtnFemenino.Enabled = false;
+                    if (dataGridView1.CurrentRow.Cells["Revisado"].Value.ToString() == "True")
+                    {
+                        frm.txtNombreCompleto.ReadOnly = true;
+                        frm.txtHora.ReadOnly = true;
+                        frm.dtpFecha.Enabled = false;
+                        frm.cbxDepartamentos.Enabled = false;
+                        frm.cbxMunicipio.Enabled = false;
+                        frm.rbtnMasculino.Enabled = false;
+                        frm.rbtnFemenino.Enabled = false;
+                        frm.chbxRevisado.Checked = true;
+                        frm.chbxRevisado.Enabled = false;
+                    }
                     frm.ShowDialog();
                     CargarInfantes();
                 }

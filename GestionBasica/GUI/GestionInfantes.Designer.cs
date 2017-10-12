@@ -44,6 +44,9 @@
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Revisado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMunicipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -133,7 +136,10 @@
             this.LugarNac,
             this.Sexo,
             this.Hora,
-            this.Fecha});
+            this.Fecha,
+            this.Revisado,
+            this.idMunicipio,
+            this.Departamento});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.MultiSelect = false;
@@ -165,7 +171,7 @@
             // 
             // LugarNac
             // 
-            this.LugarNac.DataPropertyName = "LugarNac";
+            this.LugarNac.DataPropertyName = "Municipio";
             this.LugarNac.HeaderText = "Lugar de nacimiento";
             this.LugarNac.Name = "LugarNac";
             this.LugarNac.ReadOnly = true;
@@ -194,6 +200,30 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 120;
+            // 
+            // Revisado
+            // 
+            this.Revisado.DataPropertyName = "Revisado";
+            this.Revisado.HeaderText = "Revisado";
+            this.Revisado.Name = "Revisado";
+            this.Revisado.ReadOnly = true;
+            this.Revisado.Visible = false;
+            // 
+            // idMunicipio
+            // 
+            this.idMunicipio.DataPropertyName = "LugarNac";
+            this.idMunicipio.HeaderText = "idMunicipio";
+            this.idMunicipio.Name = "idMunicipio";
+            this.idMunicipio.ReadOnly = true;
+            this.idMunicipio.Visible = false;
+            // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Departamento";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Visible = false;
             // 
             // GestionInfantes
             // 
@@ -229,12 +259,15 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNumeroFilas;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdInfante;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn LugarNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Revisado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMunicipio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
     }
 }

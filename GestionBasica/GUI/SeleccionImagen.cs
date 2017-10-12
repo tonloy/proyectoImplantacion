@@ -52,7 +52,7 @@ namespace GestionBasica.GUI
         private void btnEscanear_Click(object sender, EventArgs e)
         {
             EscanearImagen frm = new EscanearImagen();
-            frm.Show(this);
+            frm.ShowDialog(this);
         }
 
         private void btnExaminar_Click(object sender, EventArgs e)

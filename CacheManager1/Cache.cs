@@ -115,7 +115,8 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "SELECT idInfante, NombreCompleto, LugarNac, Sexo, Hora, FechaNac FROM registro_familiar.infantes;";
+            Consulta = @"SELECT idInfante, NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,dep.Departamento,m.Municipio FROM registro_familiar.infantes p, municipios m, departamentos dep
+                        where p.LugarNac = m.idMunicipio and dep.idDepartamento=m.idDepartamento;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

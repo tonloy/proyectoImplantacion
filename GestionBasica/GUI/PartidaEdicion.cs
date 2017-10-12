@@ -85,12 +85,12 @@ namespace GestionBasica.GUI
             {
                 GestionInfantes frm = new GestionInfantes();
                 frm.IdInfante1 = txbIdInfante.Text;                
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
             else
             {
                 GestionInfantes frm = new GestionInfantes();
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
 
         }
@@ -107,12 +107,12 @@ namespace GestionBasica.GUI
             {
                 GestionMadres frm = new GestionMadres();
                 frm.IdMadre = txtIdMadre.Text;
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
             else
             {
                 GestionMadres frm = new GestionMadres();
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
         }
 
@@ -122,12 +122,12 @@ namespace GestionBasica.GUI
             {
                 GestionPadres frm = new GestionPadres();
                 frm.IdPadre1 = txtIdPadre.Text;
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
             else
             {
                 GestionPadres frm = new GestionPadres();
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
         }
 
@@ -137,12 +137,12 @@ namespace GestionBasica.GUI
             {
                 GestionInformantes frm = new GestionInformantes();
                 frm.IdInformante1 = txtIdInformante.Text;
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
             else
             {
                 GestionInformantes frm = new GestionInformantes();
-                frm.Show(this);
+                frm.ShowDialog(this);
             }
         }
 
@@ -180,7 +180,7 @@ namespace GestionBasica.GUI
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             SeleccionImagen frm = new SeleccionImagen();
-            frm.Show(this);
+            frm.ShowDialog(this);
         }
 
         private void Procesar()
