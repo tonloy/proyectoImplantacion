@@ -37,7 +37,7 @@ namespace CacheManager1
              ma.NombreCompleto as madre,
              p.idPadre,
              pa.NombreCompleto as padre,
-             inf.idInformante,
+             inf.idPadre as IdInformante,
              inf.NombreCompleto as informante,
              idJefeRegistro,
              Folio,
@@ -52,11 +52,11 @@ namespace CacheManager1
              partidas_nacimiento p,
              padres pa,
              padres ma,
-             informantes inf,
+             padres inf,
              infantes i,
              empleados e,
              tipo_partidas t where p.idInfante=i.idInfante and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
-             and p.idInformante=inf.idInformante and Modificada=0;";
+             and p.idInformante=inf.idPadre and Modificada=0;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -150,9 +150,9 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, pa.Nacionalidad, DUI, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion 
-                        FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa
-                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion; ";
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, pa.Nacionalidad, DUI, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion,ps.Parentesco,p.Observaciones 
+                        FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa,parentescos ps 
+                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and ps.idParentesco=p.idParentesco; ";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

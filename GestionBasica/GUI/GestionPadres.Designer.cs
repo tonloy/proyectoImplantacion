@@ -40,6 +40,8 @@
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IdPadre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConocidoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,6 +148,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdPadre,
+            this.Parentesco,
+            this.Observaciones,
             this.NombreCompleto,
             this.ConocidoPor,
             this.Edad,
@@ -176,6 +180,22 @@
             this.IdPadre.Name = "IdPadre";
             this.IdPadre.ReadOnly = true;
             this.IdPadre.Width = 50;
+            // 
+            // Parentesco
+            // 
+            this.Parentesco.DataPropertyName = "Parentesco";
+            this.Parentesco.HeaderText = "Parentesco";
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.ReadOnly = true;
+            this.Parentesco.Visible = false;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Visible = false;
             // 
             // NombreCompleto
             // 
@@ -300,6 +320,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPadre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConocidoPor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;

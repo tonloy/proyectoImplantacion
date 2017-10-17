@@ -127,23 +127,23 @@
   <data name="btnModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGQSURBVEhLY6AWuB7tkXQ9wuvq9Sivz0D6+NUoLzuoFGXg
-        ////jEdPHJ12obXiJNDw/zB82s/+L8WWgAx/8+JA161bBw/v37//J7olIJ9AlZIHXj070Hbu3LEH757v
-        v4nDks9QpaSB//8ZGN90Sk77cKx63/tX+6/gtAQYJ1AtxAOY4Q+7JX+/2ixy/P3lpm04LQFGPFQbcQDd
-        8DfrxA4+rJf89+FE4350S0ARD9VGHMBl+Nsuyf8gGtknoIgHJQCoVsKAkOEgPkgcFCegiKeJ4SB5kDqo
-        NuIAqYaD1EO1EgajhmMFQ9vwtwvEG18vED/6cqvoSaoaDgJv9lnHv9qjdez9PuODz7aKPaWq4SDw69zs
-        db/Pzf3/42Tz7ddbxS5Q1XBQtv5xbu5rkAXfjuafebVN4AXIEpBPQMFFkeEgADRcC2Q4CH8+Ou0LyBKQ
-        T0DBBYoTigwHgV/n5mbCLEDGoDgBRTxFhoPAltkN/ckpCQdhBoOCCxQnoIin2HAQsHT1OwyyBOQTUHCR
-        VNQSBAwMAF/pmMa1nxpRAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVEhL7ZQ/S8NQFMXTb+CgLfkKXZ1E0EmQgM5SB0Vd
+        nFwFB62iYB3cupRAP0EXTSdJGkr6RyQUtBTr0sVa09QUKlJb9JkDL1CKIYmJg+CBR0jeu7/DvScJE5Rq
+        q4sbtRWuWotxPfNarMa4ObrlT4SQkFJSkpXj3bIJJ9a6Xpr/8G0CuN7KJep1OS9J0vu4CTqhR38mrZk7
+        UdVC4+VJurcx6dGj3kQIE9JP2WS3sCcamnRna2JmQkvcy4I3ztihdjFZNG4Ps7YmZvC0zJ3G4XomLDf2
+        2c9uKS6NmyB4WuZOdvBOgiW4jnaC4PEC0FJnOcFxj+fIBMH/Chz7OEfL3MkrHOdpqbP+4d/qb8M76Ui8
+        nY4oz8JUOVA4pIuza9pVtGCI03JTCD8GCocGaiozVHnSLx89tIVwJVA4Puu+yrdh8Kbs3GjZiRZM0AnG
+        5QsOmfAo4Fg9JfkKE3SCcSETX3BooPLblsHoQiYI3hccukwdnG9urcsWGONCJgjeNxyaWVjOwwSdYFye
+        frWOYpgvhg2YlkSsMJwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnNueva.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACuSURBVEhLYyAK/GdgVF7kHae80PcUGAPZIDGoLOVAeZGv
-        BxD/R8ELvd2h0pQDoIs3Y1gAFINKUw6UF3jfwLAAKAaVphyMWkAQDHILwJkIlM6BSRFkEBYsPs3xJ7oF
+        BxD/R8ELvd2h0pQDoIs3Y1gAFINKUw6UF3jfwLAAKAaVphyMWkAQDHILwJkIlM6BSRFkEBYsNtXhJ7oF
         YDEsasEYkqw9wJkRlCvRNVMPA3M8JOtjk6QCBppNBwtoHUQ0j2RiAEQTqgUgMag05WDUAoJgGFgASXao
-        FgDFoNKUA6CBtK30IZmRnGYLAwMA1qbolDuakYwAAAAASUVORK5CYII=
+        FgDFoNKUA6CBtK30IZmRnGYLAwMAoBDoiH8X03UAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txbImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

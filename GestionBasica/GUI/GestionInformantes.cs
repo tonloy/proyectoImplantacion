@@ -33,7 +33,7 @@ namespace GestionBasica.GUI
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (row.Cells["IdInformante"].Value.ToString() == _idInformante)
+                    if (row.Cells["IdPadre"].Value.ToString() == _idInformante)
                     {
                         dataGridView1.ClearSelection();
                         dataGridView1.CurrentCell = dataGridView1.Rows[row.Index].Cells[0];
@@ -47,7 +47,7 @@ namespace GestionBasica.GUI
         {
             try
             {
-                _GRUPOS.DataSource = CacheManager1.Cache.TODOS_LOS_INFORMANTES();
+                _GRUPOS.DataSource = CacheManager1.Cache.TODOS_LOS_PADRES();
                 FiltrarLocalmente();
             }
             catch
@@ -72,20 +72,14 @@ namespace GestionBasica.GUI
 
         private void txbNueva_Click(object sender, EventArgs e)
         {
-            InformanteEdicion frm = new InformanteEdicion();
+            PadreEdicion frm = new PadreEdicion();
             frm.ShowDialog();
             CargarInformantes();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            IInformante miInterfaz = this.Owner as IInformante;
-            if (miInterfaz != null)
-            {
-                miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdInformante"].Value.ToString());
-                miInterfaz.cambiarInformantes(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
-            }
-            this.Dispose();
+            
         }
 
         private void txbFiltrar_TextChanged(object sender, EventArgs e)
@@ -99,15 +93,19 @@ namespace GestionBasica.GUI
             {
                 try
                 {
-                    InformanteEdicion frm = new InformanteEdicion();
-                    frm.txbIdInformante.Text = dataGridView1.CurrentRow.Cells["IdInformante"].Value.ToString();
-                    frm.txtNombreCompleto.Text = dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                    PadreEdicion frm = new PadreEdicion();
+                    frm.txtID.Text = dataGridView1.CurrentRow.Cells["idPadre"].Value.ToString();
+                    frm.txbNombreCompleto.Text = dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString();
                     frm.txtConocidapor.Text = dataGridView1.CurrentRow.Cells["ConocidoPor"].Value.ToString();
-                    frm.txtObservaciones.Text = dataGridView1.CurrentRow.Cells["Observaciones"].Value.ToString();
+                    frm.mskTEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
+                    frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString());
+                    frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString());
+                    frm.txtDomicilio.Text = dataGridView1.CurrentRow.Cells["Domicilio"].Value.ToString();
+                    frm.cbxProfesiones.SelectedIndex = frm.cbxProfesiones.FindStringExact(dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString());
+                    frm.cbxPaises.SelectedIndex = frm.cbxPaises.FindStringExact(dataGridView1.CurrentRow.Cells["Nacionalidad"].Value.ToString());
                     frm.mtxtDUI.Text = dataGridView1.CurrentRow.Cells["DUI"].Value.ToString();
                     frm.cbxParentesco.SelectedIndex = frm.cbxParentesco.FindStringExact(dataGridView1.CurrentRow.Cells["Parentesco"].Value.ToString());
-                    frm.mtxtDUI.ReadOnly = true;
-                    frm.cbxParentesco.Enabled = false;
+                    frm.txtObservaciones.Text = dataGridView1.CurrentRow.Cells["Observaciones"].Value.ToString();
 
                     frm.ShowDialog();
                     CargarInformantes();
@@ -126,7 +124,23 @@ namespace GestionBasica.GUI
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            
+        }
+
+        private void dataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
+        }
+
+        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            IInformante miInterfaz = this.Owner as IInformante;
+            if (miInterfaz != null)
+            {
+                miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                miInterfaz.cambiarInformantes(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+            }
+            this.Dispose();
         }
     }
 }

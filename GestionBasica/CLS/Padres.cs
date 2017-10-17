@@ -18,6 +18,20 @@ namespace GestionBasica.CLS
         private string DUI;
         private string idMunicipio;
         private string Profesion;
+        private string Parentesco;
+        private string Observaciones;
+
+        public string Observaciones1
+        {
+            get { return Observaciones; }
+            set { Observaciones = value; }
+        }
+
+        public string Parentesco1
+        {
+            get { return Parentesco; }
+            set { Parentesco = value; }
+        }
 
 
         //prop
@@ -82,8 +96,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion, idParentesco, Observaciones) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "',"+Parentesco+",'"+Observaciones+"' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -119,7 +133,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(Domicilio + "',Nacionalidad=");
             Sentencia.Append(Nacionalidad + ",DUI='");
             Sentencia.Append(DUI + "',idMunicipio=");
-            Sentencia.Append(idMunicipio + " where idPadre=" + IdPadre + ";");
+            Sentencia.Append(idMunicipio + ",idParentesco="+Parentesco+",Observaciones='"+Observaciones+"' where idPadre=" + IdPadre + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

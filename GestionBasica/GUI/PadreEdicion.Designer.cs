@@ -53,13 +53,17 @@
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxParentesco = new System.Windows.Forms.ComboBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 266);
+            this.button3.Location = new System.Drawing.Point(542, 355);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -69,7 +73,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(440, 266);
+            this.btnGuardar.Location = new System.Drawing.Point(440, 355);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 1;
@@ -168,6 +172,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtObservaciones);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbxParentesco);
             this.groupBox1.Controls.Add(this.cbxPaises);
             this.groupBox1.Controls.Add(this.cbxProfesiones);
             this.groupBox1.Controls.Add(this.label12);
@@ -184,10 +192,10 @@
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(32, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 220);
+            this.groupBox1.Size = new System.Drawing.Size(604, 313);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Padre";
+            this.groupBox1.Text = "Datos de la Persona";
             // 
             // cbxPaises
             // 
@@ -281,11 +289,45 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Parentesco:";
+            // 
+            // cbxParentesco
+            // 
+            this.cbxParentesco.FormattingEnabled = true;
+            this.cbxParentesco.Location = new System.Drawing.Point(145, 203);
+            this.cbxParentesco.Name = "cbxParentesco";
+            this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
+            this.cbxParentesco.TabIndex = 90;
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(145, 230);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
+            this.txtObservaciones.TabIndex = 92;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(49, 230);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Observaciones:";
+            // 
             // PadreEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 310);
+            this.ClientSize = new System.Drawing.Size(667, 407);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -335,5 +377,9 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.ComboBox cbxPaises;
         public System.Windows.Forms.ComboBox cbxProfesiones;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cbxParentesco;
+        public System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.Label label3;
     }
 }

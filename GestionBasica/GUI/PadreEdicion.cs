@@ -16,7 +16,7 @@ namespace GestionBasica.GUI
         BindingSource _Departamentos = new BindingSource();
         BindingSource _Profesiones = new BindingSource();
         BindingSource _Nacionalidades = new BindingSource();
-
+        BindingSource _Parentesco = new BindingSource();
         public PadreEdicion()
         {
             InitializeComponent();            
@@ -24,6 +24,23 @@ namespace GestionBasica.GUI
             CargarMunicipios();
             CargarProfesiones();
             CargarPaises();
+            CargarParentescos();
+        }
+        private void CargarParentescos()
+        {
+            try
+            {
+                _Parentesco.DataSource = CacheManager1.Cache.TODOS_LOS_PARENTESCOS();
+                cbxParentesco.DataSource = null;
+                cbxParentesco.DataSource = _Parentesco;
+                cbxParentesco.DisplayMember = "Parentesco";
+                cbxParentesco.ValueMember = "idParentesco";
+                cbxParentesco.Text = "Seleccione un parentesco";
+            }
+            catch
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,24 +53,6 @@ namespace GestionBasica.GUI
             Close();
         }
 
-
-      /*  private void CargarMunicipios()
-        {
-            try
-            {
-                _Municipio.DataSource = CacheManager1.Cache.TODOS_LOS_MUNICIPIOS();
-                cbxMunicipio.DataSource = null;
-                cbxMunicipio.DataSource = _Municipio;
-                cbxMunicipio.DisplayMember = "Municipio";
-                cbxMunicipio.ValueMember = "idMunicipio";
-                cbxMunicipio.Text = "Elija un Municipio";
-            }
-            catch
-            {
-
-            }
-        }
-       */ 
 
         private void CargarDepartamentos()
         {
@@ -118,7 +117,8 @@ namespace GestionBasica.GUI
             oPadre.Profesion1 = cbxProfesiones.SelectedValue.ToString();
             oPadre.Nacionalidad1 = cbxPaises.SelectedValue.ToString();
             oPadre.DUI1 = mtxtDUI.Text;
-
+            oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
+            oPadre.Observaciones1 = txtObservaciones.Text;
 
             if (ValidarDatos())
             {
@@ -204,6 +204,11 @@ namespace GestionBasica.GUI
                 Notificador.SetError(txtDomicilio, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
+            if (txtObservaciones.TextLength == 0)
+            {
+                Notificador.SetError(txtObservaciones, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
 
             if (cbxProfesiones.SelectedItem == null)
             {
@@ -226,6 +231,11 @@ namespace GestionBasica.GUI
             if (cbxDepartamentos.SelectedItem == null)
             {
                 Notificador.SetError(cbxDepartamentos, "Seleccione un departamento de la lista.");
+                Validado = false;
+            }
+            if (cbxParentesco.SelectedItem == null)
+            {
+                Notificador.SetError(cbxParentesco, "Seleccione un parentesco de la lista.");
                 Validado = false;
             }
 

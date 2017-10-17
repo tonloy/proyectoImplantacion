@@ -39,14 +39,20 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPadre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConocidoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nacionalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMunicipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProfesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -142,14 +148,20 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdInformante,
+            this.IdPadre,
             this.NombreCompleto,
             this.ConocidoPor,
-            this.FechaInscripcion,
-            this.Observaciones,
-            this.DUI,
-            this.IdParentesco,
-            this.Parentesco});
+            this.Edad,
+            this.Domicilio,
+            this.Nacionalidad,
+            this.Dui,
+            this.Departamento,
+            this.idMunicipio,
+            this.Municipio,
+            this.IdProfesion,
+            this.Profesion,
+            this.Parentesco,
+            this.Observaciones});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.MultiSelect = false;
@@ -159,16 +171,16 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1007, 607);
             this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting_1);
             // 
-            // IdInformante
+            // IdPadre
             // 
-            this.IdInformante.DataPropertyName = "idInformante";
-            this.IdInformante.HeaderText = "ID";
-            this.IdInformante.Name = "IdInformante";
-            this.IdInformante.ReadOnly = true;
-            this.IdInformante.Width = 50;
+            this.IdPadre.DataPropertyName = "idPadre";
+            this.IdPadre.HeaderText = "ID";
+            this.IdPadre.Name = "IdPadre";
+            this.IdPadre.ReadOnly = true;
+            this.IdPadre.Width = 50;
             // 
             // NombreCompleto
             // 
@@ -185,36 +197,75 @@
             this.ConocidoPor.Name = "ConocidoPor";
             this.ConocidoPor.ReadOnly = true;
             // 
-            // FechaInscripcion
+            // Edad
             // 
-            this.FechaInscripcion.DataPropertyName = "FechaInscripcion";
-            this.FechaInscripcion.HeaderText = "Fecha de inscripción";
-            this.FechaInscripcion.Name = "FechaInscripcion";
-            this.FechaInscripcion.ReadOnly = true;
-            this.FechaInscripcion.Width = 150;
+            this.Edad.DataPropertyName = "Edad";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
+            this.Edad.Width = 50;
             // 
-            // Observaciones
+            // Domicilio
             // 
-            this.Observaciones.DataPropertyName = "Observaciones";
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.ReadOnly = true;
-            this.Observaciones.Width = 300;
+            this.Domicilio.DataPropertyName = "Domicilio";
+            this.Domicilio.HeaderText = "Domicilio";
+            this.Domicilio.Name = "Domicilio";
+            this.Domicilio.ReadOnly = true;
+            this.Domicilio.Width = 200;
             // 
-            // DUI
+            // Nacionalidad
             // 
-            this.DUI.DataPropertyName = "DUI";
-            this.DUI.HeaderText = "DUI";
-            this.DUI.Name = "DUI";
-            this.DUI.ReadOnly = true;
+            this.Nacionalidad.DataPropertyName = "Nacionalidad";
+            this.Nacionalidad.HeaderText = "Nacionalidad";
+            this.Nacionalidad.Name = "Nacionalidad";
+            this.Nacionalidad.ReadOnly = true;
             // 
-            // IdParentesco
+            // Dui
             // 
-            this.IdParentesco.DataPropertyName = "idParentesco";
-            this.IdParentesco.HeaderText = "IdParentesco";
-            this.IdParentesco.Name = "IdParentesco";
-            this.IdParentesco.ReadOnly = true;
-            this.IdParentesco.Visible = false;
+            this.Dui.DataPropertyName = "DUI";
+            this.Dui.HeaderText = "DUI";
+            this.Dui.Name = "Dui";
+            this.Dui.ReadOnly = true;
+            // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Departamento";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Visible = false;
+            // 
+            // idMunicipio
+            // 
+            this.idMunicipio.DataPropertyName = "idMunicipio";
+            this.idMunicipio.HeaderText = "IdMunicipio";
+            this.idMunicipio.Name = "idMunicipio";
+            this.idMunicipio.ReadOnly = true;
+            this.idMunicipio.Visible = false;
+            // 
+            // Municipio
+            // 
+            this.Municipio.DataPropertyName = "Municipio";
+            this.Municipio.HeaderText = "Municipio";
+            this.Municipio.Name = "Municipio";
+            this.Municipio.ReadOnly = true;
+            this.Municipio.Width = 150;
+            // 
+            // IdProfesion
+            // 
+            this.IdProfesion.DataPropertyName = "idProfesion";
+            this.IdProfesion.HeaderText = "IdProfesion";
+            this.IdProfesion.Name = "IdProfesion";
+            this.IdProfesion.ReadOnly = true;
+            this.IdProfesion.Visible = false;
+            // 
+            // Profesion
+            // 
+            this.Profesion.DataPropertyName = "Profesion";
+            this.Profesion.HeaderText = "Profesión";
+            this.Profesion.Name = "Profesion";
+            this.Profesion.ReadOnly = true;
+            this.Profesion.Width = 150;
             // 
             // Parentesco
             // 
@@ -222,6 +273,14 @@
             this.Parentesco.HeaderText = "Parentesco";
             this.Parentesco.Name = "Parentesco";
             this.Parentesco.ReadOnly = true;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Visible = false;
             // 
             // GestionInformantes
             // 
@@ -236,6 +295,7 @@
             this.Name = "GestionInformantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Informantes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GestionInformantes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -257,15 +317,21 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNumeroFilas;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdInformante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPadre;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConocidoPor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInscripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DUI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdParentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Domicilio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nacionalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dui;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMunicipio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProfesion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
     }
 }

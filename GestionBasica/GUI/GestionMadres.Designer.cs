@@ -51,6 +51,8 @@
             this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProfesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -154,7 +156,9 @@
             this.idMunicipio,
             this.Municipio,
             this.IdProfesion,
-            this.Profesion});
+            this.Profesion,
+            this.Parentesco,
+            this.Observaciones});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.MultiSelect = false;
@@ -260,6 +264,22 @@
             this.Profesion.ReadOnly = true;
             this.Profesion.Width = 150;
             // 
+            // Parentesco
+            // 
+            this.Parentesco.DataPropertyName = "Parentesco";
+            this.Parentesco.HeaderText = "Parentesco";
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.ReadOnly = true;
+            this.Parentesco.Visible = false;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Visible = false;
+            // 
             // GestionMadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,5 +327,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProfesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
     }
 }
