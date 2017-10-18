@@ -46,12 +46,12 @@ namespace SessionManager
             get { return _horaSentencia; }
             set { _horaSentencia = value; }
         }
-        String _Folio;
+        String _Tomo;
 
-        public String Folio
+        public String Tomo
         {
-            get { return _Folio; }
-            set { _Folio = value; }
+            get { return _Tomo; }
+            set { _Tomo = value; }
         }
         String _Libro;
 

@@ -44,12 +44,12 @@ namespace GestionBasica.CLS
             get { return _idJefeRegistro; }
             set { _idJefeRegistro = value; }
         }
-        String _Folio;
+        String _Tomo;
 
-        public String Folio
+        public String Tomo
         {
-            get { return _Folio; }
-            set { _Folio = value; }
+            get { return _Tomo; }
+            set { _Tomo = value; }
         }
         String _idInfante;
 
@@ -120,12 +120,12 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Folio, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
+            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
             Sentencia.Append(_idMadre + ",");
             Sentencia.Append(_idPadre + ",");
             Sentencia.Append(_idInformante + ",");
             Sentencia.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo)" + ",");
-            Sentencia.Append(_Folio + ",");
+            Sentencia.Append(_Tomo + ",");
             Sentencia.Append(_idInfante + ",");
             Sentencia.Append(_Libro + ",");
             Sentencia.Append(_NumPartida + ",\'");
