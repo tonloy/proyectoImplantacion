@@ -48,12 +48,12 @@ namespace GestionBasica.CLS
 
             Sentencia1.Append("UPDATE partidas_nacimiento SET Hora_sentencia='"+_Datos.HoraSentencia+"', Fecha_sentencia='"+_Datos.FechaSentencia+"', idJuzgado='"+_Datos.IdJuzgado+"', Modificada='1' WHERE idPartida='"+_Datos.IdPartidaVieja+"';");
 
-            Sentencia2.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Folio, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
+            Sentencia2.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
             Sentencia2.Append(_Datos.IdMadre + ",");
             Sentencia2.Append(_Datos.IdPadre + ",");
             Sentencia2.Append(_Datos.IdInformante + ",");
             Sentencia2.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo)" + ",");
-            Sentencia2.Append(_Datos.Folio + ",");
+            Sentencia2.Append(_Datos.Tomo + ",");
             Sentencia2.Append(_Datos.IdInfante + ",");
             Sentencia2.Append(_Datos.Libro + ",");
             Sentencia2.Append(_Datos.NumPartida + ",\'");
