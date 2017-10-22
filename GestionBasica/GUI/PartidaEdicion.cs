@@ -197,6 +197,9 @@ namespace GestionBasica.GUI
             oUsuario.NumPartida = txbNumPartida.Text;
             oUsuario.IdPartida = txbIdPartida.Text;
             oUsuario.Ruta = obtenerRuta(pictureBox1.ImageLocation);
+            oUsuario.Tomo_letras = CLS.Conv.enletras(txbFolio.Text);
+            oUsuario.Libro_letras = CLS.Conv.enletras(txbLibro.Text);
+            oUsuario.NumPartida_letras = CLS.Conv.enletras(txbNumPartida.Text);
 
             if (ValidarDatos())
             {
@@ -206,6 +209,10 @@ namespace GestionBasica.GUI
                     _Datos.Libro = txbLibro.Text;
                     _Datos.NumPartida = txbNumPartida.Text;
                     _Datos.Ruta = obtenerRuta(pictureBox1.ImageLocation);
+                    _Datos.Tomo_letras = oUsuario.Tomo_letras;
+                    _Datos.Libro_letras = oUsuario.Libro_letras;
+                    _Datos.NumPartida_letras = oUsuario.NumPartida_letras;
+
 
                     Close();
                 }

@@ -289,13 +289,13 @@ namespace GestionBasica.DAT {
             
             private global::System.Data.DataColumn columnidJefeRegistro;
             
-            private global::System.Data.DataColumn columnTomo;
+            private global::System.Data.DataColumn columnTomo_letras;
             
             private global::System.Data.DataColumn columnidInfante;
             
-            private global::System.Data.DataColumn columnLibro;
+            private global::System.Data.DataColumn columnLibro_letras;
             
-            private global::System.Data.DataColumn columnNumPartida;
+            private global::System.Data.DataColumn columnNumPartida_letras;
             
             private global::System.Data.DataColumn columnHora_sentencia;
             
@@ -434,9 +434,9 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TomoColumn {
+            public global::System.Data.DataColumn Tomo_letrasColumn {
                 get {
-                    return this.columnTomo;
+                    return this.columnTomo_letras;
                 }
             }
             
@@ -450,17 +450,17 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LibroColumn {
+            public global::System.Data.DataColumn Libro_letrasColumn {
                 get {
-                    return this.columnLibro;
+                    return this.columnLibro_letras;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumPartidaColumn {
+            public global::System.Data.DataColumn NumPartida_letrasColumn {
                 get {
-                    return this.columnNumPartida;
+                    return this.columnNumPartida_letras;
                 }
             }
             
@@ -755,10 +755,10 @@ namespace GestionBasica.DAT {
                         string idPadre, 
                         string idInformante, 
                         string idJefeRegistro, 
-                        string Tomo, 
+                        string Tomo_letras, 
                         string idInfante, 
-                        string Libro, 
-                        string NumPartida, 
+                        string Libro_letras, 
+                        string NumPartida_letras, 
                         string Hora_sentencia, 
                         string Fecha_sentencia, 
                         string idJuzgado, 
@@ -797,10 +797,10 @@ namespace GestionBasica.DAT {
                         idPadre,
                         idInformante,
                         idJefeRegistro,
-                        Tomo,
+                        Tomo_letras,
                         idInfante,
-                        Libro,
-                        NumPartida,
+                        Libro_letras,
+                        NumPartida_letras,
                         Hora_sentencia,
                         Fecha_sentencia,
                         idJuzgado,
@@ -859,10 +859,10 @@ namespace GestionBasica.DAT {
                 this.columnidPadre = base.Columns["idPadre"];
                 this.columnidInformante = base.Columns["idInformante"];
                 this.columnidJefeRegistro = base.Columns["idJefeRegistro"];
-                this.columnTomo = base.Columns["Tomo"];
+                this.columnTomo_letras = base.Columns["Tomo_letras"];
                 this.columnidInfante = base.Columns["idInfante"];
-                this.columnLibro = base.Columns["Libro"];
-                this.columnNumPartida = base.Columns["NumPartida"];
+                this.columnLibro_letras = base.Columns["Libro_letras"];
+                this.columnNumPartida_letras = base.Columns["NumPartida_letras"];
                 this.columnHora_sentencia = base.Columns["Hora_sentencia"];
                 this.columnFecha_sentencia = base.Columns["Fecha_sentencia"];
                 this.columnidJuzgado = base.Columns["idJuzgado"];
@@ -909,14 +909,14 @@ namespace GestionBasica.DAT {
                 base.Columns.Add(this.columnidInformante);
                 this.columnidJefeRegistro = new global::System.Data.DataColumn("idJefeRegistro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidJefeRegistro);
-                this.columnTomo = new global::System.Data.DataColumn("Tomo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTomo);
+                this.columnTomo_letras = new global::System.Data.DataColumn("Tomo_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTomo_letras);
                 this.columnidInfante = new global::System.Data.DataColumn("idInfante", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidInfante);
-                this.columnLibro = new global::System.Data.DataColumn("Libro", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLibro);
-                this.columnNumPartida = new global::System.Data.DataColumn("NumPartida", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumPartida);
+                this.columnLibro_letras = new global::System.Data.DataColumn("Libro_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLibro_letras);
+                this.columnNumPartida_letras = new global::System.Data.DataColumn("NumPartida_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumPartida_letras);
                 this.columnHora_sentencia = new global::System.Data.DataColumn("Hora_sentencia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHora_sentencia);
                 this.columnFecha_sentencia = new global::System.Data.DataColumn("Fecha_sentencia", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1201,17 +1201,17 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Tomo {
+            public string Tomo_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.TomoColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.Tomo_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tomo\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tomo_letras\' in table \'partidas_nacimiento\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.TomoColumn] = value;
+                    this[this.tablepartidas_nacimiento.Tomo_letrasColumn] = value;
                 }
             }
             
@@ -1233,33 +1233,34 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Libro {
+            public string Libro_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.LibroColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.Libro_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Libro\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Libro_letras\' in table \'partidas_nacimiento\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.LibroColumn] = value;
+                    this[this.tablepartidas_nacimiento.Libro_letrasColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NumPartida {
+            public string NumPartida_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.NumPartidaColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.NumPartida_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumPartida\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumPartida_letras\' in table \'partidas_nacimiento\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.NumPartidaColumn] = value;
+                    this[this.tablepartidas_nacimiento.NumPartida_letrasColumn] = value;
                 }
             }
             
@@ -1823,14 +1824,14 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTomoNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.TomoColumn);
+            public bool IsTomo_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.Tomo_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTomoNull() {
-                this[this.tablepartidas_nacimiento.TomoColumn] = global::System.Convert.DBNull;
+            public void SetTomo_letrasNull() {
+                this[this.tablepartidas_nacimiento.Tomo_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1847,26 +1848,26 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLibroNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.LibroColumn);
+            public bool IsLibro_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.Libro_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLibroNull() {
-                this[this.tablepartidas_nacimiento.LibroColumn] = global::System.Convert.DBNull;
+            public void SetLibro_letrasNull() {
+                this[this.tablepartidas_nacimiento.Libro_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNumPartidaNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.NumPartidaColumn);
+            public bool IsNumPartida_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.NumPartida_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNumPartidaNull() {
-                this[this.tablepartidas_nacimiento.NumPartidaColumn] = global::System.Convert.DBNull;
+            public void SetNumPartida_letrasNull() {
+                this[this.tablepartidas_nacimiento.NumPartida_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

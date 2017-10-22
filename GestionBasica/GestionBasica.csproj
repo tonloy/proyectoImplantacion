@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Conv.cs" />
     <Compile Include="CLS\Empleado.cs" />
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />

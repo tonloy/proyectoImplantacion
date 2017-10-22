@@ -78,7 +78,7 @@ namespace GestionBasica.GUI
                 //frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
                 
                 //frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
-               
+                
                 //frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();   
                 
                 frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
@@ -118,6 +118,7 @@ namespace GestionBasica.GUI
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+           
             _GRUPOS.DataSource = CacheManager1.Cache.TODAS_LAS_PARTIDAS(Convert.ToDateTime(dateTimePicker1.Value.ToString()).ToString("yyyy-MM-dd"));
             dtgPartidas.AutoGenerateColumns = false;
             dtgPartidas.DataSource = _GRUPOS;
@@ -131,6 +132,7 @@ namespace GestionBasica.GUI
 
         private void txbImprimir_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(CLS.Conv.enletras(dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString()));
             Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
             frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
             frm.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();

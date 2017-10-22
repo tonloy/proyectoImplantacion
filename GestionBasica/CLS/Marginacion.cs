@@ -48,7 +48,7 @@ namespace GestionBasica.CLS
 
             Sentencia1.Append("UPDATE partidas_nacimiento SET Hora_sentencia='"+_Datos.HoraSentencia+"', Fecha_sentencia='"+_Datos.FechaSentencia+"', idJuzgado='"+_Datos.IdJuzgado+"', Modificada='1' WHERE idPartida='"+_Datos.IdPartidaVieja+"';");
 
-            Sentencia2.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
+            Sentencia2.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada,Tomo_letras,Libro_letras,NumPartida_letras) VALUES(");
             Sentencia2.Append(_Datos.IdMadre + ",");
             Sentencia2.Append(_Datos.IdPadre + ",");
             Sentencia2.Append(_Datos.IdInformante + ",");
@@ -58,7 +58,7 @@ namespace GestionBasica.CLS
             Sentencia2.Append(_Datos.Libro + ",");
             Sentencia2.Append(_Datos.NumPartida + ",\'");
             Sentencia2.Append(_Datos.Ruta + "',");
-            Sentencia2.Append("1,0);");
+            Sentencia2.Append("1,0,'" + _Datos.Tomo_letras + "','" + _Datos.Libro_letras + "','" + _Datos.NumPartida_letras + "');");
 
             Sentencia3.Append("INSERT INTO marginaciones(idPartida,Explicacion,idJefe) VALUES(");
             Sentencia3.Append(_NumPartida+",'");

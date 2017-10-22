@@ -74,8 +74,8 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo,
-             i.idInfante, Libro, NumPartida, Hora_sentencia, Fecha_sentencia, idJuzgado,
+            Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
+             i.idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
              Ruta, idTipo_partida, Modificada, (select date_format(Fecha_insercion,'%d-%c-%Y') from infantes o where i.idInfante=o.idInfante) as Fecha_insercion,year(Fecha_insercion)as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
              inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, date_format(i.FechaNac,'%d-%c-%Y') as FechaNac,i.Hora,
              (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
@@ -112,7 +112,7 @@ namespace CacheManager1
              ma.NombreCompleto as madre,
              p.idPadre,
              pa.NombreCompleto as padre,
-             inf.idInformante,
+             inf.idPadre,
              inf.NombreCompleto as informante,
              idJefeRegistro,
              Tomo,
@@ -127,11 +127,11 @@ namespace CacheManager1
              partidas_nacimiento p,
              padres pa,
              padres ma,
-             informantes inf,
+             padres inf,
              infantes i,
              empleados e,
              tipo_partidas t where p.idInfante=i.idInfante and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
-             and p.idInformante=inf.idInformante and (i.NombreCompleto like '%"+fecha+"%' or i.FechaNac like '%"+fecha+"%');";
+             and p.idInformante=inf.idPadre and Modificada=0 and (i.NombreCompleto like '%" + fecha + "%' or i.FechaNac like '%" + fecha + "%');";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

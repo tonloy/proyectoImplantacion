@@ -102,7 +102,7 @@ namespace GestionBasica.GUI
                     frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dataGridView1.CurrentRow.Cells["LugarNac"].Value.ToString());
                     frm.txtHora.Text = dataGridView1.CurrentRow.Cells["Hora"].Value.ToString();
                     frm.dtpFecha.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["Fecha"].Value.ToString());
-                    if (dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString() == "M")
+                    if (dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString() == "Masculino")
                     {
                         frm.rbtnMasculino.Checked = true;
                     }

@@ -9,6 +9,28 @@ namespace GestionBasica.CLS
 {
     class PartidaNac
     {
+        String _Tomo_letras;
+
+        public String Tomo_letras
+        {
+            get { return _Tomo_letras; }
+            set { _Tomo_letras = value; }
+        }
+        String _Libro_letras;
+
+        public String Libro_letras
+        {
+            get { return _Libro_letras; }
+            set { _Libro_letras = value; }
+        }
+        String _NumPartida_letras;
+
+        public String NumPartida_letras
+        {
+            get { return _NumPartida_letras; }
+            set { _NumPartida_letras = value; }
+        }
+
         String _idPartida;
 
         public String IdPartida
@@ -120,7 +142,7 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
+            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada,Tomo_letras,Libro_letras,NumPartida_letras) VALUES(");
             Sentencia.Append(_idMadre + ",");
             Sentencia.Append(_idPadre + ",");
             Sentencia.Append(_idInformante + ",");
@@ -130,7 +152,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(_Libro + ",");
             Sentencia.Append(_NumPartida + ",\'");
             Sentencia.Append(_Ruta + "',");
-            Sentencia.Append("1,0);");
+            Sentencia.Append("1,0,'"+_Tomo_letras+"','"+_Libro_letras+"','"+_NumPartida_letras+"');");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
