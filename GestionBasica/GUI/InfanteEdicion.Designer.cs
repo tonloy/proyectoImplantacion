@@ -210,6 +210,8 @@
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(105, 20);
             this.txtHora.TabIndex = 21;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
+            this.txtHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHora_KeyPress);
             // 
             // txbIdInfante
             // 

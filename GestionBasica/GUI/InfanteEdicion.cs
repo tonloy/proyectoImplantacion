@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace GestionBasica.GUI
 {
@@ -150,6 +151,11 @@ namespace GestionBasica.GUI
                 Notificador.SetError(txtHora, "Este campo no puede quedar vacío.");
                 Validado = false;
             }
+            if (!esHoraValida())
+            {
+                Notificador.SetError(txtHora, "Hora no válida.");
+                Validado = false;
+            }
             if (!rbtnFemenino.Checked && !rbtnMasculino.Checked)
             {
                 Notificador.SetError(rbtnFemenino, "Seleccione un género.");
@@ -207,6 +213,21 @@ namespace GestionBasica.GUI
             {
                 txtNombreCompleto.Text = txtNombreCompleto.Text.ToUpper();
             }
+        }
+
+        private void txtHora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+        private Boolean esHoraValida()
+        {
+            Regex r = new Regex("([0-1][0-9]|2[0-3]):[0-5][0-9]");
+            Boolean sw = true;
+            if (!r.Match(txtHora.Text).Success)
+            {
+                sw = false;
+            }
+            return sw;
         }
     }
 }

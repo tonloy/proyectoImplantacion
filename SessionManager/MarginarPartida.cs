@@ -11,6 +11,13 @@ namespace SessionManager
         private static volatile MarginarPartida _Instancia = null;
         private static object Bloqueador = new Object();
 
+        String _AnioInsercionLetras;
+
+        public String AnioInsercionLetras
+        {
+            get { return _AnioInsercionLetras; }
+            set { _AnioInsercionLetras = value; }
+        }
         String _Tomo_letras;
 
         public String Tomo_letras

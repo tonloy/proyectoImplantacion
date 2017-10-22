@@ -200,6 +200,7 @@ namespace GestionBasica.GUI
             oUsuario.Tomo_letras = CLS.Conv.enletras(txbFolio.Text);
             oUsuario.Libro_letras = CLS.Conv.enletras(txbLibro.Text);
             oUsuario.NumPartida_letras = CLS.Conv.enletras(txbNumPartida.Text);
+            oUsuario.Anio_insercion_letras1 = CLS.Conv.enletras(DateTime.Today.Year.ToString());
 
             if (ValidarDatos())
             {
@@ -212,7 +213,7 @@ namespace GestionBasica.GUI
                     _Datos.Tomo_letras = oUsuario.Tomo_letras;
                     _Datos.Libro_letras = oUsuario.Libro_letras;
                     _Datos.NumPartida_letras = oUsuario.NumPartida_letras;
-
+                    _Datos.AnioInsercionLetras = oUsuario.Anio_insercion_letras1;
 
                     Close();
                 }

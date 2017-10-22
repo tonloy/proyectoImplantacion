@@ -76,7 +76,7 @@ namespace CacheManager1
             String Consulta;
             Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
              i.idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
-             Ruta, idTipo_partida, Modificada, (select date_format(Fecha_insercion,'%d-%c-%Y') from infantes o where i.idInfante=o.idInfante) as Fecha_insercion,year(Fecha_insercion)as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
+             Ruta, idTipo_partida, Modificada, (select date_format(Fecha_insercion,'%d-%c-%Y') from infantes o where i.idInfante=o.idInfante) as Fecha_insercion,Anio_insercion_letras as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
              inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, date_format(i.FechaNac,'%d-%c-%Y') as FechaNac,i.Hora,
              (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
              (select Profesion from profesiones where idProfesion=ma.Profesion) as ProfesionMadre,(select Profesion from profesiones where idProfesion=pa.Profesion) as ProfesionPadre,
@@ -85,7 +85,7 @@ namespace CacheManager1
              (select Nacionalidad from paises where idPais=ma.Nacionalidad) as NacionalidadMadre,
              (select Nacionalidad from paises where idPais=pa.Nacionalidad) as NacionalidadPadre,
              (select Parentesco from parentescos where idParentesco=inf.idParentesco) as InformanteParen,
-             ma.DUI as DuiMadre,pa.DUI as DuiPadre,inf.DUI as DuiInformante,ma.Edad as EdadMadre,pa.Edad as EdadPadre,
+             ma.DUI as DuiMadre,pa.DUI as DuiPadre,inf.DUI as DuiInformante,ma.Edad_letras as EdadMadre,pa.Edad_letras as EdadPadre,
              ma.Domicilio as DomicilioMadre, pa.Domicilio as DomicilioPadre,
              (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p, padres pa,
              padres ma,padres inf, infantes i where p.idInfante=i.idInfante and
