@@ -23,6 +23,7 @@ namespace GestionBasica.GUI
         String ruta_imagen;
         public PartidaEdicion()
         {
+          
             InitializeComponent();
         }
         //Imagen
@@ -191,7 +192,7 @@ namespace GestionBasica.GUI
             oUsuario.IdMadre = txtIdMadre.Text;
             oUsuario.IdPadre = txtIdPadre.Text;
             oUsuario.IdInformante = txtIdInformante.Text;
-            oUsuario.Folio = txbFolio.Text;
+            oUsuario.Tomo = txbFolio.Text;
             oUsuario.Libro = txbLibro.Text;
             oUsuario.NumPartida = txbNumPartida.Text;
             oUsuario.IdPartida = txbIdPartida.Text;
@@ -201,7 +202,7 @@ namespace GestionBasica.GUI
             {
                 if (marginando)
                 {
-                    _Datos.Folio = txbFolio.Text;
+                    _Datos.Tomo = txbFolio.Text;
                     _Datos.Libro = txbLibro.Text;
                     _Datos.NumPartida = txbNumPartida.Text;
                     _Datos.Ruta = obtenerRuta(pictureBox1.ImageLocation);
@@ -235,6 +236,7 @@ namespace GestionBasica.GUI
         {
             Boolean Validado = true;
             Notificador.Clear();
+
             if (txbFolio.TextLength == 0)
             {
                 Notificador.SetError(txbFolio, "Este campo no puede quedar vacío.");
@@ -270,13 +272,19 @@ namespace GestionBasica.GUI
                 Notificador.SetError(button4, "Este campo no puede quedar vacío.");
                 Validado = false;
             }
-            if (pictureBox1.ImageLocation.Length == 0)
-            {
-                Notificador.SetError(pictureBox1, "Seleccione una imagen");
-                Validado = false;
-            }
 
             return Validado;
+        }
+
+        private void cbxRespaldoPda_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxRespaldoPda.Checked)
+            {
+                pictureBox1.Visible = true;
+            }
+            else {
+                pictureBox1.Visible = false; 
+            }             
         }
     }
 }

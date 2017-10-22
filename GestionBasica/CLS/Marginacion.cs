@@ -53,7 +53,7 @@ namespace GestionBasica.CLS
             Sentencia2.Append(_Datos.IdPadre + ",");
             Sentencia2.Append(_Datos.IdInformante + ",");
             Sentencia2.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo)" + ",");
-            Sentencia2.Append(_Datos.Folio + ",");
+            Sentencia2.Append(_Datos.Tomo + ",");
             Sentencia2.Append(_Datos.IdInfante + ",");
             Sentencia2.Append(_Datos.Libro + ",");
             Sentencia2.Append(_Datos.NumPartida + ",\'");
