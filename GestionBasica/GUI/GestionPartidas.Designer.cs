@@ -41,6 +41,8 @@
             this.txbImprimir = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +88,9 @@
             this.txbFiltrar,
             this.toolStripLabel1,
             this.toolStripSeparator2,
-            this.txbImprimir});
+            this.txbImprimir,
+            this.toolStripSeparator3,
+            this.btnGenerar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -146,8 +150,8 @@
             this.txbImprimir.Image = ((System.Drawing.Image)(resources.GetObject("txbImprimir.Image")));
             this.txbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbImprimir.Name = "txbImprimir";
-            this.txbImprimir.Size = new System.Drawing.Size(87, 22);
-            this.txbImprimir.Text = "Vista previa";
+            this.txbImprimir.Size = new System.Drawing.Size(100, 22);
+            this.txbImprimir.Text = "Vista respaldo";
             this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
             // dtgPartidas
@@ -189,12 +193,27 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(384, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
+            this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(108, 22);
+            this.btnGenerar.Text = "Generar partida";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // NumPartida
             // 
@@ -222,8 +241,8 @@
             // 
             // Folio
             // 
-            this.Folio.DataPropertyName = "Folio";
-            this.Folio.HeaderText = "Folio";
+            this.Folio.DataPropertyName = "Tomo";
+            this.Folio.HeaderText = "Tomo";
             this.Folio.Name = "Folio";
             this.Folio.ReadOnly = true;
             this.Folio.Visible = false;
@@ -357,6 +376,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton txbImprimir;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnGenerar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPartida;

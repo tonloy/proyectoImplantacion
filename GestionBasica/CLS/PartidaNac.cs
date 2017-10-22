@@ -120,7 +120,7 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Folio, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
+            Sentencia.Append("INSERT INTO partidas_nacimiento(idMadre, idPadre, idInformante, idJefeRegistro, Tomo, idInfante, Libro, NumPartida, Ruta, idTipo_partida,Modificada) VALUES(");
             Sentencia.Append(_idMadre + ",");
             Sentencia.Append(_idPadre + ",");
             Sentencia.Append(_idInformante + ",");

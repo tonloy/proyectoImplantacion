@@ -84,11 +84,11 @@ namespace GestionBasica.GUI
             {
                 if (rbtnFemenino.Checked)
                 {
-                    oUsuario.Sexo1 = "F";
+                    oUsuario.Sexo1 = "Femenino";
                 }
                 else
                 {
-                    oUsuario.Sexo1 = "M";
+                    oUsuario.Sexo1 = "Masculino";
                 }
                 if(chbxRevisado.Checked){
                     _revisado = 1;

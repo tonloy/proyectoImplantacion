@@ -183,7 +183,6 @@
             this.Sexo.HeaderText = "Sexo";
             this.Sexo.Name = "Sexo";
             this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 38;
             // 
             // Hora
             // 

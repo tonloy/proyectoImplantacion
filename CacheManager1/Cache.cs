@@ -40,7 +40,7 @@ namespace CacheManager1
              inf.idPadre as IdInformante,
              inf.NombreCompleto as informante,
              idJefeRegistro,
-             Folio,
+             Tomo,
              i.idInfante,
              i.NombreCompleto as infante,
             i.FechaNac,
@@ -70,6 +70,39 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable TODAS_LAS_PARTIDAS(Int32 pidPartida)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo,
+             i.idInfante, Libro, NumPartida, Hora_sentencia, Fecha_sentencia, idJuzgado,
+             Ruta, idTipo_partida, Modificada, (select date_format(Fecha_insercion,'%d-%c-%Y') from infantes o where i.idInfante=o.idInfante) as Fecha_insercion,year(Fecha_insercion)as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
+             inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, date_format(i.FechaNac,'%d-%c-%Y') as FechaNac,i.Hora,
+             (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
+             (select Profesion from profesiones where idProfesion=ma.Profesion) as ProfesionMadre,(select Profesion from profesiones where idProfesion=pa.Profesion) as ProfesionPadre,
+             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=ma.idMunicipio) as MadreOrigen,
+             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=pa.idMunicipio) as PadreOrigen,
+             (select Nacionalidad from paises where idPais=ma.Nacionalidad) as NacionalidadMadre,
+             (select Nacionalidad from paises where idPais=pa.Nacionalidad) as NacionalidadPadre,
+             (select Parentesco from parentescos where idParentesco=inf.idParentesco) as InformanteParen,
+             ma.DUI as DuiMadre,pa.DUI as DuiPadre,inf.DUI as DuiInformante,ma.Edad as EdadMadre,pa.Edad as EdadPadre,
+             ma.Domicilio as DomicilioMadre, pa.Domicilio as DomicilioPadre,
+             (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p, padres pa,
+             padres ma,padres inf, infantes i where p.idInfante=i.idInfante and
+             p.idInformante=inf.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and idPartida=" + pidPartida+";";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable TODAS_LAS_PARTIDAS(String fecha)
         {
             DataTable Datos = new DataTable();
@@ -82,7 +115,7 @@ namespace CacheManager1
              inf.idInformante,
              inf.NombreCompleto as informante,
              idJefeRegistro,
-             Folio,
+             Tomo,
              i.idInfante,
              i.NombreCompleto as infante,
             i.FechaNac,

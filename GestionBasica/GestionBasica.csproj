@@ -63,10 +63,19 @@
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
+    <Compile Include="DAT\DatosPartidaNac.cs">
+      <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DAT\DatosPartidaNac.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\partidaNac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>partidaNac.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -242,6 +251,12 @@
     <Compile Include="Reportes\VisorPartidaNac.Designer.cs">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\VisorPartidaNacGenerada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaNacGenerada.Designer.cs">
+      <DependentUpon>VisorPartidaNacGenerada.cs</DependentUpon>
+    </Compile>
     <Compile Include="REP\VistaPreviaPartidaNac.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -339,6 +354,9 @@
     <EmbeddedResource Include="Reportes\VisorPartidaNac.resx">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorPartidaNacGenerada.resx">
+      <DependentUpon>VisorPartidaNacGenerada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REP\VistaPreviaPartidaNac.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VistaPreviaPartidaNac.cs</LastGenOutput>
@@ -353,6 +371,17 @@
     </None>
     <None Include="DAT\DatosPartidaNac.xss">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\partidaNac.xsc">
+      <DependentUpon>partidaNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\partidaNac.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>partidaNac.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\partidaNac.xss">
+      <DependentUpon>partidaNac.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

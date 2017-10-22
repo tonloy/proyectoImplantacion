@@ -136,5 +136,12 @@ namespace GestionBasica.GUI
             frm.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
             frm.ShowDialog();
         }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
+            fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+            fm.ShowDialog();
+        }
     }
 }

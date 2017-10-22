@@ -20,9 +20,9 @@ namespace GestionBasica.DAT {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DatosPartidaNac")]
+    [global::System.Xml.Serialization.XmlRootAttribute("partidaNac")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DatosPartidaNac : global::System.Data.DataSet {
+    public partial class partidaNac : global::System.Data.DataSet {
         
         private partidas_nacimientoDataTable tablepartidas_nacimiento;
         
@@ -30,7 +30,7 @@ namespace GestionBasica.DAT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DatosPartidaNac() {
+        public partidaNac() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GestionBasica.DAT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DatosPartidaNac(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected partidaNac(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DatosPartidaNac cln = ((DatosPartidaNac)(base.Clone()));
+            partidaNac cln = ((partidaNac)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DatosPartidaNac";
+            this.DataSetName = "partidaNac";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DatosPartidaNac.xsd";
+            this.Namespace = "http://tempuri.org/partidaNac.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablepartidas_nacimiento = new partidas_nacimientoDataTable();
@@ -225,7 +225,7 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DatosPartidaNac ds = new DatosPartidaNac();
+            partidaNac ds = new partidaNac();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -309,55 +309,7 @@ namespace GestionBasica.DAT {
             
             private global::System.Data.DataColumn columnModificada;
             
-            private global::System.Data.DataColumn columnMadre;
-            
-            private global::System.Data.DataColumn columnPadre;
-            
-            private global::System.Data.DataColumn columnInformante;
-            
-            private global::System.Data.DataColumn columnInfante;
-            
             private global::System.Data.DataColumn columnFecha_insercion;
-            
-            private global::System.Data.DataColumn columnSexo;
-            
-            private global::System.Data.DataColumn columnFechaNac;
-            
-            private global::System.Data.DataColumn columnHora;
-            
-            private global::System.Data.DataColumn columnLugarNac;
-            
-            private global::System.Data.DataColumn columnProfesionMadre;
-            
-            private global::System.Data.DataColumn columnProfesionPadre;
-            
-            private global::System.Data.DataColumn columnMadreOrigen;
-            
-            private global::System.Data.DataColumn columnPadreOrigen;
-            
-            private global::System.Data.DataColumn columnNacionalidadMadre;
-            
-            private global::System.Data.DataColumn columnNacionalidadPadre;
-            
-            private global::System.Data.DataColumn columnInformanteParen;
-            
-            private global::System.Data.DataColumn columnDuiMadre;
-            
-            private global::System.Data.DataColumn columnDuiPadre;
-            
-            private global::System.Data.DataColumn columnEdadPadre;
-            
-            private global::System.Data.DataColumn columnEdadMadre;
-            
-            private global::System.Data.DataColumn columnDomicilioPadre;
-            
-            private global::System.Data.DataColumn columnDomicilioMadre;
-            
-            private global::System.Data.DataColumn columnDuiInformante;
-            
-            private global::System.Data.DataColumn columnJefeRegistro;
-            
-            private global::System.Data.DataColumn columnAnio_insercion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -514,201 +466,9 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MadreColumn {
-                get {
-                    return this.columnMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PadreColumn {
-                get {
-                    return this.columnPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InformanteColumn {
-                get {
-                    return this.columnInformante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InfanteColumn {
-                get {
-                    return this.columnInfante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Fecha_insercionColumn {
                 get {
                     return this.columnFecha_insercion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SexoColumn {
-                get {
-                    return this.columnSexo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaNacColumn {
-                get {
-                    return this.columnFechaNac;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HoraColumn {
-                get {
-                    return this.columnHora;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LugarNacColumn {
-                get {
-                    return this.columnLugarNac;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ProfesionMadreColumn {
-                get {
-                    return this.columnProfesionMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ProfesionPadreColumn {
-                get {
-                    return this.columnProfesionPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MadreOrigenColumn {
-                get {
-                    return this.columnMadreOrigen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PadreOrigenColumn {
-                get {
-                    return this.columnPadreOrigen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NacionalidadMadreColumn {
-                get {
-                    return this.columnNacionalidadMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NacionalidadPadreColumn {
-                get {
-                    return this.columnNacionalidadPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InformanteParenColumn {
-                get {
-                    return this.columnInformanteParen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DuiMadreColumn {
-                get {
-                    return this.columnDuiMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DuiPadreColumn {
-                get {
-                    return this.columnDuiPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EdadPadreColumn {
-                get {
-                    return this.columnEdadPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EdadMadreColumn {
-                get {
-                    return this.columnEdadMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DomicilioPadreColumn {
-                get {
-                    return this.columnDomicilioPadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DomicilioMadreColumn {
-                get {
-                    return this.columnDomicilioMadre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DuiInformanteColumn {
-                get {
-                    return this.columnDuiInformante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn JefeRegistroColumn {
-                get {
-                    return this.columnJefeRegistro;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Anio_insercionColumn {
-                get {
-                    return this.columnAnio_insercion;
                 }
             }
             
@@ -765,31 +525,7 @@ namespace GestionBasica.DAT {
                         string Ruta, 
                         string idTipo_partida, 
                         string Modificada, 
-                        string Madre, 
-                        string Padre, 
-                        string Informante, 
-                        string Infante, 
-                        string Fecha_insercion, 
-                        string Sexo, 
-                        string FechaNac, 
-                        string Hora, 
-                        string LugarNac, 
-                        string ProfesionMadre, 
-                        string ProfesionPadre, 
-                        string MadreOrigen, 
-                        string PadreOrigen, 
-                        string NacionalidadMadre, 
-                        string NacionalidadPadre, 
-                        string InformanteParen, 
-                        string DuiMadre, 
-                        string DuiPadre, 
-                        string EdadPadre, 
-                        string EdadMadre, 
-                        string DomicilioPadre, 
-                        string DomicilioMadre, 
-                        string DuiInformante, 
-                        string JefeRegistro, 
-                        string Anio_insercion) {
+                        string Fecha_insercion) {
                 partidas_nacimientoRow rowpartidas_nacimientoRow = ((partidas_nacimientoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idPartida,
@@ -807,31 +543,7 @@ namespace GestionBasica.DAT {
                         Ruta,
                         idTipo_partida,
                         Modificada,
-                        Madre,
-                        Padre,
-                        Informante,
-                        Infante,
-                        Fecha_insercion,
-                        Sexo,
-                        FechaNac,
-                        Hora,
-                        LugarNac,
-                        ProfesionMadre,
-                        ProfesionPadre,
-                        MadreOrigen,
-                        PadreOrigen,
-                        NacionalidadMadre,
-                        NacionalidadPadre,
-                        InformanteParen,
-                        DuiMadre,
-                        DuiPadre,
-                        EdadPadre,
-                        EdadMadre,
-                        DomicilioPadre,
-                        DomicilioMadre,
-                        DuiInformante,
-                        JefeRegistro,
-                        Anio_insercion};
+                        Fecha_insercion};
                 rowpartidas_nacimientoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpartidas_nacimientoRow);
                 return rowpartidas_nacimientoRow;
@@ -869,31 +581,7 @@ namespace GestionBasica.DAT {
                 this.columnRuta = base.Columns["Ruta"];
                 this.columnidTipo_partida = base.Columns["idTipo_partida"];
                 this.columnModificada = base.Columns["Modificada"];
-                this.columnMadre = base.Columns["Madre"];
-                this.columnPadre = base.Columns["Padre"];
-                this.columnInformante = base.Columns["Informante"];
-                this.columnInfante = base.Columns["Infante"];
                 this.columnFecha_insercion = base.Columns["Fecha_insercion"];
-                this.columnSexo = base.Columns["Sexo"];
-                this.columnFechaNac = base.Columns["FechaNac"];
-                this.columnHora = base.Columns["Hora"];
-                this.columnLugarNac = base.Columns["LugarNac"];
-                this.columnProfesionMadre = base.Columns["ProfesionMadre"];
-                this.columnProfesionPadre = base.Columns["ProfesionPadre"];
-                this.columnMadreOrigen = base.Columns["MadreOrigen"];
-                this.columnPadreOrigen = base.Columns["PadreOrigen"];
-                this.columnNacionalidadMadre = base.Columns["NacionalidadMadre"];
-                this.columnNacionalidadPadre = base.Columns["NacionalidadPadre"];
-                this.columnInformanteParen = base.Columns["InformanteParen"];
-                this.columnDuiMadre = base.Columns["DuiMadre"];
-                this.columnDuiPadre = base.Columns["DuiPadre"];
-                this.columnEdadPadre = base.Columns["EdadPadre"];
-                this.columnEdadMadre = base.Columns["EdadMadre"];
-                this.columnDomicilioPadre = base.Columns["DomicilioPadre"];
-                this.columnDomicilioMadre = base.Columns["DomicilioMadre"];
-                this.columnDuiInformante = base.Columns["DuiInformante"];
-                this.columnJefeRegistro = base.Columns["JefeRegistro"];
-                this.columnAnio_insercion = base.Columns["Anio_insercion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -929,56 +617,8 @@ namespace GestionBasica.DAT {
                 base.Columns.Add(this.columnidTipo_partida);
                 this.columnModificada = new global::System.Data.DataColumn("Modificada", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnModificada);
-                this.columnMadre = new global::System.Data.DataColumn("Madre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMadre);
-                this.columnPadre = new global::System.Data.DataColumn("Padre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPadre);
-                this.columnInformante = new global::System.Data.DataColumn("Informante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInformante);
-                this.columnInfante = new global::System.Data.DataColumn("Infante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInfante);
                 this.columnFecha_insercion = new global::System.Data.DataColumn("Fecha_insercion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha_insercion);
-                this.columnSexo = new global::System.Data.DataColumn("Sexo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSexo);
-                this.columnFechaNac = new global::System.Data.DataColumn("FechaNac", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaNac);
-                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHora);
-                this.columnLugarNac = new global::System.Data.DataColumn("LugarNac", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLugarNac);
-                this.columnProfesionMadre = new global::System.Data.DataColumn("ProfesionMadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProfesionMadre);
-                this.columnProfesionPadre = new global::System.Data.DataColumn("ProfesionPadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProfesionPadre);
-                this.columnMadreOrigen = new global::System.Data.DataColumn("MadreOrigen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMadreOrigen);
-                this.columnPadreOrigen = new global::System.Data.DataColumn("PadreOrigen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPadreOrigen);
-                this.columnNacionalidadMadre = new global::System.Data.DataColumn("NacionalidadMadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNacionalidadMadre);
-                this.columnNacionalidadPadre = new global::System.Data.DataColumn("NacionalidadPadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNacionalidadPadre);
-                this.columnInformanteParen = new global::System.Data.DataColumn("InformanteParen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInformanteParen);
-                this.columnDuiMadre = new global::System.Data.DataColumn("DuiMadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDuiMadre);
-                this.columnDuiPadre = new global::System.Data.DataColumn("DuiPadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDuiPadre);
-                this.columnEdadPadre = new global::System.Data.DataColumn("EdadPadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEdadPadre);
-                this.columnEdadMadre = new global::System.Data.DataColumn("EdadMadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEdadMadre);
-                this.columnDomicilioPadre = new global::System.Data.DataColumn("DomicilioPadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDomicilioPadre);
-                this.columnDomicilioMadre = new global::System.Data.DataColumn("DomicilioMadre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDomicilioMadre);
-                this.columnDuiInformante = new global::System.Data.DataColumn("DuiInformante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDuiInformante);
-                this.columnJefeRegistro = new global::System.Data.DataColumn("JefeRegistro", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJefeRegistro);
-                this.columnAnio_insercion = new global::System.Data.DataColumn("Anio_insercion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAnio_insercion);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1046,7 +686,7 @@ namespace GestionBasica.DAT {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DatosPartidaNac ds = new DatosPartidaNac();
+                partidaNac ds = new partidaNac();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1361,70 +1001,6 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Madre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.MadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Madre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.MadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Padre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.PadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Padre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.PadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Informante {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.InformanteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Informante\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.InformanteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Infante {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.InfanteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Infante\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.InfanteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Fecha_insercion {
                 get {
                     try {
@@ -1436,328 +1012,6 @@ namespace GestionBasica.DAT {
                 }
                 set {
                     this[this.tablepartidas_nacimiento.Fecha_insercionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Sexo {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.SexoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sexo\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.SexoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FechaNac {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.FechaNacColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaNac\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.FechaNacColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Hora {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.HoraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.HoraColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string LugarNac {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.LugarNacColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LugarNac\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.LugarNacColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ProfesionMadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.ProfesionMadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ProfesionMadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.ProfesionMadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ProfesionPadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.ProfesionPadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ProfesionPadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.ProfesionPadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MadreOrigen {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.MadreOrigenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MadreOrigen\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.MadreOrigenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PadreOrigen {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.PadreOrigenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PadreOrigen\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.PadreOrigenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NacionalidadMadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.NacionalidadMadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NacionalidadMadre\' in table \'partidas_nacimiento\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.NacionalidadMadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NacionalidadPadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.NacionalidadPadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NacionalidadPadre\' in table \'partidas_nacimiento\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.NacionalidadPadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string InformanteParen {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.InformanteParenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'InformanteParen\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.InformanteParenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DuiMadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.DuiMadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DuiMadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.DuiMadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DuiPadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.DuiPadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DuiPadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.DuiPadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EdadPadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.EdadPadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EdadPadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.EdadPadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EdadMadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.EdadMadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EdadMadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.EdadMadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DomicilioPadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.DomicilioPadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DomicilioPadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.DomicilioPadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DomicilioMadre {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.DomicilioMadreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DomicilioMadre\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.DomicilioMadreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DuiInformante {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.DuiInformanteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DuiInformante\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.DuiInformanteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string JefeRegistro {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.JefeRegistroColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'JefeRegistro\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.JefeRegistroColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Anio_insercion {
-                get {
-                    try {
-                        return ((string)(this[this.tablepartidas_nacimiento.Anio_insercionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Anio_insercion\' in table \'partidas_nacimiento\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepartidas_nacimiento.Anio_insercionColumn] = value;
                 }
             }
             
@@ -1943,54 +1197,6 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.MadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMadreNull() {
-                this[this.tablepartidas_nacimiento.MadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.PadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPadreNull() {
-                this[this.tablepartidas_nacimiento.PadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInformanteNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.InformanteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInformanteNull() {
-                this[this.tablepartidas_nacimiento.InformanteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInfanteNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.InfanteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInfanteNull() {
-                this[this.tablepartidas_nacimiento.InfanteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFecha_insercionNull() {
                 return this.IsNull(this.tablepartidas_nacimiento.Fecha_insercionColumn);
             }
@@ -1999,246 +1205,6 @@ namespace GestionBasica.DAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFecha_insercionNull() {
                 this[this.tablepartidas_nacimiento.Fecha_insercionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSexoNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.SexoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSexoNull() {
-                this[this.tablepartidas_nacimiento.SexoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaNacNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.FechaNacColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaNacNull() {
-                this[this.tablepartidas_nacimiento.FechaNacColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHoraNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.HoraColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHoraNull() {
-                this[this.tablepartidas_nacimiento.HoraColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLugarNacNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.LugarNacColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLugarNacNull() {
-                this[this.tablepartidas_nacimiento.LugarNacColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsProfesionMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.ProfesionMadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetProfesionMadreNull() {
-                this[this.tablepartidas_nacimiento.ProfesionMadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsProfesionPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.ProfesionPadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetProfesionPadreNull() {
-                this[this.tablepartidas_nacimiento.ProfesionPadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMadreOrigenNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.MadreOrigenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMadreOrigenNull() {
-                this[this.tablepartidas_nacimiento.MadreOrigenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPadreOrigenNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.PadreOrigenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPadreOrigenNull() {
-                this[this.tablepartidas_nacimiento.PadreOrigenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNacionalidadMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.NacionalidadMadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNacionalidadMadreNull() {
-                this[this.tablepartidas_nacimiento.NacionalidadMadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNacionalidadPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.NacionalidadPadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNacionalidadPadreNull() {
-                this[this.tablepartidas_nacimiento.NacionalidadPadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInformanteParenNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.InformanteParenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInformanteParenNull() {
-                this[this.tablepartidas_nacimiento.InformanteParenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDuiMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.DuiMadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDuiMadreNull() {
-                this[this.tablepartidas_nacimiento.DuiMadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDuiPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.DuiPadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDuiPadreNull() {
-                this[this.tablepartidas_nacimiento.DuiPadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEdadPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.EdadPadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEdadPadreNull() {
-                this[this.tablepartidas_nacimiento.EdadPadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEdadMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.EdadMadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEdadMadreNull() {
-                this[this.tablepartidas_nacimiento.EdadMadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDomicilioPadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.DomicilioPadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDomicilioPadreNull() {
-                this[this.tablepartidas_nacimiento.DomicilioPadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDomicilioMadreNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.DomicilioMadreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDomicilioMadreNull() {
-                this[this.tablepartidas_nacimiento.DomicilioMadreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDuiInformanteNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.DuiInformanteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDuiInformanteNull() {
-                this[this.tablepartidas_nacimiento.DuiInformanteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsJefeRegistroNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.JefeRegistroColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetJefeRegistroNull() {
-                this[this.tablepartidas_nacimiento.JefeRegistroColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAnio_insercionNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.Anio_insercionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAnio_insercionNull() {
-                this[this.tablepartidas_nacimiento.Anio_insercionColumn] = global::System.Convert.DBNull;
             }
         }
         
