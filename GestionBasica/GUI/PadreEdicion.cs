@@ -119,6 +119,7 @@ namespace GestionBasica.GUI
             oPadre.DUI1 = mtxtDUI.Text;
             oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
             oPadre.Observaciones1 = txtObservaciones.Text;
+            oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text); 
 
             if (ValidarDatos())
             {

@@ -38,18 +38,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.rbtnFemenino = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxMunicipio = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chbxRevisado = new System.Windows.Forms.CheckBox();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.txbIdInfante = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtHora = new System.Windows.Forms.MaskedTextBox();
-            this.chbxRevisado = new System.Windows.Forms.CheckBox();
-            this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxMunicipio = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -77,11 +77,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 57);
+            this.label5.Location = new System.Drawing.Point(65, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Nombre completo";
+            this.label5.Text = "Nombres";
             // 
             // label6
             // 
@@ -156,6 +156,61 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Recien Nacido";
             // 
+            // cbxDepartamentos
+            // 
+            this.cbxDepartamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDepartamentos.FormattingEnabled = true;
+            this.cbxDepartamentos.Location = new System.Drawing.Point(199, 92);
+            this.cbxDepartamentos.Name = "cbxDepartamentos";
+            this.cbxDepartamentos.Size = new System.Drawing.Size(159, 21);
+            this.cbxDepartamentos.TabIndex = 66;
+            this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Departamento";
+            // 
+            // cbxMunicipio
+            // 
+            this.cbxMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMunicipio.FormattingEnabled = true;
+            this.cbxMunicipio.Location = new System.Drawing.Point(416, 92);
+            this.cbxMunicipio.Name = "cbxMunicipio";
+            this.cbxMunicipio.Size = new System.Drawing.Size(161, 21);
+            this.cbxMunicipio.TabIndex = 67;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(364, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Municipio";
+            // 
+            // chbxRevisado
+            // 
+            this.chbxRevisado.AutoSize = true;
+            this.chbxRevisado.Location = new System.Drawing.Point(131, 247);
+            this.chbxRevisado.Name = "chbxRevisado";
+            this.chbxRevisado.Size = new System.Drawing.Size(71, 17);
+            this.chbxRevisado.TabIndex = 22;
+            this.chbxRevisado.Text = "Revisado";
+            this.chbxRevisado.UseVisualStyleBackColor = true;
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(131, 171);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(105, 20);
+            this.txtHora.TabIndex = 21;
+            // 
             // txbIdInfante
             // 
             this.txbIdInfante.Location = new System.Drawing.Point(131, 19);
@@ -207,61 +262,6 @@
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(131, 171);
-            this.txtHora.Mask = "00:00";
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(105, 20);
-            this.txtHora.TabIndex = 21;
-            // 
-            // chbxRevisado
-            // 
-            this.chbxRevisado.AutoSize = true;
-            this.chbxRevisado.Location = new System.Drawing.Point(131, 247);
-            this.chbxRevisado.Name = "chbxRevisado";
-            this.chbxRevisado.Size = new System.Drawing.Size(71, 17);
-            this.chbxRevisado.TabIndex = 22;
-            this.chbxRevisado.Text = "Revisado";
-            this.chbxRevisado.UseVisualStyleBackColor = true;
-            // 
-            // cbxDepartamentos
-            // 
-            this.cbxDepartamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxDepartamentos.FormattingEnabled = true;
-            this.cbxDepartamentos.Location = new System.Drawing.Point(199, 92);
-            this.cbxDepartamentos.Name = "cbxDepartamentos";
-            this.cbxDepartamentos.Size = new System.Drawing.Size(159, 21);
-            this.cbxDepartamentos.TabIndex = 66;
-            this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Departamento";
-            // 
-            // cbxMunicipio
-            // 
-            this.cbxMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxMunicipio.FormattingEnabled = true;
-            this.cbxMunicipio.Location = new System.Drawing.Point(416, 93);
-            this.cbxMunicipio.Name = "cbxMunicipio";
-            this.cbxMunicipio.Size = new System.Drawing.Size(161, 21);
-            this.cbxMunicipio.TabIndex = 67;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Municipio";
             // 
             // InfanteEdicion
             // 

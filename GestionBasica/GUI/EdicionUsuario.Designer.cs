@@ -91,6 +91,7 @@
             // 
             // cbxEmpleados
             // 
+            this.cbxEmpleados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEmpleados.FormattingEnabled = true;
             this.cbxEmpleados.Location = new System.Drawing.Point(32, 120);
             this.cbxEmpleados.Name = "cbxEmpleados";
@@ -99,6 +100,7 @@
             // 
             // cbxRoles
             // 
+            this.cbxRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRoles.FormattingEnabled = true;
             this.cbxRoles.Location = new System.Drawing.Point(32, 160);
             this.cbxRoles.Name = "cbxRoles";

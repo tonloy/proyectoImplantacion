@@ -20,6 +20,13 @@ namespace GestionBasica.CLS
         private string Profesion;
         private string Parentesco;
         private string Observaciones;
+        private string Edad_letras;
+
+        public string Edad_letras1
+        {
+            get { return Edad_letras; }
+            set { Edad_letras = value; }
+        }
 
         public string Observaciones1
         {
@@ -96,8 +103,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion, idParentesco, Observaciones) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "',"+Parentesco+",'"+Observaciones+"' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion, idParentesco, Observaciones,Edad_letras) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "',"+Parentesco+",'"+Observaciones+"','"+Edad_letras+"' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -133,7 +140,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(Domicilio + "',Nacionalidad=");
             Sentencia.Append(Nacionalidad + ",DUI='");
             Sentencia.Append(DUI + "',idMunicipio=");
-            Sentencia.Append(idMunicipio + ",idParentesco="+Parentesco+",Observaciones='"+Observaciones+"' where idPadre=" + IdPadre + ";");
+            Sentencia.Append(idMunicipio + ",idParentesco="+Parentesco+",Observaciones='"+Observaciones+"',Edad_letras='"+Edad_letras+"' where idPadre=" + IdPadre + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

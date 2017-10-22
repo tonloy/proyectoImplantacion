@@ -42,6 +42,10 @@
             this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxParentesco = new System.Windows.Forms.ComboBox();
             this.cbxPaises = new System.Windows.Forms.ComboBox();
             this.cbxProfesiones = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,10 +57,6 @@
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxParentesco = new System.Windows.Forms.ComboBox();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -197,6 +197,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
             // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(145, 230);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
+            this.txtObservaciones.TabIndex = 92;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(49, 230);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Observaciones:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Parentesco:";
+            // 
+            // cbxParentesco
+            // 
+            this.cbxParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxParentesco.FormattingEnabled = true;
+            this.cbxParentesco.Location = new System.Drawing.Point(145, 203);
+            this.cbxParentesco.Name = "cbxParentesco";
+            this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
+            this.cbxParentesco.TabIndex = 90;
+            // 
             // cbxPaises
             // 
             this.cbxPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -288,40 +323,6 @@
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Parentesco:";
-            // 
-            // cbxParentesco
-            // 
-            this.cbxParentesco.FormattingEnabled = true;
-            this.cbxParentesco.Location = new System.Drawing.Point(145, 203);
-            this.cbxParentesco.Name = "cbxParentesco";
-            this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
-            this.cbxParentesco.TabIndex = 90;
-            // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.Location = new System.Drawing.Point(145, 230);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
-            this.txtObservaciones.TabIndex = 92;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 230);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Observaciones:";
             // 
             // PadreEdicion
             // 

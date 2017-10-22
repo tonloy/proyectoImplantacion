@@ -165,6 +165,7 @@
             // 
             // cbxJuzgados
             // 
+            this.cbxJuzgados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxJuzgados.FormattingEnabled = true;
             this.cbxJuzgados.Location = new System.Drawing.Point(144, 123);
             this.cbxJuzgados.Name = "cbxJuzgados";
