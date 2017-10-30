@@ -119,7 +119,9 @@ namespace GestionBasica.GUI
             oPadre.DUI1 = mtxtDUI.Text;
             oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
             oPadre.Observaciones1 = txtObservaciones.Text;
-            oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text); 
+            oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text);
+            oPadre.NumPartida1 = txtNumPartida.Text;
+            oPadre.NumPartidaLetras1 = CLS.Conv.enletras(txtNumPartida.Text); 
 
             if (ValidarDatos())
             {
@@ -223,22 +225,36 @@ namespace GestionBasica.GUI
                 Validado = false;
             }
 
-            if (mtxtDUI.TextLength == 0 || !mtxtDUI.MaskCompleted)
-            {
-                Notificador.SetError(mtxtDUI, "Este campo no puede ir vacio o incompleto.");
-                Validado = false;
-            }
-
             if (cbxDepartamentos.SelectedItem == null)
             {
                 Notificador.SetError(cbxDepartamentos, "Seleccione un departamento de la lista.");
                 Validado = false;
             }
+
             if (cbxParentesco.SelectedItem == null)
             {
                 Notificador.SetError(cbxParentesco, "Seleccione un parentesco de la lista.");
                 Validado = false;
             }
+
+            if (chbxMenor.Checked)
+            {
+                if (txtNumPartida.TextLength == 0)
+                {
+                    Notificador.SetError(mtxtDUI, "Este campo no puede ir vacio o incompleto.");
+                    Validado = false;
+                }
+
+            }
+            else
+            {
+                if (mtxtDUI.TextLength == 0 || !mtxtDUI.MaskCompleted)
+                {
+                    Notificador.SetError(mtxtDUI, "Este campo no puede ir vacio o incompleto.");
+                    Validado = false;
+                }
+            }
+
 
             return Validado;
         }
