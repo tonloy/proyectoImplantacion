@@ -15,6 +15,20 @@ namespace GestionBasica.CLS
         private string Sexo;
         private string Hora;
         private string FechaNac;
+        private string Hora_letras;
+
+        public string Hora_letras1
+        {
+            get { return Hora_letras; }
+            set { Hora_letras = value; }
+        }
+        private string FechaNac_letras;
+
+        public string FechaNac_letras1
+        {
+            get { return FechaNac_letras; }
+            set { FechaNac_letras = value; }
+        }
 
         //Propiedades
         public string IdInfante
@@ -60,8 +74,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
             
-            Sentencia.Append("INSERT INTO registro_familiar.infantes (NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "',"+revisado+" );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.infantes (NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,Hora_letras,FechaNac_letras) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "',"+revisado+",'"+Hora_letras1+"','"+FechaNac_letras1+"' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -88,7 +102,7 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("UPDATE registro_familiar.infantes SET NombreCompleto='" + NombreCompleto + "',LugarNac='" + LugarNac + "',Sexo='" + Sexo + "', Hora='" + Hora + "',Revisado='" + pRevisado + "', FechaNac='" + FechaNac + "' WHERE idInfante='" + idInfante + "';");
+            Sentencia.Append("UPDATE registro_familiar.infantes SET NombreCompleto='" + NombreCompleto + "',LugarNac='" + LugarNac + "',Sexo='" + Sexo + "', Hora='" + Hora + "',Revisado='" + pRevisado + "', FechaNac='" + FechaNac + "',Hora_letras='"+Hora_letras1+"',FechaNac_letras='"+FechaNac_letras1+"' WHERE idInfante='" + idInfante + "';");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

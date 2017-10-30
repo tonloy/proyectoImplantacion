@@ -317,13 +317,13 @@ namespace GestionBasica.DAT {
             
             private global::System.Data.DataColumn columnInfante;
             
-            private global::System.Data.DataColumn columnFecha_insercion;
+            private global::System.Data.DataColumn columnFecha_insercion_letras;
             
             private global::System.Data.DataColumn columnSexo;
             
-            private global::System.Data.DataColumn columnFechaNac;
+            private global::System.Data.DataColumn columnFechaNac_letras;
             
-            private global::System.Data.DataColumn columnHora;
+            private global::System.Data.DataColumn columnHora_letras;
             
             private global::System.Data.DataColumn columnLugarNac;
             
@@ -546,9 +546,9 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Fecha_insercionColumn {
+            public global::System.Data.DataColumn Fecha_insercion_letrasColumn {
                 get {
-                    return this.columnFecha_insercion;
+                    return this.columnFecha_insercion_letras;
                 }
             }
             
@@ -562,17 +562,17 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaNacColumn {
+            public global::System.Data.DataColumn FechaNac_letrasColumn {
                 get {
-                    return this.columnFechaNac;
+                    return this.columnFechaNac_letras;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HoraColumn {
+            public global::System.Data.DataColumn Hora_letrasColumn {
                 get {
-                    return this.columnHora;
+                    return this.columnHora_letras;
                 }
             }
             
@@ -769,10 +769,10 @@ namespace GestionBasica.DAT {
                         string Padre, 
                         string Informante, 
                         string Infante, 
-                        string Fecha_insercion, 
+                        string Fecha_insercion_letras, 
                         string Sexo, 
-                        string FechaNac, 
-                        string Hora, 
+                        string FechaNac_letras, 
+                        string Hora_letras, 
                         string LugarNac, 
                         string ProfesionMadre, 
                         string ProfesionPadre, 
@@ -811,10 +811,10 @@ namespace GestionBasica.DAT {
                         Padre,
                         Informante,
                         Infante,
-                        Fecha_insercion,
+                        Fecha_insercion_letras,
                         Sexo,
-                        FechaNac,
-                        Hora,
+                        FechaNac_letras,
+                        Hora_letras,
                         LugarNac,
                         ProfesionMadre,
                         ProfesionPadre,
@@ -873,10 +873,10 @@ namespace GestionBasica.DAT {
                 this.columnPadre = base.Columns["Padre"];
                 this.columnInformante = base.Columns["Informante"];
                 this.columnInfante = base.Columns["Infante"];
-                this.columnFecha_insercion = base.Columns["Fecha_insercion"];
+                this.columnFecha_insercion_letras = base.Columns["Fecha_insercion_letras"];
                 this.columnSexo = base.Columns["Sexo"];
-                this.columnFechaNac = base.Columns["FechaNac"];
-                this.columnHora = base.Columns["Hora"];
+                this.columnFechaNac_letras = base.Columns["FechaNac_letras"];
+                this.columnHora_letras = base.Columns["Hora_letras"];
                 this.columnLugarNac = base.Columns["LugarNac"];
                 this.columnProfesionMadre = base.Columns["ProfesionMadre"];
                 this.columnProfesionPadre = base.Columns["ProfesionPadre"];
@@ -937,14 +937,14 @@ namespace GestionBasica.DAT {
                 base.Columns.Add(this.columnInformante);
                 this.columnInfante = new global::System.Data.DataColumn("Infante", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInfante);
-                this.columnFecha_insercion = new global::System.Data.DataColumn("Fecha_insercion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_insercion);
+                this.columnFecha_insercion_letras = new global::System.Data.DataColumn("Fecha_insercion_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_insercion_letras);
                 this.columnSexo = new global::System.Data.DataColumn("Sexo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSexo);
-                this.columnFechaNac = new global::System.Data.DataColumn("FechaNac", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaNac);
-                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHora);
+                this.columnFechaNac_letras = new global::System.Data.DataColumn("FechaNac_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaNac_letras);
+                this.columnHora_letras = new global::System.Data.DataColumn("Hora_letras", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora_letras);
                 this.columnLugarNac = new global::System.Data.DataColumn("LugarNac", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLugarNac);
                 this.columnProfesionMadre = new global::System.Data.DataColumn("ProfesionMadre", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1426,17 +1426,18 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Fecha_insercion {
+            public string Fecha_insercion_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.Fecha_insercionColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.Fecha_insercion_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha_insercion\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha_insercion_letras\' in table \'partidas_nacimiento\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.Fecha_insercionColumn] = value;
+                    this[this.tablepartidas_nacimiento.Fecha_insercion_letrasColumn] = value;
                 }
             }
             
@@ -1458,33 +1459,33 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FechaNac {
+            public string FechaNac_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.FechaNacColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.FechaNac_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaNac\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaNac_letras\' in table \'partidas_nacimiento\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.FechaNacColumn] = value;
+                    this[this.tablepartidas_nacimiento.FechaNac_letrasColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Hora {
+            public string Hora_letras {
                 get {
                     try {
-                        return ((string)(this[this.tablepartidas_nacimiento.HoraColumn]));
+                        return ((string)(this[this.tablepartidas_nacimiento.Hora_letrasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'partidas_nacimiento\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hora_letras\' in table \'partidas_nacimiento\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepartidas_nacimiento.HoraColumn] = value;
+                    this[this.tablepartidas_nacimiento.Hora_letrasColumn] = value;
                 }
             }
             
@@ -1992,14 +1993,14 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFecha_insercionNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.Fecha_insercionColumn);
+            public bool IsFecha_insercion_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.Fecha_insercion_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFecha_insercionNull() {
-                this[this.tablepartidas_nacimiento.Fecha_insercionColumn] = global::System.Convert.DBNull;
+            public void SetFecha_insercion_letrasNull() {
+                this[this.tablepartidas_nacimiento.Fecha_insercion_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2016,26 +2017,26 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaNacNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.FechaNacColumn);
+            public bool IsFechaNac_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.FechaNac_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaNacNull() {
-                this[this.tablepartidas_nacimiento.FechaNacColumn] = global::System.Convert.DBNull;
+            public void SetFechaNac_letrasNull() {
+                this[this.tablepartidas_nacimiento.FechaNac_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHoraNull() {
-                return this.IsNull(this.tablepartidas_nacimiento.HoraColumn);
+            public bool IsHora_letrasNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.Hora_letrasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHoraNull() {
-                this[this.tablepartidas_nacimiento.HoraColumn] = global::System.Convert.DBNull;
+            public void SetHora_letrasNull() {
+                this[this.tablepartidas_nacimiento.Hora_letrasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

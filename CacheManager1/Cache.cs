@@ -76,8 +76,8 @@ namespace CacheManager1
             String Consulta;
             Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
              i.idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
-             Ruta, idTipo_partida, Modificada, (select date_format(Fecha_insercion,'%d-%c-%Y') from infantes o where i.idInfante=o.idInfante) as Fecha_insercion,Anio_insercion_letras as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
-             inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, date_format(i.FechaNac,'%d-%c-%Y') as FechaNac,i.Hora,
+             Ruta, idTipo_partida, Modificada, p.Fecha_insercion_letras,Anio_insercion_letras as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
+             inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, i.FechaNac_letras,i.Hora_letras,
              (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
              (select Profesion from profesiones where idProfesion=ma.Profesion) as ProfesionMadre,(select Profesion from profesiones where idProfesion=pa.Profesion) as ProfesionPadre,
              (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=ma.idMunicipio) as MadreOrigen,
