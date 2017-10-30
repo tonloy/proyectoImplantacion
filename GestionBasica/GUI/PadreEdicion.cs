@@ -329,5 +329,19 @@ namespace GestionBasica.GUI
             }
         }
 
+        private void chbxMenor_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (chbxMenor.Checked)
+            {
+                mtxtDUI.Enabled = false;
+                txtNumPartida.Enabled = true;
+            }
+            else
+            {
+                mtxtDUI.Enabled = true;
+                txtNumPartida.Enabled = false;
+            }
+        }
+
     }
 }

@@ -57,13 +57,16 @@
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNumPartida = new System.Windows.Forms.TextBox();
+            this.chbxMenor = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 355);
+            this.button3.Location = new System.Drawing.Point(542, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(440, 355);
+            this.btnGuardar.Location = new System.Drawing.Point(440, 379);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 1;
@@ -172,6 +175,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chbxMenor);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtNumPartida);
             this.groupBox1.Controls.Add(this.txtObservaciones);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -192,14 +198,14 @@
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(32, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 313);
+            this.groupBox1.Size = new System.Drawing.Size(604, 338);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(145, 230);
+            this.txtObservaciones.Location = new System.Drawing.Point(145, 257);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
@@ -208,7 +214,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 230);
+            this.label3.Location = new System.Drawing.Point(49, 257);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 93;
@@ -217,7 +223,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 206);
+            this.label2.Location = new System.Drawing.Point(64, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 91;
@@ -227,7 +233,7 @@
             // 
             this.cbxParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxParentesco.FormattingEnabled = true;
-            this.cbxParentesco.Location = new System.Drawing.Point(145, 203);
+            this.cbxParentesco.Location = new System.Drawing.Point(145, 230);
             this.cbxParentesco.Name = "cbxParentesco";
             this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
             this.cbxParentesco.TabIndex = 90;
@@ -253,7 +259,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 174);
+            this.label12.Location = new System.Drawing.Point(32, 171);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 26);
             this.label12.TabIndex = 87;
@@ -324,11 +330,39 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 26);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Número de partida\r\nde nacimiento:";
+            // 
+            // txtNumPartida
+            // 
+            this.txtNumPartida.Enabled = false;
+            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
+            this.txtNumPartida.Name = "txtNumPartida";
+            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
+            this.txtNumPartida.TabIndex = 96;
+            // 
+            // chbxMenor
+            // 
+            this.chbxMenor.AutoSize = true;
+            this.chbxMenor.Location = new System.Drawing.Point(475, 21);
+            this.chbxMenor.Name = "chbxMenor";
+            this.chbxMenor.Size = new System.Drawing.Size(110, 17);
+            this.chbxMenor.TabIndex = 98;
+            this.chbxMenor.Text = "¿Menor de edad?";
+            this.chbxMenor.UseVisualStyleBackColor = true;
+            this.chbxMenor.CheckStateChanged += new System.EventHandler(this.chbxMenor_CheckStateChanged);
+            // 
             // PadreEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 407);
+            this.ClientSize = new System.Drawing.Size(667, 428);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -382,5 +416,8 @@
         public System.Windows.Forms.ComboBox cbxParentesco;
         public System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtNumPartida;
+        private System.Windows.Forms.CheckBox chbxMenor;
     }
 }

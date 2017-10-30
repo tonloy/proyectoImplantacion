@@ -45,7 +45,7 @@ namespace CacheManager1
              i.NombreCompleto as infante,
             i.FechaNac,
              Libro,
-             NumPartida,
+             p.NumPartida,
              Ruta,
              t.idTipo_partida,
              Modificada FROM
@@ -120,7 +120,7 @@ namespace CacheManager1
              i.NombreCompleto as infante,
             i.FechaNac,
              Libro,
-             NumPartida,
+             p.NumPartida,
              Ruta,
              t.idTipo_partida,
              Modificada FROM
