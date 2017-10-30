@@ -201,6 +201,7 @@ namespace GestionBasica.GUI
             oUsuario.Libro_letras = CLS.Conv.enletras(txbLibro.Text);
             oUsuario.NumPartida_letras = CLS.Conv.enletras(txbNumPartida.Text);
             oUsuario.Anio_insercion_letras1 = CLS.Conv.enletras(DateTime.Today.Year.ToString());
+            oUsuario.Fecha_insercion_letras1 = CLS.Hora.fecha_letras(DateTime.Today.ToString("yyyy-MM-dd"));
 
             if (ValidarDatos())
             {

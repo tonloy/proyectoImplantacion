@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using GestionBasica.CLS;
 
 namespace GestionBasica.GUI
 {
@@ -80,6 +81,8 @@ namespace GestionBasica.GUI
             oUsuario.NombreCompleto1 = txtNombreCompleto.Text;
             oUsuario.LugarNac1 = cbxMunicipio.SelectedValue.ToString();
             oUsuario.FechaNac1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
+            oUsuario.Hora_letras1 = Hora.hora_letras(txtHora.Text);
+            oUsuario.FechaNac_letras1 = Hora.fecha_letras(oUsuario.FechaNac1);
 
             if (ValidarDatos())
             {

@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\Conv.cs" />
+    <Compile Include="CLS\Dui.cs" />
     <Compile Include="CLS\Empleado.cs" />
+    <Compile Include="CLS\Hora.cs" />
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Marginacion.cs" />
