@@ -85,7 +85,7 @@ namespace CacheManager1
              (select Nacionalidad from paises where idPais=ma.Nacionalidad) as NacionalidadMadre,
              (select Nacionalidad from paises where idPais=pa.Nacionalidad) as NacionalidadPadre,
              (select Parentesco from parentescos where idParentesco=inf.idParentesco) as InformanteParen,
-             ma.DUI as DuiMadre,pa.DUI as DuiPadre,inf.DUI as DuiInformante,ma.Edad_letras as EdadMadre,pa.Edad_letras as EdadPadre,
+             ma.Dui_letras as DuiMadre,pa.Dui_letras as DuiPadre,inf.Dui_letras as DuiInformante,ma.Edad_letras as EdadMadre,pa.Edad_letras as EdadPadre,
              ma.Domicilio as DomicilioMadre, pa.Domicilio as DomicilioPadre,
              (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p, padres pa,
              padres ma,padres inf, infantes i where p.idInfante=i.idInfante and

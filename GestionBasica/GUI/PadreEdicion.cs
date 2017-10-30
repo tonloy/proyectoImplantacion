@@ -121,7 +121,8 @@ namespace GestionBasica.GUI
             oPadre.Observaciones1 = txtObservaciones.Text;
             oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text);
             oPadre.NumPartida1 = txtNumPartida.Text;
-            oPadre.NumPartidaLetras1 = CLS.Conv.enletras(txtNumPartida.Text); 
+            oPadre.NumPartidaLetras1 = CLS.Conv.enletras(txtNumPartida.Text);
+            oPadre.DUI_letras1 = CLS.Dui.dui_letras(mtxtDUI.Text);
 
             if (ValidarDatos())
             {
