@@ -60,7 +60,7 @@
             this.rbtnMasculino.Location = new System.Drawing.Point(131, 135);
             this.rbtnMasculino.Name = "rbtnMasculino";
             this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
-            this.rbtnMasculino.TabIndex = 2;
+            this.rbtnMasculino.TabIndex = 3;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.rbtnFemenino.Location = new System.Drawing.Point(210, 135);
             this.rbtnFemenino.Name = "rbtnFemenino";
             this.rbtnFemenino.Size = new System.Drawing.Size(71, 17);
-            this.rbtnFemenino.TabIndex = 3;
+            this.rbtnFemenino.TabIndex = 4;
             this.rbtnFemenino.TabStop = true;
             this.rbtnFemenino.Text = "Femenino";
             this.rbtnFemenino.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.groupBox1.Location = new System.Drawing.Point(22, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(597, 280);
-            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Recien Nacido";
             // 
@@ -163,7 +163,7 @@
             this.cbxDepartamentos.Location = new System.Drawing.Point(199, 92);
             this.cbxDepartamentos.Name = "cbxDepartamentos";
             this.cbxDepartamentos.Size = new System.Drawing.Size(159, 21);
-            this.cbxDepartamentos.TabIndex = 66;
+            this.cbxDepartamentos.TabIndex = 1;
             this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
             // 
             // label1
@@ -182,7 +182,7 @@
             this.cbxMunicipio.Location = new System.Drawing.Point(416, 92);
             this.cbxMunicipio.Name = "cbxMunicipio";
             this.cbxMunicipio.Size = new System.Drawing.Size(161, 21);
-            this.cbxMunicipio.TabIndex = 67;
+            this.cbxMunicipio.TabIndex = 2;
             // 
             // label3
             // 
@@ -199,7 +199,7 @@
             this.chbxRevisado.Location = new System.Drawing.Point(131, 247);
             this.chbxRevisado.Name = "chbxRevisado";
             this.chbxRevisado.Size = new System.Drawing.Size(71, 17);
-            this.chbxRevisado.TabIndex = 22;
+            this.chbxRevisado.TabIndex = 7;
             this.chbxRevisado.Text = "Revisado";
             this.chbxRevisado.UseVisualStyleBackColor = true;
             // 
@@ -209,7 +209,7 @@
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(105, 20);
-            this.txtHora.TabIndex = 21;
+            this.txtHora.TabIndex = 5;
             this.txtHora.ValidatingType = typeof(System.DateTime);
             this.txtHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHora_KeyPress);
             // 
@@ -237,7 +237,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(131, 209);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(105, 20);
-            this.dtpFecha.TabIndex = 1;
+            this.dtpFecha.TabIndex = 6;
             this.dtpFecha.Value = new System.DateTime(2017, 9, 22, 0, 0, 0, 0);
             this.dtpFecha.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -246,7 +246,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(447, 309);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnSiguiente_Click);
@@ -256,7 +256,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(544, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

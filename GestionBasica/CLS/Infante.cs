@@ -74,8 +74,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
             
-            Sentencia.Append("INSERT INTO registro_familiar.infantes (NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,Hora_letras,FechaNac_letras) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "',"+revisado+",'"+Hora_letras1+"','"+FechaNac_letras1+"' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,Hora_letras,FechaNac_letras,Nacionalidad) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + LugarNac + "', '" + Sexo + "','" + Hora + "','" + FechaNac + "',"+revisado+",'"+Hora_letras1+"','"+FechaNac_letras1+"' ,129);  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -102,7 +102,7 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("UPDATE registro_familiar.infantes SET NombreCompleto='" + NombreCompleto + "',LugarNac='" + LugarNac + "',Sexo='" + Sexo + "', Hora='" + Hora + "',Revisado='" + pRevisado + "', FechaNac='" + FechaNac + "',Hora_letras='"+Hora_letras1+"',FechaNac_letras='"+FechaNac_letras1+"' WHERE idInfante='" + idInfante + "';");
+            Sentencia.Append("UPDATE registro_familiar.padres SET NombreCompleto='" + NombreCompleto + "',LugarNac='" + LugarNac + "',Sexo='" + Sexo + "', Hora='" + Hora + "',Revisado='" + pRevisado + "', FechaNac='" + FechaNac + "',Hora_letras='"+Hora_letras1+"',FechaNac_letras='"+FechaNac_letras1+"' WHERE idPadre='" + idInfante + "';");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

@@ -77,6 +77,7 @@
             this.txbNumPartida.Name = "txbNumPartida";
             this.txbNumPartida.Size = new System.Drawing.Size(49, 20);
             this.txbNumPartida.TabIndex = 2;
+            this.txbNumPartida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumPartida_KeyPress);
             // 
             // txbLibro
             // 
@@ -84,6 +85,7 @@
             this.txbLibro.Name = "txbLibro";
             this.txbLibro.Size = new System.Drawing.Size(49, 20);
             this.txbLibro.TabIndex = 0;
+            this.txbLibro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbLibro_KeyPress);
             // 
             // label2
             // 
@@ -277,6 +279,7 @@
             this.txbFolio.Name = "txbFolio";
             this.txbFolio.Size = new System.Drawing.Size(49, 20);
             this.txbFolio.TabIndex = 1;
+            this.txbFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbFolio_KeyPress);
             // 
             // label8
             // 
@@ -308,7 +311,7 @@
             // 
             this.cbxRespaldoPda.AutoSize = true;
             this.cbxRespaldoPda.Location = new System.Drawing.Point(306, 132);
-            this.cbxRespaldoPda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxRespaldoPda.Margin = new System.Windows.Forms.Padding(2);
             this.cbxRespaldoPda.Name = "cbxRespaldoPda";
             this.cbxRespaldoPda.Size = new System.Drawing.Size(107, 17);
             this.cbxRespaldoPda.TabIndex = 24;

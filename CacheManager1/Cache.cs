@@ -41,7 +41,7 @@ namespace CacheManager1
              inf.NombreCompleto as informante,
              idJefeRegistro,
              Tomo,
-             i.idInfante,
+             i.idPadre as idInfante,
              i.NombreCompleto as infante,
             i.FechaNac,
              Libro,
@@ -53,9 +53,9 @@ namespace CacheManager1
              padres pa,
              padres ma,
              padres inf,
-             infantes i,
+             padres i,
              empleados e,
-             tipo_partidas t where p.idInfante=i.idInfante and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
+             tipo_partidas t where p.idInfante=i.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
              and p.idInformante=inf.idPadre and Modificada=0;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -75,7 +75,7 @@ namespace CacheManager1
             DataTable Datos = new DataTable();
             String Consulta;
             Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
-             i.idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
+             i.idPadre as idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
              Ruta, idTipo_partida, Modificada, p.Fecha_insercion_letras,Anio_insercion_letras as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
              inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, i.FechaNac_letras,i.Hora_letras,
              (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
@@ -88,7 +88,7 @@ namespace CacheManager1
              ma.Dui_letras as DuiMadre,pa.Dui_letras as DuiPadre,inf.Dui_letras as DuiInformante,ma.Edad_letras as EdadMadre,pa.Edad_letras as EdadPadre,
              ma.Domicilio as DomicilioMadre, pa.Domicilio as DomicilioPadre,
              (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p, padres pa,
-             padres ma,padres inf, infantes i where p.idInfante=i.idInfante and
+             padres ma,padres inf, padres i where p.idInfante=i.idPadre and
              p.idInformante=inf.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and idPartida=" + pidPartida+";";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -116,7 +116,7 @@ namespace CacheManager1
              inf.NombreCompleto as informante,
              idJefeRegistro,
              Tomo,
-             i.idInfante,
+             i.idPadre as idInfante,
              i.NombreCompleto as infante,
             i.FechaNac,
              Libro,
@@ -128,9 +128,9 @@ namespace CacheManager1
              padres pa,
              padres ma,
              padres inf,
-             infantes i,
+             padres i,
              empleados e,
-             tipo_partidas t where p.idInfante=i.idInfante and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
+             tipo_partidas t where p.idInfante=i.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
              and p.idInformante=inf.idPadre and Modificada=0 and (i.NombreCompleto like '%" + fecha + "%' or i.FechaNac like '%" + fecha + "%');";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -148,7 +148,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idInfante, NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,dep.Departamento,m.Municipio FROM registro_familiar.infantes p, municipios m, departamentos dep
+            Consulta = @"SELECT idPadre as idInfante, NombreCompleto, LugarNac, Sexo, Hora, FechaNac, Revisado,dep.Departamento,m.Municipio FROM registro_familiar.padres p, municipios m, departamentos dep
                         where p.LugarNac = m.idMunicipio and dep.idDepartamento=m.idDepartamento;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

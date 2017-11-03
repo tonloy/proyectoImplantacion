@@ -39,10 +39,10 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbImprimir = new System.Windows.Forms.ToolStripButton();
-            this.dtgPartidas = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnGenerar = new System.Windows.Forms.ToolStripButton();
+            this.dtgPartidas = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,6 +154,21 @@
             this.txbImprimir.Text = "Vista respaldo";
             this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
+            this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(108, 22);
+            this.btnGenerar.Text = "Generar partida";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
             // dtgPartidas
             // 
             this.dtgPartidas.AllowUserToAddRows = false;
@@ -199,21 +214,6 @@
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
-            this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(108, 22);
-            this.btnGenerar.Text = "Generar partida";
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // NumPartida
             // 
@@ -278,7 +278,7 @@
             this.FechaNac.HeaderText = "Fecha nacimiento";
             this.FechaNac.Name = "FechaNac";
             this.FechaNac.ReadOnly = true;
-            this.FechaNac.Width = 140;
+            this.FechaNac.Width = 130;
             // 
             // IdMadre
             // 
@@ -294,7 +294,7 @@
             this.NombreMadre.HeaderText = "Nombre Madre";
             this.NombreMadre.Name = "NombreMadre";
             this.NombreMadre.ReadOnly = true;
-            this.NombreMadre.Width = 180;
+            this.NombreMadre.Width = 220;
             // 
             // IdPadre
             // 
@@ -310,7 +310,7 @@
             this.NombrePadre.HeaderText = "Nombre Padre";
             this.NombrePadre.Name = "NombrePadre";
             this.NombrePadre.ReadOnly = true;
-            this.NombrePadre.Width = 200;
+            this.NombrePadre.Width = 220;
             // 
             // IdInformante
             // 

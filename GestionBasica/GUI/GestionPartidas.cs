@@ -143,6 +143,7 @@ namespace GestionBasica.GUI
         {
             Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
             fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+            fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
             fm.ShowDialog();
         }
     }

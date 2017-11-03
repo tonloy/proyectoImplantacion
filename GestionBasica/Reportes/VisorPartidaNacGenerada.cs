@@ -13,12 +13,27 @@ namespace GestionBasica.Reportes
     public partial class VisorPartidaNacGenerada : Form
     {
         Int32 idPartida;
+        String _idPartida;
 
         public Int32 IdPartida
         {
             get { return idPartida; }
             set { idPartida = value; }
         }
+
+        public string IdPartida1
+        {
+            get
+            {
+                return _idPartida;
+            }
+
+            set
+            {
+                _idPartida = value;
+            }
+        }
+
         public VisorPartidaNacGenerada()
         {
             InitializeComponent();
@@ -35,6 +50,27 @@ namespace GestionBasica.Reportes
         private void VisorPartidaNacGenerada_Load(object sender, EventArgs e)
         {
             CargarPartida();
+            Operaciones();
+        }
+        private void Operaciones()
+        {
+            CLS.Operaciones oUsuario = new CLS.Operaciones();
+            oUsuario.IdPartida = _idPartida;
+            try
+            {
+                if (oUsuario.Guardar(2))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

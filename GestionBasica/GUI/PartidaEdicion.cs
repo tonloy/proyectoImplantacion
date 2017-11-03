@@ -295,5 +295,47 @@ namespace GestionBasica.GUI
                 pictureBox1.Visible = false; 
             }             
         }
+
+        private void txbLibro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) || (e.KeyChar == (char)Keys.Space))
+            {
+                Notificador.SetError(txbLibro, "Solo se permiten números");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txbFolio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) || (e.KeyChar == (char)Keys.Space))
+            {
+                Notificador.SetError(txbFolio, "Solo se permiten números");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
+
+        private void txbNumPartida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) || (e.KeyChar == (char)Keys.Space))
+            {
+                Notificador.SetError(txbNumPartida, "Solo se permiten números");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
     }
 }
