@@ -106,7 +106,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(961, 25);
-            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnModificar
@@ -131,6 +131,7 @@
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(61, 22);
             this.btnNueva.Text = "Nueva";
+            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
             // 
             // txbFiltrar
             // 
@@ -185,7 +186,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(395, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2017, 9, 18, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -290,7 +291,7 @@
             // 
             // Causa
             // 
-            this.Causa.DataPropertyName = "Causa_muerte";
+            this.Causa.DataPropertyName = "Causa";
             this.Causa.HeaderText = "Causa de muerte";
             this.Causa.Name = "Causa";
             this.Causa.ReadOnly = true;

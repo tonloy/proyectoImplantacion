@@ -77,5 +77,12 @@ namespace GestionBasica.GUI
         {
             FiltrarLocalmente();
         }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            Defunciones.DefuncionEdicion fmo = new Defunciones.DefuncionEdicion();
+            fmo.ShowDialog();
+            CargarPartidas();
+        }
     }
 }

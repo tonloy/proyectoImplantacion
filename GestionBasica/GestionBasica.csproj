@@ -91,6 +91,12 @@
     <Compile Include="GUI\CambiarPassword.Designer.cs">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Defunciones\DefuncionEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Defunciones\DefuncionEdicion.Designer.cs">
+      <DependentUpon>DefuncionEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Defunciones\DefuncionEdicion.resx">
+      <DependentUpon>DefuncionEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>
