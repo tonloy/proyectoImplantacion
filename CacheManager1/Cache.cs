@@ -464,6 +464,8 @@ namespace CacheManager1
 
             return Datos;
         }
+
+
         public static DataTable TODOS_LOS_PAISES()
         {
             DataTable Datos = new DataTable();
@@ -481,5 +483,37 @@ namespace CacheManager1
 
             return Datos;
         }
+
+        public static DataTable TODAS_PARTIDAS_MATRIMONIO()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"select pda.idpartida_matrimonio,
+                            pda.NumPartida,
+                            p.NombreCompleto as 'Esposa',
+                            pa.NombreCompleto as 'Esposo',
+                            pda.Apellido_elegido as 'ApellidoCasada',
+                            pad.NombreCompleto as 'Testigo',
+                            padr.NombreCompleto as 'Testigo2',
+                            pda.Fecha_matrimonio,
+                            pda.Regimen_patrimonial
+                            from partidas_matrimonio pda, padres p, padres pa, padres pad, padres padr
+                            where pda.idEsposa = p.idPadre and pda.idEsposo = pa.idPadre
+                            and pda.idTestigo = pad.idPadre and pda.idTestigo2 = padr.idPadre;";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+ 
+
     }
 }

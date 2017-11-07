@@ -39,6 +39,8 @@
             this.buscarPartidaDeNacimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partidasEscaneadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partidasDeMatrimonioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partidasDeDivorcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeOperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,14 +57,13 @@
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.partidasDeMatrimonioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.partidasDeDivorcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarToolStripMenuItem,
             this.buscarPartidaDeNacimientoToolStripMenuItem,
@@ -71,8 +72,9 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(817, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1226, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,14 +89,14 @@
             this.gestionarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.gestionarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
-            this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(117, 34);
             this.gestionarToolStripMenuItem.Text = "Gestionar";
             // 
             // gestionarEmpleadosToolStripMenuItem
             // 
             this.gestionarEmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
-            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.gestionarEmpleadosToolStripMenuItem.Text = "Empleados";
             this.gestionarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.gestionarEmpleadosToolStripMenuItem_Click);
             // 
@@ -102,21 +104,21 @@
             // 
             this.gestionarUsuariosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.gestionarUsuariosToolStripMenuItem.Text = "Usuarios";
             this.gestionarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuariosToolStripMenuItem_Click);
             // 
             // profesionesToolStripMenuItem
             // 
             this.profesionesToolStripMenuItem.Name = "profesionesToolStripMenuItem";
-            this.profesionesToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.profesionesToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.profesionesToolStripMenuItem.Text = "Profesiones";
             this.profesionesToolStripMenuItem.Click += new System.EventHandler(this.profesionesToolStripMenuItem_Click);
             // 
             // nacionalidadesToolStripMenuItem
             // 
             this.nacionalidadesToolStripMenuItem.Name = "nacionalidadesToolStripMenuItem";
-            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
             this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadesToolStripMenuItem_Click);
             // 
@@ -130,22 +132,35 @@
             this.buscarPartidaDeNacimientoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.buscarPartidaDeNacimientoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.buscarPartidaDeNacimientoToolStripMenuItem.Name = "buscarPartidaDeNacimientoToolStripMenuItem";
-            this.buscarPartidaDeNacimientoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.buscarPartidaDeNacimientoToolStripMenuItem.Size = new System.Drawing.Size(100, 34);
             this.buscarPartidaDeNacimientoToolStripMenuItem.Text = "Partidas";
             // 
             // agregarPartidaToolStripMenuItem
             // 
             this.agregarPartidaToolStripMenuItem.Name = "agregarPartidaToolStripMenuItem";
-            this.agregarPartidaToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.agregarPartidaToolStripMenuItem.Size = new System.Drawing.Size(322, 34);
             this.agregarPartidaToolStripMenuItem.Text = "Partidas de nacimiento";
             this.agregarPartidaToolStripMenuItem.Click += new System.EventHandler(this.agregarPartidaToolStripMenuItem_Click);
             // 
             // partidasEscaneadasToolStripMenuItem
             // 
             this.partidasEscaneadasToolStripMenuItem.Name = "partidasEscaneadasToolStripMenuItem";
-            this.partidasEscaneadasToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.partidasEscaneadasToolStripMenuItem.Size = new System.Drawing.Size(322, 34);
             this.partidasEscaneadasToolStripMenuItem.Text = "Partidas de defunción";
             this.partidasEscaneadasToolStripMenuItem.Click += new System.EventHandler(this.partidasEscaneadasToolStripMenuItem_Click);
+            // 
+            // partidasDeMatrimonioToolStripMenuItem
+            // 
+            this.partidasDeMatrimonioToolStripMenuItem.Name = "partidasDeMatrimonioToolStripMenuItem";
+            this.partidasDeMatrimonioToolStripMenuItem.Size = new System.Drawing.Size(322, 34);
+            this.partidasDeMatrimonioToolStripMenuItem.Text = "Partidas de matrimonio";
+            this.partidasDeMatrimonioToolStripMenuItem.Click += new System.EventHandler(this.partidasDeMatrimonioToolStripMenuItem_Click);
+            // 
+            // partidasDeDivorcioToolStripMenuItem
+            // 
+            this.partidasDeDivorcioToolStripMenuItem.Name = "partidasDeDivorcioToolStripMenuItem";
+            this.partidasDeDivorcioToolStripMenuItem.Size = new System.Drawing.Size(322, 34);
+            this.partidasDeDivorcioToolStripMenuItem.Text = "Partidas de divorcio";
             // 
             // reportesToolStripMenuItem
             // 
@@ -154,13 +169,13 @@
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(111, 34);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // reporteDeOperacionesToolStripMenuItem
             // 
             this.reporteDeOperacionesToolStripMenuItem.Name = "reporteDeOperacionesToolStripMenuItem";
-            this.reporteDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
+            this.reporteDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(330, 34);
             this.reporteDeOperacionesToolStripMenuItem.Text = "Reporte de operaciones";
             this.reporteDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeOperacionesToolStripMenuItem_Click);
             // 
@@ -171,13 +186,13 @@
             this.configuraciónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.configuraciónToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(160, 34);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // permisosToolStripMenuItem
             // 
             this.permisosToolStripMenuItem.Name = "permisosToolStripMenuItem";
-            this.permisosToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.permisosToolStripMenuItem.Size = new System.Drawing.Size(184, 34);
             this.permisosToolStripMenuItem.Text = "Permisos";
             this.permisosToolStripMenuItem.Click += new System.EventHandler(this.permisosToolStripMenuItem_Click);
             // 
@@ -186,11 +201,12 @@
             this.ayudaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.ayudaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(86, 34);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblUsuario,
@@ -199,9 +215,10 @@
             this.toolStripStatusLabel3,
             this.conectado,
             this.desconectado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 536);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 828);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(817, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1226, 30);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -209,48 +226,48 @@
             // 
             this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(66, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 25);
             this.toolStripStatusLabel1.Text = "Usuario:";
             // 
             // lblUsuario
             // 
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(0, 3, 7, 2);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(60, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(91, 25);
             this.lblUsuario.Text = "lblUsuario";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(142, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(216, 25);
             this.toolStripStatusLabel2.Text = "Nombre de empleado:";
             // 
             // lblNombreEmpleado
             // 
             this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(0, 3, 7, 2);
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
-            this.lblNombreEmpleado.Size = new System.Drawing.Size(73, 17);
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(111, 25);
             this.lblNombreEmpleado.Text = "lblEmpleado";
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(48, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(75, 25);
             this.toolStripStatusLabel3.Text = "Estado: ";
             // 
             // conectado
             // 
             this.conectado.Image = ((System.Drawing.Image)(resources.GetObject("conectado.Image")));
             this.conectado.Name = "conectado";
-            this.conectado.Size = new System.Drawing.Size(81, 17);
+            this.conectado.Size = new System.Drawing.Size(122, 25);
             this.conectado.Text = "Conectado";
             // 
             // desconectado
             // 
             this.desconectado.Image = ((System.Drawing.Image)(resources.GetObject("desconectado.Image")));
             this.desconectado.Name = "desconectado";
-            this.desconectado.Size = new System.Drawing.Size(98, 17);
+            this.desconectado.Size = new System.Drawing.Size(149, 25);
             this.desconectado.Text = "Desconectado";
             this.desconectado.Visible = false;
             // 
@@ -272,29 +289,18 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 508);
+            this.panel1.Size = new System.Drawing.Size(1226, 788);
             this.panel1.TabIndex = 4;
-            // 
-            // partidasDeMatrimonioToolStripMenuItem
-            // 
-            this.partidasDeMatrimonioToolStripMenuItem.Name = "partidasDeMatrimonioToolStripMenuItem";
-            this.partidasDeMatrimonioToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
-            this.partidasDeMatrimonioToolStripMenuItem.Text = "Partidas de matrimonio";
-            // 
-            // partidasDeDivorcioToolStripMenuItem
-            // 
-            this.partidasDeDivorcioToolStripMenuItem.Name = "partidasDeDivorcioToolStripMenuItem";
-            this.partidasDeDivorcioToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
-            this.partidasDeDivorcioToolStripMenuItem.Text = "Partidas de divorcio";
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(817, 558);
+            this.ClientSize = new System.Drawing.Size(1226, 858);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -302,6 +308,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Registro Familiar";
