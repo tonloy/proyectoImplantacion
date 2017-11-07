@@ -27,6 +27,58 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable TODAS_LAS_PARTIDAS_DEFUNCION()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idpartidas_defuncion, 
+                        p.NumPartida, 
+                        idFallecido, 
+                        fa.NombreCompleto as Fallecido,
+                        fa.edad,
+                        idConyuge, 
+                        (select NombreCompleto from padres v where v.idPadre=idConyuge)as Conyuge,
+                        Lugar_fallecimiento, 
+                        m.Municipio,
+                        Fecha_fallecimiento, 
+                        Hora_fallecimiento, 
+                        Causa_muerte, 
+                        Asistencia_medica,
+                        p.idPadre, 
+                        (select NombreCompleto from padres where idPadre=p.idPadre) as Padre,
+                        p.idMadre, 
+                        (select NombreCompleto from padres where idPadre=p.idMadre) as Madre,
+                        idProfesional,
+                        (select NombreCompleto from padres where idPadre=p.idProfesional) as Profesional,
+                        Imagen, 
+                        idTestigo1, 
+                        tes1.NombreCompleto as Testigo1,
+                        idTestigo2, 
+                        tes2.NombreCompleto as Testigo2,
+                        t.idTipo_partida,
+                        Libro, 
+                        Folio, 
+                        idInformante, 
+                        inf.NombreCompleto as Informante,
+                        idJefeRegistro,
+                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,
+                        padres inf,padres tes1,padres tes2,tipo_partidas t,
+                        empleados e where p.idFallecido=fa.idPadre and p.idInformante=inf.idPadre
+                        and p.idJefeRegistro=e.idEmpleado and p.idTestigo1=tes1.idPadre
+                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable TODAS_LAS_PARTIDAS()
         {
             DataTable Datos = new DataTable();
@@ -132,6 +184,58 @@ namespace CacheManager1
              empleados e,
              tipo_partidas t where p.idInfante=i.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
              and p.idInformante=inf.idPadre and Modificada=0 and (i.NombreCompleto like '%" + fecha + "%' or i.FechaNac like '%" + fecha + "%');";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable TODAS_LAS_PARTIDAS_DEFUNCION(String fecha)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idpartidas_defuncion, 
+                        p.NumPartida, 
+                        idFallecido, 
+                        fa.NombreCompleto as Fallecido,
+                        fa.edad,
+                        idConyuge, 
+                        (select NombreCompleto from padres v where v.idPadre=idConyuge)as Conyuge,
+                        Lugar_fallecimiento, 
+                        m.Municipio,
+                        Fecha_fallecimiento, 
+                        Hora_fallecimiento, 
+                        Causa_muerte, 
+                        Asistencia_medica,
+                        p.idPadre, 
+                        (select NombreCompleto from padres where idPadre=p.idPadre) as Padre,
+                        p.idMadre, 
+                        (select NombreCompleto from padres where idPadre=p.idMadre) as Madre,
+                        idProfesional,
+                        (select NombreCompleto from padres where idPadre=p.idProfesional) as Profesional,
+                        Imagen, 
+                        idTestigo1, 
+                        tes1.NombreCompleto as Testigo1,
+                        idTestigo2, 
+                        tes2.NombreCompleto as Testigo2,
+                        t.idTipo_partida,
+                        Libro, 
+                        Folio, 
+                        idInformante, 
+                        inf.NombreCompleto as Informante,
+                        idJefeRegistro,
+                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,
+                        padres inf,padres tes1,padres tes2,tipo_partidas t,
+                        empleados e where p.idFallecido=fa.idPadre and p.idInformante=inf.idPadre
+                        and p.idJefeRegistro=e.idEmpleado and p.idTestigo1=tes1.idPadre
+                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0 and Fecha_fallecimiento like '%" + fecha + "%';";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
