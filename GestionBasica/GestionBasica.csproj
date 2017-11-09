@@ -235,6 +235,12 @@
     <Compile Include="GUI\MadreEdicion.Designer.cs">
       <DependentUpon>MadreEdicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Matrimonio\GestionPdasMatrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Matrimonio\GestionPdasMatrimonio.Designer.cs">
+      <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PadreEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MadreEdicion.resx">
       <DependentUpon>MadreEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Matrimonio\GestionPdasMatrimonio.resx">
+      <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PadreEdicion.resx">
       <DependentUpon>PadreEdicion.cs</DependentUpon>

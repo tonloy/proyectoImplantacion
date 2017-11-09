@@ -141,5 +141,11 @@ namespace App
             GestionBasica.GUI.GestionPaises frm = new GestionBasica.GUI.GestionPaises();
             frm.ShowDialog();
         }
+
+        private void partidasDeMatrimonioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Matrimonio.GestionPdasMatrimonio frm = new GestionBasica.GUI.Matrimonio.GestionPdasMatrimonio();
+            frm.ShowDialog();
+        }
     }
 }

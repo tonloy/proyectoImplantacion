@@ -15,6 +15,7 @@ namespace GestionBasica.GUI
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
         BindingSource _GRUPOS = new BindingSource();
+
         public GestionPartidas()
         {
             InitializeComponent();
@@ -38,6 +39,8 @@ namespace GestionBasica.GUI
 
             }
         }
+
+
         private void FiltrarLocalmente()
         {
             _GRUPOS.DataSource = CacheManager1.Cache.TODAS_LAS_PARTIDAS();
