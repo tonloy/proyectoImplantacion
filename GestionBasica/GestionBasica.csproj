@@ -58,9 +58,11 @@
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Marginacion.cs" />
+    <Compile Include="CLS\Nit.cs" />
     <Compile Include="CLS\Operaciones.cs" />
     <Compile Include="CLS\Padres.cs" />
     <Compile Include="CLS\Pais.cs" />
+    <Compile Include="CLS\PartidaDef.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Profesion.cs" />
     <Compile Include="CLS\Scanner.cs" />
@@ -96,6 +98,12 @@
     </Compile>
     <Compile Include="GUI\Defunciones\DefuncionEdicion.Designer.cs">
       <DependentUpon>DefuncionEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Defunciones\DifuntoEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Defunciones\DifuntoEdicion.Designer.cs">
+      <DependentUpon>DifuntoEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EdicionEmpleado.cs">
       <SubType>Form</SubType>
@@ -276,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Defunciones\DefuncionEdicion.resx">
       <DependentUpon>DefuncionEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Defunciones\DifuntoEdicion.resx">
+      <DependentUpon>DifuntoEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>

@@ -80,7 +80,7 @@
             this.lblNumeroFilas});
             this.statusStrip1.Location = new System.Drawing.Point(0, 535);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(961, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1025, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -105,7 +105,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(961, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1025, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -230,8 +230,9 @@
             this.dtgPartidas.ReadOnly = true;
             this.dtgPartidas.RowHeadersVisible = false;
             this.dtgPartidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPartidas.Size = new System.Drawing.Size(961, 510);
+            this.dtgPartidas.Size = new System.Drawing.Size(1025, 510);
             this.dtgPartidas.TabIndex = 6;
+            this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
             // 
             // NumPartida
             // 
@@ -295,7 +296,7 @@
             this.Causa.HeaderText = "Causa de muerte";
             this.Causa.Name = "Causa";
             this.Causa.ReadOnly = true;
-            this.Causa.Width = 200;
+            this.Causa.Width = 225;
             // 
             // Asistencia
             // 
@@ -445,7 +446,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 557);
+            this.ClientSize = new System.Drawing.Size(1025, 557);
             this.Controls.Add(this.dtgPartidas);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.toolStrip1);

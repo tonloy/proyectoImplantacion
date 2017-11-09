@@ -119,10 +119,15 @@ namespace GestionBasica.GUI
             oPadre.DUI1 = mtxtDUI.Text;
             oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
             oPadre.Observaciones1 = txtObservaciones.Text;
-            oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text);
+            if (mskTEdad.MaskCompleted) {
+                oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text); }
             oPadre.NumPartida1 = txtNumPartida.Text;
-            oPadre.NumPartidaLetras1 = CLS.Conv.enletras(txtNumPartida.Text);
-            oPadre.DUI_letras1 = CLS.Dui.dui_letras(mtxtDUI.Text);
+            if (txtNumPartida.MaskCompleted) { 
+            oPadre.NumPartidaLetras1 = CLS.Nit.nit_letras(txtNumPartida.Text); }
+            if (mtxtDUI.MaskCompleted)
+            {
+                oPadre.DUI_letras1 = CLS.Dui.dui_letras(mtxtDUI.Text);
+            }
 
             if (ValidarDatos())
             {
@@ -240,9 +245,9 @@ namespace GestionBasica.GUI
 
             if (chbxMenor.Checked)
             {
-                if (txtNumPartida.TextLength == 0)
+                if (txtNumPartida.TextLength == 0 || !txtNumPartida.MaskCompleted)
                 {
-                    Notificador.SetError(mtxtDUI, "Este campo no puede ir vacio o incompleto.");
+                    Notificador.SetError(txtNumPartida, "Este campo no puede ir vacio o incompleto.");
                     Validado = false;
                 }
 

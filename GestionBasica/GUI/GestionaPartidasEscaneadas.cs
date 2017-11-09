@@ -84,5 +84,10 @@ namespace GestionBasica.GUI
             fmo.ShowDialog();
             CargarPartidas();
         }
+
+        private void dtgPartidas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
+        }
     }
 }
