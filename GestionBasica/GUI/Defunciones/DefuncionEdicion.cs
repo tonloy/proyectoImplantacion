@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI.Defunciones
 {
-    public partial class DefuncionEdicion : Form
+    public partial class DefuncionEdicion : Form, IImagen, IPadre, IInformante,IInfante
     {
         Boolean marginando = false;
         BindingSource _Municipio = new BindingSource();
@@ -379,6 +379,18 @@ namespace GestionBasica.GUI.Defunciones
         {
             SeleccionImagen frm = new SeleccionImagen();
             frm.ShowDialog(this);
+        }
+
+        private void btnDifunto_Click(object sender, EventArgs e)
+        {
+            GestionDifuntos fom = new GestionDifuntos();
+            fom.IdPadre = txbIdDifunto.Text;
+            fom.ShowDialog(this);
+        }
+
+        private void btnConyuge_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

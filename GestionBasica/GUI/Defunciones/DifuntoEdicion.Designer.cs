@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button3 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -37,9 +38,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rbtnFemenino = new System.Windows.Forms.RadioButton();
+            this.rbtnMasculino = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxParentesco = new System.Windows.Forms.ComboBox();
+            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbxPaises = new System.Windows.Forms.ComboBox();
             this.cbxProfesiones = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,27 +58,30 @@
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbNombreCompleto = new System.Windows.Forms.TextBox();
-            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(537, 376);
+            this.button3.Location = new System.Drawing.Point(537, 324);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 60;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(435, 376);
+            this.btnGuardar.Location = new System.Drawing.Point(435, 324);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 59;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label11
             // 
@@ -132,10 +139,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.rbtnFemenino);
+            this.groupBox1.Controls.Add(this.rbtnMasculino);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNumPartida);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbxParentesco);
             this.groupBox1.Controls.Add(this.cbxPaises);
             this.groupBox1.Controls.Add(this.cbxProfesiones);
             this.groupBox1.Controls.Add(this.label12);
@@ -152,10 +161,60 @@
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(27, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 338);
-            this.groupBox1.TabIndex = 58;
+            this.groupBox1.Size = new System.Drawing.Size(604, 282);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(145, 256);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(71, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Revisado";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // rbtnFemenino
+            // 
+            this.rbtnFemenino.AutoSize = true;
+            this.rbtnFemenino.Location = new System.Drawing.Point(224, 229);
+            this.rbtnFemenino.Name = "rbtnFemenino";
+            this.rbtnFemenino.Size = new System.Drawing.Size(71, 17);
+            this.rbtnFemenino.TabIndex = 11;
+            this.rbtnFemenino.TabStop = true;
+            this.rbtnFemenino.Text = "Femenino";
+            this.rbtnFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbtnMasculino
+            // 
+            this.rbtnMasculino.AutoSize = true;
+            this.rbtnMasculino.Location = new System.Drawing.Point(145, 229);
+            this.rbtnMasculino.Name = "rbtnMasculino";
+            this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
+            this.rbtnMasculino.TabIndex = 10;
+            this.rbtnMasculino.TabStop = true;
+            this.rbtnMasculino.Text = "Masculino";
+            this.rbtnMasculino.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 231);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "Género:";
+            // 
+            // txtNumPartida
+            // 
+            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
+            this.txtNumPartida.Mask = "0000-000000-000-0";
+            this.txtNumPartida.Name = "txtNumPartida";
+            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
+            this.txtNumPartida.TabIndex = 9;
+            this.txtNumPartida.Enter += new System.EventHandler(this.txtNumPartida_Enter);
             // 
             // label4
             // 
@@ -166,24 +225,6 @@
             this.label4.TabIndex = 97;
             this.label4.Text = "NIT:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Parentesco:";
-            // 
-            // cbxParentesco
-            // 
-            this.cbxParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxParentesco.FormattingEnabled = true;
-            this.cbxParentesco.Location = new System.Drawing.Point(145, 230);
-            this.cbxParentesco.Name = "cbxParentesco";
-            this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
-            this.cbxParentesco.TabIndex = 90;
-            // 
             // cbxPaises
             // 
             this.cbxPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -191,7 +232,7 @@
             this.cbxPaises.Location = new System.Drawing.Point(408, 150);
             this.cbxPaises.Name = "cbxPaises";
             this.cbxPaises.Size = new System.Drawing.Size(177, 21);
-            this.cbxPaises.TabIndex = 89;
+            this.cbxPaises.TabIndex = 7;
             // 
             // cbxProfesiones
             // 
@@ -200,7 +241,7 @@
             this.cbxProfesiones.Location = new System.Drawing.Point(145, 150);
             this.cbxProfesiones.Name = "cbxProfesiones";
             this.cbxProfesiones.Size = new System.Drawing.Size(157, 21);
-            this.cbxProfesiones.TabIndex = 88;
+            this.cbxProfesiones.TabIndex = 6;
             // 
             // label12
             // 
@@ -227,6 +268,7 @@
             this.cbxDepartamentos.Name = "cbxDepartamentos";
             this.cbxDepartamentos.Size = new System.Drawing.Size(126, 21);
             this.cbxDepartamentos.TabIndex = 3;
+            this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -243,6 +285,7 @@
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(440, 20);
             this.txtDomicilio.TabIndex = 5;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // txtID
             // 
@@ -268,6 +311,7 @@
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(157, 20);
             this.mtxtDUI.TabIndex = 8;
+            this.mtxtDUI.Enter += new System.EventHandler(this.mtxtDUI_Enter);
             // 
             // txtConocidapor
             // 
@@ -275,6 +319,8 @@
             this.txtConocidapor.Name = "txtConocidapor";
             this.txtConocidapor.Size = new System.Drawing.Size(157, 20);
             this.txtConocidapor.TabIndex = 1;
+            this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
+            this.txtConocidapor.Leave += new System.EventHandler(this.txtConocidapor_Leave);
             // 
             // cbxMunicipio
             // 
@@ -300,21 +346,18 @@
             this.txbNombreCompleto.Name = "txbNombreCompleto";
             this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
             this.txbNombreCompleto.TabIndex = 0;
+            this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
+            this.txbNombreCompleto.Leave += new System.EventHandler(this.txbNombreCompleto_Leave);
             // 
-            // txtNumPartida
+            // Notificador
             // 
-            this.txtNumPartida.Enabled = false;
-            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
-            this.txtNumPartida.Mask = "0000-000000-000-0";
-            this.txtNumPartida.Name = "txtNumPartida";
-            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
-            this.txtNumPartida.TabIndex = 100;
+            this.Notificador.ContainerControl = this;
             // 
             // DifuntoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 428);
+            this.ClientSize = new System.Drawing.Size(653, 360);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -331,6 +374,7 @@
             this.Text = "Edición Difunto";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,8 +392,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox cbxParentesco;
         public System.Windows.Forms.ComboBox cbxPaises;
         public System.Windows.Forms.ComboBox cbxProfesiones;
         private System.Windows.Forms.Label label12;
@@ -365,5 +407,10 @@
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txbNombreCompleto;
         public System.Windows.Forms.MaskedTextBox txtNumPartida;
+        public System.Windows.Forms.RadioButton rbtnFemenino;
+        public System.Windows.Forms.RadioButton rbtnMasculino;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbxRespaldoPda = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txbFolio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbIdPartida = new System.Windows.Forms.TextBox();
@@ -85,8 +84,9 @@
             this.cbxMunicipios = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxRespaldoPda
@@ -100,20 +100,6 @@
             this.cbxRespaldoPda.Text = "Respaldo Partida";
             this.cbxRespaldoPda.UseVisualStyleBackColor = true;
             this.cbxRespaldoPda.CheckedChanged += new System.EventHandler(this.cbxRespaldoPda_CheckedChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GestionBasica.Properties.Resources.Imagen_no_disponible;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(714, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // txbFolio
             // 
@@ -278,6 +264,7 @@
             this.btnDifunto.TabIndex = 30;
             this.btnDifunto.Text = "Seleccionar";
             this.btnDifunto.UseVisualStyleBackColor = true;
+            this.btnDifunto.Click += new System.EventHandler(this.btnDifunto_Click);
             // 
             // txbDifunto
             // 
@@ -344,6 +331,7 @@
             this.btnConyuge.TabIndex = 53;
             this.btnConyuge.Text = "Seleccionar";
             this.btnConyuge.UseVisualStyleBackColor = true;
+            this.btnConyuge.Click += new System.EventHandler(this.btnConyuge_Click);
             // 
             // txbConyuge
             // 
@@ -581,6 +569,20 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GestionBasica.Properties.Resources.Imagen_no_disponible;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(714, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            // 
             // DefuncionEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,8 +649,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de partida de defunción";
             this.Load += new System.EventHandler(this.DefuncionEdicion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

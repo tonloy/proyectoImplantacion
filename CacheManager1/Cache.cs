@@ -304,6 +304,26 @@ namespace CacheManager1
 
             return Datos;
         }
+
+        public static DataTable TODOS_LOS_PADRES1()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Sexo, Domicilio, pa.Nacionalidad, DUI, NumPartida, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion, p.NumPartida 
+                        FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa 
+                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and Estado='Viva'; ";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
         public static DataTable TODOS_LOS_INFORMANTES()
         {
             DataTable Datos = new DataTable();
