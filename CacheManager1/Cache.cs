@@ -309,7 +309,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Sexo, Domicilio, pa.Nacionalidad, DUI, NumPartida, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion, p.NumPartida 
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, p.Sexo, Domicilio, pa.Nacionalidad, DUI, NumPartida, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion, p.NumPartida,p.Revisado,Estado_familiar 
                         FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa 
                         where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and Estado='Viva'; ";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();

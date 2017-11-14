@@ -18,6 +18,21 @@ namespace GestionBasica.GUI.Defunciones
         BindingSource _Profesiones = new BindingSource();
         BindingSource _Nacionalidades = new BindingSource();
         Int32 _revisado = 0;
+        private int cual = 0;
+
+        public int Cual
+        {
+            get
+            {
+                return cual;
+            }
+
+            set
+            {
+                cual = value;
+            }
+        }
+
         public DifuntoEdicion()
         {
             InitializeComponent();
@@ -25,6 +40,10 @@ namespace GestionBasica.GUI.Defunciones
             CargarMunicipios();
             CargarProfesiones();
             CargarPaises();
+            cbxEstados.Items.Insert(0,"Soltero/a");
+            cbxEstados.Items.Insert(1, "Casado/a");
+            cbxEstados.Items.Insert(2, "Divorciado/a");
+            cbxEstados.Items.Insert(3, "Viudo/a");
         }
 
         private void CargarDepartamentos()
@@ -178,6 +197,7 @@ namespace GestionBasica.GUI.Defunciones
             oPadre.Profesion1 = cbxProfesiones.SelectedValue.ToString();
             oPadre.Nacionalidad1 = cbxPaises.SelectedValue.ToString();
             oPadre.DUI1 = mtxtDUI.Text;
+            
             if (mskTEdad.MaskCompleted)
             {
                 oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text);
@@ -194,6 +214,7 @@ namespace GestionBasica.GUI.Defunciones
 
             if (ValidarDatos())
             {
+                oPadre.Estado_familiar1 = cbxEstados.SelectedItem.ToString();
                 if (rbtnFemenino.Checked)
                 {
                     oPadre.Sexo1 = "Femenino";
@@ -274,7 +295,12 @@ namespace GestionBasica.GUI.Defunciones
 
             if (cbxMunicipio.SelectedItem == null)
             {
-                Notificador.SetError(cbxMunicipio, "Seleccione un rol de la lista.");
+                Notificador.SetError(cbxMunicipio, "Seleccione un municipio de la lista.");
+                Validado = false;
+            }
+            if (cbxEstados.SelectedItem == null)
+            {
+                Notificador.SetError(cbxEstados, "Seleccione un estado de la lista.");
                 Validado = false;
             }
 
@@ -328,6 +354,25 @@ namespace GestionBasica.GUI.Defunciones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
+        }
+
+        private void DifuntoEdicion_Load(object sender, EventArgs e)
+        {
+            switch (cual)
+            {
+                case 1:
+                    cbxEstados.SelectedIndex = 0;
+                    break;
+                case 2:
+                    cbxEstados.SelectedIndex = 1;
+                    break;
+                case 3:
+                    cbxEstados.SelectedIndex = 2;
+                    break;
+                case 4:
+                    cbxEstados.SelectedIndex = 3;
+                    break;
+            }
         }
     }
 }

@@ -59,13 +59,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxEstados = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(537, 324);
+            this.button3.Location = new System.Drawing.Point(537, 360);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -75,7 +77,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(435, 324);
+            this.btnGuardar.Location = new System.Drawing.Point(435, 360);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 1;
@@ -139,6 +141,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxEstados);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.rbtnFemenino);
             this.groupBox1.Controls.Add(this.rbtnMasculino);
@@ -161,7 +165,7 @@
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(27, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 282);
+            this.groupBox1.Size = new System.Drawing.Size(604, 328);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
@@ -169,7 +173,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(145, 256);
+            this.checkBox1.Location = new System.Drawing.Point(145, 289);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(71, 17);
             this.checkBox1.TabIndex = 12;
@@ -179,7 +183,7 @@
             // rbtnFemenino
             // 
             this.rbtnFemenino.AutoSize = true;
-            this.rbtnFemenino.Location = new System.Drawing.Point(224, 229);
+            this.rbtnFemenino.Location = new System.Drawing.Point(224, 262);
             this.rbtnFemenino.Name = "rbtnFemenino";
             this.rbtnFemenino.Size = new System.Drawing.Size(71, 17);
             this.rbtnFemenino.TabIndex = 11;
@@ -190,7 +194,7 @@
             // rbtnMasculino
             // 
             this.rbtnMasculino.AutoSize = true;
-            this.rbtnMasculino.Location = new System.Drawing.Point(145, 229);
+            this.rbtnMasculino.Location = new System.Drawing.Point(145, 262);
             this.rbtnMasculino.Name = "rbtnMasculino";
             this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
             this.rbtnMasculino.TabIndex = 10;
@@ -201,7 +205,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 231);
+            this.label2.Location = new System.Drawing.Point(83, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 103;
@@ -209,7 +213,7 @@
             // 
             // txtNumPartida
             // 
-            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
+            this.txtNumPartida.Location = new System.Drawing.Point(145, 236);
             this.txtNumPartida.Mask = "0000-000000-000-0";
             this.txtNumPartida.Name = "txtNumPartida";
             this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
@@ -219,7 +223,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 206);
+            this.label4.Location = new System.Drawing.Point(100, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 97;
@@ -246,7 +250,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 171);
+            this.label12.Location = new System.Drawing.Point(32, 204);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 26);
             this.label12.TabIndex = 87;
@@ -306,7 +310,7 @@
             // 
             // mtxtDUI
             // 
-            this.mtxtDUI.Location = new System.Drawing.Point(145, 177);
+            this.mtxtDUI.Location = new System.Drawing.Point(145, 210);
             this.mtxtDUI.Mask = "00000000-0";
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(157, 20);
@@ -353,11 +357,29 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "Estado familiar:";
+            // 
+            // cbxEstados
+            // 
+            this.cbxEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstados.FormattingEnabled = true;
+            this.cbxEstados.Location = new System.Drawing.Point(145, 179);
+            this.cbxEstados.Name = "cbxEstados";
+            this.cbxEstados.Size = new System.Drawing.Size(157, 21);
+            this.cbxEstados.TabIndex = 105;
+            // 
             // DifuntoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 360);
+            this.ClientSize = new System.Drawing.Size(653, 400);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -372,6 +394,7 @@
             this.Name = "DifuntoEdicion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición Difunto";
+            this.Load += new System.EventHandler(this.DifuntoEdicion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
@@ -383,7 +406,6 @@
         #endregion
 
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -410,7 +432,10 @@
         public System.Windows.Forms.RadioButton rbtnFemenino;
         public System.Windows.Forms.RadioButton rbtnMasculino;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.ComboBox cbxEstados;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button btnGuardar;
     }
 }

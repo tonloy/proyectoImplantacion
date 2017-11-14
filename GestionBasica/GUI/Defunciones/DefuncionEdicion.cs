@@ -390,7 +390,9 @@ namespace GestionBasica.GUI.Defunciones
 
         private void btnConyuge_Click(object sender, EventArgs e)
         {
-
+            GestionPadres formu = new GestionPadres();
+            formu.IdPadre1 = txbIdConyuge.Text;
+            formu.ShowDialog(this);
         }
     }
 }

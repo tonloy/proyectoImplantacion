@@ -13,6 +13,7 @@ namespace GestionBasica.GUI
 {
     public partial class GestionPadres : Form
     {
+        public int individuo = 0;
         BindingSource _GRUPOS = new BindingSource();
         string _idPadre;
 

@@ -110,5 +110,77 @@ namespace GestionBasica.GUI.Defunciones
         {
             FiltrarLocalmente();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea EDITAR la persona seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    DifuntoEdicion frm = new DifuntoEdicion();
+                    frm.txtID.Text = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                    frm.txbNombreCompleto.Text = dtgPartidas.CurrentRow.Cells["Nombre"].Value.ToString();
+                    frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dtgPartidas.CurrentRow.Cells["Departamento"].Value.ToString());
+                    frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dtgPartidas.CurrentRow.Cells["Municipio"].Value.ToString());
+                    frm.txtConocidapor.Text= dtgPartidas.CurrentRow.Cells["ConocidoPor"].Value.ToString();
+                    frm.mskTEdad.Text= dtgPartidas.CurrentRow.Cells["Edad"].Value.ToString();
+                    frm.txtDomicilio.Text= dtgPartidas.CurrentRow.Cells["Domicilio"].Value.ToString();
+                    frm.cbxProfesiones.SelectedIndex = frm.cbxProfesiones.FindStringExact(dtgPartidas.CurrentRow.Cells["Profesión"].Value.ToString());
+                    frm.cbxPaises.SelectedIndex = frm.cbxPaises.FindStringExact(dtgPartidas.CurrentRow.Cells["Nacionalidad"].Value.ToString());
+                    frm.mtxtDUI.Text= dtgPartidas.CurrentRow.Cells["Dui"].Value.ToString();
+                    frm.txtNumPartida.Text= dtgPartidas.CurrentRow.Cells["Nit"].Value.ToString();
+
+                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString()=="Soltero/a")
+                    {
+                        frm.Cual = 1;
+                    }
+                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Casado/a"))
+                    {
+                        frm.Cual = 2;
+                    }
+                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Divorciado/a"))
+                    {
+                        frm.Cual = 3;
+                    }
+                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Viudo/a"))
+                    {
+                        frm.Cual = 4;
+                    }
+                    if (dtgPartidas.CurrentRow.Cells["Género"].Value.ToString() == "Masculino")
+                    {
+                        frm.rbtnMasculino.Checked = true;
+                    }
+                    else
+                    {
+                        frm.rbtnFemenino.Checked = true;
+                    }
+                    if (dtgPartidas.CurrentRow.Cells["Revisado"].Value.ToString() == "True")
+                    {
+                        frm.txbNombreCompleto.ReadOnly = true;
+                        frm.cbxDepartamentos.Enabled = false;
+                        frm.cbxMunicipio.Enabled = false;
+                        frm.rbtnMasculino.Enabled = false;
+                        frm.rbtnFemenino.Enabled = false;
+                        frm.checkBox1.Checked = true;
+                        frm.checkBox1.Enabled = false;
+                        frm.mskTEdad.ReadOnly = true;
+                        //frm.cbxEstados.Enabled = false;
+                        frm.txtConocidapor.ReadOnly = true;
+                        frm.txtDomicilio.ReadOnly = true;
+                        frm.cbxProfesiones.Enabled = false;
+                        frm.cbxPaises.Enabled = false;
+                        frm.mtxtDUI.Enabled = false;
+                        frm.txtNumPartida.Enabled = false;
+                        frm.btnGuardar.Visible = false;
+                    }
+                    frm.ShowDialog();
+                    CargarPersonas();
+                }
+                catch(Exception en)
+                {
+                    MessageBox.Show("Por favor seleccione un registro " +en.StackTrace);
+                }
+            }
+        }
     }
 }
