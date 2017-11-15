@@ -40,6 +40,7 @@ namespace CacheManager1
                         (select NombreCompleto from padres v where v.idPadre=idConyuge)as Conyuge,
                         Lugar_fallecimiento, 
                         m.Municipio,
+                        dep.Departamento,
                         Fecha_fallecimiento, 
                         Hora_fallecimiento, 
                         Causa_muerte,
@@ -62,11 +63,11 @@ namespace CacheManager1
                         idInformante, 
                         inf.NombreCompleto as Informante,
                         idJefeRegistro,
-                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,
+                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,departamentos dep,
                         padres inf,padres tes1,padres tes2,tipo_partidas t,
                         empleados e where p.idFallecido=fa.idPadre and p.idInformante=inf.idPadre
                         and p.idJefeRegistro=e.idEmpleado and p.idTestigo1=tes1.idPadre
-                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0;";
+                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0 and dep.idDepartamento=m.idDepartamento;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

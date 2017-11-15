@@ -255,4 +255,20 @@
   <metadata name="HoraFallecimiento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Departamento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnCambiarDatos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVEhLY6AWuB7tkXQ90uvq9Sivz0D6+NUoLzuoFGXg
+        ////jMdOHJ12obXyJNDw/zB8LdLzL8WWgAx/8+JA153bhw4fO3nsJ7olIJ9AlZIHXj870Hbu3LEH71/u
+        v4nDks9QpaSB//8ZGN90Sk77cKxm3/tX+6/gtAQYJ1AtxAOY4W+6JX+/2ix6/P2V5m04LQFGPFQbcQDd
+        8DfrxQ4C+f8+nGjcj2EJMOKh2ogDuAx/2yX5H0Qj+wQU8aAEANVKGBAyHMQHiYPiBBTxNDEcJA9SB9VG
+        HCDVcJB6qFbCYNRwrGBoG/52gXjj6wXiR19vFTtJVcNB4M0+6/g3e7SOvd9nfPDVDrGnVDUcBH6dm7Pu
+        97m5/3+car79epvYBaoaDsrWv87NfQ2y4Nux/DOvdoi+AFkC8gk4uCgxHAR+nJurBTIchH+emfYFZAnI
+        J6DgAsUJRYaDAND1mTALkDEoTkART5HhILBldkN/ckrCQZjBoOACxQko4ik2HAQsXf0PgywB+QQUXCQV
+        tQQBAwMAkMScyPGXyJgAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

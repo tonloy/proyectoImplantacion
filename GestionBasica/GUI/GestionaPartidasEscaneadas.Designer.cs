@@ -43,6 +43,8 @@
             this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
+            this.btnCambiarDatos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +73,7 @@
             this.idProfesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -95,6 +98,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnCambiarDatos,
+            this.toolStripSeparator4,
             this.btnModificar,
             this.toolStripSeparator1,
             this.btnNueva,
@@ -187,7 +192,7 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(395, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(513, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 2;
@@ -228,7 +233,8 @@
             this.Conyuge,
             this.idProfesional,
             this.Profesional,
-            this.HoraFallecimiento});
+            this.HoraFallecimiento,
+            this.Departamento});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
             this.dtgPartidas.MultiSelect = false;
@@ -239,6 +245,21 @@
             this.dtgPartidas.Size = new System.Drawing.Size(1025, 510);
             this.dtgPartidas.TabIndex = 6;
             this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
+            // 
+            // btnCambiarDatos
+            // 
+            this.btnCambiarDatos.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarDatos.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarDatos.Image")));
+            this.btnCambiarDatos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCambiarDatos.Name = "btnCambiarDatos";
+            this.btnCambiarDatos.Size = new System.Drawing.Size(78, 22);
+            this.btnCambiarDatos.Text = "Modificar";
+            this.btnCambiarDatos.Click += new System.EventHandler(this.btnCambiarDatos_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // NumPartida
             // 
@@ -464,6 +485,14 @@
             this.HoraFallecimiento.ReadOnly = true;
             this.HoraFallecimiento.Visible = false;
             // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Departamento";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Visible = false;
+            // 
             // GestionaPartidasEscaneadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +533,8 @@
         private System.Windows.Forms.ToolStripButton btnGenerar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dtgPartidas;
+        private System.Windows.Forms.ToolStripButton btnCambiarDatos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
@@ -532,5 +563,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProfesional;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesional;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFallecimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
     }
 }
