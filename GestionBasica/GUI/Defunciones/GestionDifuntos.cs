@@ -130,22 +130,7 @@ namespace GestionBasica.GUI.Defunciones
                     frm.mtxtDUI.Text= dtgPartidas.CurrentRow.Cells["Dui"].Value.ToString();
                     frm.txtNumPartida.Text= dtgPartidas.CurrentRow.Cells["Nit"].Value.ToString();
 
-                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString()=="Soltero/a")
-                    {
-                        frm.Cual = 1;
-                    }
-                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Casado/a"))
-                    {
-                        frm.Cual = 2;
-                    }
-                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Divorciado/a"))
-                    {
-                        frm.Cual = 3;
-                    }
-                    if (dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString().Equals("Viudo/a"))
-                    {
-                        frm.Cual = 4;
-                    }
+                    frm.cbxEstados.Text=dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString();
                     if (dtgPartidas.CurrentRow.Cells["Género"].Value.ToString() == "Masculino")
                     {
                         frm.rbtnMasculino.Checked = true;
@@ -164,7 +149,7 @@ namespace GestionBasica.GUI.Defunciones
                         frm.checkBox1.Checked = true;
                         frm.checkBox1.Enabled = false;
                         frm.mskTEdad.ReadOnly = true;
-                        //frm.cbxEstados.Enabled = false;
+                        frm.cbxEstados.Enabled = false;
                         frm.txtConocidapor.ReadOnly = true;
                         frm.txtDomicilio.ReadOnly = true;
                         frm.cbxProfesiones.Enabled = false;

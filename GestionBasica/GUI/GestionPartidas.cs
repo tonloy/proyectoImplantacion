@@ -135,11 +135,17 @@ namespace GestionBasica.GUI
 
         private void txbImprimir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(CLS.Conv.enletras(dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString()));
-            Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
-            frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
-            frm.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
-            frm.ShowDialog();
+            if (dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString() == "")
+            {
+                MessageBox.Show("No hay respaldo para esta partida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
+                frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+                frm.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                frm.ShowDialog();
+            }
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

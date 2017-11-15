@@ -46,6 +46,7 @@
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDifunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugardefallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@
             this.Conyuge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProfesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -117,6 +119,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 22);
             this.btnModificar.Text = "Marginar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -162,6 +165,7 @@
             this.txbImprimir.Name = "txbImprimir";
             this.txbImprimir.Size = new System.Drawing.Size(100, 22);
             this.txbImprimir.Text = "Vista respaldo";
+            this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
             // toolStripSeparator3
             // 
@@ -200,6 +204,7 @@
             this.NumPartida,
             this.ID,
             this.Imagen,
+            this.idDifunto,
             this.Nombre,
             this.Edad,
             this.Lugardefallecimiento,
@@ -222,7 +227,8 @@
             this.idConyuge,
             this.Conyuge,
             this.idProfesional,
-            this.Profesional});
+            this.Profesional,
+            this.HoraFallecimiento});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
             this.dtgPartidas.MultiSelect = false;
@@ -257,6 +263,14 @@
             this.Imagen.Name = "Imagen";
             this.Imagen.ReadOnly = true;
             this.Imagen.Visible = false;
+            // 
+            // idDifunto
+            // 
+            this.idDifunto.DataPropertyName = "idFallecido";
+            this.idDifunto.HeaderText = "idDifunto";
+            this.idDifunto.Name = "idDifunto";
+            this.idDifunto.ReadOnly = true;
+            this.idDifunto.Visible = false;
             // 
             // Nombre
             // 
@@ -442,6 +456,14 @@
             this.Profesional.ReadOnly = true;
             this.Profesional.Visible = false;
             // 
+            // HoraFallecimiento
+            // 
+            this.HoraFallecimiento.DataPropertyName = "Hora_fallecimiento";
+            this.HoraFallecimiento.HeaderText = "HoraFallecimiento";
+            this.HoraFallecimiento.Name = "HoraFallecimiento";
+            this.HoraFallecimiento.ReadOnly = true;
+            this.HoraFallecimiento.Visible = false;
+            // 
             // GestionaPartidasEscaneadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +507,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDifunto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lugardefallecimiento;
@@ -508,5 +531,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Conyuge;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProfesional;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesional;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFallecimiento;
     }
 }

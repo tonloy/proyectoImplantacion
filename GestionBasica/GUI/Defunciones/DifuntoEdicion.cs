@@ -40,10 +40,7 @@ namespace GestionBasica.GUI.Defunciones
             CargarMunicipios();
             CargarProfesiones();
             CargarPaises();
-            cbxEstados.Items.Insert(0,"Soltero/a");
-            cbxEstados.Items.Insert(1, "Casado/a");
-            cbxEstados.Items.Insert(2, "Divorciado/a");
-            cbxEstados.Items.Insert(3, "Viudo/a");
+            CargarEstadosFamiliares();
         }
 
         private void CargarDepartamentos()
@@ -358,21 +355,40 @@ namespace GestionBasica.GUI.Defunciones
 
         private void DifuntoEdicion_Load(object sender, EventArgs e)
         {
-            switch (cual)
-            {
-                case 1:
-                    cbxEstados.SelectedIndex = 0;
-                    break;
-                case 2:
-                    cbxEstados.SelectedIndex = 1;
-                    break;
-                case 3:
-                    cbxEstados.SelectedIndex = 2;
-                    break;
-                case 4:
-                    cbxEstados.SelectedIndex = 3;
-                    break;
-            }
+            
+        }
+
+        private void CargarEstadosFamiliares()
+        {
+            DataRow fila;
+            DataTable tipos = new DataTable();
+            tipos.Columns.Add("Tipo");
+            tipos.Columns.Add("Valor");
+
+            fila = tipos.NewRow();
+            fila["Tipo"] = "Soltero/a";
+            fila["Valor"] = "1";
+            tipos.Rows.Add(fila);
+
+            fila = tipos.NewRow();
+            fila["Tipo"] = "Casado/a";
+            fila["Valor"] = "2";
+            tipos.Rows.Add(fila);
+
+            fila = tipos.NewRow();
+            fila["Tipo"] = "Divorciado/a";
+            fila["Valor"] = "3";
+            tipos.Rows.Add(fila);
+
+            fila = tipos.NewRow();
+            fila["Tipo"] = "Viudo/a";
+            fila["Valor"] = "4";
+            tipos.Rows.Add(fila);
+
+            cbxEstados.DataSource = tipos;
+            cbxEstados.ValueMember = "Valor";
+            cbxEstados.DisplayMember = "Tipo";
+
         }
     }
 }

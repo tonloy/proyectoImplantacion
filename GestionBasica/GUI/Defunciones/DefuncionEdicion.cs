@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI.Defunciones
 {
-    public partial class DefuncionEdicion : Form, IImagen, IPadre, IInformante,IInfante
+    public partial class DefuncionEdicion : Form, IImagen, IPadre, IInformante,IInfante,IConyuge,ITestigo1,ITestigo2,IProfesional
     {
         Boolean marginando = false;
         BindingSource _Municipio = new BindingSource();
@@ -56,6 +56,45 @@ namespace GestionBasica.GUI.Defunciones
             txbDifunto.Text = infante;
         }
 
+        //Profesional
+        public void cambiarIdProfesional(String idInfante)
+        {
+            txbIdProfesional.Text = idInfante;
+        }
+        public void cambiarProfesional(String infante)
+        {
+            txbProfesional.Text = infante;
+        }
+
+        //testigo1
+        public void cambiarIdTestigo1(String idtestigo)
+        {
+            txbIdTestigo1.Text = idtestigo;
+        }
+        public void cambiarTestigo1(String testigo)
+        {
+            txbTestigo1.Text = testigo;
+        }
+
+        //testigo2
+        public void cambiarIdTestigo2(String idtestigo)
+        {
+            txbIdTestigo2.Text = idtestigo;
+        }
+        public void cambiarTestigo2(String testigo)
+        {
+            txbTestigo2.Text = testigo;
+        }
+
+        //conyuge
+
+        public void cambiarIdConyuge(String idConyuge) {
+            txbIdConyuge.Text = idConyuge;
+        }
+        public void cambiarConyuge(String conyuge)
+        {
+            txbConyuge.Text = conyuge;
+        }
         //padres
         public void cambiarIdPadre(String idPadre)
         {
@@ -193,7 +232,7 @@ namespace GestionBasica.GUI.Defunciones
             CLS.Operaciones oUsuario = new CLS.Operaciones();
             try
             {
-                if (oUsuario.Guardar(1))
+                if (oUsuario.Guardar(7))
                 {
 
                 }
@@ -280,6 +319,7 @@ namespace GestionBasica.GUI.Defunciones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
+            Operaciones();
         }
 
         private void Procesar()
@@ -392,7 +432,53 @@ namespace GestionBasica.GUI.Defunciones
         {
             GestionPadres formu = new GestionPadres();
             formu.IdPadre1 = txbIdConyuge.Text;
+            formu.Conyuge = true;
             formu.ShowDialog(this);
+        }
+
+        private void btnMadre_Click(object sender, EventArgs e)
+        {
+            GestionMadres frm = new GestionMadres();
+            frm.IdMadre = txtIdMadre.Text;
+            frm.ShowDialog(this);
+        }
+
+        private void btnPadre_Click(object sender, EventArgs e)
+        {
+            GestionPadres frm = new GestionPadres();
+            frm.IdPadre1 = txtIdPadre.Text;
+            frm.ShowDialog(this);
+        }
+
+        private void btnTestigo1_Click(object sender, EventArgs e)
+        {
+            GestionMadres frm = new GestionMadres();
+            frm.IdMadre = txbIdTestigo1.Text;
+            frm.Individuo = 1;
+            frm.ShowDialog(this);
+        }
+
+        private void btnTestigo2_Click(object sender, EventArgs e)
+        {
+            GestionMadres frm = new GestionMadres();
+            frm.IdMadre = txbIdTestigo2.Text;
+            frm.Individuo = 2;
+            frm.ShowDialog(this);
+        }
+
+        private void btnInformante_Click(object sender, EventArgs e)
+        {
+            GestionInformantes frm = new GestionInformantes();
+            frm.IdInformante1 = txtIdInformante.Text;
+            frm.ShowDialog(this);
+        }
+
+        private void btnProfesional_Click(object sender, EventArgs e)
+        {
+            GestionInformantes frm = new GestionInformantes();
+            frm.IdInformante1 = txtIdInformante.Text;
+            frm.Profesional = true;
+            frm.ShowDialog(this);
         }
     }
 }

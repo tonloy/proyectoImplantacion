@@ -220,6 +220,7 @@
     <Compile Include="GUI\GestionUsuarios.Designer.cs">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IConyuge.cs" />
     <Compile Include="GUI\IImagen.cs" />
     <Compile Include="GUI\IInfante.cs" />
     <Compile Include="GUI\IInformante.cs" />
@@ -236,6 +237,9 @@
       <DependentUpon>InformanteEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\IPadre.cs" />
+    <Compile Include="GUI\IProfesional.cs" />
+    <Compile Include="GUI\ITestigo1.cs" />
+    <Compile Include="GUI\ITestigo2.cs" />
     <Compile Include="GUI\MadreEdicion.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,7 +12,8 @@ namespace GestionBasica.GUI
 {
     public partial class GestionaPartidasEscaneadas : Form
     {
-
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
         BindingSource _Partidas = new BindingSource();
         public GestionaPartidasEscaneadas()
         {
@@ -88,6 +89,41 @@ namespace GestionBasica.GUI
         private void dtgPartidas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6, 0, 88);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (_SESION.Grupo == "Administrador" && (MessageBox.Show("¿Realmente desea marginar esta partida?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            {
+                
+                _Datos.IdPartidaVieja = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                _Datos.IdInfante = dtgPartidas.CurrentRow.Cells["idDifunto"].Value.ToString();
+                
+                EdicionMarginacion frm1 = new EdicionMarginacion();
+                frm1.txtIdPartida.Text = _Datos.IdPartidaVieja;
+                frm1.seleccion = 1;
+                frm1.txtNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
+                frm1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("¡No tiene permisos para realizar esta acción!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            CargarPartidas();
+        }
+
+        private void txbImprimir_Click(object sender, EventArgs e)
+        {
+            if (dtgPartidas.CurrentRow.Cells["Imagen"].Value.ToString() == "") {
+                MessageBox.Show("No hay respaldo para esta partida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
+                frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Imagen"].Value.ToString();
+                frm.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                frm.ShowDialog();
+            }
         }
     }
 }

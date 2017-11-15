@@ -14,12 +14,27 @@ namespace GestionBasica.GUI
     {
         BindingSource _GRUPOS = new BindingSource();
         String idMadre;
+        int individuo=0;
 
         public String IdMadre
         {
             get { return idMadre; }
             set { idMadre = value; }
         }
+
+        public int Individuo
+        {
+            get
+            {
+                return individuo;
+            }
+
+            set
+            {
+                individuo = value;
+            }
+        }
+
         public GestionMadres()
         {
             InitializeComponent();
@@ -114,13 +129,36 @@ namespace GestionBasica.GUI
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            IPadre miInterfaz = this.Owner as IPadre;
-            if (miInterfaz != null)
+            switch (individuo)
             {
-                miInterfaz.cambiarIdMadre(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
-                miInterfaz.cambiarMadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                case 0:
+                    IPadre miInterfaz = this.Owner as IPadre;
+                    if (miInterfaz != null)
+                    {
+                        miInterfaz.cambiarIdMadre(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                        miInterfaz.cambiarMadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                    }
+                    this.Dispose();
+                    break;
+                case 1:
+                    ITestigo1 miInterfaz1 = this.Owner as ITestigo1;
+                    if (miInterfaz1 != null)
+                    {
+                        miInterfaz1.cambiarIdTestigo1(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                        miInterfaz1.cambiarTestigo1(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                    }
+                    this.Dispose();
+                    break;
+                case 2:
+                    ITestigo2 miInterfaz2 = this.Owner as ITestigo2;
+                    if (miInterfaz2 != null)
+                    {
+                        miInterfaz2.cambiarIdTestigo2(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                        miInterfaz2.cambiarTestigo2(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                    }
+                    this.Dispose();
+                    break;
             }
-            this.Dispose();
         }
 
         private void txbFiltrar_TextChanged(object sender, EventArgs e)

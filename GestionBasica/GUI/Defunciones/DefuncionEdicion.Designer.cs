@@ -162,6 +162,7 @@
             this.btnInformante.TabIndex = 36;
             this.btnInformante.Text = "Seleccionar";
             this.btnInformante.UseVisualStyleBackColor = true;
+            this.btnInformante.Click += new System.EventHandler(this.btnInformante_Click);
             // 
             // txtNombreInformante
             // 
@@ -196,6 +197,7 @@
             this.btnPadre.TabIndex = 34;
             this.btnPadre.Text = "Seleccionar";
             this.btnPadre.UseVisualStyleBackColor = true;
+            this.btnPadre.Click += new System.EventHandler(this.btnPadre_Click);
             // 
             // txtNombrePadre
             // 
@@ -230,6 +232,7 @@
             this.btnMadre.TabIndex = 32;
             this.btnMadre.Text = "Seleccionar";
             this.btnMadre.UseVisualStyleBackColor = true;
+            this.btnMadre.Click += new System.EventHandler(this.btnMadre_Click);
             // 
             // txtNombreMadre
             // 
@@ -453,6 +456,7 @@
             this.btnProfesional.TabIndex = 67;
             this.btnProfesional.Text = "Seleccionar";
             this.btnProfesional.UseVisualStyleBackColor = true;
+            this.btnProfesional.Click += new System.EventHandler(this.btnProfesional_Click);
             // 
             // txbProfesional
             // 
@@ -487,6 +491,7 @@
             this.btnTestigo2.TabIndex = 72;
             this.btnTestigo2.Text = "Seleccionar";
             this.btnTestigo2.UseVisualStyleBackColor = true;
+            this.btnTestigo2.Click += new System.EventHandler(this.btnTestigo2_Click);
             // 
             // txbTestigo2
             // 
@@ -521,6 +526,7 @@
             this.btnTestigo1.TabIndex = 71;
             this.btnTestigo1.Text = "Seleccionar";
             this.btnTestigo1.UseVisualStyleBackColor = true;
+            this.btnTestigo1.Click += new System.EventHandler(this.btnTestigo1_Click);
             // 
             // txbTestigo1
             // 
