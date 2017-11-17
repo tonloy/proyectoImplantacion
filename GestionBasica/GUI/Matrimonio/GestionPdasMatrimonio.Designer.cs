@@ -30,18 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionPdasMatrimonio));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnNueva = new System.Windows.Forms.ToolStripButton();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbImprimir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumPda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEsposo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +45,12 @@
             this.Testigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegimenPatrimonial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnNueva = new System.Windows.Forms.ToolStripButton();
+            this.txbImprimir = new System.Windows.Forms.ToolStripButton();
+            this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -77,28 +77,10 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnModificar
-            // 
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(111, 29);
-            this.btnModificar.Text = "Marginar";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
-            // 
-            // btnNueva
-            // 
-            this.btnNueva.ForeColor = System.Drawing.Color.White;
-            this.btnNueva.Image = ((System.Drawing.Image)(resources.GetObject("btnNueva.Image")));
-            this.btnNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Size = new System.Drawing.Size(90, 29);
-            this.btnNueva.Text = "Nueva";
             // 
             // txbFiltrar
             // 
@@ -121,28 +103,10 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
-            // txbImprimir
-            // 
-            this.txbImprimir.ForeColor = System.Drawing.Color.White;
-            this.txbImprimir.Image = ((System.Drawing.Image)(resources.GetObject("txbImprimir.Image")));
-            this.txbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbImprimir.Name = "txbImprimir";
-            this.txbImprimir.Size = new System.Drawing.Size(152, 29);
-            this.txbImprimir.Text = "Vista respaldo";
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 32);
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
-            this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(162, 29);
-            this.btnGenerar.Text = "Generar partida";
             // 
             // dtgPartidas
             // 
@@ -172,24 +136,6 @@
             this.dtgPartidas.TabIndex = 3;
             this.dtgPartidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentClick);
             this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 362);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1245, 30);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblNumeroFilas
-            // 
-            this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
-            this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // ID
             // 
@@ -262,6 +208,61 @@
             this.RegimenPatrimonial.Name = "RegimenPatrimonial";
             this.RegimenPatrimonial.ReadOnly = true;
             this.RegimenPatrimonial.Width = 140;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNumeroFilas});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 362);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1245, 30);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblNumeroFilas
+            // 
+            this.lblNumeroFilas.Name = "lblNumeroFilas";
+            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
+            this.lblNumeroFilas.Text = "0 registros encontrados";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(111, 29);
+            this.btnModificar.Text = "Marginar";
+            // 
+            // btnNueva
+            // 
+            this.btnNueva.ForeColor = System.Drawing.Color.White;
+            this.btnNueva.Image = ((System.Drawing.Image)(resources.GetObject("btnNueva.Image")));
+            this.btnNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNueva.Name = "btnNueva";
+            this.btnNueva.Size = new System.Drawing.Size(90, 29);
+            this.btnNueva.Text = "Nueva";
+            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
+            // 
+            // txbImprimir
+            // 
+            this.txbImprimir.ForeColor = System.Drawing.Color.White;
+            this.txbImprimir.Image = ((System.Drawing.Image)(resources.GetObject("txbImprimir.Image")));
+            this.txbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txbImprimir.Name = "txbImprimir";
+            this.txbImprimir.Size = new System.Drawing.Size(152, 29);
+            this.txbImprimir.Text = "Vista respaldo";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
+            this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(162, 29);
+            this.btnGenerar.Text = "Generar partida";
             // 
             // GestionPdasMatrimonio
             // 

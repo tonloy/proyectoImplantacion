@@ -12,6 +12,13 @@ namespace GestionBasica.GUI
 {
     public partial class GestionEmpleados : Form
     {
+
+        String IdFuncionario1;
+        public string IdFuncionario11 {
+            get{ return IdFuncionario1; }
+            set{ IdFuncionario1 = value;}
+        }
+
         BindingSource _EMPLEADOS = new BindingSource();
         public GestionEmpleados()
         {
@@ -114,6 +121,17 @@ namespace GestionBasica.GUI
         private void dtgEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(6,0,88);
+        }
+
+        private void dtgEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+                Matrimonio.IFuncionario miInterfaz = this.Owner as Matrimonio.IFuncionario;
+            if (miInterfaz != null)
+            {
+                miInterfaz.cambiarIdFuncionario(dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString());
+                miInterfaz.cambiarfuncionario(dtgEmpleados.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+            }
+            this.Dispose();
         }
     }
 }

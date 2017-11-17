@@ -15,6 +15,7 @@ namespace GestionBasica.GUI
         BindingSource _GRUPOS = new BindingSource();
         String _idInfante;
         public static Boolean _marginar = false;
+
         public String IdInfante1
         {
             get { return _idInfante; }

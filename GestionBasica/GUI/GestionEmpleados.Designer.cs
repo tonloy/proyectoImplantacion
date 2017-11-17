@@ -52,6 +52,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripSeparator3,
@@ -63,8 +64,9 @@
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(798, 32);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -74,14 +76,14 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(102, 29);
             this.toolStripButton1.Text = "Eliminar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 32);
             // 
             // txbModificar
             // 
@@ -89,14 +91,14 @@
             this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
             this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbModificar.Name = "txbModificar";
-            this.txbModificar.Size = new System.Drawing.Size(78, 22);
+            this.txbModificar.Size = new System.Drawing.Size(115, 29);
             this.txbModificar.Text = "Modificar";
             this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // txbNueva
             // 
@@ -104,7 +106,7 @@
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(69, 22);
+            this.txbNueva.Size = new System.Drawing.Size(104, 29);
             this.txbNueva.Text = "Agregar";
             this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
@@ -113,7 +115,7 @@
             this.txbFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltrar.Name = "txbFiltrar";
-            this.txbFiltrar.Size = new System.Drawing.Size(200, 25);
+            this.txbFiltrar.Size = new System.Drawing.Size(200, 32);
             this.txbFiltrar.TextChanged += new System.EventHandler(this.txbFiltrar_TextChanged);
             // 
             // toolStripLabel1
@@ -121,28 +123,30 @@
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(63, 29);
             this.toolStripLabel1.Text = "Buscar";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 555);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(532, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(798, 30);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblNumeroFilas
             // 
             this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
+            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
             this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // dtgEmpleados
@@ -157,14 +161,16 @@
             this.IdCargo,
             this.Cargo});
             this.dtgEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgEmpleados.Location = new System.Drawing.Point(0, 25);
+            this.dtgEmpleados.Location = new System.Drawing.Point(0, 32);
+            this.dtgEmpleados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgEmpleados.MultiSelect = false;
             this.dtgEmpleados.Name = "dtgEmpleados";
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(532, 333);
+            this.dtgEmpleados.Size = new System.Drawing.Size(798, 523);
             this.dtgEmpleados.TabIndex = 6;
+            this.dtgEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmpleados_CellDoubleClick);
             this.dtgEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmpleados_CellFormatting);
             // 
             // IdEmpleado
@@ -201,13 +207,14 @@
             // 
             // GestionEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 380);
+            this.ClientSize = new System.Drawing.Size(798, 585);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "GestionEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
