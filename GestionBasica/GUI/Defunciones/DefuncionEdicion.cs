@@ -18,7 +18,7 @@ namespace GestionBasica.GUI.Defunciones
         BindingSource _Departamentos = new BindingSource();
         BindingSource _Causas = new BindingSource();
         String ruta_imagen;
-
+        int revisado;
         public bool Marginando
         {
             get
@@ -326,7 +326,7 @@ namespace GestionBasica.GUI.Defunciones
         {
             CLS.PartidaDef oUsuario = new CLS.PartidaDef();
 
-
+            oUsuario.Idpartidas_defuncion = txbIdPartida.Text;
             oUsuario.NumPartida1 = txbNumPartida.Text;
             oUsuario.Libro1 = txbLibro.Text;
             oUsuario.Folio1 = txbFolio.Text;
@@ -353,6 +353,14 @@ namespace GestionBasica.GUI.Defunciones
 
             if (ValidarDatos())
             {
+                if (chbxRevisado.Checked)
+                {
+                    revisado = 1;
+                }
+                else
+                {
+                    revisado = 0;
+                }
                 if (chbxAsistencia.Checked)
                 {
                     oUsuario.Asistencia_medica1 = "Si";
@@ -381,31 +389,52 @@ namespace GestionBasica.GUI.Defunciones
                 {
                     oUsuario.IdPadre = "null";
                 }
+                
+                if (marginando)
                 {
-
-                }
-                if (!marginando)
-                {
-                    //Insertando
-                    try
-                    {
-                        if (oUsuario.Guardar())
-                        {
-                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    
                 }else
                 {
-
+                    if (txbIdPartida.TextLength > 0)
+                    {
+                        //Actualizando
+                        try
+                        {
+                            if (oUsuario.Modificar(revisado))
+                            {
+                                MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        //Insertando
+                        try
+                        {
+                            if (oUsuario.Guardar(revisado))
+                            {
+                                MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
         }

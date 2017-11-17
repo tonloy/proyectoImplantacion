@@ -38,6 +38,7 @@ namespace GestionBasica.CLS
         String Anio_insercion_letras;
         String Fecha_fallecimiento_letras;
         String Hora_fallecimiento_letras;
+        
 
         public string Anio_insercion_letras1
         {
@@ -429,12 +430,12 @@ namespace GestionBasica.CLS
             }
         }
 
-        public Boolean Guardar()
+        public Boolean Guardar(int _revisado)
         {
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO partidas_defuncion(NumPartida, idFallecido, idConyuge, Lugar_fallecimiento, Fecha_fallecimiento, Hora_fallecimiento, Causa_muerte, Asistencia_medica, idProfesional, idPadre, idMadre, idTipo_partida, Imagen, idTestigo1, idTestigo2, Libro, Folio, Libro_letras, Folio_letras, Fecha_insercion_letras, NumPartida_letras, idInformante, idJefeRegistro, Modificada, Anio_insercion_letras,Fecha_fallecimiento_letras,Hora_fallecimiento_letras) VALUES(");
+            Sentencia.Append("INSERT INTO partidas_defuncion(NumPartida, idFallecido, idConyuge, Lugar_fallecimiento, Fecha_fallecimiento, Hora_fallecimiento, Causa_muerte, Asistencia_medica, idProfesional, idPadre, idMadre, idTipo_partida, Imagen, idTestigo1, idTestigo2, Libro, Folio, Libro_letras, Folio_letras, Fecha_insercion_letras, NumPartida_letras, idInformante, idJefeRegistro, Modificada, Anio_insercion_letras,Fecha_fallecimiento_letras,Hora_fallecimiento_letras,Revisado) VALUES(");
             Sentencia.Append(NumPartida + ",");
             Sentencia.Append(idFallecido + ",");
             Sentencia.Append(idConyuge + ",");
@@ -459,7 +460,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(idInformante + ",");
             Sentencia.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo)" + ",");
             Sentencia.Append("0,'");
-            Sentencia.Append(Anio_insercion_letras + "','"+Fecha_fallecimiento_letras1+"','"+Hora_fallecimiento_letras1+"');");
+            Sentencia.Append(Anio_insercion_letras + "','"+Fecha_fallecimiento_letras1+"','"+Hora_fallecimiento_letras1+"',"+_revisado+");");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -478,6 +479,56 @@ namespace GestionBasica.CLS
                 guardado = false;
             }
             return guardado;
+        }
+
+        public Boolean Modificar(int _revisado)
+        {
+            Boolean modificado = false;
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("UPDATE partidas_defuncion set NumPartida=");
+            Sentencia.Append(NumPartida + ", idFallecido=");
+            Sentencia.Append(idFallecido + ", idConyuge=");
+            Sentencia.Append(idConyuge + ", Lugar_fallecimiento=");
+            Sentencia.Append(Lugar_fallecimiento + ", Fecha_fallecimiento='");
+            Sentencia.Append(Fecha_fallecimiento + "', Hora_fallecimiento='");
+            Sentencia.Append(Hora_fallecimiento + "', Causa_muerte=");
+            Sentencia.Append(Causa_muerte + ", Asistencia_medica='");
+            Sentencia.Append(Asistencia_medica + "', idProfesional=");
+            Sentencia.Append(IdProfesional + ", idPadre=");
+            Sentencia.Append(idPadre + ", idMadre=");
+            Sentencia.Append(idMadre + ", Imagen='");
+            Sentencia.Append(Imagen + "', idTestigo1=");
+            Sentencia.Append(idTestigo1 + ", idTestigo2=");
+            Sentencia.Append(idTestigo2 + ", Libro='");
+            Sentencia.Append(Libro + "', Folio='");
+            Sentencia.Append(Folio + "', Libro_letras='");
+            Sentencia.Append(Libro_letras + "', Folio_letras='");
+            Sentencia.Append(Folio_letras + "', Fecha_insercion_letras='");
+            Sentencia.Append(Fecha_insercion_letras + "', NumPartida_letras='");
+            Sentencia.Append(NumPartida_letras + "', idInformante=");
+            Sentencia.Append(idInformante + ", Anio_insercion_letras='");
+            Sentencia.Append(Anio_insercion_letras + "', Fecha_fallecimiento_letras='");
+            Sentencia.Append(Fecha_fallecimiento_letras + "', Hora_fallecimiento_letras='");
+            Sentencia.Append(Hora_fallecimiento_letras + "', Revisado=");
+            Sentencia.Append(_revisado + " where idpartidas_defuncion="+idpartidas_defuncion+";");
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Actualizar(Sentencia.ToString()) > 0)
+                {
+                    modificado = true;
+                }
+                else
+                {
+                    modificado = false;
+                }
+            }
+            catch
+            {
+                modificado = false;
+            }
+            return modificado;
         }
     }
 }

@@ -171,6 +171,32 @@ namespace GestionBasica.GUI
                     fro.cbxCausas.SelectedIndex = fro.cbxCausas.FindStringExact(dtgPartidas.CurrentRow.Cells["Causa"].Value.ToString());
                     fro.dtpFecha.Value = Convert.ToDateTime(dtgPartidas.CurrentRow.Cells["FechaFallecimiento"].Value.ToString());
                     fro.txtHora.Text = dtgPartidas.CurrentRow.Cells["HoraFallecimiento"].Value.ToString();
+
+                    if (dtgPartidas.CurrentRow.Cells["Revisado"].Value.ToString().Equals("True"))
+                    {
+                        fro.chbxRevisado.Checked = true;
+                        fro.chbxRevisado.Enabled = false;
+                        fro.btnConyuge.Enabled = false;
+                        fro.btnDifunto.Enabled = false;
+                        fro.btnInformante.Enabled = false;
+                        fro.btnPadre.Enabled = false;
+                        fro.btnMadre.Enabled = false;
+                        fro.btnProfesional.Enabled = false;
+                        fro.btnTestigo1.Enabled = false;
+                        fro.btnTestigo2.Enabled = false;
+                        fro.chbxAsistencia.Enabled = false;
+                        fro.cbxRespaldoPda.Enabled = false;
+                        fro.txbLibro.ReadOnly = true;
+                        fro.txbNumPartida.ReadOnly = true;
+                        fro.txbFolio.ReadOnly = true;
+                        fro.cbxCausas.Enabled = false;
+                        fro.cbxDepartamentos.Enabled = false;
+                        fro.cbxMunicipios.Enabled = false;
+                        fro.txtHora.ReadOnly = true;
+                        fro.dtpFecha.Enabled = false;
+
+                        fro.btnGuardar.Visible = false;
+                    }
                     fro.ShowDialog();
                 }catch
                 {

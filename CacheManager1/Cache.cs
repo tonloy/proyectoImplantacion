@@ -62,7 +62,7 @@ namespace CacheManager1
                         Folio, 
                         idInformante, 
                         inf.NombreCompleto as Informante,
-                        idJefeRegistro,
+                        idJefeRegistro,p.Revisado,
                         Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,departamentos dep,
                         padres inf,padres tes1,padres tes2,tipo_partidas t,
                         empleados e where p.idFallecido=fa.idPadre and p.idInformante=inf.idPadre
