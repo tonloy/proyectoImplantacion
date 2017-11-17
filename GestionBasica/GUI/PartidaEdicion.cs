@@ -337,5 +337,15 @@ namespace GestionBasica.GUI
                 Notificador.Clear();
             }
         }
+
+        private void txbLibro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbInfante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="CLS\Padres.cs" />
     <Compile Include="CLS\Pais.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
+    <Compile Include="CLS\Partidas_Matrimonio.cs" />
     <Compile Include="CLS\Profesion.cs" />
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
@@ -233,6 +234,17 @@
     <Compile Include="GUI\Matrimonio\GestionPdasMatrimonio.Designer.cs">
       <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Matrimonio\IEsposa.cs" />
+    <Compile Include="GUI\Matrimonio\IEsposo.cs" />
+    <Compile Include="GUI\Matrimonio\IFuncionario.cs" />
+    <Compile Include="GUI\Matrimonio\IngresarPartidaMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Matrimonio\IngresarPartidaMat.Designer.cs">
+      <DependentUpon>IngresarPartidaMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Matrimonio\ITestigo1.cs" />
+    <Compile Include="GUI\Matrimonio\ITestigo2.cs" />
     <Compile Include="GUI\PadreEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\GestionPdasMatrimonio.resx">
       <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Matrimonio\IngresarPartidaMat.resx">
+      <DependentUpon>IngresarPartidaMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PadreEdicion.resx">
       <DependentUpon>PadreEdicion.cs</DependentUpon>

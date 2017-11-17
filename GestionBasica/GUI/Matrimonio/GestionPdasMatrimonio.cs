@@ -77,5 +77,12 @@ namespace GestionBasica.GUI.Matrimonio
         {
             FiltrarLocalmente();
         }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Matrimonio.IngresarPartidaMat frm = new GestionBasica.GUI.Matrimonio.IngresarPartidaMat();
+            frm.ShowDialog();
+        }
     }
+    
 }
