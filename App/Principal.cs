@@ -147,5 +147,11 @@ namespace App
             GestionBasica.GUI.Matrimonio.GestionPdasMatrimonio frm = new GestionBasica.GUI.Matrimonio.GestionPdasMatrimonio();
             frm.ShowDialog();
         }
+
+        private void causasDeMuerteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionCausas frl = new GestionBasica.GUI.GestionCausas();
+            frl.ShowDialog();
+        }
     }
 }
