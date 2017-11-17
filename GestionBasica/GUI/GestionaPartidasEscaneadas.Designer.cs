@@ -32,6 +32,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnCambiarDatos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNueva = new System.Windows.Forms.ToolStripButton();
@@ -46,6 +48,7 @@
             this.NumPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDifunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugardefallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +72,9 @@
             this.Conyuge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProfesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Revisado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -80,7 +86,7 @@
             this.lblNumeroFilas});
             this.statusStrip1.Location = new System.Drawing.Point(0, 535);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(961, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1025, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -93,6 +99,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnCambiarDatos,
+            this.toolStripSeparator4,
             this.btnModificar,
             this.toolStripSeparator1,
             this.btnNueva,
@@ -105,9 +113,24 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(961, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1025, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnCambiarDatos
+            // 
+            this.btnCambiarDatos.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarDatos.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarDatos.Image")));
+            this.btnCambiarDatos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCambiarDatos.Name = "btnCambiarDatos";
+            this.btnCambiarDatos.Size = new System.Drawing.Size(78, 22);
+            this.btnCambiarDatos.Text = "Modificar";
+            this.btnCambiarDatos.Click += new System.EventHandler(this.btnCambiarDatos_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // btnModificar
             // 
@@ -117,6 +140,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 22);
             this.btnModificar.Text = "Marginar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -162,6 +186,7 @@
             this.txbImprimir.Name = "txbImprimir";
             this.txbImprimir.Size = new System.Drawing.Size(100, 22);
             this.txbImprimir.Text = "Vista respaldo";
+            this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
             // toolStripSeparator3
             // 
@@ -183,7 +208,7 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(395, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(513, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 2;
@@ -200,6 +225,7 @@
             this.NumPartida,
             this.ID,
             this.Imagen,
+            this.idDifunto,
             this.Nombre,
             this.Edad,
             this.Lugardefallecimiento,
@@ -222,7 +248,10 @@
             this.idConyuge,
             this.Conyuge,
             this.idProfesional,
-            this.Profesional});
+            this.Profesional,
+            this.HoraFallecimiento,
+            this.Departamento,
+            this.Revisado});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
             this.dtgPartidas.MultiSelect = false;
@@ -230,8 +259,9 @@
             this.dtgPartidas.ReadOnly = true;
             this.dtgPartidas.RowHeadersVisible = false;
             this.dtgPartidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPartidas.Size = new System.Drawing.Size(961, 510);
+            this.dtgPartidas.Size = new System.Drawing.Size(1025, 510);
             this.dtgPartidas.TabIndex = 6;
+            this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
             // 
             // NumPartida
             // 
@@ -256,6 +286,14 @@
             this.Imagen.Name = "Imagen";
             this.Imagen.ReadOnly = true;
             this.Imagen.Visible = false;
+            // 
+            // idDifunto
+            // 
+            this.idDifunto.DataPropertyName = "idFallecido";
+            this.idDifunto.HeaderText = "idDifunto";
+            this.idDifunto.Name = "idDifunto";
+            this.idDifunto.ReadOnly = true;
+            this.idDifunto.Visible = false;
             // 
             // Nombre
             // 
@@ -295,7 +333,7 @@
             this.Causa.HeaderText = "Causa de muerte";
             this.Causa.Name = "Causa";
             this.Causa.ReadOnly = true;
-            this.Causa.Width = 200;
+            this.Causa.Width = 225;
             // 
             // Asistencia
             // 
@@ -441,11 +479,35 @@
             this.Profesional.ReadOnly = true;
             this.Profesional.Visible = false;
             // 
+            // HoraFallecimiento
+            // 
+            this.HoraFallecimiento.DataPropertyName = "Hora_fallecimiento";
+            this.HoraFallecimiento.HeaderText = "HoraFallecimiento";
+            this.HoraFallecimiento.Name = "HoraFallecimiento";
+            this.HoraFallecimiento.ReadOnly = true;
+            this.HoraFallecimiento.Visible = false;
+            // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Departamento";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Visible = false;
+            // 
+            // Revisado
+            // 
+            this.Revisado.DataPropertyName = "Revisado";
+            this.Revisado.HeaderText = "Revisado";
+            this.Revisado.Name = "Revisado";
+            this.Revisado.ReadOnly = true;
+            this.Revisado.Visible = false;
+            // 
             // GestionaPartidasEscaneadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 557);
+            this.ClientSize = new System.Drawing.Size(1025, 557);
             this.Controls.Add(this.dtgPartidas);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.toolStrip1);
@@ -481,9 +543,12 @@
         private System.Windows.Forms.ToolStripButton btnGenerar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dtgPartidas;
+        private System.Windows.Forms.ToolStripButton btnCambiarDatos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDifunto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lugardefallecimiento;
@@ -507,5 +572,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Conyuge;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProfesional;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesional;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFallecimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Revisado;
     }
 }

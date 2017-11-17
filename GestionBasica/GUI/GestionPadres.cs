@@ -13,14 +13,30 @@ namespace GestionBasica.GUI
 {
     public partial class GestionPadres : Form
     {
+        public int individuo = 0;
         BindingSource _GRUPOS = new BindingSource();
         string _idPadre;
+        Boolean conyuge = false;
 
         public string IdPadre1
         {
             get { return _idPadre; }
             set { _idPadre = value; }
         }
+
+        public bool Conyuge
+        {
+            get
+            {
+                return conyuge;
+            }
+
+            set
+            {
+                conyuge = value;
+            }
+        }
+
         public GestionPadres()
         {
             InitializeComponent();
@@ -84,13 +100,26 @@ namespace GestionBasica.GUI
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            IPadre miInterfaz = this.Owner as IPadre;
-            if (miInterfaz != null)
+            if (!conyuge)
             {
-                miInterfaz.cambiarIdPadre(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
-                miInterfaz.cambiarPadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                IPadre miInterfaz = this.Owner as IPadre;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdPadre(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                    miInterfaz.cambiarPadre(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                }
+                this.Dispose();
             }
-            this.Dispose();
+            else
+            {
+                IConyuge miInterfaz = this.Owner as IConyuge;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdConyuge(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                    miInterfaz.cambiarConyuge(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                }
+                this.Dispose();
+            }
         }
 
         private void txbModificar_Click(object sender, EventArgs e)

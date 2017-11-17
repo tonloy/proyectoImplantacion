@@ -148,11 +148,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 37);
+            this.label5.Location = new System.Drawing.Point(81, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 13);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Partida de nacimiento No";
+            this.label5.Text = "Partida No";
             // 
             // label6
             // 

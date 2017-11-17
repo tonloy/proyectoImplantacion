@@ -1,6 +1,6 @@
-﻿namespace GestionBasica.GUI
+﻿namespace GestionBasica.GUI.Defunciones
 {
-    partial class PadreEdicion
+    partial class DifuntoEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -33,40 +33,41 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtConocidapor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chbxMenor = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rbtnFemenino = new System.Windows.Forms.RadioButton();
+            this.rbtnMasculino = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxParentesco = new System.Windows.Forms.ComboBox();
+            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbxPaises = new System.Windows.Forms.ComboBox();
             this.cbxProfesiones = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.mskTEdad = new System.Windows.Forms.MaskedTextBox();
             this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.tdsdxtID = new System.Windows.Forms.Label();
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.txtConocidapor = new System.Windows.Forms.TextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxEstados = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 379);
+            this.button3.Location = new System.Drawing.Point(537, 360);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -76,112 +77,78 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(440, 379);
+            this.btnGuardar.Location = new System.Drawing.Point(435, 360);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.button2_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(362, 183);
+            this.label11.Location = new System.Drawing.Point(357, 180);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 13);
-            this.label11.TabIndex = 57;
+            this.label11.TabIndex = 66;
             this.label11.Text = "Nacionalidad:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(68, 183);
+            this.label10.Location = new System.Drawing.Point(63, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 13);
-            this.label10.TabIndex = 55;
+            this.label10.TabIndex = 65;
             this.label10.Text = "Profesion u Oficio:";
-            // 
-            // txtDomicilio
-            // 
-            this.txtDomicilio.Location = new System.Drawing.Point(145, 125);
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(440, 20);
-            this.txtDomicilio.TabIndex = 5;
-            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(110, 154);
+            this.label9.Location = new System.Drawing.Point(105, 151);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 53;
+            this.label9.TabIndex = 64;
             this.label9.Text = "Domicilio:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(411, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Municipio";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(127, 131);
+            this.label7.Location = new System.Drawing.Point(122, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 49;
+            this.label7.TabIndex = 63;
             this.label7.Text = "Edad:";
-            // 
-            // txtConocidapor
-            // 
-            this.txtConocidapor.Location = new System.Drawing.Point(145, 74);
-            this.txtConocidapor.Name = "txtConocidapor";
-            this.txtConocidapor.Size = new System.Drawing.Size(157, 20);
-            this.txtConocidapor.TabIndex = 1;
-            this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
-            this.txtConocidapor.Leave += new System.EventHandler(this.txtConocidapor_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(89, 105);
+            this.label6.Location = new System.Drawing.Point(84, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 47;
+            this.label6.TabIndex = 62;
             this.label6.Text = "Conocido por:";
-            // 
-            // txbNombreCompleto
-            // 
-            this.txbNombreCompleto.Location = new System.Drawing.Point(145, 48);
-            this.txbNombreCompleto.Name = "txbNombreCompleto";
-            this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
-            this.txbNombreCompleto.TabIndex = 0;
-            this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
-            this.txbNombreCompleto.Leave += new System.EventHandler(this.txbNombreCompleto_Leave);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 79);
+            this.label5.Location = new System.Drawing.Point(63, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 45;
+            this.label5.TabIndex = 61;
             this.label5.Text = "Nombre Completo:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtNumPartida);
-            this.groupBox1.Controls.Add(this.chbxMenor);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtObservaciones);
+            this.groupBox1.Controls.Add(this.cbxEstados);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.rbtnFemenino);
+            this.groupBox1.Controls.Add(this.rbtnMasculino);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbxParentesco);
+            this.groupBox1.Controls.Add(this.txtNumPartida);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbxPaises);
             this.groupBox1.Controls.Add(this.cbxProfesiones);
             this.groupBox1.Controls.Add(this.label12);
@@ -196,67 +163,71 @@
             this.groupBox1.Controls.Add(this.cbxMunicipio);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
-            this.groupBox1.Location = new System.Drawing.Point(32, 29);
+            this.groupBox1.Location = new System.Drawing.Point(27, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 338);
+            this.groupBox1.Size = new System.Drawing.Size(604, 328);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
             // 
-            // chbxMenor
+            // checkBox1
             // 
-            this.chbxMenor.AutoSize = true;
-            this.chbxMenor.Location = new System.Drawing.Point(475, 21);
-            this.chbxMenor.Name = "chbxMenor";
-            this.chbxMenor.Size = new System.Drawing.Size(110, 17);
-            this.chbxMenor.TabIndex = 98;
-            this.chbxMenor.Text = "¿Menor de edad?";
-            this.chbxMenor.UseVisualStyleBackColor = true;
-            this.chbxMenor.CheckStateChanged += new System.EventHandler(this.chbxMenor_CheckStateChanged);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(145, 289);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(71, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Revisado";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // rbtnFemenino
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "NIT:";
+            this.rbtnFemenino.AutoSize = true;
+            this.rbtnFemenino.Location = new System.Drawing.Point(224, 262);
+            this.rbtnFemenino.Name = "rbtnFemenino";
+            this.rbtnFemenino.Size = new System.Drawing.Size(71, 17);
+            this.rbtnFemenino.TabIndex = 11;
+            this.rbtnFemenino.TabStop = true;
+            this.rbtnFemenino.Text = "Femenino";
+            this.rbtnFemenino.UseVisualStyleBackColor = true;
             // 
-            // txtObservaciones
+            // rbtnMasculino
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(145, 257);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
-            this.txtObservaciones.TabIndex = 92;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 257);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Observaciones:";
+            this.rbtnMasculino.AutoSize = true;
+            this.rbtnMasculino.Location = new System.Drawing.Point(145, 262);
+            this.rbtnMasculino.Name = "rbtnMasculino";
+            this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
+            this.rbtnMasculino.TabIndex = 10;
+            this.rbtnMasculino.TabStop = true;
+            this.rbtnMasculino.Text = "Masculino";
+            this.rbtnMasculino.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 233);
+            this.label2.Location = new System.Drawing.Point(83, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Parentesco:";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "Género:";
             // 
-            // cbxParentesco
+            // txtNumPartida
             // 
-            this.cbxParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxParentesco.FormattingEnabled = true;
-            this.cbxParentesco.Location = new System.Drawing.Point(145, 230);
-            this.cbxParentesco.Name = "cbxParentesco";
-            this.cbxParentesco.Size = new System.Drawing.Size(157, 21);
-            this.cbxParentesco.TabIndex = 90;
+            this.txtNumPartida.Location = new System.Drawing.Point(145, 236);
+            this.txtNumPartida.Mask = "0000-000000-000-0";
+            this.txtNumPartida.Name = "txtNumPartida";
+            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
+            this.txtNumPartida.TabIndex = 9;
+            this.txtNumPartida.Enter += new System.EventHandler(this.txtNumPartida_Enter);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(100, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "NIT:";
             // 
             // cbxPaises
             // 
@@ -265,7 +236,7 @@
             this.cbxPaises.Location = new System.Drawing.Point(408, 150);
             this.cbxPaises.Name = "cbxPaises";
             this.cbxPaises.Size = new System.Drawing.Size(177, 21);
-            this.cbxPaises.TabIndex = 89;
+            this.cbxPaises.TabIndex = 7;
             // 
             // cbxProfesiones
             // 
@@ -274,12 +245,12 @@
             this.cbxProfesiones.Location = new System.Drawing.Point(145, 150);
             this.cbxProfesiones.Name = "cbxProfesiones";
             this.cbxProfesiones.Size = new System.Drawing.Size(157, 21);
-            this.cbxProfesiones.TabIndex = 88;
+            this.cbxProfesiones.TabIndex = 6;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 171);
+            this.label12.Location = new System.Drawing.Point(32, 204);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 26);
             this.label12.TabIndex = 87;
@@ -312,6 +283,14 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Departamento";
             // 
+            // txtDomicilio
+            // 
+            this.txtDomicilio.Location = new System.Drawing.Point(145, 125);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(440, 20);
+            this.txtDomicilio.TabIndex = 5;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
+            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(145, 19);
@@ -331,11 +310,21 @@
             // 
             // mtxtDUI
             // 
-            this.mtxtDUI.Location = new System.Drawing.Point(145, 177);
+            this.mtxtDUI.Location = new System.Drawing.Point(145, 210);
             this.mtxtDUI.Mask = "00000000-0";
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(157, 20);
             this.mtxtDUI.TabIndex = 8;
+            this.mtxtDUI.Enter += new System.EventHandler(this.mtxtDUI_Enter);
+            // 
+            // txtConocidapor
+            // 
+            this.txtConocidapor.Location = new System.Drawing.Point(145, 74);
+            this.txtConocidapor.Name = "txtConocidapor";
+            this.txtConocidapor.Size = new System.Drawing.Size(157, 20);
+            this.txtConocidapor.TabIndex = 1;
+            this.txtConocidapor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConocidapor_KeyPress);
+            this.txtConocidapor.Leave += new System.EventHandler(this.txtConocidapor_Leave);
             // 
             // cbxMunicipio
             // 
@@ -346,24 +335,51 @@
             this.cbxMunicipio.Size = new System.Drawing.Size(122, 21);
             this.cbxMunicipio.TabIndex = 4;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(411, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Municipio";
+            // 
+            // txbNombreCompleto
+            // 
+            this.txbNombreCompleto.Location = new System.Drawing.Point(145, 48);
+            this.txbNombreCompleto.Name = "txbNombreCompleto";
+            this.txbNombreCompleto.Size = new System.Drawing.Size(440, 20);
+            this.txbNombreCompleto.TabIndex = 0;
+            this.txbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombreCompleto_KeyPress);
+            this.txbNombreCompleto.Leave += new System.EventHandler(this.txbNombreCompleto_Leave);
+            // 
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
             // 
-            // txtNumPartida
+            // label3
             // 
-            this.txtNumPartida.Enabled = false;
-            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
-            this.txtNumPartida.Mask = "0000-000000-000-0";
-            this.txtNumPartida.Name = "txtNumPartida";
-            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
-            this.txtNumPartida.TabIndex = 99;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "Estado familiar:";
             // 
-            // PadreEdicion
+            // cbxEstados
+            // 
+            this.cbxEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstados.FormattingEnabled = true;
+            this.cbxEstados.Location = new System.Drawing.Point(145, 179);
+            this.cbxEstados.Name = "cbxEstados";
+            this.cbxEstados.Size = new System.Drawing.Size(157, 21);
+            this.cbxEstados.TabIndex = 105;
+            // 
+            // DifuntoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 428);
+            this.ClientSize = new System.Drawing.Size(653, 400);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -375,10 +391,10 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.Name = "PadreEdicion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edición de Partida de Nacimiento";
-            this.Load += new System.EventHandler(this.PadreEdicion_Load);
+            this.Name = "DifuntoEdicion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Edición Difunto";
+            this.Load += new System.EventHandler(this.DifuntoEdicion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
@@ -390,35 +406,36 @@
         #endregion
 
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label tdsdxtID;
-        private System.Windows.Forms.ErrorProvider Notificador;
-        public System.Windows.Forms.TextBox txtDomicilio;
-        public System.Windows.Forms.TextBox txtConocidapor;
-        public System.Windows.Forms.TextBox txbNombreCompleto;
-        public System.Windows.Forms.MaskedTextBox mtxtDUI;
-        public System.Windows.Forms.ComboBox cbxMunicipio;
-        public System.Windows.Forms.ComboBox cbxDepartamentos;
-        public System.Windows.Forms.TextBox txtID;
-        public System.Windows.Forms.MaskedTextBox mskTEdad;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.ComboBox cbxPaises;
         public System.Windows.Forms.ComboBox cbxProfesiones;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox cbxParentesco;
-        public System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chbxMenor;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.MaskedTextBox mskTEdad;
+        public System.Windows.Forms.ComboBox cbxDepartamentos;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtDomicilio;
+        public System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label tdsdxtID;
+        public System.Windows.Forms.MaskedTextBox mtxtDUI;
+        public System.Windows.Forms.TextBox txtConocidapor;
+        public System.Windows.Forms.ComboBox cbxMunicipio;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox txbNombreCompleto;
         public System.Windows.Forms.MaskedTextBox txtNumPartida;
+        public System.Windows.Forms.RadioButton rbtnFemenino;
+        public System.Windows.Forms.RadioButton rbtnMasculino;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.ComboBox cbxEstados;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button btnGuardar;
     }
 }

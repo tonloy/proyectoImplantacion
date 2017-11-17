@@ -40,6 +40,7 @@ namespace CacheManager1
                         (select NombreCompleto from padres v where v.idPadre=idConyuge)as Conyuge,
                         Lugar_fallecimiento, 
                         m.Municipio,
+                        dep.Departamento,
                         Fecha_fallecimiento, 
                         Hora_fallecimiento, 
                         Causa_muerte,
@@ -61,12 +62,12 @@ namespace CacheManager1
                         Folio, 
                         idInformante, 
                         inf.NombreCompleto as Informante,
-                        idJefeRegistro,
-                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,
+                        idJefeRegistro,p.Revisado,
+                        Modificada FROM registro_familiar.partidas_defuncion p, padres fa,municipios m,departamentos dep,
                         padres inf,padres tes1,padres tes2,tipo_partidas t,
                         empleados e where p.idFallecido=fa.idPadre and p.idInformante=inf.idPadre
                         and p.idJefeRegistro=e.idEmpleado and p.idTestigo1=tes1.idPadre
-                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0;";
+                        and p.idTestigo2=tes2.idPadre and p.idTipo_partida=t.idTipo_partida and p.Lugar_fallecimiento=m.idMunicipio and Modificada=0 and dep.idDepartamento=m.idDepartamento;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -304,6 +305,26 @@ namespace CacheManager1
 
             return Datos;
         }
+
+        public static DataTable TODOS_LOS_PADRES1()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, p.Sexo, Domicilio, pa.Nacionalidad, DUI, NumPartida, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion, p.NumPartida,p.Revisado,Estado_familiar 
+                        FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa 
+                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and Estado='Viva'; ";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
         public static DataTable TODOS_LOS_INFORMANTES()
         {
             DataTable Datos = new DataTable();
@@ -418,6 +439,24 @@ namespace CacheManager1
             DataTable Datos = new DataTable();
             String Consulta;
             Consulta = "SELECT * FROM registro_familiar.municipios;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable TODOS_LAS_CAUSAS_DE_MUERTE()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT * FROM registro_familiar.causas_muerte order by Causa;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

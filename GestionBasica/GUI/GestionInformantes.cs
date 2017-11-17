@@ -14,12 +14,27 @@ namespace GestionBasica.GUI
     {
         BindingSource _GRUPOS = new BindingSource();
         String _idInformante;
+        Boolean _profesional = false;
 
         public String IdInformante1
         {
             get { return _idInformante; }
             set { _idInformante = value; }
         }
+
+        public bool Profesional
+        {
+            get
+            {
+                return _profesional;
+            }
+
+            set
+            {
+                _profesional = value;
+            }
+        }
+
         public GestionInformantes()
         {
             InitializeComponent();
@@ -134,13 +149,25 @@ namespace GestionBasica.GUI
 
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            IInformante miInterfaz = this.Owner as IInformante;
-            if (miInterfaz != null)
+            if (!_profesional)
             {
-                miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
-                miInterfaz.cambiarInformantes(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                IInformante miInterfaz = this.Owner as IInformante;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdInformantes(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                    miInterfaz.cambiarInformantes(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                }
+                this.Dispose();
+            }else
+            {
+                IProfesional miInterfaz = this.Owner as IProfesional;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdProfesional(dataGridView1.CurrentRow.Cells["IdPadre"].Value.ToString());
+                    miInterfaz.cambiarProfesional(dataGridView1.CurrentRow.Cells["NombreCompleto"].Value.ToString());
+                }
+                this.Dispose();
             }
-            this.Dispose();
         }
     }
 }

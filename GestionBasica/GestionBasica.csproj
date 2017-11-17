@@ -52,15 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\Conv.cs" />
+    <Compile Include="CLS\Difunto.cs" />
     <Compile Include="CLS\Dui.cs" />
     <Compile Include="CLS\Empleado.cs" />
     <Compile Include="CLS\Hora.cs" />
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Marginacion.cs" />
+    <Compile Include="CLS\Nit.cs" />
     <Compile Include="CLS\Operaciones.cs" />
     <Compile Include="CLS\Padres.cs" />
     <Compile Include="CLS\Pais.cs" />
+    <Compile Include="CLS\PartidaDef.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Partidas_Matrimonio.cs" />
     <Compile Include="CLS\Profesion.cs" />
@@ -97,6 +100,18 @@
     </Compile>
     <Compile Include="GUI\Defunciones\DefuncionEdicion.Designer.cs">
       <DependentUpon>DefuncionEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Defunciones\DifuntoEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Defunciones\DifuntoEdicion.Designer.cs">
+      <DependentUpon>DifuntoEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Defunciones\GestionDifuntos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Defunciones\GestionDifuntos.Designer.cs">
+      <DependentUpon>GestionDifuntos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EdicionEmpleado.cs">
       <SubType>Form</SubType>
@@ -206,6 +221,7 @@
     <Compile Include="GUI\GestionUsuarios.Designer.cs">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IConyuge.cs" />
     <Compile Include="GUI\IImagen.cs" />
     <Compile Include="GUI\IInfante.cs" />
     <Compile Include="GUI\IInformante.cs" />
@@ -222,6 +238,9 @@
       <DependentUpon>InformanteEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\IPadre.cs" />
+    <Compile Include="GUI\IProfesional.cs" />
+    <Compile Include="GUI\ITestigo1.cs" />
+    <Compile Include="GUI\ITestigo2.cs" />
     <Compile Include="GUI\MadreEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Defunciones\DefuncionEdicion.resx">
       <DependentUpon>DefuncionEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Defunciones\DifuntoEdicion.resx">
+      <DependentUpon>DifuntoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Defunciones\GestionDifuntos.resx">
+      <DependentUpon>GestionDifuntos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>

@@ -84,5 +84,40 @@ namespace GestionBasica.CLS
             }
             return guardado;
         }
+
+        public Boolean GuardarDefuncion()
+        {
+            Boolean guardado = false;
+            StringBuilder Sentencia1 = new StringBuilder();
+            StringBuilder Sentencia2 = new StringBuilder();
+            StringBuilder Sentencia3 = new StringBuilder();
+
+            Sentencia1.Append("UPDATE partidas_defuncion SET Hora_sentencia='" + _Datos.HoraSentencia + "', Fecha_sentencia='" + _Datos.FechaSentencia + "', idJuzgado='" + _Datos.IdJuzgado + "', Modificada='1' WHERE idpartidas_defuncion='" + _Datos.IdPartidaVieja + "';");
+
+            Sentencia2.Append("UPDATE padres SET Estado='Viva' where idPadre="+_Datos.IdInfante+";");
+            
+            Sentencia3.Append("INSERT INTO marginaciones(Explicacion,idJefe,idPartidaDef) VALUES('");
+            Sentencia3.Append(_Explicacion + "',");
+            Sentencia3.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo),"+_Datos.IdPartidaVieja+");");
+
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Transaccion(Sentencia1.ToString(), Sentencia2.ToString(), Sentencia3.ToString()) > 2)
+                {
+                    guardado = true;
+                }
+                else
+                {
+                    guardado = false;
+                }
+            }
+            catch
+            {
+                guardado = false;
+            }
+            return guardado;
+        }
     }
 }
