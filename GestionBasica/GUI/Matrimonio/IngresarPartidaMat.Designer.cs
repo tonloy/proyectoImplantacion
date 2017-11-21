@@ -61,7 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtApellidoCasada = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.cbxRegimenPatrimonial = new System.Windows.Forms.ComboBox();
             this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtID_Partida_cod = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.chbxRevisado = new System.Windows.Forms.CheckBox();
+            this.btnDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,10 +102,12 @@
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // txbFolio
             // 
-            this.txbFolio.Location = new System.Drawing.Point(179, 48);
+            this.txbFolio.Location = new System.Drawing.Point(179, 63);
             this.txbFolio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbFolio.Name = "txbFolio";
             this.txbFolio.Size = new System.Drawing.Size(72, 26);
@@ -112,7 +118,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(127, 53);
+            this.label8.Location = new System.Drawing.Point(127, 68);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 20);
@@ -139,6 +145,7 @@
             this.btnGuardar.TabIndex = 35;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // button4
             // 
@@ -246,6 +253,7 @@
             this.txtIdEsposa.ReadOnly = true;
             this.txtIdEsposa.Size = new System.Drawing.Size(43, 26);
             this.txtIdEsposa.TabIndex = 38;
+            this.txtIdEsposa.TextChanged += new System.EventHandler(this.txtIdEsposa_TextChanged);
             // 
             // label4
             // 
@@ -279,12 +287,13 @@
             // 
             // txtID_Esposo
             // 
-            this.txtID_Esposo.Location = new System.Drawing.Point(205, 167);
+            this.txtID_Esposo.Location = new System.Drawing.Point(204, 167);
             this.txtID_Esposo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtID_Esposo.Name = "txtID_Esposo";
             this.txtID_Esposo.ReadOnly = true;
             this.txtID_Esposo.Size = new System.Drawing.Size(43, 26);
             this.txtID_Esposo.TabIndex = 32;
+            this.txtID_Esposo.TextChanged += new System.EventHandler(this.txtID_Esposo_TextChanged);
             // 
             // label3
             // 
@@ -299,7 +308,7 @@
             // 
             // txbNumPartida
             // 
-            this.txbNumPartida.Location = new System.Drawing.Point(179, 90);
+            this.txbNumPartida.Location = new System.Drawing.Point(179, 105);
             this.txbNumPartida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbNumPartida.Name = "txbNumPartida";
             this.txbNumPartida.Size = new System.Drawing.Size(72, 26);
@@ -309,7 +318,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 94);
+            this.label1.Location = new System.Drawing.Point(85, 109);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
@@ -361,7 +370,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(485, 112);
+            this.label9.Location = new System.Drawing.Point(485, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 20);
@@ -401,7 +410,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.btnDetalle);
+            this.groupBox1.Controls.Add(this.txtApellidoCasada);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.cbxRegimenPatrimonial);
@@ -417,13 +427,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Matrimonio";
             // 
-            // textBox3
+            // txtApellidoCasada
             // 
-            this.textBox3.Location = new System.Drawing.Point(262, 178);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 26);
-            this.textBox3.TabIndex = 59;
+            this.txtApellidoCasada.Location = new System.Drawing.Point(262, 178);
+            this.txtApellidoCasada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoCasada.Name = "txtApellidoCasada";
+            this.txtApellidoCasada.Size = new System.Drawing.Size(196, 26);
+            this.txtApellidoCasada.TabIndex = 59;
             // 
             // groupBox2
             // 
@@ -493,7 +503,7 @@
             // 
             // txtHora
             // 
-            this.txtHora.Location = new System.Drawing.Point(488, 65);
+            this.txtHora.Location = new System.Drawing.Point(488, 66);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
@@ -505,18 +515,61 @@
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(488, 136);
+            this.dtpFecha.Location = new System.Drawing.Point(488, 124);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(147, 26);
             this.dtpFecha.TabIndex = 55;
             this.dtpFecha.Value = new System.DateTime(2017, 9, 22, 0, 0, 0, 0);
             // 
+            // txtID_Partida_cod
+            // 
+            this.txtID_Partida_cod.Location = new System.Drawing.Point(179, 27);
+            this.txtID_Partida_cod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID_Partida_cod.Name = "txtID_Partida_cod";
+            this.txtID_Partida_cod.ReadOnly = true;
+            this.txtID_Partida_cod.Size = new System.Drawing.Size(72, 26);
+            this.txtID_Partida_cod.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(85, 31);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "ID Partida";
+            // 
+            // chbxRevisado
+            // 
+            this.chbxRevisado.AutoSize = true;
+            this.chbxRevisado.Location = new System.Drawing.Point(77, 652);
+            this.chbxRevisado.Name = "chbxRevisado";
+            this.chbxRevisado.Size = new System.Drawing.Size(101, 24);
+            this.chbxRevisado.TabIndex = 61;
+            this.chbxRevisado.Text = "Revisado";
+            this.chbxRevisado.UseVisualStyleBackColor = true;
+            // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Location = new System.Drawing.Point(488, 169);
+            this.btnDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(147, 35);
+            this.btnDetalle.TabIndex = 62;
+            this.btnDetalle.Text = "Detalles";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
             // IngresarPartidaMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 728);
+            this.Controls.Add(this.chbxRevisado);
+            this.Controls.Add(this.txtID_Partida_cod);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.txtFuncionario);
@@ -598,12 +651,16 @@
         public System.Windows.Forms.DateTimePicker dtpFecha;
         public System.Windows.Forms.ComboBox cbxRegimenPatrimonial;
         public System.Windows.Forms.MaskedTextBox txtHora;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtApellidoCasada;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.ComboBox cbxDepartamentos;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.ComboBox cbxMunicipio;
         public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox txtID_Partida_cod;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox chbxRevisado;
+        public System.Windows.Forms.Button btnDetalle;
     }
 }

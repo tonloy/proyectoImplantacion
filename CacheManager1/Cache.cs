@@ -627,7 +627,48 @@ namespace CacheManager1
 
             return Datos;
         }
- 
+
+
+        
+        public static DataTable ID_Papas_Conyuges(String idInfante)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select pnac.idPadre , pnac.idMadre from partidas_nacimiento pnac where pnac.idInfante="+idInfante+";";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+
+
+        public static DataTable EstadoFamiliar_Conyugue(String idInfante)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select p.Estado_familiar from padres p where p.idPadre= " + idInfante + ";";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
 
     }
 }

@@ -11,8 +11,19 @@ using System.Windows.Forms;
 
 namespace GestionBasica.GUI.Matrimonio
 {
-    public partial class IngresarPartidaMat : Form, IPadre,IInformante, IInfante,  IFuncionario
+    public partial class IngresarPartidaMat : Form, IPadre, IInformante, IInfante, IFuncionario,IImagen
     {
+        public static Boolean marginando = false;
+        Int32 _revisado = 0;
+
+        String ruta_imagen;
+        public static string idpapaA= "";
+        public static string idmapaA = "";
+        public static string idpapaB = "";
+        public static string idmapaB = "";
+        public static string EF_Hombre, EF_Mujer;
+
+
         ErrorProvider Notificador = new ErrorProvider();
         BindingSource _Municipio = new BindingSource();
         BindingSource _Departamentos = new BindingSource();
@@ -46,6 +57,11 @@ namespace GestionBasica.GUI.Matrimonio
         public void cambiarIdFuncionario(string idFuncionario) { txtIDFuncionario.Text = idFuncionario; }
         public void cambiarfuncionario(string funcionario) { txtFuncionario.Text = funcionario; }
 
+        //imagen
+        public void cambiarImagen(String ruta) { pictureBox1.ImageLocation = ruta; }
+        
+        
+
 
         private void IngresarPartidaMat_Load(object sender, EventArgs e)
         {
@@ -74,13 +90,13 @@ namespace GestionBasica.GUI.Matrimonio
             fila["Tipo"] = "Comunidad Diferida";
             fila["Valor"] = "3";
             tipos.Rows.Add(fila);
-            
+
             cbxRegimenPatrimonial.DataSource = tipos;
             cbxRegimenPatrimonial.ValueMember = "Valor";
             cbxRegimenPatrimonial.DisplayMember = "Tipo";
 
         }
-       
+
         private void CargarDepartamentos()
         {
             try
@@ -107,7 +123,239 @@ namespace GestionBasica.GUI.Matrimonio
             cbxMunicipio.ValueMember = "idMunicipio";
         }
 
-        
+
+        private void Procesar()
+        {
+            CLS.Partidas_Matrimonio oPdaMatrimonio = new CLS.Partidas_Matrimonio();
+           
+            oPdaMatrimonio.Folio = txbFolio.Text;
+            oPdaMatrimonio.NumPartida1 = txbNumPartida.Text;
+
+            oPdaMatrimonio.IdEsposo = txtID_Esposo.Text;
+            oPdaMatrimonio.IdEsposa = txtIdEsposa.Text;
+            oPdaMatrimonio.IdTestigo = txt_IdInf1.Text;
+            oPdaMatrimonio.IdTestigo2 = txtIdInfo2.Text;
+            oPdaMatrimonio.IdFuncionario = txtIDFuncionario.Text;
+
+            oPdaMatrimonio.IdPadre_esposo = idpapaA;
+            oPdaMatrimonio.IdMadre_esposo = idmapaA;
+            oPdaMatrimonio.IdPadre_esposa = idpapaB;
+            oPdaMatrimonio.IdMadre_esposa = idmapaB;
+
+            oPdaMatrimonio.Lugar_matrimonio1 = cbxMunicipio.SelectedValue.ToString();
+            oPdaMatrimonio.Fecha_matrimonio1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
+            oPdaMatrimonio.Hora_matrimonio1 = txtHora.Text;
+            oPdaMatrimonio.Apellido_elegido1 = txtApellidoCasada.Text;
+            oPdaMatrimonio.Regimen_patrimonial1 = cbxRegimenPatrimonial.Text;
+            oPdaMatrimonio.Folio_letras = CLS.Conv.enletras(txbFolio.Text);
+
+            oPdaMatrimonio.Fecha_matrimonio_letra1 = CLS.Hora.fecha_letras(oPdaMatrimonio.Fecha_matrimonio1);
+            oPdaMatrimonio.Fecha_insercion1 = DateTime.Today.ToString("yyyy-MM-dd");
+            oPdaMatrimonio.Hora_insercion_letra1 = CLS.Hora.hora_letras(oPdaMatrimonio.Hora_matrimonio1);
+
+            oPdaMatrimonio.Imagen1 = obtenerRuta(pictureBox1.ImageLocation);
+            oPdaMatrimonio.Detalle_hijos = Detalle_Hijos.detalle_hijosfrm;
+
+            /*
+            oPdaMatrimonio.Anio_insercion_letras = CLS.Conv.enletras(DateTime.Today.Year.ToString());
+            oPdaMatrimonio.Fecha_insercion_letra1 = CLS.Hora.fecha_letras(DateTime.Now.TimeOfDay.ToString("yyyy-MM-dd"));
+            oPdaMatrimonio.Hora_insercion1 = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            
+            */
+
+
+
+            if (ValidarDatos())
+                    {
+                        if (chbxRevisado.Checked)
+                        {
+                            _revisado = 1;
+                        }
+                        if (txtIdEsposa.TextLength > 0)
+                        {
+                            //Actualizando
+                            try
+                            {
+                                if (oPdaMatrimonio.Insertar(_revisado))
+                                {
+                                    MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            //Insertando
+                            try
+                            {
+                                if (oPdaMatrimonio.Insertar(_revisado))
+                                {
+                                    MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+
+
+        private String obtenerRuta(String rtpbx)
+        {
+            ruta_imagen = rtpbx.Replace("\\", "\\\\");
+            return ruta_imagen;
+        }
+
+        private void IDPadresHombre()
+        {
+            DataTable _Datos = new DataTable();
+            _Datos = CacheManager1.Cache.ID_Papas_Conyuges(txtID_Esposo.Text);
+
+            foreach (DataRow row in _Datos.Rows)
+            {
+               
+                idmapaA = row[1].ToString();
+                idpapaA = row[0].ToString();
+
+                if (idmapaA == null) {
+                    idmapaA = "";
+                }
+
+                if (idpapaA == null)
+                {
+                    idpapaA = "";
+                }
+
+            }
+
+        }
+
+        private void IDPadresMujer()
+        {
+            DataTable _Datos = new DataTable();
+            _Datos = CacheManager1.Cache.ID_Papas_Conyuges(txtIdEsposa.Text);
+
+            foreach (DataRow row in _Datos.Rows)
+            {
+                idmapaB = row[1].ToString();
+                idpapaB = row[0].ToString();
+            }
+
+
+            if (idmapaB == null)
+            {
+                idmapaB = " ";
+            }
+
+            if (idpapaB == null)
+            {
+                idpapaB = " ";
+            }
+
+        }
+
+
+        private void EstadoFam_Hombre()
+        {
+            DataTable _Datos = new DataTable();
+            _Datos = CacheManager1.Cache.EstadoFamiliar_Conyugue(txtID_Esposo.Text);
+
+            foreach (DataRow row in _Datos.Rows)
+            {
+                EF_Hombre = row[0].ToString();
+            }
+        }
+
+        private void EstadoFam_Mujer()
+        {
+            DataTable _Datos = new DataTable();
+            _Datos = CacheManager1.Cache.EstadoFamiliar_Conyugue(txtIdEsposa.Text);
+
+            foreach (DataRow row in _Datos.Rows)
+            {
+                EF_Mujer = row[0].ToString();
+            }
+        }
+
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (txbFolio.TextLength == 0)
+            {
+                Notificador.SetError(txbFolio, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txbNumPartida.TextLength == 0 )
+            {
+                Notificador.SetError(txbNumPartida, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+
+            if (txtEsposo.TextLength == 0)
+            {
+                Notificador.SetError(button1, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtEsposa.TextLength == 0)
+            {
+                Notificador.SetError(button2, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtInformante1.TextLength == 0)
+            {
+                Notificador.SetError(button3, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtInformante2.TextLength == 0)
+            {
+                Notificador.SetError(button4, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+            if (txtFuncionario.TextLength == 0)
+            {
+                Notificador.SetError(button7, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+
+            if (txtApellidoCasada.TextLength == 0)
+            {
+                Notificador.SetError(txtApellidoCasada, "Este campo no puede quedar vacío.");
+                Validado = false;
+            }
+
+            if (!esHoraValida())
+            {
+                Notificador.SetError(txtHora, "Hora no válida.");
+                Validado = false;
+            }
+
+            if (EF_Hombre == "Casado" || EF_Mujer=="Casado")
+            {
+                MessageBox.Show("El estado Familiar del conyugue es: Casado/a", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validado = false;
+            }
+
+
+            return Validado;
+        }
+
 
 
         //botones de seleciion de sujeto 
@@ -288,6 +536,40 @@ namespace GestionBasica.GUI.Matrimonio
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
         private void cbxMunicipio_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        
+        private void txtID_Esposo_TextChanged(object sender, EventArgs e)
+        {
+            IDPadresHombre();
+            EstadoFam_Hombre();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Procesar();
+           
+        }
+
+        private void txtIdEsposa_TextChanged(object sender, EventArgs e)
+        {
+            IDPadresMujer();
+            EstadoFam_Mujer();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            GUI.Matrimonio.Detalle_Hijos frm = new Detalle_Hijos();
+            frm.Show();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            SeleccionImagen frm = new SeleccionImagen();
+            frm.ShowDialog(this);
+        }
     }
 }
+
