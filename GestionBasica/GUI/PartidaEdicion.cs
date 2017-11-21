@@ -205,6 +205,14 @@ namespace GestionBasica.GUI
 
             if (ValidarDatos())
             {
+                if (txtIdPadre.TextLength == 0)
+                {
+                    oUsuario.IdPadre = "null";
+                }
+                if (txtIdMadre.TextLength == 0)
+                {
+                    oUsuario.IdMadre = "null";
+                }
                 if (marginando)
                 {
                     _Datos.Tomo = txbFolio.Text;
@@ -220,22 +228,43 @@ namespace GestionBasica.GUI
                 }
                 else
                 {
-                    //Insertando
-                    try
-                    {
-                        if (oUsuario.Guardar())
+                    if (txbIdPartida.TextLength > 0) {
+                        try
                         {
-                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
+                            if (oUsuario.Actualizar())
+                            {
+                                MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
-                        else
+                        catch
                         {
-                            MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    catch
+                    //Insertando
+                    else
                     {
-                        MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        try
+                        {
+                            if (oUsuario.Guardar())
+                            {
+                                MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -266,16 +295,17 @@ namespace GestionBasica.GUI
                 Notificador.SetError(button1, "Este campo no puede quedar vacío.");
                 Validado = false;
             }
-            if (txtIdMadre.TextLength == 0)
+            if (txtIdMadre.TextLength == 0 && txtIdPadre.TextLength == 0)
             {
-                Notificador.SetError(button2, "Este campo no puede quedar vacío.");
+                if (txtIdMadre.TextLength == 0) { Notificador.SetError(button2, "Este campo no puede quedar vacío."); }
+                if(txtIdPadre.TextLength == 0) { Notificador.SetError(button3, "Este campo no puede quedar vacío."); }                
                 Validado = false;
             }
-            if (txtIdPadre.TextLength == 0)
+            /*if (txtIdPadre.TextLength == 0)
             {
                 Notificador.SetError(button3, "Este campo no puede quedar vacío.");
                 Validado = false;
-            }
+            }*/
             if (txtIdInformante.TextLength == 0)
             {
                 Notificador.SetError(button4, "Este campo no puede quedar vacío.");

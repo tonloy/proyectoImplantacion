@@ -12,7 +12,8 @@ namespace App
 {
     public partial class Principal : Form
     {
-        
+
+        DataTable _Opciones = new DataTable();
         SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
         public Principal()
         {
@@ -31,6 +32,48 @@ namespace App
             lblUsuario.Text = _Sesion.Usuario;
             lblNombreEmpleado.Text = _Sesion.Nombres;
             tmpConexion.Start();
+            CargarOpciones();
+        }
+
+        private void CargarOpciones()
+        {
+            gestionarToolStripMenuItem.Visible = false;
+            buscarPartidaDeNacimientoToolStripMenuItem.Visible = false;
+            reportesToolStripMenuItem.Visible = false;
+            configuraciónToolStripMenuItem.Visible = false;
+            ayudaToolStripMenuItem.Visible = false;
+            try
+            {
+                _Opciones = CacheManager1.Cache.PERMISOS_OTORGADOS(_Sesion.IDGrupo);
+                foreach (DataRow row in _Opciones.Rows)
+                {
+                    if (row[1].ToString() == gestionarToolStripMenuItem.Text)
+                    {
+                        gestionarToolStripMenuItem.Visible = true;
+                    }
+                    if (row[1].ToString() == buscarPartidaDeNacimientoToolStripMenuItem.Text)
+                    {
+                        buscarPartidaDeNacimientoToolStripMenuItem.Visible = true;
+                    }
+                    if (row[1].ToString() == reportesToolStripMenuItem.Text)
+                    {
+                        reportesToolStripMenuItem.Visible = true;
+                    }
+                    if(row[1].ToString() == configuraciónToolStripMenuItem.Text)
+                    {
+                        configuraciónToolStripMenuItem.Visible = true;
+                    }
+                    if(row[1].ToString() == ayudaToolStripMenuItem.Text)
+                    {
+                        ayudaToolStripMenuItem.Visible = true;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
@@ -152,6 +195,12 @@ namespace App
         {
             GestionBasica.GUI.GestionCausas frl = new GestionBasica.GUI.GestionCausas();
             frl.ShowDialog();
+        }
+
+        private void cantonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionCantones fmor = new GestionBasica.GUI.GestionCantones();
+            fmor.ShowDialog();
         }
     }
 }

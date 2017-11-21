@@ -66,7 +66,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(249, 312);
+            this.button1.Location = new System.Drawing.Point(249, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.txtExplicacion.Location = new System.Drawing.Point(15, 173);
             this.txtExplicacion.Multiline = true;
             this.txtExplicacion.Name = "txtExplicacion";
-            this.txtExplicacion.Size = new System.Drawing.Size(417, 133);
+            this.txtExplicacion.Size = new System.Drawing.Size(417, 246);
             this.txtExplicacion.TabIndex = 1;
             // 
             // label2
@@ -93,7 +93,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(357, 312);
+            this.btnCancelar.Location = new System.Drawing.Point(357, 425);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 4;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 351);
+            this.ClientSize = new System.Drawing.Size(454, 470);
             this.Controls.Add(this.cbxJuzgados);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNumPartida);

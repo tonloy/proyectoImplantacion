@@ -88,11 +88,11 @@ namespace CacheManager1
             Consulta = @"SELECT idPartida,
              p.Ruta,
              p.idMadre,
-             ma.NombreCompleto as madre,
+             (select NombreCompleto from padres where idPadre=p.idMadre) as madre,
              p.idPadre,
-             pa.NombreCompleto as padre,
+             (select NombreCompleto from padres where idPadre=p.idPadre) as padre,
              inf.idPadre as IdInformante,
-             inf.NombreCompleto as informante,
+             (select NombreCompleto from padres where idPadre=p.idInformante) as informante,
              idJefeRegistro,
              Tomo,
              i.idPadre as idInfante,
@@ -104,12 +104,10 @@ namespace CacheManager1
              t.idTipo_partida,
              Modificada FROM
              partidas_nacimiento p,
-             padres pa,
-             padres ma,
              padres inf,
              padres i,
              empleados e,
-             tipo_partidas t where p.idInfante=i.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
+             tipo_partidas t where p.idInfante=i.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
              and p.idInformante=inf.idPadre and Modificada=0;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -128,22 +126,25 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPartida, ma.idPadre as idMadre, pa.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
+            Consulta = @"SELECT idPartida, p.idMadre as idMadre, p.idPadre, inf.idPadre as idInformante, idJefeRegistro, Tomo_letras,
              i.idPadre as idInfante, Libro_letras, NumPartida_letras, Hora_sentencia, Fecha_sentencia, idJuzgado,
-             Ruta, idTipo_partida, Modificada, p.Fecha_insercion_letras,Anio_insercion_letras as Anio_insercion,ma.NombreCompleto as Madre,pa.NombreCompleto as Padre,
+             Ruta, idTipo_partida, Modificada, p.Fecha_insercion_letras,Anio_insercion_letras as Anio_insercion,
+             (select NombreCompleto from padres where idPadre=p.idMadre) as Madre,
+             (select NombreCompleto from padres where idPadre=p.idPadre) as Padre,
              inf.NombreCompleto as Informante,i.NombreCompleto as Infante,i.Sexo, i.FechaNac_letras,i.Hora_letras,
              (select Municipio from municipios where idMunicipio=i.LugarNac) as LugarNac,
-             (select Profesion from profesiones where idProfesion=ma.Profesion) as ProfesionMadre,(select Profesion from profesiones where idProfesion=pa.Profesion) as ProfesionPadre,
-             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=ma.idMunicipio) as MadreOrigen,
-             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=pa.idMunicipio) as PadreOrigen,
-             (select Nacionalidad from paises where idPais=ma.Nacionalidad) as NacionalidadMadre,
-             (select Nacionalidad from paises where idPais=pa.Nacionalidad) as NacionalidadPadre,
+             (select s.Profesion from profesiones s,padres pv where idProfesion=pv.Profesion and pv.idPadre=p.idMadre) as ProfesionMadre,(select s.Profesion from profesiones s,padres px where idProfesion=px.Profesion and px.idPadre=p.idPadre) as ProfesionPadre,
+             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de,padres pd where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=pd.idMunicipio and pd.idPadre=p.idMadre) as MadreOrigen,
+             (select concat(Municipio,(', '),Departamento) from municipios mu,departamentos de,padres md where mu.idDepartamento=de.idDepartamento and mu.idMunicipio=md.idMunicipio and md.idPadre=p.idPadre) as PadreOrigen,
+             (select sa.Nacionalidad from paises sa,padres ps where idPais=ps.Nacionalidad and ps.idPadre=p.idMadre) as NacionalidadMadre,
+             (select sa.Nacionalidad from paises sa,padres pf where idPais=pf.Nacionalidad and pf.idPadre=p.idPadre) as NacionalidadPadre,
              (select Parentesco from parentescos where idParentesco=inf.idParentesco) as InformanteParen,
-             ma.Dui_letras as DuiMadre,pa.Dui_letras as DuiPadre,inf.Dui_letras as DuiInformante,ma.Edad_letras as EdadMadre,pa.Edad_letras as EdadPadre,
-             ma.Domicilio as DomicilioMadre, pa.Domicilio as DomicilioPadre,
-             (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p, padres pa,
-             padres ma,padres inf, padres i where p.idInfante=i.idPadre and
-             p.idInformante=inf.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and idPartida=" + pidPartida+";";
+             (select Dui_letras from padres where idPadre=p.idMadre) as DuiMadre,(select Dui_letras from padres where idPadre=p.idPadre) as DuiPadre,inf.Dui_letras as DuiInformante,(select Edad_letras from padres where idPadre=p.idMadre) as EdadMadre,
+             (select Edad_letras from padres where idPadre=p.idPadre) as EdadPadre,
+             (select Domicilio from padres where idPadre=p.idMadre) as DomicilioMadre, (select Domicilio from padres where idPadre=p.idPadre) as DomicilioPadre,
+             (select NombreCompleto from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo) as JefeRegistro FROM registro_familiar.partidas_nacimiento p,
+             padres inf, padres i where p.idInfante=i.idPadre and
+             p.idInformante=inf.idPadre and idPartida=" + pidPartida + ";";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -163,9 +164,9 @@ namespace CacheManager1
             String Consulta;
             Consulta = @"SELECT idPartida,
              p.idMadre,
-             ma.NombreCompleto as madre,
+             (select NombreCompleto from padres where idPadre=p.idMadre) as madre,
              p.idPadre,
-             pa.NombreCompleto as padre,
+             (select NombreCompleto from padres where idPadre=p.idPadre) as padre,
              inf.idPadre,
              inf.NombreCompleto as informante,
              idJefeRegistro,
@@ -179,12 +180,10 @@ namespace CacheManager1
              t.idTipo_partida,
              Modificada FROM
              partidas_nacimiento p,
-             padres pa,
-             padres ma,
              padres inf,
              padres i,
              empleados e,
-             tipo_partidas t where p.idInfante=i.idPadre and p.idPadre=pa.idPadre and p.idMadre=ma.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
+             tipo_partidas t where p.idInfante=i.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
              and p.idInformante=inf.idPadre and Modificada=0 and (i.NombreCompleto like '%" + fecha + "%' or i.FechaNac like '%" + fecha + "%');";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -198,6 +197,25 @@ namespace CacheManager1
 
             return Datos;
         }
+
+        public static DataTable PERMISOS_OTORGADOS(String pidGrupo)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "SELECT p.idOpcion,Opcion from permisos p,opciones o,roles g where o.idOpcion=p.idOpcion and p.idRol=g.idRol and p.idRol=" + pidGrupo + ";";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
 
         public static DataTable TODAS_LAS_PARTIDAS_DEFUNCION(String fecha)
         {
@@ -361,6 +379,24 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable TODOS_LOS_CANTONES()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select idCanton,Canton,Municipio,Departamento from cantones c,municipios m,departamentos d where c.idMunicipio=m.idMunicipio and m.idDepartamento=d.idDepartamento;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable TODOS_LOS_CAUSAS()
         {
             DataTable Datos = new DataTable();
@@ -471,6 +507,24 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable PERMISOS_DISPONIBLES(String pidGrupo)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select o.idOpcion,o.Opcion from opciones o where o.idOpcion not in(select p.idOpcion from permisos p where p.idRol=" + pidGrupo + ");";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable TODOS_LAS_CAUSAS_DE_MUERTE()
         {
             DataTable Datos = new DataTable();
@@ -530,7 +584,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "SELECT * FROM registro_familiar.paises;";
+            Consulta = "SELECT * FROM registro_familiar.paises order by Nacionalidad;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

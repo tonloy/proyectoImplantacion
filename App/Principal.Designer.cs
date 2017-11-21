@@ -36,6 +36,7 @@
             this.gestionarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profesionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.causasDeMuerteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPartidaDeNacimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partidasEscaneadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,7 @@
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.causasDeMuerteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cantonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +87,8 @@
             this.gestionarUsuariosToolStripMenuItem,
             this.profesionesToolStripMenuItem,
             this.nacionalidadesToolStripMenuItem,
-            this.causasDeMuerteToolStripMenuItem});
+            this.causasDeMuerteToolStripMenuItem,
+            this.cantonesToolStripMenuItem});
             this.gestionarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.gestionarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
@@ -122,6 +124,13 @@
             this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
             this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
             this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadesToolStripMenuItem_Click);
+            // 
+            // causasDeMuerteToolStripMenuItem
+            // 
+            this.causasDeMuerteToolStripMenuItem.Name = "causasDeMuerteToolStripMenuItem";
+            this.causasDeMuerteToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.causasDeMuerteToolStripMenuItem.Text = "Causas de muerte";
+            this.causasDeMuerteToolStripMenuItem.Click += new System.EventHandler(this.causasDeMuerteToolStripMenuItem_Click);
             // 
             // buscarPartidaDeNacimientoToolStripMenuItem
             // 
@@ -294,12 +303,12 @@
             this.panel1.Size = new System.Drawing.Size(817, 445);
             this.panel1.TabIndex = 4;
             // 
-            // causasDeMuerteToolStripMenuItem
+            // cantonesToolStripMenuItem
             // 
-            this.causasDeMuerteToolStripMenuItem.Name = "causasDeMuerteToolStripMenuItem";
-            this.causasDeMuerteToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
-            this.causasDeMuerteToolStripMenuItem.Text = "Causas de muerte";
-            this.causasDeMuerteToolStripMenuItem.Click += new System.EventHandler(this.causasDeMuerteToolStripMenuItem_Click);
+            this.cantonesToolStripMenuItem.Name = "cantonesToolStripMenuItem";
+            this.cantonesToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.cantonesToolStripMenuItem.Text = "Cantones";
+            this.cantonesToolStripMenuItem.Click += new System.EventHandler(this.cantonesToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -359,5 +368,6 @@
         private System.Windows.Forms.ToolStripMenuItem partidasDeMatrimonioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem partidasDeDivorcioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem causasDeMuerteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cantonesToolStripMenuItem;
     }
 }

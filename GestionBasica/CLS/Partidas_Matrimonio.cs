@@ -408,9 +408,9 @@ namespace GestionBasica.CLS
         }
 
 
-        public Boolean Actualizar()
+        /*public Boolean Actualizar()
         {
-            //luga, hora y apellido
+            /luga, hora y apellido
             Boolean actualizado = false;
             StringBuilder Sentencia = new StringBuilder();
 
@@ -442,7 +442,7 @@ namespace GestionBasica.CLS
             }
 
             return actualizado;
-        }
+        }*/
 
 
 

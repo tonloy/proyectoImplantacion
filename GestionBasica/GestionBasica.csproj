@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Canton.cs" />
     <Compile Include="CLS\Causa_muerte.cs" />
     <Compile Include="CLS\Conv.cs" />
     <Compile Include="CLS\Difunto.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="CLS\PartidaDef.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Partidas_Matrimonio.cs" />
+    <Compile Include="CLS\Permiso.cs" />
     <Compile Include="CLS\Profesion.cs" />
     <Compile Include="CLS\Scanner.cs" />
     <Compile Include="CLS\Usuario.cs" />
@@ -113,6 +115,12 @@
     </Compile>
     <Compile Include="GUI\Defunciones\GestionDifuntos.Designer.cs">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionCanton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionCanton.Designer.cs">
+      <DependentUpon>EdicionCanton.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EdicionCausa.cs">
       <SubType>Form</SubType>
@@ -167,6 +175,12 @@
     </Compile>
     <Compile Include="GUI\GestionaPartidasEscaneadas.Designer.cs">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionCantones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionCantones.Designer.cs">
+      <DependentUpon>GestionCantones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionCausas.cs">
       <SubType>Form</SubType>
@@ -333,6 +347,9 @@
     <EmbeddedResource Include="GUI\Defunciones\GestionDifuntos.resx">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionCanton.resx">
+      <DependentUpon>EdicionCanton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionCausa.resx">
       <DependentUpon>EdicionCausa.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionaPartidasEscaneadas.resx">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionCantones.resx">
+      <DependentUpon>GestionCantones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionCausas.resx">
       <DependentUpon>GestionCausas.cs</DependentUpon>
