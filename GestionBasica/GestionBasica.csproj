@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Causa_muerte.cs" />
     <Compile Include="CLS\Conv.cs" />
     <Compile Include="CLS\Difunto.cs" />
     <Compile Include="CLS\Dui.cs" />
@@ -113,6 +114,12 @@
     <Compile Include="GUI\Defunciones\GestionDifuntos.Designer.cs">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EdicionCausa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionCausa.Designer.cs">
+      <DependentUpon>EdicionCausa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +167,12 @@
     </Compile>
     <Compile Include="GUI\GestionaPartidasEscaneadas.Designer.cs">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionCausas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionCausas.Designer.cs">
+      <DependentUpon>GestionCausas.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionEmpleados.cs">
       <SubType>Form</SubType>
@@ -326,6 +339,9 @@
     <EmbeddedResource Include="GUI\Defunciones\GestionDifuntos.resx">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionCausa.resx">
+      <DependentUpon>EdicionCausa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionaPartidasEscaneadas.resx">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionCausas.resx">
+      <DependentUpon>GestionCausas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
