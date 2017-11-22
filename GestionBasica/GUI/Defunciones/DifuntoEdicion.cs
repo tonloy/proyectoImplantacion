@@ -203,15 +203,17 @@ namespace GestionBasica.GUI.Defunciones
             if (txtNumPartida.MaskCompleted)
             {
                 oPadre.NumPartidaLetras1 = CLS.Nit.nit_letras(txtNumPartida.Text);
+                oPadre.Documento1 = "NIT";
             }
             if (mtxtDUI.MaskCompleted)
             {
                 oPadre.DUI_letras1 = CLS.Dui.dui_letras(mtxtDUI.Text);
+                oPadre.Documento1 = "DUI";
             }
 
             if (ValidarDatos())
             {
-                oPadre.Estado_familiar1 = cbxEstados.SelectedItem.ToString();
+                oPadre.Estado_familiar1 = cbxEstados.SelectedValue.ToString();
                 if (rbtnFemenino.Checked)
                 {
                     oPadre.Sexo1 = "Femenino";
@@ -386,7 +388,7 @@ namespace GestionBasica.GUI.Defunciones
             tipos.Rows.Add(fila);
 
             cbxEstados.DataSource = tipos;
-            cbxEstados.ValueMember = "Valor";
+            cbxEstados.ValueMember = "Tipo";
             cbxEstados.DisplayMember = "Tipo";
 
         }

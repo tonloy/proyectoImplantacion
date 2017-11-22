@@ -86,6 +86,8 @@
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chbxRevisado = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbxCantones = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -137,7 +139,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(741, 460);
+            this.button6.Location = new System.Drawing.Point(741, 498);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 39;
@@ -147,7 +149,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(624, 460);
+            this.btnGuardar.Location = new System.Drawing.Point(624, 498);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 37;
@@ -365,7 +367,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 420);
+            this.label10.Location = new System.Drawing.Point(9, 450);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(113, 13);
             this.label10.TabIndex = 57;
@@ -392,7 +394,7 @@
             // 
             // txtHora
             // 
-            this.txtHora.Location = new System.Drawing.Point(486, 417);
+            this.txtHora.Location = new System.Drawing.Point(486, 447);
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(105, 20);
@@ -403,7 +405,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(374, 420);
+            this.label12.Location = new System.Drawing.Point(374, 450);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 13);
             this.label12.TabIndex = 62;
@@ -413,7 +415,7 @@
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(128, 417);
+            this.dtpFecha.Location = new System.Drawing.Point(128, 447);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(105, 20);
             this.dtpFecha.TabIndex = 63;
@@ -422,7 +424,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 381);
+            this.label13.Location = new System.Drawing.Point(35, 411);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 13);
             this.label13.TabIndex = 64;
@@ -432,7 +434,7 @@
             // 
             this.cbxCausas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCausas.FormattingEnabled = true;
-            this.cbxCausas.Location = new System.Drawing.Point(128, 378);
+            this.cbxCausas.Location = new System.Drawing.Point(128, 408);
             this.cbxCausas.Name = "cbxCausas";
             this.cbxCausas.Size = new System.Drawing.Size(281, 21);
             this.cbxCausas.TabIndex = 65;
@@ -562,6 +564,7 @@
             this.cbxMunicipios.Name = "cbxMunicipios";
             this.cbxMunicipios.Size = new System.Drawing.Size(247, 21);
             this.cbxMunicipios.TabIndex = 79;
+            this.cbxMunicipios.SelectedIndexChanged += new System.EventHandler(this.cbxMunicipios_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -601,11 +604,31 @@
             this.chbxRevisado.Text = "Revisado";
             this.chbxRevisado.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(81, 376);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 83;
+            this.label18.Text = "Cantón";
+            // 
+            // cbxCantones
+            // 
+            this.cbxCantones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCantones.FormattingEnabled = true;
+            this.cbxCantones.Location = new System.Drawing.Point(128, 373);
+            this.cbxCantones.Name = "cbxCantones";
+            this.cbxCantones.Size = new System.Drawing.Size(281, 21);
+            this.cbxCantones.TabIndex = 82;
+            // 
             // DefuncionEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 505);
+            this.ClientSize = new System.Drawing.Size(829, 544);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.cbxCantones);
             this.Controls.Add(this.chbxRevisado);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cbxMunicipios);
@@ -733,5 +756,7 @@
         public System.Windows.Forms.CheckBox chbxRevisado;
         public System.Windows.Forms.Button btnDifunto;
         public System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label18;
+        public System.Windows.Forms.ComboBox cbxCantones;
     }
 }

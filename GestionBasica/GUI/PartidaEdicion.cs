@@ -207,11 +207,11 @@ namespace GestionBasica.GUI
             {
                 if (txtIdPadre.TextLength == 0)
                 {
-                    oUsuario.IdPadre = "null";
+                    oUsuario.IdPadre = "23";
                 }
                 if (txtIdMadre.TextLength == 0)
                 {
-                    oUsuario.IdMadre = "null";
+                    oUsuario.IdMadre = "23";
                 }
                 if (marginando)
                 {

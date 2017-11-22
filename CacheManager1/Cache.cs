@@ -330,7 +330,7 @@ namespace CacheManager1
             String Consulta;
             Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, p.Sexo, Domicilio, pa.Nacionalidad, DUI, NumPartida, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion, p.NumPartida,p.Revisado,Estado_familiar 
                         FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa 
-                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and Estado='Viva'; ";
+                        where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion; ";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -383,7 +383,25 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "select idCanton,Canton,Municipio,Departamento from cantones c,municipios m,departamentos d where c.idMunicipio=m.idMunicipio and m.idDepartamento=d.idDepartamento;";
+            Consulta = "select idCanton,Canton,Municipio,Departamento,c.idMunicipio from cantones c,municipios m,departamentos d where c.idMunicipio=m.idMunicipio and m.idDepartamento=d.idDepartamento;";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable TODOS_LOS_CANTONES1()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select * from cantones;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
