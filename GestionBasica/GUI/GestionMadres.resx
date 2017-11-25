@@ -124,14 +124,14 @@
   <data name="txbModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGQSURBVEhLY6AWuB7tkXQ9wuvq9Sivz0D6+NUoLzuoFGXg
-        ////jEdPHJ12obXiJNDw/zB8wtv+L8WWgAx/8+JA161bBw/v37//J7olIJ9AlZIHXj070Hbu3LEH757v
-        v4nDks9QpaSB//8ZGN90Sk77cKx63/tX+6/gtAQYJ1AtxAOY4fe7JX+/2ixy/P3lpm04LQFGPFQbcQDd
-        8DfrxA7eq5f89+FE4350S0ARD9VGHMBl+Nsuyf8gGtknoIgHJQCoVsKAkOEgPkgcFCegiKeJ4SB5kDqo
-        NuIAqYaD1EO1EgajhmMFQ9vwtwvEG18vED/6cqvoSaoaDgJv9lnHv9qjdez9PuODz7aKPaWq4SDw69zs
-        db/Pzf3/42Tz7ddbxS5Q1XBQtv5xbu5rkAXfjuafebVN4AXIEpBPQMFFkeEgADRcC2Q4CH8+Ou0LyBKQ
-        T0DBBYoTigwHgV/n5mbCLEDGoDgBRTxFhoPAltkN/ckpCQdhBoOCCxQnoIin2HAQsHT1OwyyBOQTUHCR
-        VNQSBAwMADKOmEwGMw27AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVEhL7ZQxS8NQFIXTf+CgLfkLXZ1E0EnQDs5SB0Vd
+        nFwFB62iYB3cupRCf0EXbSdpGkrSBiQUtASroIu1pqkpRKS26DMHXqAEQ1ITB8EDj5C8d7/DvScJE5SU
+        5fk1ZSlWV+Ixw7xW6vHYDN3yJ0JISKgKqdrhtmTCibXEhdkP3yaAa61SstHgyxzHvdtN0Ak9+jOpzdKR
+        LIsPL0/cjYOJQY+OJkKYkHbMprriTlFXuWtHEzMTWuJdFvz+hB2oZ+MV/Wq/4GhiBk/LvMkO13Jh/m6X
+        /exWE5zdBMHTMm9ygneSLMF1uBMEjxeAlrrLDY57PEcmCP5X4NjHOVrmTaPCcZ6Wuusf/q3+NryTjSTa
+        2YjwnJ+QAoVDWnF6Rb2Iinpxkm/mw4+BwqG+nM4N5AzpSQe37Xy4Figcn3VPzrRh8CZsXaqFsRZM0AnG
+        5QsOmfAo4FiGkHqFCTrBuJCJLzjUlzOblsHwQiYI3hccOk/vna5vrPIWGONCJgjeNxyamlsswwSdYFwj
+        /WpdxTBfPzmYGNgnvxkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txbNueva.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -183,6 +183,9 @@
     <value>True</value>
   </metadata>
   <metadata name="Observaciones.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Nit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

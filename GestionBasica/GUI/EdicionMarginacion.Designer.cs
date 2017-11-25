@@ -210,19 +210,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtExplicacion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox mtxtHoraSentencia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpFechaSentencia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbxJuzgados;
         public System.Windows.Forms.TextBox txtIdPartida;
         public System.Windows.Forms.TextBox txtNumPartida;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txtExplicacion;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.MaskedTextBox mtxtHoraSentencia;
+        public System.Windows.Forms.DateTimePicker dtpFechaSentencia;
+        public System.Windows.Forms.ComboBox cbxJuzgados;
     }
 }

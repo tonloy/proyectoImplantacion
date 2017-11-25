@@ -168,6 +168,7 @@ namespace GestionBasica.GUI
                     fro.txbProfesional.Text = dtgPartidas.CurrentRow.Cells["Profesional"].Value.ToString();
                     fro.cbxDepartamentos.SelectedIndex = fro.cbxDepartamentos.FindStringExact(dtgPartidas.CurrentRow.Cells["Departamento"].Value.ToString());
                     fro.cbxMunicipios.SelectedIndex = fro.cbxMunicipios.FindStringExact(dtgPartidas.CurrentRow.Cells["Lugardefallecimiento"].Value.ToString());
+                    fro.cbxCantones.SelectedIndex = fro.cbxCantones.FindStringExact(dtgPartidas.CurrentRow.Cells["Canton"].Value.ToString());
                     fro.cbxCausas.SelectedIndex = fro.cbxCausas.FindStringExact(dtgPartidas.CurrentRow.Cells["Causa"].Value.ToString());
                     fro.dtpFecha.Value = Convert.ToDateTime(dtgPartidas.CurrentRow.Cells["FechaFallecimiento"].Value.ToString());
                     fro.txtHora.Text = dtgPartidas.CurrentRow.Cells["HoraFallecimiento"].Value.ToString();
@@ -194,6 +195,7 @@ namespace GestionBasica.GUI
                         fro.cbxMunicipios.Enabled = false;
                         fro.txtHora.ReadOnly = true;
                         fro.dtpFecha.Enabled = false;
+                        fro.cbxCantones.Enabled = false;
 
                         fro.btnGuardar.Visible = false;
                     }
@@ -208,6 +210,24 @@ namespace GestionBasica.GUI
                 MessageBox.Show("¡No tiene permisos para realizar esta acción!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             CargarPartidas();
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            if (dtgPartidas.CurrentRow.Cells["Dui_difunto"].Value.ToString()== "        -")
+            {
+                Reportes.VisorPartidaDefNit fr = new Reportes.VisorPartidaDefNit();
+                fr.IdPartida1= Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                fr.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                fr.ShowDialog();
+            }
+            else
+            {
+                Reportes.VisorPartidaDefGenerada fm = new Reportes.VisorPartidaDefGenerada();
+                fm.IdPartida1 = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                fm.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                fm.ShowDialog();
+            }
         }
     }
 }

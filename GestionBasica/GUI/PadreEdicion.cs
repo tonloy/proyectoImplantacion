@@ -119,6 +119,7 @@ namespace GestionBasica.GUI
             oPadre.DUI1 = mtxtDUI.Text;
             oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
             oPadre.Observaciones1 = txtObservaciones.Text;
+            oPadre.Rubrica1 = txtRubrica.Text;
             if (mskTEdad.MaskCompleted) {
                 oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text); }
             oPadre.NumPartida1 = txtNumPartida.Text;
@@ -193,6 +194,12 @@ namespace GestionBasica.GUI
             if (txtConocidapor.TextLength == 0)
             {
                 Notificador.SetError(txtConocidapor, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtRubrica.TextLength == 0)
+            {
+                Notificador.SetError(txtRubrica, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
 

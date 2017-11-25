@@ -48,7 +48,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(186, 208);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -58,7 +58,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(98, 208);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -70,7 +70,7 @@
             this.cbxDepartamentos.Location = new System.Drawing.Point(15, 66);
             this.cbxDepartamentos.Name = "cbxDepartamentos";
             this.cbxDepartamentos.Size = new System.Drawing.Size(246, 21);
-            this.cbxDepartamentos.TabIndex = 7;
+            this.cbxDepartamentos.TabIndex = 0;
             this.cbxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbxDepartamentos_SelectedIndexChanged);
             // 
             // label3
@@ -88,7 +88,7 @@
             this.txbCanton.Multiline = true;
             this.txbCanton.Name = "txbCanton";
             this.txbCanton.Size = new System.Drawing.Size(246, 51);
-            this.txbCanton.TabIndex = 5;
+            this.txbCanton.TabIndex = 2;
             this.txbCanton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCanton_KeyPress);
             this.txbCanton.Leave += new System.EventHandler(this.txbCanton_Leave);
             // 
@@ -125,7 +125,7 @@
             this.cbxMunicipios.Location = new System.Drawing.Point(15, 108);
             this.cbxMunicipios.Name = "cbxMunicipios";
             this.cbxMunicipios.Size = new System.Drawing.Size(246, 21);
-            this.cbxMunicipios.TabIndex = 13;
+            this.cbxMunicipios.TabIndex = 1;
             // 
             // label4
             // 

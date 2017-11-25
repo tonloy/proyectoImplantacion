@@ -46,6 +46,7 @@
             this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nacionalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMunicipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,6 +156,7 @@
             this.Domicilio,
             this.Nacionalidad,
             this.Dui,
+            this.Nit,
             this.Departamento,
             this.idMunicipio,
             this.Municipio,
@@ -226,6 +228,14 @@
             this.Dui.HeaderText = "DUI";
             this.Dui.Name = "Dui";
             this.Dui.ReadOnly = true;
+            // 
+            // Nit
+            // 
+            this.Nit.DataPropertyName = "Nit";
+            this.Nit.HeaderText = "Nit";
+            this.Nit.Name = "Nit";
+            this.Nit.ReadOnly = true;
+            this.Nit.Width = 120;
             // 
             // Departamento
             // 
@@ -326,6 +336,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Domicilio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nacionalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dui;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMunicipio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;

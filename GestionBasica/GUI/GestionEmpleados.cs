@@ -70,6 +70,7 @@ namespace GestionBasica.GUI
                     frm.txbIdEmpleado.Text = dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
                     frm.txbNombreCompleto.Text = dtgEmpleados.CurrentRow.Cells["NombreCompleto"].Value.ToString();
                     frm.cbxCargos.SelectedIndex = frm.cbxCargos.FindStringExact(dtgEmpleados.CurrentRow.Cells["Cargo"].Value.ToString());
+                    frm.txtRubricas.Text= dtgEmpleados.CurrentRow.Cells["Rubricas"].Value.ToString();
 
                     frm.ShowDialog();
                     CargarEmpleados();

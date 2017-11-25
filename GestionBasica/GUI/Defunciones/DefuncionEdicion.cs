@@ -330,7 +330,10 @@ namespace GestionBasica.GUI.Defunciones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
-            Operaciones();
+            if (txbIdPartida.TextLength < 0)
+            {
+                Operaciones();
+            }
         }
 
         private void Procesar()
@@ -349,7 +352,7 @@ namespace GestionBasica.GUI.Defunciones
             oUsuario.IdMadre = txtIdMadre.Text;
             oUsuario.IdConyuge = txbIdConyuge.Text;
             oUsuario.IdProfesional = txbIdProfesional.Text;
-            oUsuario.Lugar_fallecimiento1 = cbxMunicipios.SelectedValue.ToString();
+            oUsuario.Lugar_fallecimiento1 = cbxCantones.SelectedValue.ToString();
             oUsuario.Causa_muerte1 = cbxCausas.SelectedValue.ToString();
             oUsuario.Fecha_fallecimiento1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
             oUsuario.Hora_fallecimiento1 = txtHora.Text;

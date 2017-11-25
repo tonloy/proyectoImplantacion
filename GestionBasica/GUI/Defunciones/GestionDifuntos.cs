@@ -75,7 +75,10 @@ namespace GestionBasica.GUI.Defunciones
                         dtgPartidas.CurrentCell.Selected = true;
                     }
                 }
-                dtgPartidas.Enabled = false;
+                if (_idPadre.Length>0)
+                {
+                    dtgPartidas.Enabled = false;
+                }
             }
         }
 

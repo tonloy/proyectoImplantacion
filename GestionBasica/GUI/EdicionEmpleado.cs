@@ -53,6 +53,7 @@ namespace GestionBasica.GUI
             oEmpleado.IdEmpleado = txbIdEmpleado.Text;
             oEmpleado.NombreCompleto = txbNombreCompleto.Text;
             oEmpleado.IdCargo = cbxCargos.SelectedValue.ToString();
+            oEmpleado.Rubricas = txtRubricas.Text;
 
             if (ValidarDatos())
             {

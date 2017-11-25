@@ -37,6 +37,8 @@
             this.profesionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.causasDeMuerteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cantonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tarifasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPartidaDeNacimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partidasEscaneadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +60,9 @@
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cantonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marginacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partidasDeNacimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partidasDeDefunciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +92,8 @@
             this.profesionesToolStripMenuItem,
             this.nacionalidadesToolStripMenuItem,
             this.causasDeMuerteToolStripMenuItem,
-            this.cantonesToolStripMenuItem});
+            this.cantonesToolStripMenuItem,
+            this.tarifasToolStripMenuItem});
             this.gestionarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.gestionarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
@@ -132,13 +137,28 @@
             this.causasDeMuerteToolStripMenuItem.Text = "Causas de muerte";
             this.causasDeMuerteToolStripMenuItem.Click += new System.EventHandler(this.causasDeMuerteToolStripMenuItem_Click);
             // 
+            // cantonesToolStripMenuItem
+            // 
+            this.cantonesToolStripMenuItem.Name = "cantonesToolStripMenuItem";
+            this.cantonesToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.cantonesToolStripMenuItem.Text = "Cantones";
+            this.cantonesToolStripMenuItem.Click += new System.EventHandler(this.cantonesToolStripMenuItem_Click);
+            // 
+            // tarifasToolStripMenuItem
+            // 
+            this.tarifasToolStripMenuItem.Name = "tarifasToolStripMenuItem";
+            this.tarifasToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.tarifasToolStripMenuItem.Text = "Tarifas";
+            this.tarifasToolStripMenuItem.Click += new System.EventHandler(this.tarifasToolStripMenuItem_Click);
+            // 
             // buscarPartidaDeNacimientoToolStripMenuItem
             // 
             this.buscarPartidaDeNacimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarPartidaToolStripMenuItem,
             this.partidasEscaneadasToolStripMenuItem,
             this.partidasDeMatrimonioToolStripMenuItem,
-            this.partidasDeDivorcioToolStripMenuItem});
+            this.partidasDeDivorcioToolStripMenuItem,
+            this.marginacionesToolStripMenuItem});
             this.buscarPartidaDeNacimientoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.buscarPartidaDeNacimientoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.buscarPartidaDeNacimientoToolStripMenuItem.Name = "buscarPartidaDeNacimientoToolStripMenuItem";
@@ -303,12 +323,28 @@
             this.panel1.Size = new System.Drawing.Size(817, 445);
             this.panel1.TabIndex = 4;
             // 
-            // cantonesToolStripMenuItem
+            // marginacionesToolStripMenuItem
             // 
-            this.cantonesToolStripMenuItem.Name = "cantonesToolStripMenuItem";
-            this.cantonesToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
-            this.cantonesToolStripMenuItem.Text = "Cantones";
-            this.cantonesToolStripMenuItem.Click += new System.EventHandler(this.cantonesToolStripMenuItem_Click);
+            this.marginacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.partidasDeNacimientoToolStripMenuItem,
+            this.partidasDeDefunciónToolStripMenuItem});
+            this.marginacionesToolStripMenuItem.Name = "marginacionesToolStripMenuItem";
+            this.marginacionesToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.marginacionesToolStripMenuItem.Text = "Marginaciones";
+            // 
+            // partidasDeNacimientoToolStripMenuItem
+            // 
+            this.partidasDeNacimientoToolStripMenuItem.Name = "partidasDeNacimientoToolStripMenuItem";
+            this.partidasDeNacimientoToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
+            this.partidasDeNacimientoToolStripMenuItem.Text = "Partidas de nacimiento";
+            this.partidasDeNacimientoToolStripMenuItem.Click += new System.EventHandler(this.partidasDeNacimientoToolStripMenuItem_Click);
+            // 
+            // partidasDeDefunciónToolStripMenuItem
+            // 
+            this.partidasDeDefunciónToolStripMenuItem.Name = "partidasDeDefunciónToolStripMenuItem";
+            this.partidasDeDefunciónToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
+            this.partidasDeDefunciónToolStripMenuItem.Text = "Partidas de defunción";
+            this.partidasDeDefunciónToolStripMenuItem.Click += new System.EventHandler(this.partidasDeDefunciónToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -369,5 +405,9 @@
         private System.Windows.Forms.ToolStripMenuItem partidasDeDivorcioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem causasDeMuerteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cantonesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tarifasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marginacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem partidasDeNacimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem partidasDeDefunciónToolStripMenuItem;
     }
 }

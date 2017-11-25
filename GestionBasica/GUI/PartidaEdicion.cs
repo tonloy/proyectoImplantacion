@@ -155,7 +155,10 @@ namespace GestionBasica.GUI
         private void button5_Click(object sender, EventArgs e)
         {
             Procesar();
-            Operaciones();
+            if (txbIdPartida.TextLength < 0)
+            {
+                Operaciones();
+            }
         }
 
         private void Operaciones()

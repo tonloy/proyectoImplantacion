@@ -202,5 +202,23 @@ namespace App
             GestionBasica.GUI.GestionCantones fmor = new GestionBasica.GUI.GestionCantones();
             fmor.ShowDialog();
         }
+
+        private void tarifasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionTarifas gtsa = new GestionBasica.GUI.GestionTarifas();
+            gtsa.ShowDialog();
+        }
+
+        private void partidasDeNacimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Marginadas.GestionPartidasNacMarginadas mar = new GestionBasica.GUI.Marginadas.GestionPartidasNacMarginadas();
+            mar.ShowDialog();
+        }
+
+        private void partidasDeDefunciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas marg = new GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas();
+            marg.ShowDialog();
+        }
     }
 }

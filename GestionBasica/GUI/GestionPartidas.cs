@@ -150,10 +150,18 @@ namespace GestionBasica.GUI
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
-            fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
-            fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
-            fm.ShowDialog();
+            if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())<18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())<18) {
+                Reportes.VisorPartidaNacNit fl = new Reportes.VisorPartidaNacNit();
+                fl.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+                fl.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                fl.ShowDialog();
+            }
+            else if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())>=18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())>=18) {
+                Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
+                fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+                fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                fm.ShowDialog();
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

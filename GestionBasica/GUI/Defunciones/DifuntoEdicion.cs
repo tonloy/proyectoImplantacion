@@ -204,11 +204,13 @@ namespace GestionBasica.GUI.Defunciones
             {
                 oPadre.NumPartidaLetras1 = CLS.Nit.nit_letras(txtNumPartida.Text);
                 oPadre.Documento1 = "NIT";
+                oPadre.DUI_letras1 = "";
             }
             if (mtxtDUI.MaskCompleted)
             {
                 oPadre.DUI_letras1 = CLS.Dui.dui_letras(mtxtDUI.Text);
                 oPadre.Documento1 = "DUI";
+                oPadre.NumPartidaLetras1 = "";
             }
 
             if (ValidarDatos())

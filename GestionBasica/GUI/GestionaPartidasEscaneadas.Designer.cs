@@ -75,6 +75,8 @@
             this.HoraFallecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Revisado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dui_difunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
@@ -201,6 +203,7 @@
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(108, 22);
             this.btnGenerar.Text = "Generar partida";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // dateTimePicker1
             // 
@@ -251,7 +254,9 @@
             this.Profesional,
             this.HoraFallecimiento,
             this.Departamento,
-            this.Revisado});
+            this.Revisado,
+            this.Canton,
+            this.Dui_difunto});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
             this.dtgPartidas.MultiSelect = false;
@@ -503,6 +508,22 @@
             this.Revisado.ReadOnly = true;
             this.Revisado.Visible = false;
             // 
+            // Canton
+            // 
+            this.Canton.DataPropertyName = "Canton";
+            this.Canton.HeaderText = "Canton";
+            this.Canton.Name = "Canton";
+            this.Canton.ReadOnly = true;
+            this.Canton.Visible = false;
+            // 
+            // Dui_difunto
+            // 
+            this.Dui_difunto.DataPropertyName = "Dui_difunto";
+            this.Dui_difunto.HeaderText = "Dui";
+            this.Dui_difunto.Name = "Dui_difunto";
+            this.Dui_difunto.ReadOnly = true;
+            this.Dui_difunto.Visible = false;
+            // 
             // GestionaPartidasEscaneadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,5 +596,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFallecimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Revisado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Canton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dui_difunto;
     }
 }
