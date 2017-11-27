@@ -1102,5 +1102,58 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable EstadisticaNacimientos(String pFechaI,String pFechaF,String pUsuario)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"select NombreCompleto as Empleado,
+(select count(idPartida) from partidas_nacimiento where Fecha_insercion between '"+pFechaI+@"' and '"+pFechaF+@"') as Asientos,
+(select count(idPartida) from partidas_nacimiento p,padres pa where p.idInfante = pa.idPadre and pa.Sexo = 'Femenino' and Fecha_insercion between '"+pFechaI+ @"' and '" + pFechaF + @"') as CantidadMujeres,
+(select count(idPartida) from partidas_nacimiento p,padres pa where p.idInfante = pa.idPadre and pa.Sexo = 'Masculino' and Fecha_insercion between '" + pFechaI + @"' and '" + pFechaF + @"') as CantidadHombres,
+(select count(idPartida) from partidas_nacimiento p,padres pa where p.idMadre = pa.idPadre and pa.Edad < 18 and Fecha_insercion between '" + pFechaI + @"' and '" + pFechaF + @"') as MadresMenores,
+(select count(idPartida) from partidas_nacimiento p,padres pa where p.idPadre = pa.idPadre and pa.Edad < 18 and Fecha_insercion between '" + pFechaI + @"' and '" + pFechaF + @"') as PadresMenores,
+(select count(idTransaccion) from operaciones where Tipo = 'Impresión de partida de nacimiento' and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"')as Solicitudes,
+(select(round(count(idTransaccion) * Costo, 2)) from operaciones where Tipo = 'Impresión de partida de nacimiento' and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"')as Ingresos,
+(select min(Fecha) from operaciones where (Tipo = 'Impresión de partida de nacimiento' or Tipo = 'Nueva partida de nacimiento') and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"') as FechaInicio,
+(select max(Fecha) from operaciones where (Tipo = 'Impresión de partida de nacimiento' or Tipo = 'Nueva partida de nacimiento') and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"') as FechaFin
+from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '" + pUsuario+"'; ";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable Reporte_Operaciones(String pFechaI, String pFechaF, String Tipo)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"select (select count(*)from operaciones where Fecha between '"+pFechaI+@"' and '"+pFechaF+ @"' and Tipo = '"+Tipo+ @"') as Operaciones,
+                        (select round((count(idTransaccion)*Costo),2) from operaciones where Tipo='" + Tipo + @"' and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"')as Ingresos,
+                        (select min(Fecha) from operaciones where Tipo = '" + Tipo + @"') as FechaInicio,
+                        (select max(Fecha) from operaciones where Tipo = '" + Tipo + @"') as FechaFinal,
+                        Tipo,Costo,
+                        Fecha from operaciones where Tipo='" + Tipo + @"' and Fecha between '" + pFechaI + @"' and '" + pFechaF + @"';";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
     }
 }

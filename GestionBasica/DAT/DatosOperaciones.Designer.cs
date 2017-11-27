@@ -20,17 +20,17 @@ namespace GestionBasica.DAT {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("EstadisticaPartidasNac")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DatosOperaciones")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class EstadisticaPartidasNac : global::System.Data.DataSet {
+    public partial class DatosOperaciones : global::System.Data.DataSet {
         
-        private EstadisticaNacDataTable tableEstadisticaNac;
+        private DatosOperacionesDataTable tableDatosOperaciones;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public EstadisticaPartidasNac() {
+        public DatosOperaciones() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GestionBasica.DAT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected EstadisticaPartidasNac(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DatosOperaciones(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GestionBasica.DAT {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["EstadisticaNac"] != null)) {
-                    base.Tables.Add(new EstadisticaNacDataTable(ds.Tables["EstadisticaNac"]));
+                if ((ds.Tables["DatosOperaciones"] != null)) {
+                    base.Tables.Add(new DatosOperacionesDataTable(ds.Tables["DatosOperaciones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GestionBasica.DAT {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EstadisticaNacDataTable EstadisticaNac {
+        public DatosOperacionesDataTable _DatosOperaciones {
             get {
-                return this.tableEstadisticaNac;
+                return this.tableDatosOperaciones;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            EstadisticaPartidasNac cln = ((EstadisticaPartidasNac)(base.Clone()));
+            DatosOperaciones cln = ((DatosOperaciones)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GestionBasica.DAT {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["EstadisticaNac"] != null)) {
-                    base.Tables.Add(new EstadisticaNacDataTable(ds.Tables["EstadisticaNac"]));
+                if ((ds.Tables["DatosOperaciones"] != null)) {
+                    base.Tables.Add(new DatosOperacionesDataTable(ds.Tables["DatosOperaciones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEstadisticaNac = ((EstadisticaNacDataTable)(base.Tables["EstadisticaNac"]));
+            this.tableDatosOperaciones = ((DatosOperacionesDataTable)(base.Tables["DatosOperaciones"]));
             if ((initTable == true)) {
-                if ((this.tableEstadisticaNac != null)) {
-                    this.tableEstadisticaNac.InitVars();
+                if ((this.tableDatosOperaciones != null)) {
+                    this.tableDatosOperaciones.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "EstadisticaPartidasNac";
+            this.DataSetName = "DatosOperaciones";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/EstadisticaPartidasNac.xsd";
+            this.Namespace = "http://tempuri.org/DatosOperaciones.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEstadisticaNac = new EstadisticaNacDataTable();
-            base.Tables.Add(this.tableEstadisticaNac);
+            this.tableDatosOperaciones = new DatosOperacionesDataTable();
+            base.Tables.Add(this.tableDatosOperaciones);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeEstadisticaNac() {
+        private bool ShouldSerialize_DatosOperaciones() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GestionBasica.DAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            EstadisticaPartidasNac ds = new EstadisticaPartidasNac();
+            DatosOperaciones ds = new DatosOperaciones();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,39 +270,33 @@ namespace GestionBasica.DAT {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void EstadisticaNacRowChangeEventHandler(object sender, EstadisticaNacRowChangeEvent e);
+        public delegate void DatosOperacionesRowChangeEventHandler(object sender, DatosOperacionesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EstadisticaNacDataTable : global::System.Data.TypedTableBase<EstadisticaNacRow> {
+        public partial class DatosOperacionesDataTable : global::System.Data.TypedTableBase<DatosOperacionesRow> {
             
-            private global::System.Data.DataColumn columnEmpleado;
-            
-            private global::System.Data.DataColumn columnAsientos;
-            
-            private global::System.Data.DataColumn columnCantidadMujeres;
-            
-            private global::System.Data.DataColumn columnCantidadHombres;
-            
-            private global::System.Data.DataColumn columnMadresMenores;
-            
-            private global::System.Data.DataColumn columnPadresMenores;
+            private global::System.Data.DataColumn columnOperaciones;
             
             private global::System.Data.DataColumn columnIngresos;
             
+            private global::System.Data.DataColumn columnCosto;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
             private global::System.Data.DataColumn columnFechaInicio;
             
-            private global::System.Data.DataColumn columnFechaFin;
+            private global::System.Data.DataColumn columnFechaFinal;
             
             private global::System.Data.DataColumn columnDataColumn1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacDataTable() {
-                this.TableName = "EstadisticaNac";
+            public DatosOperacionesDataTable() {
+                this.TableName = "DatosOperaciones";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +304,7 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal EstadisticaNacDataTable(global::System.Data.DataTable table) {
+            internal DatosOperacionesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,56 +321,16 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected EstadisticaNacDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DatosOperacionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EmpleadoColumn {
+            public global::System.Data.DataColumn OperacionesColumn {
                 get {
-                    return this.columnEmpleado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AsientosColumn {
-                get {
-                    return this.columnAsientos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CantidadMujeresColumn {
-                get {
-                    return this.columnCantidadMujeres;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CantidadHombresColumn {
-                get {
-                    return this.columnCantidadHombres;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MadresMenoresColumn {
-                get {
-                    return this.columnMadresMenores;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PadresMenoresColumn {
-                get {
-                    return this.columnPadresMenores;
+                    return this.columnOperaciones;
                 }
             }
             
@@ -390,6 +344,22 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CostoColumn {
+                get {
+                    return this.columnCosto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn FechaInicioColumn {
                 get {
                     return this.columnFechaInicio;
@@ -398,9 +368,9 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaFinColumn {
+            public global::System.Data.DataColumn FechaFinalColumn {
                 get {
-                    return this.columnFechaFin;
+                    return this.columnFechaFinal;
                 }
             }
             
@@ -423,54 +393,51 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacRow this[int index] {
+            public DatosOperacionesRow this[int index] {
                 get {
-                    return ((EstadisticaNacRow)(this.Rows[index]));
+                    return ((DatosOperacionesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EstadisticaNacRowChangeEventHandler EstadisticaNacRowChanging;
+            public event DatosOperacionesRowChangeEventHandler DatosOperacionesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EstadisticaNacRowChangeEventHandler EstadisticaNacRowChanged;
+            public event DatosOperacionesRowChangeEventHandler DatosOperacionesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EstadisticaNacRowChangeEventHandler EstadisticaNacRowDeleting;
+            public event DatosOperacionesRowChangeEventHandler DatosOperacionesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EstadisticaNacRowChangeEventHandler EstadisticaNacRowDeleted;
+            public event DatosOperacionesRowChangeEventHandler DatosOperacionesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddEstadisticaNacRow(EstadisticaNacRow row) {
+            public void AddDatosOperacionesRow(DatosOperacionesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacRow AddEstadisticaNacRow(string Empleado, string Asientos, string CantidadMujeres, string CantidadHombres, string MadresMenores, string PadresMenores, string Ingresos, string FechaInicio, string FechaFin, string DataColumn1) {
-                EstadisticaNacRow rowEstadisticaNacRow = ((EstadisticaNacRow)(this.NewRow()));
+            public DatosOperacionesRow AddDatosOperacionesRow(string Operaciones, string Ingresos, string Costo, string Fecha, string FechaInicio, string FechaFinal, string DataColumn1) {
+                DatosOperacionesRow rowDatosOperacionesRow = ((DatosOperacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Empleado,
-                        Asientos,
-                        CantidadMujeres,
-                        CantidadHombres,
-                        MadresMenores,
-                        PadresMenores,
+                        Operaciones,
                         Ingresos,
+                        Costo,
+                        Fecha,
                         FechaInicio,
-                        FechaFin,
+                        FechaFinal,
                         DataColumn1};
-                rowEstadisticaNacRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEstadisticaNacRow);
-                return rowEstadisticaNacRow;
+                rowDatosOperacionesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDatosOperacionesRow);
+                return rowDatosOperacionesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EstadisticaNacDataTable cln = ((EstadisticaNacDataTable)(base.Clone()));
+                DatosOperacionesDataTable cln = ((DatosOperacionesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,73 +445,66 @@ namespace GestionBasica.DAT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EstadisticaNacDataTable();
+                return new DatosOperacionesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnEmpleado = base.Columns["Empleado"];
-                this.columnAsientos = base.Columns["Asientos"];
-                this.columnCantidadMujeres = base.Columns["CantidadMujeres"];
-                this.columnCantidadHombres = base.Columns["CantidadHombres"];
-                this.columnMadresMenores = base.Columns["MadresMenores"];
-                this.columnPadresMenores = base.Columns["PadresMenores"];
+                this.columnOperaciones = base.Columns["Operaciones"];
                 this.columnIngresos = base.Columns["Ingresos"];
+                this.columnCosto = base.Columns["Costo"];
+                this.columnFecha = base.Columns["Fecha"];
                 this.columnFechaInicio = base.Columns["FechaInicio"];
-                this.columnFechaFin = base.Columns["FechaFin"];
+                this.columnFechaFinal = base.Columns["FechaFinal"];
                 this.columnDataColumn1 = base.Columns["DataColumn1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnEmpleado = new global::System.Data.DataColumn("Empleado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmpleado);
-                this.columnAsientos = new global::System.Data.DataColumn("Asientos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAsientos);
-                this.columnCantidadMujeres = new global::System.Data.DataColumn("CantidadMujeres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCantidadMujeres);
-                this.columnCantidadHombres = new global::System.Data.DataColumn("CantidadHombres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCantidadHombres);
-                this.columnMadresMenores = new global::System.Data.DataColumn("MadresMenores", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMadresMenores);
-                this.columnPadresMenores = new global::System.Data.DataColumn("PadresMenores", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPadresMenores);
+                this.columnOperaciones = new global::System.Data.DataColumn("Operaciones", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOperaciones);
                 this.columnIngresos = new global::System.Data.DataColumn("Ingresos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIngresos);
+                this.columnCosto = new global::System.Data.DataColumn("Costo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCosto);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
                 this.columnFechaInicio = new global::System.Data.DataColumn("FechaInicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaInicio);
-                this.columnFechaFin = new global::System.Data.DataColumn("FechaFin", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaFin);
+                this.columnFechaFinal = new global::System.Data.DataColumn("FechaFinal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaFinal);
                 this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataColumn1);
+                this.ExtendedProperties.Add("Generator_TablePropName", "_DatosOperaciones");
+                this.ExtendedProperties.Add("Generator_UserTableName", "DatosOperaciones");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacRow NewEstadisticaNacRow() {
-                return ((EstadisticaNacRow)(this.NewRow()));
+            public DatosOperacionesRow NewDatosOperacionesRow() {
+                return ((DatosOperacionesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EstadisticaNacRow(builder);
+                return new DatosOperacionesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EstadisticaNacRow);
+                return typeof(DatosOperacionesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EstadisticaNacRowChanged != null)) {
-                    this.EstadisticaNacRowChanged(this, new EstadisticaNacRowChangeEvent(((EstadisticaNacRow)(e.Row)), e.Action));
+                if ((this.DatosOperacionesRowChanged != null)) {
+                    this.DatosOperacionesRowChanged(this, new DatosOperacionesRowChangeEvent(((DatosOperacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +512,8 @@ namespace GestionBasica.DAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EstadisticaNacRowChanging != null)) {
-                    this.EstadisticaNacRowChanging(this, new EstadisticaNacRowChangeEvent(((EstadisticaNacRow)(e.Row)), e.Action));
+                if ((this.DatosOperacionesRowChanging != null)) {
+                    this.DatosOperacionesRowChanging(this, new DatosOperacionesRowChangeEvent(((DatosOperacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +521,8 @@ namespace GestionBasica.DAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EstadisticaNacRowDeleted != null)) {
-                    this.EstadisticaNacRowDeleted(this, new EstadisticaNacRowChangeEvent(((EstadisticaNacRow)(e.Row)), e.Action));
+                if ((this.DatosOperacionesRowDeleted != null)) {
+                    this.DatosOperacionesRowDeleted(this, new DatosOperacionesRowChangeEvent(((DatosOperacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,14 +530,14 @@ namespace GestionBasica.DAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EstadisticaNacRowDeleting != null)) {
-                    this.EstadisticaNacRowDeleting(this, new EstadisticaNacRowChangeEvent(((EstadisticaNacRow)(e.Row)), e.Action));
+                if ((this.DatosOperacionesRowDeleting != null)) {
+                    this.DatosOperacionesRowDeleting(this, new DatosOperacionesRowChangeEvent(((DatosOperacionesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveEstadisticaNacRow(EstadisticaNacRow row) {
+            public void RemoveDatosOperacionesRow(DatosOperacionesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -586,7 +546,7 @@ namespace GestionBasica.DAT {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                EstadisticaPartidasNac ds = new EstadisticaPartidasNac();
+                DatosOperaciones ds = new DatosOperaciones();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -604,7 +564,7 @@ namespace GestionBasica.DAT {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EstadisticaNacDataTable";
+                attribute2.FixedValue = "DatosOperacionesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -648,110 +608,30 @@ namespace GestionBasica.DAT {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EstadisticaNacRow : global::System.Data.DataRow {
+        public partial class DatosOperacionesRow : global::System.Data.DataRow {
             
-            private EstadisticaNacDataTable tableEstadisticaNac;
+            private DatosOperacionesDataTable tableDatosOperaciones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal EstadisticaNacRow(global::System.Data.DataRowBuilder rb) : 
+            internal DatosOperacionesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEstadisticaNac = ((EstadisticaNacDataTable)(this.Table));
+                this.tableDatosOperaciones = ((DatosOperacionesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Empleado {
+            public string Operaciones {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaNac.EmpleadoColumn]));
+                        return ((string)(this[this.tableDatosOperaciones.OperacionesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Empleado\' de la tabla \'EstadisticaNac\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Operaciones\' de la tabla \'DatosOperaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaNac.EmpleadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Asientos {
-                get {
-                    try {
-                        return ((string)(this[this.tableEstadisticaNac.AsientosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asientos\' de la tabla \'EstadisticaNac\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEstadisticaNac.AsientosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CantidadMujeres {
-                get {
-                    try {
-                        return ((string)(this[this.tableEstadisticaNac.CantidadMujeresColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadMujeres\' de la tabla \'EstadisticaNac\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEstadisticaNac.CantidadMujeresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CantidadHombres {
-                get {
-                    try {
-                        return ((string)(this[this.tableEstadisticaNac.CantidadHombresColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadHombres\' de la tabla \'EstadisticaNac\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEstadisticaNac.CantidadHombresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MadresMenores {
-                get {
-                    try {
-                        return ((string)(this[this.tableEstadisticaNac.MadresMenoresColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MadresMenores\' de la tabla \'EstadisticaNac\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEstadisticaNac.MadresMenoresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PadresMenores {
-                get {
-                    try {
-                        return ((string)(this[this.tableEstadisticaNac.PadresMenoresColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PadresMenores\' de la tabla \'EstadisticaNac\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEstadisticaNac.PadresMenoresColumn] = value;
+                    this[this.tableDatosOperaciones.OperacionesColumn] = value;
                 }
             }
             
@@ -760,14 +640,46 @@ namespace GestionBasica.DAT {
             public string Ingresos {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaNac.IngresosColumn]));
+                        return ((string)(this[this.tableDatosOperaciones.IngresosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ingresos\' de la tabla \'EstadisticaNac\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ingresos\' de la tabla \'DatosOperaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaNac.IngresosColumn] = value;
+                    this[this.tableDatosOperaciones.IngresosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Costo {
+                get {
+                    try {
+                        return ((string)(this[this.tableDatosOperaciones.CostoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Costo\' de la tabla \'DatosOperaciones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosOperaciones.CostoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Fecha {
+                get {
+                    try {
+                        return ((string)(this[this.tableDatosOperaciones.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'DatosOperaciones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosOperaciones.FechaColumn] = value;
                 }
             }
             
@@ -776,30 +688,30 @@ namespace GestionBasica.DAT {
             public string FechaInicio {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaNac.FechaInicioColumn]));
+                        return ((string)(this[this.tableDatosOperaciones.FechaInicioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'EstadisticaNac\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'DatosOperaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaNac.FechaInicioColumn] = value;
+                    this[this.tableDatosOperaciones.FechaInicioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FechaFin {
+            public string FechaFinal {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaNac.FechaFinColumn]));
+                        return ((string)(this[this.tableDatosOperaciones.FechaFinalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaFin\' de la tabla \'EstadisticaNac\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaFinal\' de la tabla \'DatosOperaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaNac.FechaFinColumn] = value;
+                    this[this.tableDatosOperaciones.FechaFinalColumn] = value;
                 }
             }
             
@@ -808,135 +720,99 @@ namespace GestionBasica.DAT {
             public string DataColumn1 {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaNac.DataColumn1Column]));
+                        return ((string)(this[this.tableDatosOperaciones.DataColumn1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DataColumn1\' de la tabla \'EstadisticaNac\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DataColumn1\' de la tabla \'DatosOperaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaNac.DataColumn1Column] = value;
+                    this[this.tableDatosOperaciones.DataColumn1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEmpleadoNull() {
-                return this.IsNull(this.tableEstadisticaNac.EmpleadoColumn);
+            public bool IsOperacionesNull() {
+                return this.IsNull(this.tableDatosOperaciones.OperacionesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEmpleadoNull() {
-                this[this.tableEstadisticaNac.EmpleadoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAsientosNull() {
-                return this.IsNull(this.tableEstadisticaNac.AsientosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAsientosNull() {
-                this[this.tableEstadisticaNac.AsientosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCantidadMujeresNull() {
-                return this.IsNull(this.tableEstadisticaNac.CantidadMujeresColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCantidadMujeresNull() {
-                this[this.tableEstadisticaNac.CantidadMujeresColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCantidadHombresNull() {
-                return this.IsNull(this.tableEstadisticaNac.CantidadHombresColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCantidadHombresNull() {
-                this[this.tableEstadisticaNac.CantidadHombresColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMadresMenoresNull() {
-                return this.IsNull(this.tableEstadisticaNac.MadresMenoresColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMadresMenoresNull() {
-                this[this.tableEstadisticaNac.MadresMenoresColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPadresMenoresNull() {
-                return this.IsNull(this.tableEstadisticaNac.PadresMenoresColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPadresMenoresNull() {
-                this[this.tableEstadisticaNac.PadresMenoresColumn] = global::System.Convert.DBNull;
+            public void SetOperacionesNull() {
+                this[this.tableDatosOperaciones.OperacionesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIngresosNull() {
-                return this.IsNull(this.tableEstadisticaNac.IngresosColumn);
+                return this.IsNull(this.tableDatosOperaciones.IngresosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIngresosNull() {
-                this[this.tableEstadisticaNac.IngresosColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosOperaciones.IngresosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCostoNull() {
+                return this.IsNull(this.tableDatosOperaciones.CostoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCostoNull() {
+                this[this.tableDatosOperaciones.CostoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableDatosOperaciones.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableDatosOperaciones.FechaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaInicioNull() {
-                return this.IsNull(this.tableEstadisticaNac.FechaInicioColumn);
+                return this.IsNull(this.tableDatosOperaciones.FechaInicioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaInicioNull() {
-                this[this.tableEstadisticaNac.FechaInicioColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosOperaciones.FechaInicioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaFinNull() {
-                return this.IsNull(this.tableEstadisticaNac.FechaFinColumn);
+            public bool IsFechaFinalNull() {
+                return this.IsNull(this.tableDatosOperaciones.FechaFinalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaFinNull() {
-                this[this.tableEstadisticaNac.FechaFinColumn] = global::System.Convert.DBNull;
+            public void SetFechaFinalNull() {
+                this[this.tableDatosOperaciones.FechaFinalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDataColumn1Null() {
-                return this.IsNull(this.tableEstadisticaNac.DataColumn1Column);
+                return this.IsNull(this.tableDatosOperaciones.DataColumn1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDataColumn1Null() {
-                this[this.tableEstadisticaNac.DataColumn1Column] = global::System.Convert.DBNull;
+                this[this.tableDatosOperaciones.DataColumn1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -944,22 +820,22 @@ namespace GestionBasica.DAT {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class EstadisticaNacRowChangeEvent : global::System.EventArgs {
+        public class DatosOperacionesRowChangeEvent : global::System.EventArgs {
             
-            private EstadisticaNacRow eventRow;
+            private DatosOperacionesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacRowChangeEvent(EstadisticaNacRow row, global::System.Data.DataRowAction action) {
+            public DatosOperacionesRowChangeEvent(DatosOperacionesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadisticaNacRow Row {
+            public DatosOperacionesRow Row {
                 get {
                     return this.eventRow;
                 }

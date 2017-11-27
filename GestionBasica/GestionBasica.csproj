@@ -74,6 +74,11 @@
     <Compile Include="CLS\Tarifas.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
+    <Compile Include="DAT\DatosOperaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\DatosPartidaNac.cs">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
     </Compile>
@@ -366,6 +371,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\VisorEstadisticaNacimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorEstadisticaNacimientos.Designer.cs">
+      <DependentUpon>VisorEstadisticaNacimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\VisorPartidaDefGenerada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,10 +407,22 @@
     <Compile Include="Reportes\VisorPartidaNacNit.Designer.cs">
       <DependentUpon>VisorPartidaNacNit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\VisorReporteOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorReporteOperaciones.Designer.cs">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="REP\Nacimientos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Nacimientos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\Operaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operaciones.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="REP\PartidaDefNit.cs">
@@ -425,6 +448,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaPreviaPartidaNac.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Respaldar\RespaldarBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Respaldar\RespaldarBase.Designer.cs">
+      <DependentUpon>RespaldarBase.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
@@ -556,6 +585,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\VisorEstadisticaNacimientos.resx">
+      <DependentUpon>VisorEstadisticaNacimientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VisorPartidaDefGenerada.resx">
       <DependentUpon>VisorPartidaDefGenerada.cs</DependentUpon>
     </EmbeddedResource>
@@ -571,9 +603,16 @@
     <EmbeddedResource Include="Reportes\VisorPartidaNacNit.resx">
       <DependentUpon>VisorPartidaNacNit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorReporteOperaciones.resx">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REP\Nacimientos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Nacimientos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Operaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Operaciones.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REP\PartidaDefNit.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -591,6 +630,20 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VistaPreviaPartidaNac.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Respaldar\RespaldarBase.resx">
+      <DependentUpon>RespaldarBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DAT\DatosOperaciones.xsc">
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\DatosOperaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosOperaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\DatosOperaciones.xss">
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </None>
     <None Include="DAT\DatosPartidaNac.xsc">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
     </None>

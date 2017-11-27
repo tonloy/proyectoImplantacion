@@ -98,7 +98,7 @@ namespace App
 
         private void reporteDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionBasica.GUI.VisorReporteOperaciones frm = new GestionBasica.GUI.VisorReporteOperaciones();
+            GestionBasica.Reportes.VisorReporteOperaciones frm = new GestionBasica.Reportes.VisorReporteOperaciones();
             frm.ShowDialog();
         }
 
@@ -219,6 +219,18 @@ namespace App
         {
             GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas marg = new GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas();
             marg.ShowDialog();
+        }
+
+        private void reporteDeEstadísticasDeNacimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Reportes.VisorEstadisticaNacimientos vNac = new GestionBasica.Reportes.VisorEstadisticaNacimientos();
+            vNac.ShowDialog();
+        }
+
+        private void respaldarBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
+            rBa.ShowDialog();
         }
     }
 }

@@ -49,6 +49,8 @@ namespace GestionBasica.Reportes
         {
             REP.PartidaNacNit cReporte = new REP.PartidaNacNit();
             cReporte.SetDataSource(CacheManager1.Cache.TODAS_LAS_PARTIDAS2(idPartida));
+            String fecha = GestionBasica.CLS.Hora.fecha_letras(DateTime.Today.ToString("yyyy-MM-dd"));
+            cReporte.SetParameterValue("FechaActual", fecha);
             crvVisor.ReportSource = cReporte;
         }
 

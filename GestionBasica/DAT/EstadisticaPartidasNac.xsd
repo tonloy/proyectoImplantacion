@@ -12,7 +12,7 @@
   <xs:element name="EstadisticaPartidasNac" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EstadisticaPartidasNac" msprop:Generator_UserDSName="EstadisticaPartidasNac">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EstadisticaNac" msprop:Generator_TableClassName="EstadisticaNacDataTable" msprop:Generator_TableVarName="tableEstadisticaNac" msprop:Generator_RowChangedName="EstadisticaNacRowChanged" msprop:Generator_TablePropName="EstadisticaNac" msprop:Generator_RowDeletingName="EstadisticaNacRowDeleting" msprop:Generator_RowChangingName="EstadisticaNacRowChanging" msprop:Generator_RowEvHandlerName="EstadisticaNacRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadisticaNacRowDeleted" msprop:Generator_RowClassName="EstadisticaNacRow" msprop:Generator_UserTableName="EstadisticaNac" msprop:Generator_RowEvArgName="EstadisticaNacRowChangeEvent">
+        <xs:element name="EstadisticaNac" msprop:Generator_TableClassName="EstadisticaNacDataTable" msprop:Generator_TableVarName="tableEstadisticaNac" msprop:Generator_TablePropName="EstadisticaNac" msprop:Generator_RowDeletingName="EstadisticaNacRowDeleting" msprop:Generator_RowChangingName="EstadisticaNacRowChanging" msprop:Generator_RowEvHandlerName="EstadisticaNacRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadisticaNacRowDeleted" msprop:Generator_UserTableName="EstadisticaNac" msprop:Generator_RowChangedName="EstadisticaNacRowChanged" msprop:Generator_RowEvArgName="EstadisticaNacRowChangeEvent" msprop:Generator_RowClassName="EstadisticaNacRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Empleado" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" type="xs:string" minOccurs="0" />
@@ -24,6 +24,7 @@
               <xs:element name="Ingresos" msprop:Generator_ColumnVarNameInTable="columnIngresos" msprop:Generator_ColumnPropNameInRow="Ingresos" msprop:Generator_ColumnPropNameInTable="IngresosColumn" msprop:Generator_UserColumnName="Ingresos" type="xs:string" minOccurs="0" />
               <xs:element name="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_UserColumnName="FechaInicio" type="xs:string" minOccurs="0" />
               <xs:element name="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" msprop:Generator_UserColumnName="FechaFin" type="xs:string" minOccurs="0" />
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

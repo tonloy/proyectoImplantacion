@@ -16,14 +16,14 @@ namespace GestionBasica.REP {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class VistaPreviaPartidaDef : ReportClass {
+    public class Operaciones : ReportClass {
         
-        public VistaPreviaPartidaDef() {
+        public Operaciones() {
         }
         
         public override string ResourceName {
             get {
-                return "VistaPreviaPartidaDef.rpt";
+                return "Operaciones.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GestionBasica.REP {
         
         public override string FullResourceName {
             get {
-                return "GestionBasica.REP.VistaPreviaPartidaDef.rpt";
+                return "GestionBasica.REP.Operaciones.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace GestionBasica.REP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_FechaActual {
+        public CrystalDecisions.Shared.IParameterField Parameter_TipoOperacion {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace GestionBasica.REP {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedVistaPreviaPartidaDef : Component, ICachedReport {
+    public class CachedOperaciones : Component, ICachedReport {
         
-        public CachedVistaPreviaPartidaDef() {
+        public CachedOperaciones() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace GestionBasica.REP {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            VistaPreviaPartidaDef rpt = new VistaPreviaPartidaDef();
+            Operaciones rpt = new Operaciones();
             rpt.Site = this.Site;
             return rpt;
         }
