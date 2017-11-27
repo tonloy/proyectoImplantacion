@@ -550,16 +550,32 @@ namespace CacheManager1
             String Consulta;
             Consulta = @"select pda.idpartida_matrimonio,
                             pda.NumPartida,
+                            pda.folio,
+                            pda.idEsposa as 'idMujer',
                             p.NombreCompleto as 'Esposa',
+                            pda.idEsposo as 'idHombre',
                             pa.NombreCompleto as 'Esposo',
                             pda.Apellido_elegido as 'ApellidoCasada',
+                            pda.idTestigo as 'idtes1',
                             pad.NombreCompleto as 'Testigo',
+                            pda.idTestigo2 as 'idtes2',
                             padr.NombreCompleto as 'Testigo2',
+                            pda.idFuncionario as 'idfun',
+                            pfun.NombreCompleto as 'nfuncionario',
+                            pda.Hora_insercion,
+                            d.Departamento as 'depto',
+                            pda.Lugar_matrimonio as 'Municipio', 
+                            pda.idPadre_esposo as 'PH',
+                            pda.idMadre_esposo as 'MH',
+                            pda.idPadre_esposa as 'PM',
+                            pda.idMadre_esposa as 'MM',
                             pda.Fecha_matrimonio,
-                            pda.Regimen_patrimonial
-                            from partidas_matrimonio pda, padres p, padres pa, padres pad, padres padr
+                            pda.Regimen_patrimonial,
+                            pda.detalle_hijos
+                            from partidas_matrimonio pda, padres p, padres pa, padres pad, padres padr,padres pfun, departamentos d
                             where pda.idEsposa = p.idPadre and pda.idEsposo = pa.idPadre
-                            and pda.idTestigo = pad.idPadre and pda.idTestigo2 = padr.idPadre;";
+                            and pda.idTestigo = pad.idPadre and pda.idTestigo2 = padr.idPadre
+                            and pda.idFuncionario = pfun.idPadre and (select idDepartamento from municipios where Municipio=pda.Lugar_matrimonio) = d.idDepartamento;";
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -575,7 +591,6 @@ namespace CacheManager1
         }
 
 
-        
         public static DataTable ID_Papas_Conyuges(String idInfante)
         {
             DataTable Datos = new DataTable();
@@ -615,6 +630,6 @@ namespace CacheManager1
 
             return Datos;
         }
-
+      
     }
 }

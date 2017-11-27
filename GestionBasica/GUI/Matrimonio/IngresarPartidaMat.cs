@@ -33,7 +33,7 @@ namespace GestionBasica.GUI.Matrimonio
             InitializeComponent();
             CargarDepartamentos();
             CargarMunicipios();
-
+            CargarRegimenesMatrimoniales();
         }
 
         //Esposo
@@ -65,7 +65,7 @@ namespace GestionBasica.GUI.Matrimonio
 
         private void IngresarPartidaMat_Load(object sender, EventArgs e)
         {
-            CargarRegimenesMatrimoniales();
+            
 
         }
 
@@ -127,7 +127,8 @@ namespace GestionBasica.GUI.Matrimonio
         private void Procesar()
         {
             CLS.Partidas_Matrimonio oPdaMatrimonio = new CLS.Partidas_Matrimonio();
-           
+
+            oPdaMatrimonio.Idpartida_matrimonio = txtID_Partida_cod.Text;
             oPdaMatrimonio.Folio = txbFolio.Text;
             oPdaMatrimonio.NumPartida1 = txbNumPartida.Text;
 
@@ -142,16 +143,16 @@ namespace GestionBasica.GUI.Matrimonio
             oPdaMatrimonio.IdPadre_esposa = idpapaB;
             oPdaMatrimonio.IdMadre_esposa = idmapaB;
 
-            oPdaMatrimonio.Lugar_matrimonio1 = cbxMunicipio.SelectedValue.ToString();
+            oPdaMatrimonio.Lugar_matrimonio1 = cbxMunicipio.Text;
             oPdaMatrimonio.Fecha_matrimonio1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
-            oPdaMatrimonio.Hora_matrimonio1 = txtHora.Text;
             oPdaMatrimonio.Apellido_elegido1 = txtApellidoCasada.Text;
             oPdaMatrimonio.Regimen_patrimonial1 = cbxRegimenPatrimonial.Text;
             oPdaMatrimonio.Folio_letras = CLS.Conv.enletras(txbFolio.Text);
 
             oPdaMatrimonio.Fecha_matrimonio_letra1 = CLS.Hora.fecha_letras(oPdaMatrimonio.Fecha_matrimonio1);
             oPdaMatrimonio.Fecha_insercion1 = DateTime.Today.ToString("yyyy-MM-dd");
-            oPdaMatrimonio.Hora_insercion_letra1 = CLS.Hora.hora_letras(oPdaMatrimonio.Hora_matrimonio1);
+            oPdaMatrimonio.Hora_insercion1 = txtHora.Text;
+            oPdaMatrimonio.Hora_insercion_letra1 = CLS.Hora.hora_letras(oPdaMatrimonio.Hora_insercion1);
 
             oPdaMatrimonio.Imagen1 = obtenerRuta(pictureBox1.ImageLocation);
             oPdaMatrimonio.Detalle_hijos = Detalle_Hijos.detalle_hijosfrm;
@@ -171,12 +172,12 @@ namespace GestionBasica.GUI.Matrimonio
                         {
                             _revisado = 1;
                         }
-                        if (txtIdEsposa.TextLength > 0)
+                        if (txtID_Partida_cod.TextLength > 0)
                         {
                             //Actualizando
                             try
                             {
-                                if (oPdaMatrimonio.Insertar(_revisado))
+                                if (oPdaMatrimonio.Actualizar(_revisado))
                                 {
                                     MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
@@ -211,6 +212,7 @@ namespace GestionBasica.GUI.Matrimonio
                                 MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
+
                     }
                 }
 
@@ -363,13 +365,13 @@ namespace GestionBasica.GUI.Matrimonio
         {
             if (txtIDFuncionario.TextLength > 0)
             {
-                GestionEmpleados frm = new GestionEmpleados();
+                GestionFuncionarios frm = new GestionFuncionarios();
                 frm.IdFuncionario11 = txtIDFuncionario.Text;
                 frm.ShowDialog(this);
             }
             else
             {
-                GestionEmpleados frm = new GestionEmpleados();
+                GestionFuncionarios frm = new GestionFuncionarios();
                 frm.ShowDialog(this);
             }
 
@@ -545,7 +547,7 @@ namespace GestionBasica.GUI.Matrimonio
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
-           
+
         }
 
         private void txtIdEsposa_TextChanged(object sender, EventArgs e)

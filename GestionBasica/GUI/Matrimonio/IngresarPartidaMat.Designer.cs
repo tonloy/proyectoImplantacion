@@ -61,6 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.txtApellidoCasada = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbxDepartamentos = new System.Windows.Forms.ComboBox();
@@ -73,7 +74,6 @@
             this.txtID_Partida_cod = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.chbxRevisado = new System.Windows.Forms.CheckBox();
-            this.btnDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -427,6 +427,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Matrimonio";
             // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Location = new System.Drawing.Point(488, 169);
+            this.btnDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(147, 35);
+            this.btnDetalle.TabIndex = 62;
+            this.btnDetalle.Text = "Detalles";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
             // txtApellidoCasada
             // 
             this.txtApellidoCasada.Location = new System.Drawing.Point(262, 178);
@@ -551,17 +562,6 @@
             this.chbxRevisado.Text = "Revisado";
             this.chbxRevisado.UseVisualStyleBackColor = true;
             // 
-            // btnDetalle
-            // 
-            this.btnDetalle.Location = new System.Drawing.Point(488, 169);
-            this.btnDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(147, 35);
-            this.btnDetalle.TabIndex = 62;
-            this.btnDetalle.Text = "Detalles";
-            this.btnDetalle.UseVisualStyleBackColor = true;
-            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
-            // 
             // IngresarPartidaMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -633,7 +633,6 @@
         public System.Windows.Forms.TextBox txtEsposa;
         public System.Windows.Forms.TextBox txtIdEsposa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txtEsposo;
         public System.Windows.Forms.TextBox txtID_Esposo;
         private System.Windows.Forms.Label label3;
@@ -662,5 +661,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox chbxRevisado;
         public System.Windows.Forms.Button btnDetalle;
+        public System.Windows.Forms.Button button1;
     }
 }

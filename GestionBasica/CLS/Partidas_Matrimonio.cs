@@ -395,8 +395,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO registro_familiar.partidas_matrimonio ( NumPartida, idEsposa, idEsposo, idPadre_esposa, idMadre_esposa, idPadre_esposo, idMadre_esposo, idFuncionario, idTestigo, Lugar_matrimonio, Fecha_matrimonio, Hora_matrimonio,  Apellido_elegido, Regimen_patrimonial, Imagen, idTipo_partida, idTestigo2, folio_letras, Hora_insercion_letra, Fecha_matrimonio_letra, folio, detalle_hijos) VALUES ( ");
-            Sentencia.Append("'" + NumPartida1 + "', '" + IdEsposa + "', '" + IdEsposo + "','" + IdPadre_esposa + "','" + IdMadre_esposa + "','" + IdPadre_esposo + "','" + IdMadre_esposo + "', '" + IdFuncionario + "'," + IdTestigo + ",'" + Lugar_matrimonio1 + "','" + Fecha_matrimonio1 + "','" + Hora_matrimonio1 + "','" + Apellido_elegido1 + "','" + Regimen_patrimonial1 + "','" + Imagen1 + "','2','" + IdTestigo2 + "', '" + Folio_letras + "','" + Hora_insercion_letra1 + "','" + Fecha_matrimonio_letra1 + "','" + Folio + "','" + Detalle_hijos + "' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.partidas_matrimonio ( NumPartida, idEsposa, idEsposo, idPadre_esposa, idMadre_esposa, idPadre_esposo, idMadre_esposo, idFuncionario, idTestigo, Lugar_matrimonio, Fecha_matrimonio, Hora_matrimonio,  Apellido_elegido, Regimen_patrimonial, Imagen, idTipo_partida, idTestigo2, folio_letras, Hora_insercion, Hora_insercion_letra,  Fecha_matrimonio_letra, folio, detalle_hijos) VALUES ( ");
+            Sentencia.Append("'" + NumPartida1 + "', '" + IdEsposa + "', '" + IdEsposo + "','" + IdPadre_esposa + "','" + IdMadre_esposa + "','" + IdPadre_esposo + "','" + IdMadre_esposo + "', '" + IdFuncionario + "'," + IdTestigo + ",'" + Lugar_matrimonio1 + "','" + Fecha_matrimonio1 + "','" + Hora_matrimonio1 + "','" + Apellido_elegido1 + "','" + Regimen_patrimonial1 + "','" + Imagen1 + "','2','" + IdTestigo2 + "', '" + Folio_letras + "', '" + Hora_insercion1 + "','" + Hora_insercion_letra1 + "','" + Fecha_matrimonio_letra1 + "','" + Folio + "','" + Detalle_hijos + "' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -425,20 +425,18 @@ namespace GestionBasica.CLS
             Boolean actualizado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("UPDATE registro_familiar.partidas_matrimonio SET Lugar_matrimonio = '");
+            Sentencia.Append(" UPDATE registro_familiar.partidas_matrimonio SET Lugar_matrimonio ='");
             Sentencia.Append(Lugar_matrimonio1 + "',Fecha_matrimonio='");
             Sentencia.Append(Fecha_matrimonio1 + "',Hora_matrimonio='");
-            Sentencia.Append(Hora_matrimonio1 + "',Apellido_elegido=");
-            Sentencia.Append(Apellido_elegido1 + ",Regimen_patrimonial= '");
-            Sentencia.Append(Regimen_patrimonial1 + "', anio_insercion_letras=");
-            Sentencia.Append(Anio_insercion_letras + ", Fecha_insercion ='");
-            Sentencia.Append(Fecha_insercion1 + "', Hora_insercion=");
-            Sentencia.Append(Hora_insercion1 + ", Fecha_insercion_letra =" + Fecha_insercion_letra1 + ", Hora_insercion_letra ='" + Hora_insercion_letra1 + "', Fecha_matrimonio_letra ='" + Fecha_matrimonio_letra1 + "' WHERE idpartida_matrimonio=" + idpartida_matrimonio + ";");
+            Sentencia.Append(Hora_insercion1 + "',Apellido_elegido='");
+            Sentencia.Append(Apellido_elegido1 + "',Regimen_patrimonial='");
+            Sentencia.Append(Regimen_patrimonial1 + "', Hora_insercion_letra='");
+            Sentencia.Append(Hora_insercion_letra1 + "', Fecha_insercion_letra='" + Fecha_insercion_letra1 + "', detalle_hijos ='" + Detalle_hijos  + "' WHERE idpartida_matrimonio=" + idpartida_matrimonio + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
-            {
-                if (oOperacion.Insertar(Sentencia.ToString()) > 0)
+            { 
+                if (oOperacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     actualizado = true;
                 }

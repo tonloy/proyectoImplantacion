@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtDetalleHijos = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDetalleHijos = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,25 +49,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles";
             // 
-            // btnGuardar
+            // label2
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(386, 329);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(112, 35);
-            this.btnGuardar.TabIndex = 29;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtDetalleHijos
-            // 
-            this.txtDetalleHijos.Location = new System.Drawing.Point(19, 98);
-            this.txtDetalleHijos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDetalleHijos.Multiline = true;
-            this.txtDetalleHijos.Name = "txtDetalleHijos";
-            this.txtDetalleHijos.Size = new System.Drawing.Size(457, 162);
-            this.txtDetalleHijos.TabIndex = 28;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(438, 20);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Ej.: En este acto se reconcen a sus hijos(as). Nombre y Edad";
             // 
             // label1
             // 
@@ -79,15 +69,25 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Si tuviere hijos, debera digitar en el siguiente campo";
             // 
-            // label2
+            // txtDetalleHijos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Ej.: En este acto se reconcen a sus hijos(as). Nombre y Edad";
+            this.txtDetalleHijos.Location = new System.Drawing.Point(19, 98);
+            this.txtDetalleHijos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDetalleHijos.Multiline = true;
+            this.txtDetalleHijos.Name = "txtDetalleHijos";
+            this.txtDetalleHijos.Size = new System.Drawing.Size(457, 162);
+            this.txtDetalleHijos.TabIndex = 28;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(386, 329);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(112, 35);
+            this.btnGuardar.TabIndex = 29;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -112,6 +112,7 @@
             this.Name = "Detalle_Hijos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detalles";
+            this.Load += new System.EventHandler(this.Detalle_Hijos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

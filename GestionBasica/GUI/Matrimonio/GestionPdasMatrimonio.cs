@@ -15,6 +15,8 @@ namespace GestionBasica.GUI.Matrimonio
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
         BindingSource _GRUPOS = new BindingSource();
+        BindingSource _Hijos = new BindingSource();
+        public static int idPdaMatrimonio = 0;
 
         public GestionPdasMatrimonio()
         {
@@ -42,6 +44,7 @@ namespace GestionBasica.GUI.Matrimonio
 
             }
         }
+
 
 
         private void FiltrarLocalmente()
@@ -81,9 +84,63 @@ namespace GestionBasica.GUI.Matrimonio
         private void btnNueva_Click(object sender, EventArgs e)
         {
             GestionBasica.GUI.Matrimonio.IngresarPartidaMat frm = new GestionBasica.GUI.Matrimonio.IngresarPartidaMat();
-            CargarPartidas();
             frm.ShowDialog();
+            CargarPartidas();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea EDITAR el Partida seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    IngresarPartidaMat frm = new IngresarPartidaMat();
+
+                   
+                    frm.txtID_Partida_cod.Text = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                    frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["folio"].Value.ToString();
+                    frm.txbNumPartida.Text = dtgPartidas.CurrentRow.Cells["NumPda"].Value.ToString();
+                    frm.txtID_Esposo.Text = dtgPartidas.CurrentRow.Cells["idEsposo"].Value.ToString();
+                    frm.txtEsposo.Text = dtgPartidas.CurrentRow.Cells["NombreEsposo"].Value.ToString();
+                    frm.txtIdEsposa.Text = dtgPartidas.CurrentRow.Cells["idEsposa"].Value.ToString();
+                    frm.txtEsposa.Text = dtgPartidas.CurrentRow.Cells["NombreEsposa"].Value.ToString();
+                    frm.txt_IdInf1.Text = dtgPartidas.CurrentRow.Cells["idtes1"].Value.ToString();
+                    frm.txtInformante1.Text = dtgPartidas.CurrentRow.Cells["Testigo1"].Value.ToString();
+                    frm.txtIdInfo2.Text = dtgPartidas.CurrentRow.Cells["idtes2"].Value.ToString();
+                    frm.txtInformante2.Text = dtgPartidas.CurrentRow.Cells["Testigo2"].Value.ToString();
+                    frm.txtIDFuncionario.Text = dtgPartidas.CurrentRow.Cells["idfun"].Value.ToString();
+                    frm.txtFuncionario.Text = dtgPartidas.CurrentRow.Cells["nfuncionario"].Value.ToString();
+
+                    frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dtgPartidas.CurrentRow.Cells["depto"].Value.ToString());
+                    frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dtgPartidas.CurrentRow.Cells["Municipio"].Value.ToString());
+                    frm.cbxRegimenPatrimonial.SelectedIndex = frm.cbxRegimenPatrimonial.FindStringExact(dtgPartidas.CurrentRow.Cells["RegimenPatrimonial"].Value.ToString());
+                    frm.txtHora.Text = dtgPartidas.CurrentRow.Cells["Hora_insercion"].Value.ToString();
+                    frm.dtpFecha.Text = dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString();
+                    frm.txtApellidoCasada.Text = dtgPartidas.CurrentRow.Cells["ApellidoCasada"].Value.ToString();
+                                        
+                    Detalle_Hijos.detalle_hijosfrm = dtgPartidas.CurrentRow.Cells["hijos"].Value.ToString();
+
+                    ///////////
+                    frm.txbFolio.ReadOnly = true;
+                    frm.txbNumPartida.ReadOnly = true;
+                    frm.button1.Enabled = false;
+                    frm.button2.Enabled = false;
+                    frm.button3.Enabled = false;
+                    frm.button4.Enabled = false;
+                    frm.button7.Enabled = false;
+
+
+                    frm.ShowDialog();
+                    CargarPartidas();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Por favor seleccione un Registro");
+                }
+            }
         }
     }
     
+
 }

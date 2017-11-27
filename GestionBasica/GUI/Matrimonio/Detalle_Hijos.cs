@@ -28,5 +28,10 @@ namespace GestionBasica.GUI.Matrimonio
             detalle_hijosfrm = txtDetalleHijos.Text;
             Close();
         }
+
+        private void Detalle_Hijos_Load(object sender, EventArgs e)
+        {
+            txtDetalleHijos.Text = detalle_hijosfrm;
+        }
     }
 }

@@ -266,6 +266,12 @@
     <Compile Include="GUI\Matrimonio\Detalle_Hijos.Designer.cs">
       <DependentUpon>Detalle_Hijos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Matrimonio\GestionFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Matrimonio\GestionFuncionarios.Designer.cs">
+      <DependentUpon>GestionFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Matrimonio\GestionPdasMatrimonio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\Detalle_Hijos.resx">
       <DependentUpon>Detalle_Hijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Matrimonio\GestionFuncionarios.resx">
+      <DependentUpon>GestionFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\GestionPdasMatrimonio.resx">
       <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
