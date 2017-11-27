@@ -359,6 +359,10 @@ namespace GestionBasica.DAT {
             
             private global::System.Data.DataColumn columnAnio_insercion;
             
+            private global::System.Data.DataColumn columnRubrica;
+            
+            private global::System.Data.DataColumn columnInformanteRubrica;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public partidas_nacimientoDataTable() {
@@ -714,6 +718,22 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RubricaColumn {
+                get {
+                    return this.columnRubrica;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InformanteRubricaColumn {
+                get {
+                    return this.columnInformanteRubrica;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -789,7 +809,9 @@ namespace GestionBasica.DAT {
                         string DomicilioMadre, 
                         string DuiInformante, 
                         string JefeRegistro, 
-                        string Anio_insercion) {
+                        string Anio_insercion, 
+                        string Rubrica, 
+                        string InformanteRubrica) {
                 partidas_nacimientoRow rowpartidas_nacimientoRow = ((partidas_nacimientoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idPartida,
@@ -831,7 +853,9 @@ namespace GestionBasica.DAT {
                         DomicilioMadre,
                         DuiInformante,
                         JefeRegistro,
-                        Anio_insercion};
+                        Anio_insercion,
+                        Rubrica,
+                        InformanteRubrica};
                 rowpartidas_nacimientoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpartidas_nacimientoRow);
                 return rowpartidas_nacimientoRow;
@@ -894,6 +918,8 @@ namespace GestionBasica.DAT {
                 this.columnDuiInformante = base.Columns["DuiInformante"];
                 this.columnJefeRegistro = base.Columns["JefeRegistro"];
                 this.columnAnio_insercion = base.Columns["Anio_insercion"];
+                this.columnRubrica = base.Columns["Rubrica"];
+                this.columnInformanteRubrica = base.Columns["InformanteRubrica"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -979,6 +1005,10 @@ namespace GestionBasica.DAT {
                 base.Columns.Add(this.columnJefeRegistro);
                 this.columnAnio_insercion = new global::System.Data.DataColumn("Anio_insercion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAnio_insercion);
+                this.columnRubrica = new global::System.Data.DataColumn("Rubrica", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRubrica);
+                this.columnInformanteRubrica = new global::System.Data.DataColumn("InformanteRubrica", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInformanteRubrica);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1784,6 +1814,39 @@ namespace GestionBasica.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Rubrica {
+                get {
+                    try {
+                        return ((string)(this[this.tablepartidas_nacimiento.RubricaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Rubrica\' de la tabla \'partidas_nacimiento\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepartidas_nacimiento.RubricaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string InformanteRubrica {
+                get {
+                    try {
+                        return ((string)(this[this.tablepartidas_nacimiento.InformanteRubricaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'InformanteRubrica\' de la tabla \'partidas_nacimiento\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepartidas_nacimiento.InformanteRubricaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidPartidaNull() {
                 return this.IsNull(this.tablepartidas_nacimiento.idPartidaColumn);
             }
@@ -2260,6 +2323,30 @@ namespace GestionBasica.DAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAnio_insercionNull() {
                 this[this.tablepartidas_nacimiento.Anio_insercionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRubricaNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.RubricaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRubricaNull() {
+                this[this.tablepartidas_nacimiento.RubricaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInformanteRubricaNull() {
+                return this.IsNull(this.tablepartidas_nacimiento.InformanteRubricaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInformanteRubricaNull() {
+                this[this.tablepartidas_nacimiento.InformanteRubricaColumn] = global::System.Convert.DBNull;
             }
         }
         

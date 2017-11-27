@@ -193,8 +193,8 @@ namespace GestionBasica.CLS
             Boolean actualizado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("update registro_familiar.partidas_nacimiento set NombreCompleto = '");
-
+            Sentencia.Append("update registro_familiar.partidas_nacimiento set Ruta = '"+_Ruta+"'");
+            Sentencia.Append(" where idPartida="+_idPartida);
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

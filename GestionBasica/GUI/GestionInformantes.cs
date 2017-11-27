@@ -121,6 +121,16 @@ namespace GestionBasica.GUI
                     frm.mtxtDUI.Text = dataGridView1.CurrentRow.Cells["DUI"].Value.ToString();
                     frm.cbxParentesco.SelectedIndex = frm.cbxParentesco.FindStringExact(dataGridView1.CurrentRow.Cells["Parentesco"].Value.ToString());
                     frm.txtObservaciones.Text = dataGridView1.CurrentRow.Cells["Observaciones"].Value.ToString();
+                    frm.txtNumPartida.Text= dataGridView1.CurrentRow.Cells["Nit"].Value.ToString();
+
+                    if (dataGridView1.CurrentRow.Cells["Nit"].Value.ToString() == "    -      -   -")
+                    {
+                        frm.chbxMenor.Checked = false;
+                    }
+                    else
+                    {
+                        frm.chbxMenor.Checked = true;
+                    }
 
                     frm.ShowDialog();
                     CargarInformantes();

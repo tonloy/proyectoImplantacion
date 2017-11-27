@@ -38,6 +38,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtRubricas = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +97,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(108, 155);
+            this.btnGuardar.Location = new System.Drawing.Point(108, 194);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 2;
@@ -105,7 +107,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(196, 155);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 194);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 3;
@@ -117,11 +119,29 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // txtRubricas
+            // 
+            this.txtRubricas.Location = new System.Drawing.Point(25, 154);
+            this.txtRubricas.Name = "txtRubricas";
+            this.txtRubricas.Size = new System.Drawing.Size(246, 20);
+            this.txtRubricas.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Rubricas";
+            // 
             // EdicionEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 203);
+            this.ClientSize = new System.Drawing.Size(297, 247);
+            this.Controls.Add(this.txtRubricas);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cbxCargos);
@@ -152,5 +172,7 @@
         public System.Windows.Forms.TextBox txbNombreCompleto;
         public System.Windows.Forms.ComboBox cbxCargos;
         public System.Windows.Forms.TextBox txbIdEmpleado;
+        public System.Windows.Forms.TextBox txtRubricas;
+        private System.Windows.Forms.Label label4;
     }
 }

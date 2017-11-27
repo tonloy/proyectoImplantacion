@@ -16,6 +16,7 @@ namespace GestionBasica.GUI.Defunciones
         Boolean marginando = false;
         BindingSource _Municipio = new BindingSource();
         BindingSource _Departamentos = new BindingSource();
+        BindingSource _Cantones = new BindingSource();
         BindingSource _Causas = new BindingSource();
         String ruta_imagen;
         int revisado;
@@ -38,6 +39,7 @@ namespace GestionBasica.GUI.Defunciones
             CargarDepartamentos();
             CargarMunicipios();
             CargarCausas();
+            CargarCantones();
         }
 
         //Imagen
@@ -142,6 +144,15 @@ namespace GestionBasica.GUI.Defunciones
             {
 
             }
+        }
+
+        private void CargarCantones()
+        {
+            DataView dv = new DataView(CacheManager1.Cache.TODOS_LOS_CANTONES1());
+            dv.RowFilter = "idMunicipio = " + (cbxMunicipios.SelectedValue.ToString());
+            cbxCantones.DataSource = dv.ToTable();
+            cbxCantones.DisplayMember = "Canton";
+            cbxCantones.ValueMember = "idCanton";
         }
 
         private void CargarCausas()
@@ -319,7 +330,10 @@ namespace GestionBasica.GUI.Defunciones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
-            Operaciones();
+            if (txbIdPartida.TextLength < 0)
+            {
+                Operaciones();
+            }
         }
 
         private void Procesar()
@@ -338,7 +352,7 @@ namespace GestionBasica.GUI.Defunciones
             oUsuario.IdMadre = txtIdMadre.Text;
             oUsuario.IdConyuge = txbIdConyuge.Text;
             oUsuario.IdProfesional = txbIdProfesional.Text;
-            oUsuario.Lugar_fallecimiento1 = cbxMunicipios.SelectedValue.ToString();
+            oUsuario.Lugar_fallecimiento1 = cbxCantones.SelectedValue.ToString();
             oUsuario.Causa_muerte1 = cbxCausas.SelectedValue.ToString();
             oUsuario.Fecha_fallecimiento1 = Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
             oUsuario.Hora_fallecimiento1 = txtHora.Text;
@@ -363,11 +377,11 @@ namespace GestionBasica.GUI.Defunciones
                 }
                 if (chbxAsistencia.Checked)
                 {
-                    oUsuario.Asistencia_medica1 = "Si";
+                    oUsuario.Asistencia_medica1 = "Con";
                 }
                 else
                 {
-                    oUsuario.Asistencia_medica1 = "No";
+                    oUsuario.Asistencia_medica1 = "Sin";
                 }
                 if (cbxRespaldoPda.Checked)
                 {
@@ -378,16 +392,16 @@ namespace GestionBasica.GUI.Defunciones
                 }
                 if (txbIdProfesional.TextLength == 0)
                 {
-                    oUsuario.IdProfesional = "null";
+                    oUsuario.IdProfesional = "23";
                 }if (txbIdConyuge.TextLength == 0)
                 {
-                    oUsuario.IdConyuge = "null";
+                    oUsuario.IdConyuge = "23";
                 }if (txtIdMadre.TextLength == 0)
                 {
-                    oUsuario.IdMadre = "null";
+                    oUsuario.IdMadre = "23";
                 }if (txtIdPadre.TextLength==0)
                 {
-                    oUsuario.IdPadre = "null";
+                    oUsuario.IdPadre = "23";
                 }
                 
                 if (marginando)
@@ -508,6 +522,14 @@ namespace GestionBasica.GUI.Defunciones
             frm.IdInformante1 = txtIdInformante.Text;
             frm.Profesional = true;
             frm.ShowDialog(this);
+        }
+
+        private void cbxMunicipios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxMunicipios.Items.Count > 0)
+            {
+                CargarCantones();
+            }
         }
     }
 }

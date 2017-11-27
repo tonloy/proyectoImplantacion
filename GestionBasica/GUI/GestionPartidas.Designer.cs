@@ -32,6 +32,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNueva = new System.Windows.Forms.ToolStripButton();
@@ -57,6 +59,8 @@
             this.IdInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInformante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdJefeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dui_madre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dui_padre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -82,6 +86,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripSeparator4,
             this.btnModificar,
             this.toolStripSeparator1,
             this.btnNueva,
@@ -97,6 +103,21 @@
             this.toolStrip1.Size = new System.Drawing.Size(1056, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButton1.Text = "Respaldar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // btnModificar
             // 
@@ -190,7 +211,9 @@
             this.NombrePadre,
             this.IdInformante,
             this.NombreInformante,
-            this.IdJefeRegistro});
+            this.IdJefeRegistro,
+            this.Dui_madre,
+            this.Dui_padre});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 25);
             this.dtgPartidas.MultiSelect = false;
@@ -323,13 +346,29 @@
             this.IdJefeRegistro.ReadOnly = true;
             this.IdJefeRegistro.Visible = false;
             // 
+            // Dui_madre
+            // 
+            this.Dui_madre.DataPropertyName = "Dui_madre";
+            this.Dui_madre.HeaderText = "DuiMadre";
+            this.Dui_madre.Name = "Dui_madre";
+            this.Dui_madre.ReadOnly = true;
+            this.Dui_madre.Visible = false;
+            // 
+            // Dui_padre
+            // 
+            this.Dui_padre.DataPropertyName = "Dui_padre";
+            this.Dui_padre.HeaderText = "DuiPadre";
+            this.Dui_padre.Name = "Dui_padre";
+            this.Dui_padre.ReadOnly = true;
+            this.Dui_padre.Visible = false;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(384, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(550, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -378,6 +417,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnGenerar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPartida;
@@ -393,5 +434,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdInformante;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInformante;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdJefeRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dui_madre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dui_padre;
     }
 }

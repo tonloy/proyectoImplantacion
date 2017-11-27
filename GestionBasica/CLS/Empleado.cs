@@ -9,6 +9,7 @@ namespace GestionBasica.CLS
     class Empleado
     {
         String _idEmpleado;
+        String _rubricas;
 
         public String IdEmpleado
         {
@@ -30,14 +31,27 @@ namespace GestionBasica.CLS
             set { _idCargo = value; }
         }
 
+        public string Rubricas
+        {
+            get
+            {
+                return _rubricas;
+            }
+
+            set
+            {
+                _rubricas = value;
+            }
+        }
+
         public Boolean Guardar()
         {
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO empleados(NombreCompleto,idCargo) VALUES(");
+            Sentencia.Append("INSERT INTO empleados(NombreCompleto,idCargo,Rubrica) VALUES(");
             Sentencia.Append("'" + _NombreCompleto + "',");
-            Sentencia.Append(_idCargo+");");
+            Sentencia.Append(_idCargo+",'"+_rubricas+"');");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
@@ -65,7 +79,7 @@ namespace GestionBasica.CLS
 
             Sentencia.Append("UPDATE empleados set NombreCompleto=");
             Sentencia.Append("'" + _NombreCompleto + "',idCargo=");
-            Sentencia.Append(_idCargo + " where idEmpleado=");
+            Sentencia.Append(_idCargo + ",Rubrica='"+_rubricas+"' where idEmpleado=");
             Sentencia.Append(_idEmpleado + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();

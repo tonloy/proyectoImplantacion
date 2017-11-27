@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Canton.cs" />
     <Compile Include="CLS\Causa_muerte.cs" />
     <Compile Include="CLS\Conv.cs" />
     <Compile Include="CLS\Difunto.cs" />
@@ -67,10 +68,17 @@
     <Compile Include="CLS\PartidaDef.cs" />
     <Compile Include="CLS\PartidaNac.cs" />
     <Compile Include="CLS\Partidas_Matrimonio.cs" />
+    <Compile Include="CLS\Permiso.cs" />
     <Compile Include="CLS\Profesion.cs" />
     <Compile Include="CLS\Scanner.cs" />
+    <Compile Include="CLS\Tarifas.cs" />
     <Compile Include="CLS\Usuario.cs" />
     <Compile Include="CLS\WIAScanner.cs" />
+    <Compile Include="DAT\DatosOperaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\DatosPartidaNac.cs">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
     </Compile>
@@ -78,6 +86,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\EstadisticaPartidasNac.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadisticaPartidasNac.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\PartidaDef.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartidaDef.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\PartidaDefNit.cs">
+      <DependentUpon>PartidaDefNit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\PartidaDefNit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartidaDefNit.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAT\partidaNac.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -113,6 +139,12 @@
     </Compile>
     <Compile Include="GUI\Defunciones\GestionDifuntos.Designer.cs">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionCanton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionCanton.Designer.cs">
+      <DependentUpon>EdicionCanton.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EdicionCausa.cs">
       <SubType>Form</SubType>
@@ -150,6 +182,12 @@
     <Compile Include="GUI\EdicionProfesion.Designer.cs">
       <DependentUpon>EdicionProfesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EdicionTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionTarifa.Designer.cs">
+      <DependentUpon>EdicionTarifa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +205,12 @@
     </Compile>
     <Compile Include="GUI\GestionaPartidasEscaneadas.Designer.cs">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionCantones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionCantones.Designer.cs">
+      <DependentUpon>GestionCantones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionCausas.cs">
       <SubType>Form</SubType>
@@ -228,6 +272,12 @@
     <Compile Include="GUI\GestionProfesiones.Designer.cs">
       <DependentUpon>GestionProfesiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GestionTarifas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionTarifas.Designer.cs">
+      <DependentUpon>GestionTarifas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GestionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +309,18 @@
     </Compile>
     <Compile Include="GUI\MadreEdicion.Designer.cs">
       <DependentUpon>MadreEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Marginadas\GestionPartidasDefMarginadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Marginadas\GestionPartidasDefMarginadas.Designer.cs">
+      <DependentUpon>GestionPartidasDefMarginadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Marginadas\GestionPartidasNacMarginadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Marginadas\GestionPartidasNacMarginadas.Designer.cs">
+      <DependentUpon>GestionPartidasNacMarginadas.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Matrimonio\Detalle_Hijos.cs">
       <SubType>Form</SubType>
@@ -315,6 +377,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\VisorEstadisticaNacimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorEstadisticaNacimientos.Designer.cs">
+      <DependentUpon>VisorEstadisticaNacimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaDefGenerada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaDefGenerada.Designer.cs">
+      <DependentUpon>VisorPartidaDefGenerada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaDefNit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaDefNit.Designer.cs">
+      <DependentUpon>VisorPartidaDefNit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\VisorPartidaNac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,11 +407,59 @@
     <Compile Include="Reportes\VisorPartidaNacGenerada.Designer.cs">
       <DependentUpon>VisorPartidaNacGenerada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\VisorPartidaNacNit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaNacNit.Designer.cs">
+      <DependentUpon>VisorPartidaNacNit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VisorReporteOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorReporteOperaciones.Designer.cs">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP\Nacimientos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nacimientos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\Operaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\PartidaDefNit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartidaDefNit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\PartidaNacNit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartidaNacNit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\VistaPreviaPartidaDef.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaPreviaPartidaDef.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="REP\VistaPreviaPartidaNac.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaPreviaPartidaNac.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Respaldar\RespaldarBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Respaldar\RespaldarBase.Designer.cs">
+      <DependentUpon>RespaldarBase.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
@@ -344,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Defunciones\GestionDifuntos.resx">
       <DependentUpon>GestionDifuntos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionCanton.resx">
+      <DependentUpon>EdicionCanton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionCausa.resx">
       <DependentUpon>EdicionCausa.cs</DependentUpon>
@@ -363,6 +494,9 @@
     <EmbeddedResource Include="GUI\EdicionProfesion.resx">
       <DependentUpon>EdicionProfesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionTarifa.resx">
+      <DependentUpon>EdicionTarifa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionUsuario.resx">
       <DependentUpon>EdicionUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionaPartidasEscaneadas.resx">
       <DependentUpon>GestionaPartidasEscaneadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionCantones.resx">
+      <DependentUpon>GestionCantones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionCausas.resx">
       <DependentUpon>GestionCausas.cs</DependentUpon>
@@ -402,6 +539,9 @@
     <EmbeddedResource Include="GUI\GestionProfesiones.resx">
       <DependentUpon>GestionProfesiones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionTarifas.resx">
+      <DependentUpon>GestionTarifas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +553,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MadreEdicion.resx">
       <DependentUpon>MadreEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Marginadas\GestionPartidasDefMarginadas.resx">
+      <DependentUpon>GestionPartidasDefMarginadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Marginadas\GestionPartidasNacMarginadas.resx">
+      <DependentUpon>GestionPartidasNacMarginadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\Detalle_Hijos.resx">
       <DependentUpon>Detalle_Hijos.cs</DependentUpon>
@@ -448,16 +594,65 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\VisorEstadisticaNacimientos.resx">
+      <DependentUpon>VisorEstadisticaNacimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorPartidaDefGenerada.resx">
+      <DependentUpon>VisorPartidaDefGenerada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorPartidaDefNit.resx">
+      <DependentUpon>VisorPartidaDefNit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VisorPartidaNac.resx">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VisorPartidaNacGenerada.resx">
       <DependentUpon>VisorPartidaNacGenerada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorPartidaNacNit.resx">
+      <DependentUpon>VisorPartidaNacNit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorReporteOperaciones.resx">
+      <DependentUpon>VisorReporteOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Nacimientos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Nacimientos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Operaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Operaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\PartidaDefNit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PartidaDefNit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\PartidaNacNit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PartidaNacNit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\VistaPreviaPartidaDef.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VistaPreviaPartidaDef.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REP\VistaPreviaPartidaNac.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VistaPreviaPartidaNac.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Respaldar\RespaldarBase.resx">
+      <DependentUpon>RespaldarBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DAT\DatosOperaciones.xsc">
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\DatosOperaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosOperaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\DatosOperaciones.xss">
+      <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </None>
     <None Include="DAT\DatosPartidaNac.xsc">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
     </None>
@@ -468,6 +663,39 @@
     </None>
     <None Include="DAT\DatosPartidaNac.xss">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\EstadisticaPartidasNac.xsc">
+      <DependentUpon>EstadisticaPartidasNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\EstadisticaPartidasNac.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstadisticaPartidasNac.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\EstadisticaPartidasNac.xss">
+      <DependentUpon>EstadisticaPartidasNac.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\PartidaDef.xsc">
+      <DependentUpon>PartidaDef.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\PartidaDef.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartidaDef.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\PartidaDef.xss">
+      <DependentUpon>PartidaDef.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\PartidaDefNit.xsc">
+      <DependentUpon>PartidaDefNit.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\PartidaDefNit.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartidaDefNit.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\PartidaDefNit.xss">
+      <DependentUpon>PartidaDefNit.xsd</DependentUpon>
     </None>
     <None Include="DAT\partidaNac.xsc">
       <DependentUpon>partidaNac.xsd</DependentUpon>

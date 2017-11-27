@@ -419,7 +419,7 @@ namespace GestionBasica.CLS
         }
 
 
-        public Boolean Actualizar(Int32 pRevisado)
+        public Boolean Actualizar()
         {
             //luga, hora y apellido
             Boolean actualizado = false;

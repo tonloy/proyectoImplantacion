@@ -53,6 +53,7 @@
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,8 +97,8 @@
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(114, 28);
-            this.txbNueva.Text = "Agregar Madre";
+            this.txbNueva.Size = new System.Drawing.Size(77, 28);
+            this.txbNueva.Text = "Agregar";
             this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
@@ -158,7 +159,8 @@
             this.IdProfesion,
             this.Profesion,
             this.Parentesco,
-            this.Observaciones});
+            this.Observaciones,
+            this.Nit});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.MultiSelect = false;
@@ -280,6 +282,14 @@
             this.Observaciones.ReadOnly = true;
             this.Observaciones.Visible = false;
             // 
+            // Nit
+            // 
+            this.Nit.DataPropertyName = "Nit";
+            this.Nit.HeaderText = "Nit";
+            this.Nit.Name = "Nit";
+            this.Nit.ReadOnly = true;
+            this.Nit.Width = 135;
+            // 
             // GestionMadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,5 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nit;
     }
 }

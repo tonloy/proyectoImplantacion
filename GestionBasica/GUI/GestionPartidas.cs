@@ -150,10 +150,65 @@ namespace GestionBasica.GUI
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
-            fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
-            fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
-            fm.ShowDialog();
+            if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())<18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())<18) {
+                Reportes.VisorPartidaNacNit fl = new Reportes.VisorPartidaNacNit();
+                fl.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+                fl.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                fl.ShowDialog();
+            }
+            else if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())>=18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())>=18) {
+                Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
+                fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
+                fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                fm.ShowDialog();
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea RESPALDAR la partida seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    PartidaEdicion frm = new PartidaEdicion();
+                    frm.txbNumPartida.Text= dtgPartidas.CurrentRow.Cells["NumPartida"].Value.ToString();
+                    frm.txbIdPartida.Text= dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                    frm.pictureBox1.ImageLocation= dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+                    frm.txbIdInfante.Text = dtgPartidas.CurrentRow.Cells["IdInfante"].Value.ToString();
+                    frm.txbInfante.Text = dtgPartidas.CurrentRow.Cells["NombreInfante"].Value.ToString();
+                    frm.txtIdPadre.Text = dtgPartidas.CurrentRow.Cells["IdPadre"].Value.ToString();
+                    frm.txtNombrePadre.Text = dtgPartidas.CurrentRow.Cells["NombrePadre"].Value.ToString();
+                    frm.txtIdMadre.Text = dtgPartidas.CurrentRow.Cells["IdMadre"].Value.ToString();
+                    frm.txtNombreMadre.Text = dtgPartidas.CurrentRow.Cells["NombreMadre"].Value.ToString();
+                    frm.txtIdInformante.Text = dtgPartidas.CurrentRow.Cells["IdInformante"].Value.ToString();
+                    frm.txtNombreInformante.Text = dtgPartidas.CurrentRow.Cells["NombreInformante"].Value.ToString();
+                    frm.txbLibro.Text = dtgPartidas.CurrentRow.Cells["Libro"].Value.ToString();
+                    frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["Folio"].Value.ToString();
+
+                    frm.txbLibro.ReadOnly = true;
+                    frm.txbFolio.ReadOnly = true;
+                    frm.txbNumPartida.ReadOnly = true;
+                    frm.button1.Enabled = false;
+                    frm.button2.Enabled = false;
+                    frm.button3.Enabled = false;
+                    frm.button4.Enabled = false;
+
+                    if (dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString() == "")
+                    {
+                        frm.cbxRespaldoPda.Checked = false;
+                    }else
+                    {
+                        frm.cbxRespaldoPda.Checked = true;
+                    }
+
+                    frm.ShowDialog();
+                    CargarPartidas();
+                }
+                catch
+                {
+                    MessageBox.Show("Por favor seleccione un registro");
+                }
+            }
         }
     }
 }

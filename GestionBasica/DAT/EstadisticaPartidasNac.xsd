@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EstadisticaPartidasNac" targetNamespace="http://tempuri.org/EstadisticaPartidasNac.xsd" xmlns:mstns="http://tempuri.org/EstadisticaPartidasNac.xsd" xmlns="http://tempuri.org/EstadisticaPartidasNac.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EstadisticaPartidasNac" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EstadisticaPartidasNac" msprop:Generator_UserDSName="EstadisticaPartidasNac">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EstadisticaNac" msprop:Generator_TableClassName="EstadisticaNacDataTable" msprop:Generator_TableVarName="tableEstadisticaNac" msprop:Generator_TablePropName="EstadisticaNac" msprop:Generator_RowDeletingName="EstadisticaNacRowDeleting" msprop:Generator_RowChangingName="EstadisticaNacRowChanging" msprop:Generator_RowEvHandlerName="EstadisticaNacRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadisticaNacRowDeleted" msprop:Generator_UserTableName="EstadisticaNac" msprop:Generator_RowChangedName="EstadisticaNacRowChanged" msprop:Generator_RowEvArgName="EstadisticaNacRowChangeEvent" msprop:Generator_RowClassName="EstadisticaNacRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Empleado" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" type="xs:string" minOccurs="0" />
+              <xs:element name="Asientos" msprop:Generator_ColumnVarNameInTable="columnAsientos" msprop:Generator_ColumnPropNameInRow="Asientos" msprop:Generator_ColumnPropNameInTable="AsientosColumn" msprop:Generator_UserColumnName="Asientos" type="xs:string" minOccurs="0" />
+              <xs:element name="CantidadMujeres" msprop:Generator_ColumnVarNameInTable="columnCantidadMujeres" msprop:Generator_ColumnPropNameInRow="CantidadMujeres" msprop:Generator_ColumnPropNameInTable="CantidadMujeresColumn" msprop:Generator_UserColumnName="CantidadMujeres" type="xs:string" minOccurs="0" />
+              <xs:element name="CantidadHombres" msprop:Generator_ColumnVarNameInTable="columnCantidadHombres" msprop:Generator_ColumnPropNameInRow="CantidadHombres" msprop:Generator_ColumnPropNameInTable="CantidadHombresColumn" msprop:Generator_UserColumnName="CantidadHombres" type="xs:string" minOccurs="0" />
+              <xs:element name="MadresMenores" msprop:Generator_ColumnVarNameInTable="columnMadresMenores" msprop:Generator_ColumnPropNameInRow="MadresMenores" msprop:Generator_ColumnPropNameInTable="MadresMenoresColumn" msprop:Generator_UserColumnName="MadresMenores" type="xs:string" minOccurs="0" />
+              <xs:element name="PadresMenores" msprop:Generator_ColumnVarNameInTable="columnPadresMenores" msprop:Generator_ColumnPropNameInRow="PadresMenores" msprop:Generator_ColumnPropNameInTable="PadresMenoresColumn" msprop:Generator_UserColumnName="PadresMenores" type="xs:string" minOccurs="0" />
+              <xs:element name="Ingresos" msprop:Generator_ColumnVarNameInTable="columnIngresos" msprop:Generator_ColumnPropNameInRow="Ingresos" msprop:Generator_ColumnPropNameInTable="IngresosColumn" msprop:Generator_UserColumnName="Ingresos" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_UserColumnName="FechaInicio" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" msprop:Generator_UserColumnName="FechaFin" type="xs:string" minOccurs="0" />
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -42,6 +42,7 @@
             this.txbNombreCompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
             this.chbxMenor = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -59,14 +60,15 @@
             this.mtxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.cbxMunicipio = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtNumPartida = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtRubrica = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 379);
+            this.button3.Location = new System.Drawing.Point(542, 420);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(440, 379);
+            this.btnGuardar.Location = new System.Drawing.Point(440, 420);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 1;
@@ -175,6 +177,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtRubrica);
             this.groupBox1.Controls.Add(this.txtNumPartida);
             this.groupBox1.Controls.Add(this.chbxMenor);
             this.groupBox1.Controls.Add(this.label4);
@@ -198,10 +202,19 @@
             this.groupBox1.Controls.Add(this.txbNombreCompleto);
             this.groupBox1.Location = new System.Drawing.Point(32, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 338);
+            this.groupBox1.Size = new System.Drawing.Size(604, 372);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Persona";
+            // 
+            // txtNumPartida
+            // 
+            this.txtNumPartida.Enabled = false;
+            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
+            this.txtNumPartida.Mask = "0000-000000-000-0";
+            this.txtNumPartida.Name = "txtNumPartida";
+            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
+            this.txtNumPartida.TabIndex = 99;
             // 
             // chbxMenor
             // 
@@ -225,7 +238,7 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(145, 257);
+            this.txtObservaciones.Location = new System.Drawing.Point(145, 293);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(440, 64);
@@ -234,7 +247,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 257);
+            this.label3.Location = new System.Drawing.Point(49, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 93;
@@ -350,20 +363,27 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
-            // txtNumPartida
+            // label13
             // 
-            this.txtNumPartida.Enabled = false;
-            this.txtNumPartida.Location = new System.Drawing.Point(145, 203);
-            this.txtNumPartida.Mask = "0000-000000-000-0";
-            this.txtNumPartida.Name = "txtNumPartida";
-            this.txtNumPartida.Size = new System.Drawing.Size(157, 20);
-            this.txtNumPartida.TabIndex = 99;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(76, 262);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.TabIndex = 101;
+            this.label13.Text = "Rubricas:";
+            // 
+            // txtRubrica
+            // 
+            this.txtRubrica.Location = new System.Drawing.Point(145, 259);
+            this.txtRubrica.Name = "txtRubrica";
+            this.txtRubrica.Size = new System.Drawing.Size(157, 20);
+            this.txtRubrica.TabIndex = 100;
             // 
             // PadreEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 428);
+            this.ClientSize = new System.Drawing.Size(667, 455);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label11);
@@ -418,7 +438,9 @@
         public System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chbxMenor;
         public System.Windows.Forms.MaskedTextBox txtNumPartida;
+        public System.Windows.Forms.CheckBox chbxMenor;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox txtRubrica;
     }
 }

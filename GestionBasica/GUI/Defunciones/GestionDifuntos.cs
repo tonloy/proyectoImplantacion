@@ -75,6 +75,10 @@ namespace GestionBasica.GUI.Defunciones
                         dtgPartidas.CurrentCell.Selected = true;
                     }
                 }
+                if (_idPadre.Length>0)
+                {
+                    dtgPartidas.Enabled = false;
+                }
             }
         }
 
@@ -131,6 +135,13 @@ namespace GestionBasica.GUI.Defunciones
                     frm.txtNumPartida.Text= dtgPartidas.CurrentRow.Cells["Nit"].Value.ToString();
 
                     frm.cbxEstados.Text=dtgPartidas.CurrentRow.Cells["Estado_familiar"].Value.ToString();
+                    if(dtgPartidas.CurrentRow.Cells["Dui"].Value.ToString()== "        -")
+                    {
+                        frm.mtxtDUI.ReadOnly = true;
+                    }else
+                    {
+                        frm.txtNumPartida.ReadOnly = true;
+                    }
                     if (dtgPartidas.CurrentRow.Cells["Género"].Value.ToString() == "Masculino")
                     {
                         frm.rbtnMasculino.Checked = true;

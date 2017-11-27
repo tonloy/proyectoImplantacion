@@ -12,7 +12,8 @@ namespace App
 {
     public partial class Principal : Form
     {
-        
+
+        DataTable _Opciones = new DataTable();
         SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
         public Principal()
         {
@@ -31,6 +32,48 @@ namespace App
             lblUsuario.Text = _Sesion.Usuario;
             lblNombreEmpleado.Text = _Sesion.Nombres;
             tmpConexion.Start();
+            CargarOpciones();
+        }
+
+        private void CargarOpciones()
+        {
+            gestionarToolStripMenuItem.Visible = false;
+            buscarPartidaDeNacimientoToolStripMenuItem.Visible = false;
+            reportesToolStripMenuItem.Visible = false;
+            configuraciónToolStripMenuItem.Visible = false;
+            ayudaToolStripMenuItem.Visible = false;
+            try
+            {
+                _Opciones = CacheManager1.Cache.PERMISOS_OTORGADOS(_Sesion.IDGrupo);
+                foreach (DataRow row in _Opciones.Rows)
+                {
+                    if (row[1].ToString() == gestionarToolStripMenuItem.Text)
+                    {
+                        gestionarToolStripMenuItem.Visible = true;
+                    }
+                    if (row[1].ToString() == buscarPartidaDeNacimientoToolStripMenuItem.Text)
+                    {
+                        buscarPartidaDeNacimientoToolStripMenuItem.Visible = true;
+                    }
+                    if (row[1].ToString() == reportesToolStripMenuItem.Text)
+                    {
+                        reportesToolStripMenuItem.Visible = true;
+                    }
+                    if(row[1].ToString() == configuraciónToolStripMenuItem.Text)
+                    {
+                        configuraciónToolStripMenuItem.Visible = true;
+                    }
+                    if(row[1].ToString() == ayudaToolStripMenuItem.Text)
+                    {
+                        ayudaToolStripMenuItem.Visible = true;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,7 +98,7 @@ namespace App
 
         private void reporteDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionBasica.GUI.VisorReporteOperaciones frm = new GestionBasica.GUI.VisorReporteOperaciones();
+            GestionBasica.Reportes.VisorReporteOperaciones frm = new GestionBasica.Reportes.VisorReporteOperaciones();
             frm.ShowDialog();
         }
 
@@ -152,6 +195,42 @@ namespace App
         {
             GestionBasica.GUI.GestionCausas frl = new GestionBasica.GUI.GestionCausas();
             frl.ShowDialog();
+        }
+
+        private void cantonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionCantones fmor = new GestionBasica.GUI.GestionCantones();
+            fmor.ShowDialog();
+        }
+
+        private void tarifasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionTarifas gtsa = new GestionBasica.GUI.GestionTarifas();
+            gtsa.ShowDialog();
+        }
+
+        private void partidasDeNacimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Marginadas.GestionPartidasNacMarginadas mar = new GestionBasica.GUI.Marginadas.GestionPartidasNacMarginadas();
+            mar.ShowDialog();
+        }
+
+        private void partidasDeDefunciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas marg = new GestionBasica.GUI.Marginadas.GestionPartidasDefMarginadas();
+            marg.ShowDialog();
+        }
+
+        private void reporteDeEstadísticasDeNacimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Reportes.VisorEstadisticaNacimientos vNac = new GestionBasica.Reportes.VisorEstadisticaNacimientos();
+            vNac.ShowDialog();
+        }
+
+        private void respaldarBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
+            rBa.ShowDialog();
         }
     }
 }
