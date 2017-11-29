@@ -13,6 +13,8 @@ namespace GestionBasica.GUI
 {
     public partial class EdicionMarginacion : Form
     {
+        SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
+
         SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
         BindingSource _Juzgados = new BindingSource();
         public int seleccion = 0;
@@ -68,6 +70,12 @@ namespace GestionBasica.GUI
             oUsuario.NumPartida = txtIdPartida.Text;
             oUsuario.Explicacion = txtExplicacion.Text;
             _Datos.FechaSentencia = Convert.ToDateTime(dtpFechaSentencia.Value.ToString()).ToString("yyyy-MM-dd");
+
+            CLS.Movimiento nueo = new CLS.Movimiento();
+
+            nueo.Accion = "El usuario " + _Sesion.Usuario + " marginó la partida de nacimiento número " + txtNumPartida.Text;
+            nueo.IdUsuario = _Sesion.IdUsuario;
+
             if (mtxtHoraSentencia.MaskCompleted) { 
                 _Datos.HoraSentencia = Convert.ToDateTime(mtxtHoraSentencia.Text).ToShortTimeString(); }
             _Datos.IdJuzgado = cbxJuzgados.SelectedValue.ToString();
@@ -79,6 +87,7 @@ namespace GestionBasica.GUI
                     {
                         if (oUsuario.Guardar())
                         {
+                        nueo.Guardar();
                             MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
@@ -101,6 +110,11 @@ namespace GestionBasica.GUI
             oUsuario.NumPartida = txtIdPartida.Text;
             oUsuario.Explicacion = txtExplicacion.Text;
             _Datos.FechaSentencia = Convert.ToDateTime(dtpFechaSentencia.Value.ToString()).ToString("yyyy-MM-dd");
+
+            CLS.Movimiento njuevo = new CLS.Movimiento();
+            njuevo.Accion = "El usuario " + _Sesion.Usuario + " marginó la partida de defunción número " + txtNumPartida.Text;
+            njuevo.IdUsuario = _Sesion.IdUsuario;
+
             if (mtxtHoraSentencia.MaskCompleted)
             {
                 _Datos.HoraSentencia = Convert.ToDateTime(mtxtHoraSentencia.Text).ToShortTimeString();
@@ -114,6 +128,7 @@ namespace GestionBasica.GUI
                 {
                     if (oUsuario.GuardarDefuncion())
                     {
+                        njuevo.Guardar();
                         MessageBox.Show("Partida marginada correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
                     }

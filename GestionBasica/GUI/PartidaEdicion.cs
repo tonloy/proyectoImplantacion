@@ -14,6 +14,7 @@ namespace GestionBasica.GUI
     {
         Boolean marginando = false;
         SessionManager.MarginarPartida _Datos = SessionManager.MarginarPartida.Instancia;
+        SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
 
         public Boolean Marginando
         {
@@ -206,6 +207,9 @@ namespace GestionBasica.GUI
             oUsuario.Anio_insercion_letras1 = CLS.Conv.enletras(DateTime.Today.Year.ToString());
             oUsuario.Fecha_insercion_letras1 = CLS.Hora.fecha_letras(DateTime.Today.ToString("yyyy-MM-dd"));
 
+            CLS.Movimiento nuevo = new CLS.Movimiento();            
+            nuevo.IdUsuario = _Sesion.IdUsuario;
+
             if (ValidarDatos())
             {
                 if (txtIdPadre.TextLength == 0)
@@ -227,6 +231,9 @@ namespace GestionBasica.GUI
                     _Datos.NumPartida_letras = oUsuario.NumPartida_letras;
                     _Datos.AnioInsercionLetras = oUsuario.Anio_insercion_letras1;
 
+                    //nuevo.Accion = "El usuario " + _Sesion.Usuario + " marginó la partida de nacimiento número " + oUsuario.NumPartida;
+                    //nuevo.Guardar();
+
                     Close();
                 }
                 else
@@ -236,6 +243,8 @@ namespace GestionBasica.GUI
                         {
                             if (oUsuario.Actualizar())
                             {
+                                nuevo.Accion = "El usuario " + _Sesion.Usuario + " actualizó la partida de nacimiento número "+ oUsuario.NumPartida;
+                                nuevo.Guardar();
                                 MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }
@@ -256,6 +265,8 @@ namespace GestionBasica.GUI
                         {
                             if (oUsuario.Guardar())
                             {
+                                nuevo.Accion = "El usuario " + _Sesion.Usuario + " registró la partida de nacimiento número "+ oUsuario.NumPartida;
+                                nuevo.Guardar();
                                 MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }

@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionTarifas));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txbModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txbNueva = new System.Windows.Forms.ToolStripButton();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dtgCostos = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.idCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_partida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txbModificar = new System.Windows.Forms.ToolStripButton();
-            this.txbNueva = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCostos)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -63,10 +63,30 @@
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // txbModificar
+            // 
+            this.txbModificar.ForeColor = System.Drawing.Color.White;
+            this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
+            this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txbModificar.Name = "txbModificar";
+            this.txbModificar.Size = new System.Drawing.Size(78, 22);
+            this.txbModificar.Text = "Modificar";
+            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // txbNueva
+            // 
+            this.txbNueva.ForeColor = System.Drawing.Color.White;
+            this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
+            this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txbNueva.Name = "txbNueva";
+            this.txbNueva.Size = new System.Drawing.Size(69, 22);
+            this.txbNueva.Text = "Agregar";
+            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
             // 
@@ -110,22 +130,6 @@
             this.dtgCostos.TabIndex = 9;
             this.dtgCostos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgCostos_CellFormatting);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(426, 22);
-            this.statusStrip1.TabIndex = 10;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblNumeroFilas
-            // 
-            this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
-            this.lblNumeroFilas.Text = "0 registros encontrados";
-            // 
             // idCosto
             // 
             this.idCosto.DataPropertyName = "idCosto";
@@ -150,25 +154,21 @@
             this.Tipo_partida.ReadOnly = true;
             this.Tipo_partida.Width = 250;
             // 
-            // txbModificar
+            // statusStrip1
             // 
-            this.txbModificar.ForeColor = System.Drawing.Color.White;
-            this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
-            this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbModificar.Name = "txbModificar";
-            this.txbModificar.Size = new System.Drawing.Size(78, 22);
-            this.txbModificar.Text = "Modificar";
-            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNumeroFilas});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(426, 22);
+            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // txbNueva
+            // lblNumeroFilas
             // 
-            this.txbNueva.ForeColor = System.Drawing.Color.White;
-            this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
-            this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(69, 22);
-            this.txbNueva.Text = "Agregar";
-            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
+            this.lblNumeroFilas.Name = "lblNumeroFilas";
+            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
+            this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // GestionTarifas
             // 

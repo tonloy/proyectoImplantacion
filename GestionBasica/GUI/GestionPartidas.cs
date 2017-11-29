@@ -67,7 +67,7 @@ namespace GestionBasica.GUI
 
         private void txbModificar_Click(object sender, EventArgs e)
         {
-            if (_SESION.Grupo == "Administrador" && (MessageBox.Show("¿Realmente desea marginar esta partida?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            if (_SESION.Grupo == "Administrador" && (MessageBox.Show("¿Realmente desea MARGINAR esta partida?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 InfanteEdicion.marginando = true;
                 GestionInfantes._marginar = true;
@@ -150,13 +150,19 @@ namespace GestionBasica.GUI
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            CLS.Movimiento mov = new CLS.Movimiento();
+            mov.IdUsuario = _SESION.IdUsuario;
             if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())<18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())<18) {
+                mov.Accion = "El usuario " + _SESION.Usuario + " generó la partida de nacimiento con ID " + dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                mov.Guardar();
                 Reportes.VisorPartidaNacNit fl = new Reportes.VisorPartidaNacNit();
                 fl.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
                 fl.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
                 fl.ShowDialog();
             }
             else if (Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_madre"].Value.ToString())>=18 && Convert.ToInt32(dtgPartidas.CurrentRow.Cells["Dui_padre"].Value.ToString())>=18) {
+                mov.Accion = "El usuario " + _SESION.Usuario + " generó la partida de nacimiento con ID " + dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                mov.Guardar();
                 Reportes.VisorPartidaNacGenerada fm = new Reportes.VisorPartidaNacGenerada();
                 fm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
                 fm.IdPartida1 = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();

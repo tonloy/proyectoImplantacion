@@ -78,6 +78,17 @@ namespace App
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
+            GestionBasica.CLS.Movimiento nuevo = new GestionBasica.CLS.Movimiento();
+            nuevo.Accion = "El usuario " + _Sesion.Usuario + " ha finalizado sesión";
+            nuevo.IdUsuario = _Sesion.IdUsuario;
+            try
+            {
+                nuevo.Guardar();
+            }
+            catch
+            {
+
+            }
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             oOperacion.Desconectar();
             Application.Exit();

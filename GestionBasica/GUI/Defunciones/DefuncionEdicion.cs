@@ -20,6 +20,7 @@ namespace GestionBasica.GUI.Defunciones
         BindingSource _Causas = new BindingSource();
         String ruta_imagen;
         int revisado;
+        SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
         public bool Marginando
         {
             get
@@ -364,6 +365,8 @@ namespace GestionBasica.GUI.Defunciones
             oUsuario.Folio_letras1 = CLS.Conv.enletras(txbFolio.Text);
             oUsuario.NumPartida_letras1 = CLS.Conv.enletras(txbNumPartida.Text);
 
+            CLS.Movimiento nue = new CLS.Movimiento();
+            nue.IdUsuario = _Sesion.IdUsuario;
 
             if (ValidarDatos())
             {
@@ -416,6 +419,8 @@ namespace GestionBasica.GUI.Defunciones
                         {
                             if (oUsuario.Modificar(revisado))
                             {
+                                nue.Accion = "El usuario " + _Sesion.Usuario + " actualizó la partida de defunción número "+ oUsuario.NumPartida1;
+                                nue.Guardar();
                                 MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }
@@ -436,6 +441,8 @@ namespace GestionBasica.GUI.Defunciones
                         {
                             if (oUsuario.Guardar(revisado))
                             {
+                                nue.Accion = "El usuario " + _Sesion.Usuario + " registró la partida de defunción número " + oUsuario.NumPartida1;
+                                nue.Guardar();
                                 MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }

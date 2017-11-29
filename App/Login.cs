@@ -15,6 +15,7 @@ namespace App
     {
         Color miColor = Color.FromArgb(6,0,88);
         Boolean _Autorizado = false;
+        int nIntentos=0;
 
         public Boolean Autorizado
         {
@@ -36,6 +37,19 @@ namespace App
                 _SESION.IDGrupo = Datos.Rows[0]["idRol"].ToString();
                 _SESION.Grupo = Datos.Rows[0]["Rol"].ToString();
                 _Autorizado = true;
+
+                GestionBasica.CLS.Movimiento nuevoMov = new GestionBasica.CLS.Movimiento();
+                nuevoMov.Accion = @"El usuario " + _SESION.Usuario + " ha iniciado sesión";
+                nuevoMov.IdUsuario = _SESION.IdUsuario;
+
+                try
+                {
+                    nuevoMov.Guardar();
+                }
+                catch
+                {
+
+                }
                 Close();
             }
             else
@@ -45,6 +59,7 @@ namespace App
                 _Autorizado = false;
                 txbPassword.Focus();
                 txbPassword.SelectAll();
+                nIntentos++;
             }
         }
         public Login()
@@ -61,7 +76,13 @@ namespace App
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            IniciarSesion();
+            if (nIntentos < 3)
+            { IniciarSesion(); }
+            else
+            {
+                MessageBox.Show("Ha superado el número de intentos permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnEntrar.Enabled = false;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

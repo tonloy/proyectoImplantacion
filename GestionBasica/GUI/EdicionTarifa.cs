@@ -12,6 +12,9 @@ namespace GestionBasica.GUI
 {
     public partial class EdicionTarifa : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        BindingSource _CARGOS = new BindingSource();
+
         BindingSource _Roles = new BindingSource();
         public EdicionTarifa()
         {
@@ -58,14 +61,20 @@ namespace GestionBasica.GUI
             oUsuario.Monto = txtMonto.Text;
             oUsuario.IdTipoPartida = cbxPartidas.SelectedValue.ToString();
 
-                if (txbIdTarifa.TextLength > 0)
+
+            CLS.Movimiento insertar = new CLS.Movimiento();
+            insertar.IdUsuario = _SESION.IdUsuario;
+
+            if (txbIdTarifa.TextLength > 0)
                 {
                     //Actualizando
                     try
                     {
                         if (oUsuario.Modificar())
                         {
-                            MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        insertar.Accion = "El usuario " + _SESION.Usuario + " modifico la tarifa de la partida con ID " + oUsuario.IdTipoPartida;
+                        insertar.Guardar();
+                        MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                         else
@@ -85,7 +94,9 @@ namespace GestionBasica.GUI
                     {
                         if (oUsuario.Guardar())
                         {
-                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        insertar.Accion = "El usuario " + _SESION.Usuario + " inserto una nueva tarifa ";
+                        insertar.Guardar();
+                        MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                         else

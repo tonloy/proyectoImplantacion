@@ -61,6 +61,7 @@
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Marginacion.cs" />
+    <Compile Include="CLS\Movimiento.cs" />
     <Compile Include="CLS\Nit.cs" />
     <Compile Include="CLS\Operaciones.cs" />
     <Compile Include="CLS\Padres.cs" />
