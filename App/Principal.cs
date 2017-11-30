@@ -42,6 +42,7 @@ namespace App
             reportesToolStripMenuItem.Visible = false;
             configuraciónToolStripMenuItem.Visible = false;
             ayudaToolStripMenuItem.Visible = false;
+            auditoríaToolStripMenuItem.Visible = false;
             try
             {
                 _Opciones = CacheManager1.Cache.PERMISOS_OTORGADOS(_Sesion.IDGrupo);
@@ -66,6 +67,10 @@ namespace App
                     if(row[1].ToString() == ayudaToolStripMenuItem.Text)
                     {
                         ayudaToolStripMenuItem.Visible = true;
+                    }
+                    if (row[1].ToString() == auditoríaToolStripMenuItem.Text)
+                    {
+                        auditoríaToolStripMenuItem.Visible = true;
                     }
                 }
             }
@@ -117,6 +122,7 @@ namespace App
         {
             GestionBasica.GUI.GestionPermisos frm = new GestionBasica.GUI.GestionPermisos();
             frm.ShowDialog();
+            CargarOpciones();
         }
 
         private void gestionarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,6 +248,12 @@ namespace App
         {
             GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
             rBa.ShowDialog();
+        }
+
+        private void verAccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Respaldar.VisorAcciones vA = new GestionBasica.Respaldar.VisorAcciones();
+            vA.ShowDialog();
         }
     }
 }

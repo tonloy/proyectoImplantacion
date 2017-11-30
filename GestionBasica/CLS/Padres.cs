@@ -8,8 +8,6 @@ namespace GestionBasica.CLS
 {
     public class Padres
     {   
-
-
         //atributos
         private string idPadre;
         private string NombreCompleto;
@@ -33,7 +31,6 @@ namespace GestionBasica.CLS
             get { return DUI_letras; }
             set { DUI_letras = value; }
         }
-
 
         public string NumPartidaLetras1
         {
