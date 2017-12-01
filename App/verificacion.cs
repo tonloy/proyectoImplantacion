@@ -55,6 +55,8 @@ namespace App
                     Autorizado = true;
                     GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
                     rBa.ShowDialog();
+                    intentos = 0;
+                    Close();                    
                 }
                 else
                 {
