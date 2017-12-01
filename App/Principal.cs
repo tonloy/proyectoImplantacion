@@ -12,7 +12,7 @@ namespace App
 {
     public partial class Principal : Form
     {
-
+        Boolean _Autorizado = false;
         DataTable _Opciones = new DataTable();
         SessionManager.Sesion _Sesion = SessionManager.Sesion.Instancia;
         public Principal()
@@ -246,8 +246,8 @@ namespace App
 
         private void respaldarBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
-            rBa.ShowDialog();
+            verificacion ver = new verificacion();
+            ver.ShowDialog();           
         }
 
         private void verAccionesToolStripMenuItem_Click(object sender, EventArgs e)
