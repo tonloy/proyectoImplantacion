@@ -1,6 +1,6 @@
-﻿namespace GestionBasica.GUI
+﻿namespace GestionBasica.Respaldar
 {
-    partial class GestionTarifas
+    partial class VisorAcciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionTarifas));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.txbModificar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbNueva = new System.Windows.Forms.ToolStripButton();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dtgCostos = new System.Windows.Forms.DataGridView();
-            this.idCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_partida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.idMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCostos)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -50,43 +47,14 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txbModificar,
-            this.toolStripSeparator1,
-            this.txbNueva,
             this.txbFiltrar,
-            this.toolStripLabel1,
-            this.toolStripSeparator2});
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(426, 25);
-            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Size = new System.Drawing.Size(809, 25);
+            this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // txbModificar
-            // 
-            this.txbModificar.ForeColor = System.Drawing.Color.White;
-            this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
-            this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbModificar.Name = "txbModificar";
-            this.txbModificar.Size = new System.Drawing.Size(78, 22);
-            this.txbModificar.Text = "Modificar";
-            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // txbNueva
-            // 
-            this.txbNueva.ForeColor = System.Drawing.Color.White;
-            this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
-            this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(69, 22);
-            this.txbNueva.Text = "Agregar";
-            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
             // 
@@ -94,6 +62,8 @@
             this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltrar.Name = "txbFiltrar";
             this.txbFiltrar.Size = new System.Drawing.Size(200, 25);
+            this.txbFiltrar.ToolTipText = "Digite una fecha yyyy-mm-dd";
+            this.txbFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbFiltrar_KeyPress);
             this.txbFiltrar.TextChanged += new System.EventHandler(this.txbFiltrar_TextChanged);
             // 
             // toolStripLabel1
@@ -104,11 +74,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel1.Text = "Buscar";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // dtgCostos
             // 
             this.dtgCostos.AllowUserToAddRows = false;
@@ -116,9 +81,11 @@
             this.dtgCostos.AllowUserToResizeRows = false;
             this.dtgCostos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCostos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCosto,
-            this.Monto,
-            this.Tipo_partida});
+            this.idMovimiento,
+            this.Fecha,
+            this.Hora,
+            this.Usuario,
+            this.Accion});
             this.dtgCostos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgCostos.Location = new System.Drawing.Point(0, 25);
             this.dtgCostos.MultiSelect = false;
@@ -126,42 +93,18 @@
             this.dtgCostos.ReadOnly = true;
             this.dtgCostos.RowHeadersVisible = false;
             this.dtgCostos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgCostos.Size = new System.Drawing.Size(426, 236);
-            this.dtgCostos.TabIndex = 9;
+            this.dtgCostos.Size = new System.Drawing.Size(809, 350);
+            this.dtgCostos.TabIndex = 10;
             this.dtgCostos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgCostos_CellFormatting);
-            // 
-            // idCosto
-            // 
-            this.idCosto.DataPropertyName = "idCosto";
-            this.idCosto.HeaderText = "ID";
-            this.idCosto.Name = "idCosto";
-            this.idCosto.ReadOnly = true;
-            this.idCosto.Width = 50;
-            // 
-            // Monto
-            // 
-            this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Monto.DataPropertyName = "Monto";
-            this.Monto.HeaderText = "Tarifa";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            // 
-            // Tipo_partida
-            // 
-            this.Tipo_partida.DataPropertyName = "Tipo_partida";
-            this.Tipo_partida.HeaderText = "Tipo de partida";
-            this.Tipo_partida.Name = "Tipo_partida";
-            this.Tipo_partida.ReadOnly = true;
-            this.Tipo_partida.Width = 250;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 353);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(426, 22);
-            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Size = new System.Drawing.Size(809, 22);
+            this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblNumeroFilas
@@ -170,20 +113,57 @@
             this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
             this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
-            // GestionTarifas
+            // idMovimiento
+            // 
+            this.idMovimiento.DataPropertyName = "idMovimientos";
+            this.idMovimiento.HeaderText = "ID";
+            this.idMovimiento.Name = "idMovimiento";
+            this.idMovimiento.ReadOnly = true;
+            this.idMovimiento.Width = 50;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Hora
+            // 
+            this.Hora.DataPropertyName = "Hora";
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
+            this.Hora.Width = 70;
+            // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "Usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            // 
+            // Accion
+            // 
+            this.Accion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Accion.DataPropertyName = "Accion";
+            this.Accion.HeaderText = "Acción";
+            this.Accion.Name = "Accion";
+            this.Accion.ReadOnly = true;
+            // 
+            // VisorAcciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 261);
+            this.ClientSize = new System.Drawing.Size(809, 375);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dtgCostos);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximizeBox = false;
-            this.Name = "GestionTarifas";
+            this.Name = "VisorAcciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestión de Tarifas";
-            this.Load += new System.EventHandler(this.GestionTarifas_Load);
+            this.Text = "Registro de acciones realizadas en el sistema";
+            this.Load += new System.EventHandler(this.VisorAcciones_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCostos)).EndInit();
@@ -197,17 +177,15 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton txbModificar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton txbNueva;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridView dtgCostos;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNumeroFilas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCosto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_partida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMovimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
     }
 }

@@ -12,6 +12,7 @@ namespace GestionBasica.GUI
 {
     public partial class EdicionEmpleado : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         BindingSource _CARGOS = new BindingSource();
         public EdicionEmpleado()
         {
@@ -55,6 +56,9 @@ namespace GestionBasica.GUI
             oEmpleado.IdCargo = cbxCargos.SelectedValue.ToString();
             oEmpleado.Rubricas = txtRubricas.Text;
 
+            CLS.Movimiento insertar = new CLS.Movimiento();
+            insertar.IdUsuario = _SESION.IdUsuario;
+
             if (ValidarDatos())
             {
 
@@ -65,6 +69,8 @@ namespace GestionBasica.GUI
                     {
                         if (oEmpleado.Modificar())
                         {
+                            insertar.Accion = "El usuario " + _SESION.Usuario + " modifico el empleado con ID " + oEmpleado.IdEmpleado;
+                            insertar.Guardar(); 
                             MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
@@ -85,6 +91,8 @@ namespace GestionBasica.GUI
                     {
                         if (oEmpleado.Guardar())
                         {
+                            insertar.Accion = "El usuario " + _SESION.Usuario + " Inserto un empleado con nombre " + oEmpleado.NombreCompleto;
+                            insertar.Guardar();
                             MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }

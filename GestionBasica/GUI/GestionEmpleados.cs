@@ -12,6 +12,7 @@ namespace GestionBasica.GUI
 {
     public partial class GestionEmpleados : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
 
         String IdFuncionario1;
         public string IdFuncionario11 {
@@ -98,12 +99,17 @@ namespace GestionBasica.GUI
             {
                 try
                 {
+                    CLS.Movimiento eliminar = new CLS.Movimiento();
+                    eliminar.IdUsuario = _SESION.IdUsuario;
+
+                    eliminar.Accion = "El usuario " + _SESION.Usuario + " elimino el empleado  " + dtgEmpleados.CurrentRow.Cells["NombreCompleto"].Value.ToString();
                     //Primer paso
                     CLS.Empleado oEmpleado = new CLS.Empleado();
                     //Paso 2 pasar el id del grupo a eliminar
                     oEmpleado.IdEmpleado = dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
                     if (oEmpleado.Eliminar())
                     {
+                        eliminar.Guardar();
                         MessageBox.Show("Empleado eliminado correctamente.");
                     }
                     else

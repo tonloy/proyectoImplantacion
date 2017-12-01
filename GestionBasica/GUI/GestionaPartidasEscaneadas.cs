@@ -214,8 +214,12 @@ namespace GestionBasica.GUI
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            if (dtgPartidas.CurrentRow.Cells["Dui_difunto"].Value.ToString()== "        -")
+            CLS.Movimiento nuevoM = new CLS.Movimiento();
+            nuevoM.IdUsuario = _SESION.IdUsuario;
+            if (dtgPartidas.CurrentRow.Cells["Dui_difunto"].Value.ToString() == "        -")
             {
+                nuevoM.Accion = "El usuario " + _SESION.Usuario + " generó la partida de defunción con ID " + dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                nuevoM.Guardar();
                 Reportes.VisorPartidaDefNit fr = new Reportes.VisorPartidaDefNit();
                 fr.IdPartida1= Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
                 fr.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
@@ -223,6 +227,8 @@ namespace GestionBasica.GUI
             }
             else
             {
+                nuevoM.Accion = "El usuario " + _SESION.Usuario + " generó la partida de defunción con ID " + dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                nuevoM.Guardar();
                 Reportes.VisorPartidaDefGenerada fm = new Reportes.VisorPartidaDefGenerada();
                 fm.IdPartida1 = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
                 fm.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();

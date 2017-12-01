@@ -61,6 +61,7 @@
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
     <Compile Include="CLS\Marginacion.cs" />
+    <Compile Include="CLS\Movimiento.cs" />
     <Compile Include="CLS\Nit.cs" />
     <Compile Include="CLS\Operaciones.cs" />
     <Compile Include="CLS\Padres.cs" />
@@ -467,6 +468,12 @@
     <Compile Include="Respaldar\RespaldarBase.Designer.cs">
       <DependentUpon>RespaldarBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Respaldar\VisorAcciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Respaldar\VisorAcciones.Designer.cs">
+      <DependentUpon>VisorAcciones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -650,6 +657,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Respaldar\RespaldarBase.resx">
       <DependentUpon>RespaldarBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Respaldar\VisorAcciones.resx">
+      <DependentUpon>VisorAcciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DAT\DatosOperaciones.xsc">
       <DependentUpon>DatosOperaciones.xsd</DependentUpon>

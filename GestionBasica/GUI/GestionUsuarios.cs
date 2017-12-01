@@ -12,6 +12,9 @@ namespace GestionBasica.GUI
 {
     public partial class GestionUsuarios : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        BindingSource _CARGOS = new BindingSource();
+
         BindingSource _USUARIOS = new BindingSource();
         public GestionUsuarios()
         {
@@ -92,12 +95,17 @@ namespace GestionBasica.GUI
             {
                 try
                 {
+                    CLS.Movimiento eliminar = new CLS.Movimiento();
+                    eliminar.IdUsuario = _SESION.IdUsuario;
+
+                    eliminar.Accion = "El usuario " + _SESION.Usuario + " elimino el usuario  " + dtgUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
                     //Primer paso
                     CLS.Usuario oUsuario = new CLS.Usuario();
                     //Paso 2 pasar el id del usuario a eliminar
                     oUsuario.IdUsuario = dtgUsuarios.CurrentRow.Cells["idUsuario"].Value.ToString();
                     if (oUsuario.Eliminar())
                     {
+                        eliminar.Guardar();
                         MessageBox.Show("Usuario eliminado correctamente.");
                     }
                     else

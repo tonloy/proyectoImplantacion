@@ -42,6 +42,7 @@ namespace App
             reportesToolStripMenuItem.Visible = false;
             configuraciónToolStripMenuItem.Visible = false;
             ayudaToolStripMenuItem.Visible = false;
+            auditoríaToolStripMenuItem.Visible = false;
             try
             {
                 _Opciones = CacheManager1.Cache.PERMISOS_OTORGADOS(_Sesion.IDGrupo);
@@ -67,6 +68,10 @@ namespace App
                     {
                         ayudaToolStripMenuItem.Visible = true;
                     }
+                    if (row[1].ToString() == auditoríaToolStripMenuItem.Text)
+                    {
+                        auditoríaToolStripMenuItem.Visible = true;
+                    }
                 }
             }
             catch
@@ -78,6 +83,17 @@ namespace App
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
+            GestionBasica.CLS.Movimiento nuevo = new GestionBasica.CLS.Movimiento();
+            nuevo.Accion = "El usuario " + _Sesion.Usuario + " ha finalizado sesión";
+            nuevo.IdUsuario = _Sesion.IdUsuario;
+            try
+            {
+                nuevo.Guardar();
+            }
+            catch
+            {
+
+            }
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             oOperacion.Desconectar();
             Application.Exit();
@@ -106,6 +122,7 @@ namespace App
         {
             GestionBasica.GUI.GestionPermisos frm = new GestionBasica.GUI.GestionPermisos();
             frm.ShowDialog();
+            CargarOpciones();
         }
 
         private void gestionarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -231,6 +248,12 @@ namespace App
         {
             GestionBasica.Respaldar.RespaldarBase rBa = new GestionBasica.Respaldar.RespaldarBase();
             rBa.ShowDialog();
+        }
+
+        private void verAccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Respaldar.VisorAcciones vA = new GestionBasica.Respaldar.VisorAcciones();
+            vA.ShowDialog();
         }
     }
 }

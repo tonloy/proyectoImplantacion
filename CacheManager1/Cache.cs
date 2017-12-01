@@ -854,6 +854,25 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable TODOS_LOS_MOVIMIENTOS()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idMovimientos, cast(Fecha as character(10))as Fecha, Hora, (SELECT Usuario from usuarios where idUsuario=m.idUsuario) as Usuario,
+                        Accion FROM registro_familiar.movimientos m; ";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable MarginacionPartidaNac(String pIdPartida)
         {
             DataTable Datos = new DataTable();
@@ -1098,11 +1117,7 @@ namespace CacheManager1
 
             return Datos;
         }
-        
 
-
-
-        ////////dgrdrgdtgdt
         public static DataTable EstadoFamiliar_Conyugue(String idInfante)
         {
             DataTable Datos = new DataTable();
@@ -1121,7 +1136,7 @@ namespace CacheManager1
 
             return Datos;
         }
-        
+
         public static DataTable EstadisticaNacimientos(String pFechaI,String pFechaF,String pUsuario)
         {
             DataTable Datos = new DataTable();

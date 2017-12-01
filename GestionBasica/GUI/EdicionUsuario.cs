@@ -12,6 +12,9 @@ namespace GestionBasica.GUI
 {
     public partial class EdicionUsuario : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        BindingSource _CARGOS = new BindingSource();
+
         BindingSource _Roles = new BindingSource();
         BindingSource _Empleados = new BindingSource();
         public EdicionUsuario()
@@ -137,6 +140,9 @@ namespace GestionBasica.GUI
             oUsuario.IDEmpleado = cbxEmpleados.SelectedValue.ToString();
             oUsuario.IDRol = cbxRoles.SelectedValue.ToString();
 
+            CLS.Movimiento insertar = new CLS.Movimiento();
+            insertar.IdUsuario = _SESION.IdUsuario;
+
             if (ValidarDatos())
             {
 
@@ -147,6 +153,8 @@ namespace GestionBasica.GUI
                     {
                         if (oUsuario.Actualizar())
                         {
+                            insertar.Accion = "El usuario " + _SESION.Usuario + " modifico el usuario con ID " + oUsuario.IdUsuario;
+                            insertar.Guardar();
                             MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
@@ -167,6 +175,8 @@ namespace GestionBasica.GUI
                     {
                         if (oUsuario.Guardar())
                         {
+                            insertar.Accion = "El usuario " + _SESION.Usuario + " Inserto un usuario con nombre " + oUsuario.Usuario1;
+                            insertar.Guardar();
                             MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
