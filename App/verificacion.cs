@@ -61,7 +61,7 @@ namespace App
                 else
                 {
                     intentos++;
-                    MessageBox.Show("Contraseña incorrecta.Tiene " + (3 - intentos) + " intentos más.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Contraseña incorrecta. Tiene " + (3 - intentos) + " intentos más.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
