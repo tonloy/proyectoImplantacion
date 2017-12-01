@@ -1103,22 +1103,10 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "select pnac.idPadre , pnac.idMadre from partidas_nacimiento pnac where pnac.idInfante=" + idInfante + ";";
+            Consulta = "select pnac.idPadre , pnac.idMadre from partidas_nacimiento pnac where pnac.idInfante="+idInfante+";";
 
-            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
-            try
-            {
-                Datos = oOperacion.Consultar(Consulta);
-            }
-            catch
-            {
-                Datos = new DataTable();
-            }
-
-            return Datos;
-        }
-
-        public static DataTable EstadoFamiliar_Conyugue(String idInfante)
+        
+        public static DataTable ID_Papas_Conyuges(String idInfante)
         {
             DataTable Datos = new DataTable();
             String Consulta;
@@ -1136,7 +1124,7 @@ namespace CacheManager1
 
             return Datos;
         }
-
+        
         public static DataTable EstadisticaNacimientos(String pFechaI,String pFechaF,String pUsuario)
         {
             DataTable Datos = new DataTable();
