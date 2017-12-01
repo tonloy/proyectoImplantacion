@@ -177,7 +177,7 @@ namespace GestionBasica.GUI.Matrimonio
                             //Actualizando
                             try
                             {
-                                if (oPdaMatrimonio.Actualizar())
+                                if (oPdaMatrimonio.Actualizar(_revisado))
                                 {
                                     MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
