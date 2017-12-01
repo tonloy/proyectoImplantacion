@@ -177,7 +177,7 @@ namespace GestionBasica.GUI.Matrimonio
                             //Actualizando
                             try
                             {
-                                if (oPdaMatrimonio.Actualizar(_revisado))
+                                if (oPdaMatrimonio.Actualizar())
                                 {
                                     MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
@@ -348,7 +348,7 @@ namespace GestionBasica.GUI.Matrimonio
                 Validado = false;
             }
 
-            if (EF_Hombre == "Casado" || EF_Mujer=="Casado")
+            if (EF_Hombre == "Casado/a" || EF_Mujer=="Casado/a")
             {
                 MessageBox.Show("El estado Familiar del conyugue es: Casado/a", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Validado = false;
@@ -381,13 +381,13 @@ namespace GestionBasica.GUI.Matrimonio
         {
             if (txtIdInfo2.TextLength > 0)
             {
-                GestionInfantes frm = new GestionInfantes();
+                GestionTestigos frm = new GestionTestigos();
                 frm.IdInfante1 = txtIdInfo2.Text;
                 frm.ShowDialog(this);
             }
             else
             {
-                GestionInfantes frm = new GestionInfantes();
+                GestionTestigos frm = new GestionTestigos();
                 frm.ShowDialog(this);
             }
         

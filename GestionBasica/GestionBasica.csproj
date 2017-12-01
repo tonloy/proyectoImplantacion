@@ -340,6 +340,12 @@
     <Compile Include="GUI\Matrimonio\GestionPdasMatrimonio.Designer.cs">
       <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Matrimonio\GestionTestigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Matrimonio\GestionTestigos.Designer.cs">
+      <DependentUpon>GestionTestigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Matrimonio\IEsposa.cs" />
     <Compile Include="GUI\Matrimonio\IEsposo.cs" />
     <Compile Include="GUI\Matrimonio\IFuncionario.cs" />
@@ -568,6 +574,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\GestionPdasMatrimonio.resx">
       <DependentUpon>GestionPdasMatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Matrimonio\GestionTestigos.resx">
+      <DependentUpon>GestionTestigos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\IngresarPartidaMat.resx">
       <DependentUpon>IngresarPartidaMat.cs</DependentUpon>
