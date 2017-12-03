@@ -119,5 +119,61 @@ namespace GestionBasica.CLS
             }
             return guardado;
         }
+
+        public Boolean Marginar_por_Divorcio1(String idEsposo)
+        {
+            Boolean guardado = false;
+            StringBuilder Sentencia1 = new StringBuilder();
+
+            Sentencia1.Append("INSERT INTO marginaciones(idPartida,Explicacion,idJefe) VALUES(");
+            Sentencia1.Append("(select idPartida from partidas_nacimiento where idInfante="+idEsposo+ " order by idPartida desc limit 1),'");
+            Sentencia1.Append(_Explicacion + "',");
+            Sentencia1.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo));");
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Insertar(Sentencia1.ToString()) > 0)
+                {
+                    guardado = true;
+                }
+                else
+                {
+                    guardado = false;
+                }
+            }
+            catch
+            {
+                guardado = false;
+            }
+            return guardado;
+        }
+
+        public Boolean Marginar_por_Divorcio2(String idEsposa)
+        {
+            Boolean guardado = false;
+            StringBuilder Sentencia1 = new StringBuilder();
+
+            Sentencia1.Append("INSERT INTO marginaciones(idPartida,Explicacion,idJefe) VALUES(");
+            Sentencia1.Append("(select idPartida from partidas_nacimiento where idInfante=" + idEsposa + " order by idPartida desc limit 1),'");
+            Sentencia1.Append(_Explicacion + "',");
+            Sentencia1.Append("(select idEmpleado from empleados e,cargos c where c.Cargo='Jefe de Registro Familiar' and e.idCargo=c.idCargo));");
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                if (oOperacion.Insertar(Sentencia1.ToString()) > 0)
+                {
+                    guardado = true;
+                }
+                else
+                {
+                    guardado = false;
+                }
+            }
+            catch
+            {
+                guardado = false;
+            }
+            return guardado;
+        }
     }
 }

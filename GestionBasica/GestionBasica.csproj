@@ -55,6 +55,7 @@
     <Compile Include="CLS\Causa_muerte.cs" />
     <Compile Include="CLS\Conv.cs" />
     <Compile Include="CLS\Difunto.cs" />
+    <Compile Include="CLS\Divorcio.cs" />
     <Compile Include="CLS\Dui.cs" />
     <Compile Include="CLS\Empleado.cs" />
     <Compile Include="CLS\Hora.cs" />
@@ -111,6 +112,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>partidaNac.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Divorcio\EdicionDivorcio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Divorcio\EdicionDivorcio.Designer.cs">
+      <DependentUpon>EdicionDivorcio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Divorcio\GestionDivorcios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Divorcio\GestionDivorcios.Designer.cs">
+      <DependentUpon>GestionDivorcios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Divorcio\IDivorcio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +337,12 @@
     <Compile Include="GUI\Marginadas\GestionPartidasNacMarginadas.Designer.cs">
       <DependentUpon>GestionPartidasNacMarginadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Marginadas\MarginacionesNac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Marginadas\MarginacionesNac.Designer.cs">
+      <DependentUpon>MarginacionesNac.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Matrimonio\Detalle_Hijos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -474,6 +494,12 @@
     <Compile Include="Respaldar\VisorAcciones.Designer.cs">
       <DependentUpon>VisorAcciones.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Divorcio\EdicionDivorcio.resx">
+      <DependentUpon>EdicionDivorcio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Divorcio\GestionDivorcios.resx">
+      <DependentUpon>GestionDivorcios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\CambiarPassword.resx">
       <DependentUpon>CambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -572,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Marginadas\GestionPartidasNacMarginadas.resx">
       <DependentUpon>GestionPartidasNacMarginadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Marginadas\MarginacionesNac.resx">
+      <DependentUpon>MarginacionesNac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Matrimonio\Detalle_Hijos.resx">
       <DependentUpon>Detalle_Hijos.cs</DependentUpon>

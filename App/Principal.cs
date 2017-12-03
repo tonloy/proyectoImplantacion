@@ -255,5 +255,11 @@ namespace App
             GestionBasica.Respaldar.VisorAcciones vA = new GestionBasica.Respaldar.VisorAcciones();
             vA.ShowDialog();
         }
+
+        private void partidasDeDivorcioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Divorcio.GestionDivorcios div = new GestionBasica.Divorcio.GestionDivorcios();
+            div.ShowDialog();
+        }
     }
 }

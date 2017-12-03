@@ -201,6 +201,7 @@
             this.dtgPartidas.Size = new System.Drawing.Size(830, 383);
             this.dtgPartidas.TabIndex = 3;
             this.dtgPartidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentClick);
+            this.dtgPartidas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentDoubleClick);
             this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
             // 
             // ID
@@ -421,7 +422,7 @@
             this.Controls.Add(this.dtgPartidas);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GestionPdasMatrimonio";
             this.Text = "GestionPdasMatrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

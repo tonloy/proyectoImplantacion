@@ -14,6 +14,7 @@ namespace GestionBasica.GUI.Marginadas
     {
         DataTable _Marginacion = new DataTable();
         BindingSource _GRUPOS = new BindingSource();
+        Boolean entro = false;
         public GestionPartidasNacMarginadas()
         {
             InitializeComponent();
@@ -148,6 +149,7 @@ namespace GestionBasica.GUI.Marginadas
                 _Marginacion = CacheManager1.Cache.MarginacionPartidaNac(dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString());
                 foreach (DataRow row in _Marginacion.Rows)
                 {
+                    entro = true;
                     EdicionMarginacion eM = new EdicionMarginacion();
                     eM.txtIdPartida.Text = row[0].ToString();
                     eM.txtNumPartida.Text = row[1].ToString();
@@ -164,10 +166,16 @@ namespace GestionBasica.GUI.Marginadas
                     eM.cbxJuzgados.Enabled = false;
                     eM.ShowDialog();
                 }
+                if (entro == false)
+                {
+                    MarginacionesNac from = new MarginacionesNac();
+                    from.IdPartida = dtgPartidas.CurrentRow.Cells["idPartida"].Value.ToString();
+                    from.ShowDialog();
+                }
             }
-            catch
+            catch(Exception u)
             {
-
+                MessageBox.Show(u.Message);
             }
         }
     }
