@@ -292,6 +292,7 @@ namespace GestionBasica.Divorcio
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             GUI.Matrimonio.GestionPdasMatrimonio fom = new GUI.Matrimonio.GestionPdasMatrimonio();
+            fom.Seleccionando = 0;
             fom.ShowDialog(this);
         }
 
@@ -306,7 +307,19 @@ namespace GestionBasica.Divorcio
             
         }
 
-        
+        private void txbNotario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                Notificador.SetError(txbNotario, "Solo se permiten letras");
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Notificador.Clear();
+            }
+        }
     }
     }
 
