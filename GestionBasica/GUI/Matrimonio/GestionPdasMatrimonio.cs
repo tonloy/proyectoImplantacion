@@ -140,6 +140,29 @@ namespace GestionBasica.GUI.Matrimonio
                 }
             }
         }
+
+        private void GestionPdasMatrimonio_Click(object sender, EventArgs e)
+
+        {
+           
+          
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Reportes.VisorPartidaMatrimonio frm = new Reportes.VisorPartidaMatrimonio();
+                frm.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                frm.IdPartida1 = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                frm.Show();
+            }
+            catch
+            {
+
+            }
+
+        }
     }
     
 

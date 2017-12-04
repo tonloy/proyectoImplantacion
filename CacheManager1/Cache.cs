@@ -1189,6 +1189,119 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
 
             return Datos;
         }
-      
+
+
+        public static DataTable REPORTE_PARTIDA_MATRIMONIO(Int32 idpartidaMatrimonio)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"select
+                        pmat.folio,
+                        pmat.NumPartida,
+                        pmat.Fecha_matrimonio_letra,
+                        pmat.anio_insercion_letras as 'anio_insercion',
+                        pmat.Hora_inse_entero as 'hora_insercion',
+                        pMujer.NombreCompleto as 'NombreMujer',
+                        pMujer.Edad_letras as 'Edad_letra_Mujer',
+                        pMujer.Estado_familiar as 'EstadoCivilMujer',
+                        pMujer.Estado_familiar_anterior as 'estado_fam_M_anterior',
+                        paisM.Nacionalidad as 'NacionMujer',
+                        profM.Profesion as 'ProfesionMujer',
+                        munM.Municipio as 'MunicipioMujer',
+                        pMujer.Dui_letras as 'Dui_letras_Mujer',
+                        pPadreM.NombreCompleto as 'NombrePadreMujer',
+                        pPadreM.Estado as 'Est_vida_pPadreM',
+                        profPadreM.Profesion as 'profPADREmujer',
+                        pMadreM.NombreCompleto as 'NombreMadreMujer',
+                        pMadreM.Estado as 'Est_vida_pMadreM',
+                        profMadreM.Profesion as 'profMADREmujer',
+                        pMujer.Domicilio as 'DomicilioMadreMujer',
+                        pMujer.Domicilio as 'DomicilioPadreMujer',
+                        pHombre.NombreCompleto as 'NombreHombre',
+                        pHombre.Edad_letras as 'Edad_letra_Hombre',
+                        pHombre.Estado_familiar as 'EstadoCivilHombre',
+                        pHombre.Estado_familiar_anterior as 'estado_fam_H_anterior',
+                        paisH.Nacionalidad as 'NacionHombre',
+                        profH.Profesion as 'ProfesionHombre',
+                        munH.Municipio as 'MunicipioHombre',
+                        pHombre.Dui_letras as 'Dui_letras_Hombre',
+                        pPadreH.NombreCompleto as 'NombrePadreHombre',
+                        pPadreH.Estado as 'Est_vida_pPadreH',
+                        profPadreH.Profesion as 'profPADREhombre',
+                        pMadreH.NombreCompleto as 'NombreMadreHombre',
+                        pMadreH.Estado as 'Est_vida_pMadreH',
+                        profMadreH.Profesion as 'profMADREhombre',
+                        pHombre.Domicilio as 'DomicilioMadreHombre',
+                        pHombre.Domicilio as 'DomicilioPadreHombre',
+                        pTes1.NombreCompleto as 'nomTestigo1',
+                        pTes1.Edad_letras as 'Edad_letra_Tes1',
+                        profT1.Profesion as 'profesion_Tes1',
+                        pTes1.Domicilio as 'domicilio_Tes1',
+                        pTes1.Dui_letras as 'dui_letras_tes1',
+                        pTes2.NombreCompleto as 'nomTestigo2',
+                        pTes2.Edad_letras as 'Edad_letra_Tes2',
+                        profT2.Profesion as 'profesion_Tes2',
+                        pTes2.Domicilio as 'domicilio_Tes2',
+                        pTes2.Dui_letras as 'dui_letras_tes2',
+                        pFuncionario.NombreCompleto as 'nomFuncionario',
+                        profFuncionario.Profesion as 'profFuncionario',
+                        pmat.Apellido_elegido 'apellido_casada',
+                        pmat.Regimen_patrimonial 'regimen_patrimonial',
+                        pFuncionario.Rubrica as'rubrica_funcionario',
+                        pHombre.Rubrica as'rubrica_Hombre',
+                        pMujer.Rubrica as'rubrica_Mujer',
+                        pTes1.Rubrica as'rubrica_Tes1',
+                        pTes2.Rubrica as'rubrica_Tes2'
+
+                        from
+                        partidas_matrimonio pmat,
+                        padres pPadreM, padres pMadreM, padres pPadreH, padres pMadreH,
+                         padres pMujer, padres pHombre, padres pTes1, padres pTes2, padres pFuncionario,
+                         municipios munM, municipios munH, paises paisH, paises paisM, profesiones profH,
+                         profesiones profM, profesiones profT1, profesiones profT2,
+                         profesiones profPadreH, profesiones profMadreH, profesiones profPadreM, profesiones profMadreM, profesiones profFuncionario
+
+
+                        where
+                        pmat.idEsposa = pMujer.idPadre
+                        and pmat.idMadre_esposa= pMadreM.idPadre
+                        and pmat.idPadre_esposa= pPadreM.idPadre
+                        and pmat.idEsposo = pHombre.idPadre
+                        and pmat.idPadre_esposo= pPadreH.idPadre
+                        and pmat.idMadre_esposo= pMadreH.idPadre
+                        and pmat.idEsposa = pMujer.idPadre
+                        and pmat.idTestigo = pTes1.idPadre
+                        and pmat.idTestigo2 = pTes2.idPadre
+                        and pmat.idFuncionario = pFuncionario.idPadre
+                        and munM.idMunicipio = pMujer.idMunicipio
+                        and munH.idMunicipio = pHombre.idMunicipio
+                        and pHombre.Nacionalidad = paisH.idPais
+                        and pHombre.Profesion = profH.idProfesion
+                        and pMujer.Nacionalidad = paisM.idPais
+                        and pMujer.Profesion = profM.idProfesion
+                        and pTes1.Profesion = profT1.idProfesion
+                        and pTes2.Profesion = profT2.idProfesion
+                        and pPadreH.Profesion = profPadreH.idProfesion
+                        and pMadreH.Profesion = profMadreH.idProfesion
+                        and pPadreM.Profesion = profPadreM.idProfesion
+                        and pMadreM.Profesion = profMadreM.idProfesion
+                        and pFuncionario.Profesion = profFuncionario.idProfesion
+                        and pmat.idpartida_matrimonio = "+idpartidaMatrimonio+";";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+        
+
+
     }
 }

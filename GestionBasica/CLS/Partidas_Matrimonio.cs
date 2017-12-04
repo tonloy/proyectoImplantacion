@@ -31,6 +31,7 @@ namespace GestionBasica.CLS
         private string folio_letras;
         private string anio_insercion_letras;
         private string Fecha_insercion;
+        private string Hora_inse_entero;
         private string Hora_insercion;
         private string Fecha_insercion_letra;
         private string Hora_insercion_letra;
@@ -390,13 +391,26 @@ namespace GestionBasica.CLS
             }
         }
 
+        public string Hora_inse_entero1
+        {
+            get
+            {
+                return Hora_inse_entero;
+            }
+
+            set
+            {
+                Hora_inse_entero = value;
+            }
+        }
+
         public bool Insertar(Int32 revisado)
         {
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
-
-            Sentencia.Append("INSERT INTO registro_familiar.partidas_matrimonio ( NumPartida, idEsposa, idEsposo, idPadre_esposa, idMadre_esposa, idPadre_esposo, idMadre_esposo, idFuncionario, idTestigo, Lugar_matrimonio, Fecha_matrimonio, Hora_matrimonio,  Apellido_elegido, Regimen_patrimonial, Imagen, idTipo_partida, idTestigo2, folio_letras, Hora_insercion, Hora_insercion_letra,  Fecha_matrimonio_letra, folio, detalle_hijos) VALUES ( ");
-            Sentencia.Append("'" + NumPartida1 + "', '" + IdEsposa + "', '" + IdEsposo + "','" + IdPadre_esposa + "','" + IdMadre_esposa + "','" + IdPadre_esposo + "','" + IdMadre_esposo + "', '" + IdFuncionario + "'," + IdTestigo + ",'" + Lugar_matrimonio1 + "','" + Fecha_matrimonio1 + "','" + Hora_matrimonio1 + "','" + Apellido_elegido1 + "','" + Regimen_patrimonial1 + "','" + Imagen1 + "','2','" + IdTestigo2 + "', '" + Folio_letras + "', '" + Hora_insercion1 + "','" + Hora_insercion_letra1 + "','" + Fecha_matrimonio_letra1 + "','" + Folio + "','" + Detalle_hijos + "' );  ");
+            
+            Sentencia.Append("INSERT INTO registro_familiar.partidas_matrimonio ( NumPartida, idEsposa, idEsposo, idPadre_esposa, idMadre_esposa, idPadre_esposo, idMadre_esposo, idFuncionario, idTestigo, Lugar_matrimonio, Fecha_matrimonio, Hora_matrimonio,  Apellido_elegido, Regimen_patrimonial, Imagen, idTipo_partida, idTestigo2, folio_letras, Hora_insercion, Hora_insercion_letra,  Fecha_matrimonio_letra, folio, detalle_hijos, Hora_inse_entero , anio_insercion_letras ) VALUES ( ");
+            Sentencia.Append("'" + NumPartida1 + "', '" + IdEsposa + "', '" + IdEsposo + "','" + IdPadre_esposa + "','" + IdMadre_esposa + "','" + IdPadre_esposo + "','" + IdMadre_esposo + "', '" + IdFuncionario + "'," + IdTestigo + ",'" + Lugar_matrimonio1 + "','" + Fecha_matrimonio1 + "','" + Hora_matrimonio1 + "','" + Apellido_elegido1 + "','" + Regimen_patrimonial1 + "','" + Imagen1 + "','2','" + IdTestigo2 + "', '" + Folio_letras + "', '" + Hora_insercion1 + "','" + Hora_insercion_letra1 + "','" + Fecha_matrimonio_letra1 + "','" + Folio + "','" + Detalle_hijos + "','" + Hora_inse_entero1 + "','" + Anio_insercion_letras + "' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {

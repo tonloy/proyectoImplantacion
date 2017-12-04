@@ -40,8 +40,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +64,8 @@
             this.Testigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegimenPatrimonial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -160,6 +160,7 @@
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(162, 29);
             this.btnGenerar.Text = "Generar partida";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // dtgPartidas
             // 
@@ -204,24 +205,6 @@
             this.dtgPartidas.TabIndex = 3;
             this.dtgPartidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentClick);
             this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 362);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1245, 30);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblNumeroFilas
-            // 
-            this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
-            this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // ID
             // 
@@ -415,6 +398,24 @@
             this.RegimenPatrimonial.ReadOnly = true;
             this.RegimenPatrimonial.Width = 140;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNumeroFilas});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 362);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1245, 30);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblNumeroFilas
+            // 
+            this.lblNumeroFilas.Name = "lblNumeroFilas";
+            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
+            this.lblNumeroFilas.Text = "0 registros encontrados";
+            // 
             // GestionPdasMatrimonio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -427,6 +428,7 @@
             this.Text = "GestionPdasMatrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GestionPdasMatrimonio_Load);
+            this.Click += new System.EventHandler(this.GestionPdasMatrimonio_Click);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).EndInit();
