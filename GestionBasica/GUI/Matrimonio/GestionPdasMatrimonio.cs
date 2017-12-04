@@ -17,6 +17,20 @@ namespace GestionBasica.GUI.Matrimonio
         BindingSource _GRUPOS = new BindingSource();
         BindingSource _Hijos = new BindingSource();
         public static int idPdaMatrimonio = 0;
+        int seleccionando=1;
+
+        public int Seleccionando
+        {
+            get
+            {
+                return seleccionando;
+            }
+
+            set
+            {
+                seleccionando = value;
+            }
+        }
 
         public GestionPdasMatrimonio()
         {
@@ -143,20 +157,23 @@ namespace GestionBasica.GUI.Matrimonio
 
         private void dtgPartidas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            GestionBasica.Divorcio.EdicionDivorcio.idEsposa = dtgPartidas.CurrentRow.Cells["idEsposa"].Value.ToString();
-            GestionBasica.Divorcio.EdicionDivorcio.idEsposo = dtgPartidas.CurrentRow.Cells["idEsposo"].Value.ToString();
-            GestionBasica.Divorcio.IDivorcio miInterfaz = this.Owner as GestionBasica.Divorcio.IDivorcio;
-            if (miInterfaz != null)
+            if (seleccionando == 0)
             {
-                miInterfaz.cambiarIdMatrimonio(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
-                miInterfaz.cambiarFolio(dtgPartidas.CurrentRow.Cells["folio"].Value.ToString());
-                miInterfaz.cambiarNumPartida(dtgPartidas.CurrentRow.Cells["NumPda"].Value.ToString());
-                miInterfaz.cambiarEsposa(dtgPartidas.CurrentRow.Cells["NombreEsposa"].Value.ToString());
-                miInterfaz.cambiarEsposo(dtgPartidas.CurrentRow.Cells["NombreEsposo"].Value.ToString());
-                miInterfaz.cambiarFechaMat(dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString());
-                miInterfaz.cambiarRegimen(dtgPartidas.CurrentRow.Cells["RegimenPatrimonial"].Value.ToString());
+                GestionBasica.Divorcio.EdicionDivorcio.idEsposa = dtgPartidas.CurrentRow.Cells["idEsposa"].Value.ToString();
+                GestionBasica.Divorcio.EdicionDivorcio.idEsposo = dtgPartidas.CurrentRow.Cells["idEsposo"].Value.ToString();
+                GestionBasica.Divorcio.IDivorcio miInterfaz = this.Owner as GestionBasica.Divorcio.IDivorcio;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdMatrimonio(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                    miInterfaz.cambiarFolio(dtgPartidas.CurrentRow.Cells["folio"].Value.ToString());
+                    miInterfaz.cambiarNumPartida(dtgPartidas.CurrentRow.Cells["NumPda"].Value.ToString());
+                    miInterfaz.cambiarEsposa(dtgPartidas.CurrentRow.Cells["NombreEsposa"].Value.ToString());
+                    miInterfaz.cambiarEsposo(dtgPartidas.CurrentRow.Cells["NombreEsposo"].Value.ToString());
+                    miInterfaz.cambiarFechaMat(dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString());
+                    miInterfaz.cambiarRegimen(dtgPartidas.CurrentRow.Cells["RegimenPatrimonial"].Value.ToString());
+                }
+                this.Dispose();
             }
-            this.Dispose();
         }
     }
     

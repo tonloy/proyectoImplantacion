@@ -344,6 +344,7 @@
             this.txbNotario.Name = "txbNotario";
             this.txbNotario.Size = new System.Drawing.Size(276, 20);
             this.txbNotario.TabIndex = 58;
+            this.txbNotario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNotario_KeyPress);
             // 
             // label15
             // 
