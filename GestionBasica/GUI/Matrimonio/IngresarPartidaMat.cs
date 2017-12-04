@@ -16,7 +16,7 @@ namespace GestionBasica.GUI.Matrimonio
         public static Boolean marginando = false;
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         Int32 _revisado = 0;
-
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         String ruta_imagen;
         public static string idpapaA= "";
         public static string idmapaA = "";
@@ -166,10 +166,10 @@ namespace GestionBasica.GUI.Matrimonio
             oPdaMatrimonio.Hora_insercion1 = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
             
             */
-
-
             CLS.Movimiento movi = new CLS.Movimiento();
             movi.IdUsuario = _SESION.IdUsuario;
+
+
             if (ValidarDatos())
                     {
                         if (chbxRevisado.Checked)
@@ -184,10 +184,7 @@ namespace GestionBasica.GUI.Matrimonio
                                 if (oPdaMatrimonio.Actualizar(_revisado))
                         
                                 {
-                            movi.Accion = "El usuario " + _SESION.Usuario + " modificó la partida de matrimonio número " + oPdaMatrimonio.NumPartida1;
-                            movi.Guardar();
-
-                            MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
                                 else
@@ -207,9 +204,7 @@ namespace GestionBasica.GUI.Matrimonio
                             {
                                 if (oPdaMatrimonio.Insertar(_revisado))
                                 {
-                            movi.Accion = "El usuario " + _SESION.Usuario + " insertó la partida de matrimonio número " + oPdaMatrimonio.NumPartida1;
-                            movi.Guardar();
-                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
                                 else

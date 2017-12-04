@@ -124,7 +124,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPartida,
+            Consulta = @"SELECT distinct p.idPartida,
              p.Ruta,
              p.idMadre,
              (select NombreCompleto from padres where idPadre=p.idMadre) as madre,
@@ -148,8 +148,9 @@ namespace CacheManager1
              padres inf,
              padres i,
              empleados e,
-             tipo_partidas t where p.idInfante=i.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
-             and p.idInformante=inf.idPadre and Modificada=1;";
+             tipo_partidas t,
+             marginaciones ma where p.idInfante=i.idPadre and p.idJefeRegistro=e.idEmpleado and p.idTipo_partida=t.idTipo_partida
+             and p.idInformante=inf.idPadre and ma.idPartida=p.idPartida;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -891,6 +892,24 @@ namespace CacheManager1
             return Datos;
         }
 
+        public static DataTable MarginacionesNac(String pIdPartida)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = "select m.Explicacion,Fecha from marginaciones m where m.idPartida="+pIdPartida+";";
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable MarginacionPartidaDef(String pIdPartida)
         {
             DataTable Datos = new DataTable();
@@ -1085,6 +1104,37 @@ namespace CacheManager1
                             where pda.idEsposa = p.idPadre and pda.idEsposo = pa.idPadre
                             and pda.idTestigo = pad.idPadre and pda.idTestigo2 = padr.idPadre
                             and pda.idFuncionario = pfun.idPadre and (select idDepartamento from municipios where Municipio=pda.Lugar_matrimonio) = d.idDepartamento;";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable TODAS_PARTIDAS_DIVORCIO()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT idDivorcio, 
+                        d.NumPartida, idMatrimonio, idJuzgado, Fecha_sentencia,
+                        (select idEsposo from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio) as idEsposo,
+                        (select idEsposa from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio) as idEsposa, 
+                        (select NombreCompleto from padres where idPadre=(select idEsposo from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio)) as Hombre,
+                        (select NombreCompleto from padres where idPadre=(select idEsposa from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio)) as Mujer,
+                        (select Fecha_matrimonio from partidas_matrimonio where idpartida_matrimonio=d.idDivorcio)as Fecha_matrimonio,
+                        d.Fecha_sentencia,
+                        Fecha_ejecutoriada, d.idTipo_partida, d.Imagen, d.Libro, d.Folio, 
+                        Tutela, (select Regimen_patrimonial from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio)as Regimen_patrimonial,
+                        (select Nombre from juzgados where idJuzgados=d.idJuzgado)as Juzgado,
+                        NombreNotario, Revisado FROM registro_familiar.divorcios d, partidas_matrimonio m
+                         where d.idMatrimonio=m.idpartida_matrimonio;";
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

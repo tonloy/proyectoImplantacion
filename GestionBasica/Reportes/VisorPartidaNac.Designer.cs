@@ -83,7 +83,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VisorPartidaNac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vista previa de partida de nacimiento";
+            this.Text = "Vista previa de partida";
             this.Load += new System.EventHandler(this.VisorPartidaNac_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

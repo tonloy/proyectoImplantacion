@@ -53,6 +53,8 @@
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.respaldarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verAccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -65,8 +67,6 @@
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.auditoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verAccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -195,7 +195,8 @@
             // 
             this.partidasDeDivorcioToolStripMenuItem.Name = "partidasDeDivorcioToolStripMenuItem";
             this.partidasDeDivorcioToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
-            this.partidasDeDivorcioToolStripMenuItem.Text = "Actas de divorcio";
+            this.partidasDeDivorcioToolStripMenuItem.Text = "Partidas de divorcio";
+            this.partidasDeDivorcioToolStripMenuItem.Click += new System.EventHandler(this.partidasDeDivorcioToolStripMenuItem_Click);
             // 
             // marginacionesToolStripMenuItem
             // 
@@ -269,6 +270,23 @@
             this.respaldarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.respaldarBaseDeDatosToolStripMenuItem.Text = "Respaldar base de datos";
             this.respaldarBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldarBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // auditoríaToolStripMenuItem
+            // 
+            this.auditoríaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verAccionesToolStripMenuItem});
+            this.auditoríaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.auditoríaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.auditoríaToolStripMenuItem.Name = "auditoríaToolStripMenuItem";
+            this.auditoríaToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.auditoríaToolStripMenuItem.Text = "Auditoría";
+            // 
+            // verAccionesToolStripMenuItem
+            // 
+            this.verAccionesToolStripMenuItem.Name = "verAccionesToolStripMenuItem";
+            this.verAccionesToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.verAccionesToolStripMenuItem.Text = "Ver acciones";
+            this.verAccionesToolStripMenuItem.Click += new System.EventHandler(this.verAccionesToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -366,23 +384,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(817, 445);
             this.panel1.TabIndex = 4;
-            // 
-            // auditoríaToolStripMenuItem
-            // 
-            this.auditoríaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verAccionesToolStripMenuItem});
-            this.auditoríaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.auditoríaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.auditoríaToolStripMenuItem.Name = "auditoríaToolStripMenuItem";
-            this.auditoríaToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.auditoríaToolStripMenuItem.Text = "Auditoría";
-            // 
-            // verAccionesToolStripMenuItem
-            // 
-            this.verAccionesToolStripMenuItem.Name = "verAccionesToolStripMenuItem";
-            this.verAccionesToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.verAccionesToolStripMenuItem.Text = "Ver acciones";
-            this.verAccionesToolStripMenuItem.Click += new System.EventHandler(this.verAccionesToolStripMenuItem_Click);
             // 
             // Principal
             // 

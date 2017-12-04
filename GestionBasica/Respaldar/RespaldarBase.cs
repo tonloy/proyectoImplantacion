@@ -13,6 +13,7 @@ namespace GestionBasica.Respaldar
 {
     public partial class RespaldarBase : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         String fecha = DateTime.Now.ToString("yyyy-MM-dd");
         public RespaldarBase()
         {
@@ -55,6 +56,11 @@ namespace GestionBasica.Respaldar
                     cmd.WaitForExit();
 
                     MessageBox.Show("Respaldo realizado correctamente", "Respaldo correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    CLS.Movimiento accion = new CLS.Movimiento();
+                    accion.IdUsuario = _SESION.IdUsuario;
+                    accion.Accion = "El usuario " + _SESION.Usuario + " realizó un respaldo de la base de datos en la ruta " + txtRuta.Text;
+                    accion.Guardar();
                     txtRuta.Clear();
                 }
                 catch

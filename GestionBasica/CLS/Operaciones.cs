@@ -96,8 +96,12 @@ namespace GestionBasica.CLS
                     Sentencia.Append("'Impresión de partida de Matrimonio'," + _idPartida + ",(SELECT Monto FROM registro_familiar.costos where idTipo_partida=2));");
                     break;
                 case 5:
+                    Sentencia.Append("INSERT INTO operaciones(Tipo, idDivorcio, Costo) VALUES(");
+                    Sentencia.Append("'Nueva partida de divorcio',(SELECT idDivorcio FROM registro_familiar.divorcios order by idDivorcio desc limit 1),0);");
                     break;
                 case 6:
+                    Sentencia.Append("INSERT INTO operaciones(Tipo, idDivorcio, Costo) VALUES(");
+                    Sentencia.Append("'Impresión de partida de divorcio'," + _idPartida + ",(SELECT Monto FROM registro_familiar.costos where idTipo_partida=4));");
                     break;
                 case 7:
                     Sentencia.Append("INSERT INTO operaciones(Tipo, idPartida_defuncion, Costo) VALUES(");
