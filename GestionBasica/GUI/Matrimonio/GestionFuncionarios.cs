@@ -65,5 +65,51 @@ namespace GestionBasica.GUI.Matrimonio
             }
             this.Dispose();
         }
+
+        private void txbNueva_Click(object sender, EventArgs e)
+        {
+            PadreEdicion frm = new PadreEdicion();
+            frm.Show();
+        }
+
+        private void txbModificar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea EDITAR el Funcionario seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    PadreEdicion frm = new PadreEdicion();
+                    frm.txtID.Text = dtgFuncionarios.CurrentRow.Cells["idPadre"].Value.ToString();
+                    frm.txbNombreCompleto.Text = dtgFuncionarios.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                    frm.txtConocidapor.Text = dtgFuncionarios.CurrentRow.Cells["ConocidoPor"].Value.ToString();
+                    frm.mskTEdad.Text = dtgFuncionarios.CurrentRow.Cells["Edad"].Value.ToString();
+                    frm.cbxDepartamentos.SelectedIndex = frm.cbxDepartamentos.FindStringExact(dtgFuncionarios.CurrentRow.Cells["Departamento"].Value.ToString());
+                    frm.cbxMunicipio.SelectedIndex = frm.cbxMunicipio.FindStringExact(dtgFuncionarios.CurrentRow.Cells["Municipio"].Value.ToString());
+                    frm.txtDomicilio.Text = dtgFuncionarios.CurrentRow.Cells["Domicilio"].Value.ToString();
+                    frm.cbxProfesiones.SelectedIndex = frm.cbxProfesiones.FindStringExact(dtgFuncionarios.CurrentRow.Cells["Profesion"].Value.ToString());
+                    frm.cbxPaises.SelectedIndex = frm.cbxPaises.FindStringExact(dtgFuncionarios.CurrentRow.Cells["Nacionalidad"].Value.ToString());
+                    frm.mtxtDUI.Text = dtgFuncionarios.CurrentRow.Cells["DUI"].Value.ToString();
+                    frm.cbxParentesco.SelectedIndex = frm.cbxParentesco.FindStringExact(dtgFuncionarios.CurrentRow.Cells["Parentesco"].Value.ToString());
+                    frm.txtObservaciones.Text = dtgFuncionarios.CurrentRow.Cells["Observaciones"].Value.ToString();
+                    frm.txtNumPartida.Text = dtgFuncionarios.CurrentRow.Cells["Nit"].Value.ToString();
+
+                    if (dtgFuncionarios.CurrentRow.Cells["Nit"].Value.ToString() == "    -      -   -")
+                    {
+                        frm.chbxMenor.Checked = false;
+                    }
+                    else
+                    {
+                        frm.chbxMenor.Checked = true;
+                    }
+
+                    frm.ShowDialog();
+                    CargarPadres();
+                }
+                catch
+                {
+                    MessageBox.Show("Por favor seleccione un Funcionario");
+                }
+            }
+        }
     }
 }

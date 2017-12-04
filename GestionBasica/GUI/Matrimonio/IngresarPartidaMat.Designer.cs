@@ -179,12 +179,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 298);
+            this.label6.Location = new System.Drawing.Point(66, 296);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 20);
+            this.label6.Size = new System.Drawing.Size(130, 20);
             this.label6.TabIndex = 43;
-            this.label6.Text = "Segundo Informante";
+            this.label6.Text = "Segundo Testigo";
             // 
             // button3
             // 
@@ -218,12 +218,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 259);
+            this.label5.Location = new System.Drawing.Point(86, 258);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.Size = new System.Drawing.Size(110, 20);
             this.label5.TabIndex = 40;
-            this.label5.Text = "Primer Informante";
+            this.label5.Text = "Primer Testigo";
             // 
             // button2
             // 

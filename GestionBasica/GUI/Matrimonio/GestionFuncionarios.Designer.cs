@@ -37,8 +37,6 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dtgFuncionarios = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.IdPadre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +52,8 @@
             this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProfesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -85,6 +85,7 @@
             this.txbModificar.Name = "txbModificar";
             this.txbModificar.Size = new System.Drawing.Size(115, 29);
             this.txbModificar.Text = "Modificar";
+            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -97,8 +98,9 @@
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(153, 29);
-            this.txbNueva.Text = "Agregar Padre";
+            this.txbNueva.Size = new System.Drawing.Size(104, 29);
+            this.txbNueva.Text = "Agregar";
+            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
             // 
@@ -153,24 +155,6 @@
             this.dtgFuncionarios.Size = new System.Drawing.Size(1159, 413);
             this.dtgFuncionarios.TabIndex = 6;
             this.dtgFuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgFuncionarios_CellDoubleClick);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 415);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1159, 30);
-            this.statusStrip1.TabIndex = 7;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblNumeroFilas
-            // 
-            this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
-            this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // IdPadre
             // 
@@ -297,6 +281,24 @@
             this.Profesion.ReadOnly = true;
             this.Profesion.Width = 300;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNumeroFilas});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 415);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1159, 30);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblNumeroFilas
+            // 
+            this.lblNumeroFilas.Name = "lblNumeroFilas";
+            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
+            this.lblNumeroFilas.Text = "0 registros encontrados";
+            // 
             // GestionFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -305,8 +307,10 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dtgFuncionarios);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GestionFuncionarios";
-            this.Text = "GestionFuncionarios";
+            this.Text = "Gestion Funcionarios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).EndInit();
