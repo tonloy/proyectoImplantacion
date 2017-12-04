@@ -94,7 +94,7 @@ namespace GestionBasica.GUI
 
         private void txbModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea EDITAR el Padre seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea EDITAR la madre seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -112,7 +112,11 @@ namespace GestionBasica.GUI
                     frm.cbxParentesco.SelectedIndex = frm.cbxParentesco.FindStringExact(dataGridView1.CurrentRow.Cells["Parentesco"].Value.ToString());
                     frm.txtObservaciones.Text = dataGridView1.CurrentRow.Cells["Observaciones"].Value.ToString();
                     frm.txtNumPartida.Text= dataGridView1.CurrentRow.Cells["Nit"].Value.ToString();
-
+                    frm.txtRubrica.Text= dataGridView1.CurrentRow.Cells["Rubrica"].Value.ToString();
+                    if (dataGridView1.CurrentRow.Cells["FechaNac"].Value.ToString() != "")
+                    {
+                        frm.dtpFecha.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["FechaNac"].Value.ToString());
+                    }
                     if (dataGridView1.CurrentRow.Cells["Nit"].Value.ToString() == "    -      -   -")
                     {
                         frm.chbxMenor.Checked = false;
@@ -126,7 +130,7 @@ namespace GestionBasica.GUI
                 }
                 catch
                 {
-                    MessageBox.Show("Por favor seleccione un Padre");
+                    MessageBox.Show("Por favor seleccione una madre");
                 }
             }
         }

@@ -54,6 +54,9 @@
             this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProfesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rubrica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -71,9 +74,8 @@
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1159, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(773, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -83,13 +85,14 @@
             this.txbModificar.Image = ((System.Drawing.Image)(resources.GetObject("txbModificar.Image")));
             this.txbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbModificar.Name = "txbModificar";
-            this.txbModificar.Size = new System.Drawing.Size(115, 29);
+            this.txbModificar.Size = new System.Drawing.Size(86, 28);
             this.txbModificar.Text = "Modificar";
+            this.txbModificar.Click += new System.EventHandler(this.txbModificar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // txbNueva
             // 
@@ -97,28 +100,29 @@
             this.txbNueva.Image = ((System.Drawing.Image)(resources.GetObject("txbNueva.Image")));
             this.txbNueva.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.txbNueva.Name = "txbNueva";
-            this.txbNueva.Size = new System.Drawing.Size(153, 29);
+            this.txbNueva.Size = new System.Drawing.Size(110, 28);
             this.txbNueva.Text = "Agregar Padre";
+            this.txbNueva.Click += new System.EventHandler(this.txbNueva_Click);
             // 
             // txbFiltrar
             // 
             this.txbFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltrar.Name = "txbFiltrar";
-            this.txbFiltrar.Size = new System.Drawing.Size(299, 32);
+            this.txbFiltrar.Size = new System.Drawing.Size(200, 31);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(63, 29);
+            this.toolStripLabel1.Size = new System.Drawing.Size(42, 28);
             this.toolStripLabel1.Text = "Buscar";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // dtgFuncionarios
             // 
@@ -141,35 +145,37 @@
             this.idMunicipio,
             this.Municipio,
             this.IdProfesion,
-            this.Profesion});
+            this.Profesion,
+            this.FechaNac,
+            this.Rubrica,
+            this.Nit});
             this.dtgFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgFuncionarios.Location = new System.Drawing.Point(0, 32);
-            this.dtgFuncionarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtgFuncionarios.Location = new System.Drawing.Point(0, 31);
             this.dtgFuncionarios.MultiSelect = false;
             this.dtgFuncionarios.Name = "dtgFuncionarios";
             this.dtgFuncionarios.ReadOnly = true;
             this.dtgFuncionarios.RowHeadersVisible = false;
             this.dtgFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgFuncionarios.Size = new System.Drawing.Size(1159, 413);
+            this.dtgFuncionarios.Size = new System.Drawing.Size(773, 413);
             this.dtgFuncionarios.TabIndex = 6;
             this.dtgFuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgFuncionarios_CellDoubleClick);
+            this.dtgFuncionarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgFuncionarios_CellFormatting);
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 415);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 422);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1159, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(773, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblNumeroFilas
             // 
             this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(200, 25);
+            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
             this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // IdPadre
@@ -297,16 +303,44 @@
             this.Profesion.ReadOnly = true;
             this.Profesion.Width = 300;
             // 
+            // FechaNac
+            // 
+            this.FechaNac.DataPropertyName = "FechaNac";
+            this.FechaNac.HeaderText = "FechaNac";
+            this.FechaNac.Name = "FechaNac";
+            this.FechaNac.ReadOnly = true;
+            this.FechaNac.Visible = false;
+            // 
+            // Rubrica
+            // 
+            this.Rubrica.DataPropertyName = "Rubrica";
+            this.Rubrica.HeaderText = "Rubrica";
+            this.Rubrica.Name = "Rubrica";
+            this.Rubrica.ReadOnly = true;
+            this.Rubrica.Visible = false;
+            // 
+            // Nit
+            // 
+            this.Nit.DataPropertyName = "Nit";
+            this.Nit.HeaderText = "Nit";
+            this.Nit.Name = "Nit";
+            this.Nit.ReadOnly = true;
+            this.Nit.Visible = false;
+            // 
             // GestionFuncionarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 445);
+            this.ClientSize = new System.Drawing.Size(773, 444);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dtgFuncionarios);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GestionFuncionarios";
-            this.Text = "GestionFuncionarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestión de Funcionarios";
+            this.Load += new System.EventHandler(this.GestionFuncionarios_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).EndInit();
@@ -344,5 +378,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProfesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rubrica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nit;
     }
 }

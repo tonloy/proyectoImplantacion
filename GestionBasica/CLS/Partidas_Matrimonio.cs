@@ -445,7 +445,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(Hora_insercion1 + "',Apellido_elegido='");
             Sentencia.Append(Apellido_elegido1 + "',Regimen_patrimonial='");
             Sentencia.Append(Regimen_patrimonial1 + "', Hora_insercion_letra='");
-            Sentencia.Append(Hora_insercion_letra1 + "', Fecha_insercion_letra='" + Fecha_insercion_letra1 + "', detalle_hijos ='" + Detalle_hijos  + "' WHERE idpartida_matrimonio=" + idpartida_matrimonio + ";");
+            Sentencia.Append(Hora_insercion_letra1 + "', Fecha_insercion_letra='" + Fecha_insercion_letra1 + "', detalle_hijos ='" + Detalle_hijos  + "',Imagen='"+Imagen+"' WHERE idpartida_matrimonio=" + idpartida_matrimonio + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

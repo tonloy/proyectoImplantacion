@@ -16,7 +16,7 @@ namespace GestionBasica.GUI.Matrimonio
         public static Boolean marginando = false;
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         Int32 _revisado = 0;
-        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+        
         String ruta_imagen;
         public static string idpapaA= "";
         public static string idmapaA = "";
@@ -252,21 +252,13 @@ namespace GestionBasica.GUI.Matrimonio
         {
             DataTable _Datos = new DataTable();
             _Datos = CacheManager1.Cache.ID_Papas_Conyuges(txtID_Esposo.Text);
-
+            idmapaA = "23";
+            idpapaA = "23";
             foreach (DataRow row in _Datos.Rows)
             {
                
                 idmapaA = row[1].ToString();
                 idpapaA = row[0].ToString();
-
-                if (idmapaA == null) {
-                    idmapaA = "";
-                }
-
-                if (idpapaA == null)
-                {
-                    idpapaA = "";
-                }
 
             }
 
@@ -276,22 +268,12 @@ namespace GestionBasica.GUI.Matrimonio
         {
             DataTable _Datos = new DataTable();
             _Datos = CacheManager1.Cache.ID_Papas_Conyuges(txtIdEsposa.Text);
-
+            idmapaB = "23";
+            idpapaB = "23";
             foreach (DataRow row in _Datos.Rows)
             {
                 idmapaB = row[1].ToString();
                 idpapaB = row[0].ToString();
-            }
-
-
-            if (idmapaB == null)
-            {
-                idmapaB = " ";
-            }
-
-            if (idpapaB == null)
-            {
-                idpapaB = " ";
             }
 
         }

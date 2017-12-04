@@ -40,6 +40,8 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.dtgPartidas = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,8 +66,7 @@
             this.Testigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegimenPatrimonial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblNumeroFilas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -145,6 +146,7 @@
             this.txbImprimir.Name = "txbImprimir";
             this.txbImprimir.Size = new System.Drawing.Size(108, 28);
             this.txbImprimir.Text = "Vista respaldo";
+            this.txbImprimir.Click += new System.EventHandler(this.txbImprimir_Click);
             // 
             // toolStripSeparator3
             // 
@@ -191,7 +193,8 @@
             this.Testigo1,
             this.Testigo2,
             this.FechaMat,
-            this.RegimenPatrimonial});
+            this.RegimenPatrimonial,
+            this.Ruta});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 31);
             this.dtgPartidas.MultiSelect = false;
@@ -204,6 +207,23 @@
             this.dtgPartidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentClick);
             this.dtgPartidas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartidas_CellContentDoubleClick);
             this.dtgPartidas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgPartidas_CellFormatting);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNumeroFilas});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 392);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(830, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblNumeroFilas
+            // 
+            this.lblNumeroFilas.Name = "lblNumeroFilas";
+            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
+            this.lblNumeroFilas.Text = "0 registros encontrados";
             // 
             // ID
             // 
@@ -397,6 +417,14 @@
             this.RegimenPatrimonial.ReadOnly = true;
             this.RegimenPatrimonial.Width = 140;
             // 
+            // Ruta
+            // 
+            this.Ruta.DataPropertyName = "Imagen";
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.Name = "Ruta";
+            this.Ruta.ReadOnly = true;
+            this.Ruta.Visible = false;
+            // 
             // GestionPdasMatrimonio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,10 +436,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GestionPdasMatrimonio";
-            this.Text = "GestionPdasMatrimonio";
+            this.Text = "Gestión de Partidas de Matrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GestionPdasMatrimonio_Load);
-            this.Click += new System.EventHandler(this.GestionPdasMatrimonio_Click);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).EndInit();
@@ -461,5 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Testigo2;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaMat;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegimenPatrimonial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
     }
 }

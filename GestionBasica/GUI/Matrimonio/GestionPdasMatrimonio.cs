@@ -131,8 +131,15 @@ namespace GestionBasica.GUI.Matrimonio
                     frm.txtHora.Text = dtgPartidas.CurrentRow.Cells["Hora_insercion"].Value.ToString();
                     frm.dtpFecha.Text = dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString();
                     frm.txtApellidoCasada.Text = dtgPartidas.CurrentRow.Cells["ApellidoCasada"].Value.ToString();
-                                        
+                    frm.pictureBox1.ImageLocation= dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+
                     Detalle_Hijos.detalle_hijosfrm = dtgPartidas.CurrentRow.Cells["hijos"].Value.ToString();
+
+                    if (dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString() != "")
+                    {
+                        frm.pictureBox1.Visible = true;
+                        frm.cbxRespaldoPda.Checked = true;
+                    }
 
                     ///////////
                     frm.txbFolio.ReadOnly = true;
@@ -157,20 +164,57 @@ namespace GestionBasica.GUI.Matrimonio
 
         private void dtgPartidas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            GestionBasica.Divorcio.EdicionDivorcio.idEsposa = dtgPartidas.CurrentRow.Cells["idEsposa"].Value.ToString();
-            GestionBasica.Divorcio.EdicionDivorcio.idEsposo = dtgPartidas.CurrentRow.Cells["idEsposo"].Value.ToString();
-            GestionBasica.Divorcio.IDivorcio miInterfaz = this.Owner as GestionBasica.Divorcio.IDivorcio;
-            if (miInterfaz != null)
+            if (seleccionando == 0)
             {
-                miInterfaz.cambiarIdMatrimonio(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
-                miInterfaz.cambiarFolio(dtgPartidas.CurrentRow.Cells["folio"].Value.ToString());
-                miInterfaz.cambiarNumPartida(dtgPartidas.CurrentRow.Cells["NumPda"].Value.ToString());
-                miInterfaz.cambiarEsposa(dtgPartidas.CurrentRow.Cells["NombreEsposa"].Value.ToString());
-                miInterfaz.cambiarEsposo(dtgPartidas.CurrentRow.Cells["NombreEsposo"].Value.ToString());
-                miInterfaz.cambiarFechaMat(dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString());
-                miInterfaz.cambiarRegimen(dtgPartidas.CurrentRow.Cells["RegimenPatrimonial"].Value.ToString());
+                GestionBasica.Divorcio.EdicionDivorcio.idEsposa = dtgPartidas.CurrentRow.Cells["idEsposa"].Value.ToString();
+                GestionBasica.Divorcio.EdicionDivorcio.idEsposo = dtgPartidas.CurrentRow.Cells["idEsposo"].Value.ToString();
+                GestionBasica.Divorcio.IDivorcio miInterfaz = this.Owner as GestionBasica.Divorcio.IDivorcio;
+                if (miInterfaz != null)
+                {
+                    miInterfaz.cambiarIdMatrimonio(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                    miInterfaz.cambiarFolio(dtgPartidas.CurrentRow.Cells["folio"].Value.ToString());
+                    miInterfaz.cambiarNumPartida(dtgPartidas.CurrentRow.Cells["NumPda"].Value.ToString());
+                    miInterfaz.cambiarEsposa(dtgPartidas.CurrentRow.Cells["NombreEsposa"].Value.ToString());
+                    miInterfaz.cambiarEsposo(dtgPartidas.CurrentRow.Cells["NombreEsposo"].Value.ToString());
+                    miInterfaz.cambiarFechaMat(dtgPartidas.CurrentRow.Cells["FechaMat"].Value.ToString());
+                    miInterfaz.cambiarRegimen(dtgPartidas.CurrentRow.Cells["RegimenPatrimonial"].Value.ToString());
+                }
+                this.Dispose();
             }
-            this.Dispose();
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CLS.Movimiento mov = new CLS.Movimiento();
+                mov.IdUsuario = _SESION.IdUsuario;
+                mov.Accion = "El usuario " + _SESION.Usuario + " generó la partida de matrimonio con ID " + dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                mov.Guardar();
+                Reportes.VisorPartidaMatrimonio fl = new Reportes.VisorPartidaMatrimonio();
+                fl.IdPartida = Convert.ToInt32(dtgPartidas.CurrentRow.Cells["ID"].Value.ToString());
+                fl.IdPartida1 = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                fl.ShowDialog();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void txbImprimir_Click(object sender, EventArgs e)
+        {
+            if (dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString() == "")
+            {
+                MessageBox.Show("No hay respaldo para esta partida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Reportes.VisorPartidaNac frm = new Reportes.VisorPartidaNac();
+                frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Ruta"].Value.ToString();
+                frm.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+                frm.ShowDialog();
+            }
         }
     }
     

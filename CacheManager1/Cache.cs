@@ -658,7 +658,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, pa.Nacionalidad, DUI,p.NumPartida as Nit, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion,ps.Parentesco,p.Observaciones, p.NumPartida 
+            Consulta = @"SELECT idPadre, NombreCompleto, ConocidoPor, Edad, Domicilio, pa.Nacionalidad, DUI,p.NumPartida as Nit, dep.Departamento, p.idMunicipio,m.Municipio, pr.Profesion,ps.Parentesco,p.Observaciones, p.NumPartida,p.FechaNac,p.Rubrica  
                         FROM registro_familiar.padres p, municipios m, departamentos dep, profesiones pr, paises pa,parentescos ps 
                         where p.idMunicipio = m.idMunicipio and dep.idDepartamento=m.idDepartamento and p.Nacionalidad=pa.idPais and pr.idProfesion=p.Profesion and ps.idParentesco=p.idParentesco; ";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
@@ -1040,7 +1040,7 @@ namespace CacheManager1
         {
             DataTable Datos = new DataTable();
             String Consulta;
-            Consulta = "SELECT * FROM registro_familiar.profesiones;";
+            Consulta = "SELECT * FROM registro_familiar.profesiones order by Profesion asc;";
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -1091,6 +1091,7 @@ namespace CacheManager1
                             pda.idFuncionario as 'idfun',
                             pfun.NombreCompleto as 'nfuncionario',
                             pda.Hora_insercion,
+                            pda.Imagen,
                             d.Departamento as 'depto',
                             pda.Lugar_matrimonio as 'Municipio', 
                             pda.idPadre_esposo as 'PH',
@@ -1284,12 +1285,12 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
                         pHombre.Domicilio as 'DomicilioMadreHombre',
                         pHombre.Domicilio as 'DomicilioPadreHombre',
                         pTes1.NombreCompleto as 'nomTestigo1',
-                        pTes1.Edad_letras as 'Edad_letra_Tes1',
+                        pTes1.Edad_letras_actual as 'Edad_letra_Tes1',
                         profT1.Profesion as 'profesion_Tes1',
                         pTes1.Domicilio as 'domicilio_Tes1',
                         pTes1.Dui_letras as 'dui_letras_tes1',
                         pTes2.NombreCompleto as 'nomTestigo2',
-                        pTes2.Edad_letras as 'Edad_letra_Tes2',
+                        pTes2.Edad_letras_actual as 'Edad_letra_Tes2',
                         profT2.Profesion as 'profesion_Tes2',
                         pTes2.Domicilio as 'domicilio_Tes2',
                         pTes2.Dui_letras as 'dui_letras_tes2',

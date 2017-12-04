@@ -106,12 +106,15 @@ namespace GestionBasica.GUI
 
         private void Procesar()
         {
+            int edad = DateTime.Today.AddTicks(-Convert.ToDateTime(dtpFecha.Value.ToString()).Ticks).Year-1;
+
             CLS.Padres oPadre = new CLS.Padres();
 
             oPadre.IdPadre = txtID.Text;
             oPadre.NombreCompleto1 = txbNombreCompleto.Text;
             oPadre.ConocidoPor1 = txtConocidapor.Text;
             oPadre.Edad1 = mskTEdad.Text;
+            oPadre.Edad_letras_actual1 = CLS.Conv.enletras(edad.ToString());
             oPadre.IdMunicipio = cbxMunicipio.SelectedValue.ToString();
             oPadre.Domicilio1 = txtDomicilio.Text;
             oPadre.Profesion1 = cbxProfesiones.SelectedValue.ToString();
@@ -120,6 +123,7 @@ namespace GestionBasica.GUI
             oPadre.Parentesco1 = cbxParentesco.SelectedValue.ToString();
             oPadre.Observaciones1 = txtObservaciones.Text;
             oPadre.Rubrica1 = txtRubrica.Text;
+            oPadre.FechaNac1= Convert.ToDateTime(dtpFecha.Value.ToString()).ToString("yyyy-MM-dd");
             if (mskTEdad.MaskCompleted) {
                 oPadre.Edad_letras1 = CLS.Conv.enletras(mskTEdad.Text); }
             oPadre.NumPartida1 = txtNumPartida.Text;

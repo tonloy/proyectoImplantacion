@@ -133,14 +133,14 @@
   <data name="txbModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVEhL7ZQ/S8NQFMXTb+CgKfkKXZ1E0EmQDM5SB0Vd
-        nFwFB62iYB3cupRAP0EXbSdpGkr6ByQUailWRBdrTVJbqEht0WcOvEAJhiQmDoIHHiF57/4O954kTFBq
-        rCyuN5b5eiPK941rqR7l5+iWPxFCQnJZTlSPdioGnJirxM9/+DYBXG/n482mVBBF8d1qgk7o0Z9JbeWP
-        FaX48PIk3tiY9OlRbyKECeknXKJX3M11VfHa1sTIhJa4lwm/P+VG6vlkqVs7yNqaGMHTMneywvU0K93t
-        cZ+9cky0miB4WuZOdvBOnCO4jneC4PEC0FJnOcFxj+fIBMH/Chz7OEfL3MkrHOdpqbP+4d/qb8M7qXBM
-        S4Xl58xUJVA4pOdmV9XLSLGbm5ZaGfYxUDg0VJLpkSKQQeXwVsuw1UDh+KwHiqDB4E3evlKzE22YoBOM
-        yxccMuARwLH6cuIVJugE40ImvuDQUBG2TIPxhUwQvC84dJHcP9vYXJNMMMaFTBC8bzg0s7BUgAk6wbg8
-        /WodxTBfuNyYMpFlQLEAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVEhL7ZQxS8NQFIXTf+CgLfkLXZ1E0EnQDs5SB0Vd
+        nFwFB62iYB3cupRCf0EXbSdpGkrSBiQUtASroIu1pqkpRKS26DMHXqAEQ1ITB8EDj5C8d7/DvScJE5SU
+        5fk1ZSlWV+Ixw7xW6vHYDN3yJ0JISKgKqdrhtmTCibXEhdkP3yaAa61SstHgyxzHvdtN0Ak9+jOpzdKR
+        LIsPL0/cjYOJQY+OJkKYkHbMprriTlFXuWtHEzMTWuJdFvz+hB2oZ+MV/Wq/4GhiBk/LvMkO13Jh/m6X
+        /exWE5zdBMHTMm9ygneSLMF1uBMEjxeAlrrLDY57PEcmCP5X4NjHOVrmTaPCcZ6Wuusf/q3+NryTjSTa
+        2YjwnJ+QAoVDWnF6Rb2Iinpxkm/mw4+BwqG+nM4N5AzpSQe37Xy4Figcn3VPzrRh8CZsXaqFsRZM0AnG
+        5QsOmfAo4FiGkHqFCTrBuJCJLzjUlzOblsHwQiYI3hccOk/vna5vrPIWGONCJgjeNxyamlsswwSdYFwj
+        /WpdxTBfPzmYGNgnvxkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txbNueva.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -195,6 +195,12 @@
     <value>True</value>
   </metadata>
   <metadata name="Observaciones.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Rubrica.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FechaNac.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

@@ -25,6 +25,8 @@ namespace GestionBasica.CLS
         private string NumPartidaLetras;
         private string DUI_letras;
         private string Rubrica;
+        private string FechaNac;
+        private string Edad_letras_actual;
 
         public string DUI_letras1
         {
@@ -132,6 +134,32 @@ namespace GestionBasica.CLS
             }
         }
 
+        public string FechaNac1
+        {
+            get
+            {
+                return FechaNac;
+            }
+
+            set
+            {
+                FechaNac = value;
+            }
+        }
+
+        public string Edad_letras_actual1
+        {
+            get
+            {
+                return Edad_letras_actual;
+            }
+
+            set
+            {
+                Edad_letras_actual = value;
+            }
+        }
+
 
         //me
         public bool Insertar()
@@ -139,8 +167,8 @@ namespace GestionBasica.CLS
             Boolean guardado = false;
             StringBuilder Sentencia = new StringBuilder();
 
-            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion, idParentesco, Observaciones,Edad_letras, NumPartida, NumPartidaLetras,Dui_letras,Rubrica) VALUES ( ");
-            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "'," + Parentesco + ",'" + Observaciones + "','" + Edad_letras + "','" + NumPartida1 + "','" + NumPartidaLetras1 + "','"+DUI_letras1+"','"+Rubrica+"' );  ");
+            Sentencia.Append("INSERT INTO registro_familiar.padres (NombreCompleto, ConocidoPor, Edad, Domicilio, Nacionalidad, DUI, idMunicipio, Profesion, idParentesco, Observaciones,Edad_letras, NumPartida, NumPartidaLetras,Dui_letras,Rubrica,FechaNac,Edad_letras_actual) VALUES ( ");
+            Sentencia.Append("'" + NombreCompleto + "', '" + ConocidoPor + "', '" + Edad + "','" + Domicilio + "','" + Nacionalidad + "','" + DUI + "','" + IdMunicipio + "','" + Profesion + "'," + Parentesco + ",'" + Observaciones + "','" + Edad_letras + "','" + NumPartida1 + "','" + NumPartidaLetras1 + "','"+DUI_letras1+"','"+Rubrica+"','"+FechaNac+"','"+Edad_letras_actual+"' );  ");
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try
             {
@@ -176,7 +204,7 @@ namespace GestionBasica.CLS
             Sentencia.Append(Domicilio + "',Nacionalidad=");
             Sentencia.Append(Nacionalidad + ",DUI='");
             Sentencia.Append(DUI + "',idMunicipio=");
-            Sentencia.Append(idMunicipio + ",idParentesco=" + Parentesco + ",Observaciones='" + Observaciones + "',Edad_letras='" + Edad_letras + "',NumPartidaLetras='"+NumPartidaLetras+"',NumPartida='" + NumPartida + "',Dui_letras='"+DUI_letras1+"',Rubrica='"+Rubrica+"' where idPadre=" + IdPadre + ";");
+            Sentencia.Append(idMunicipio + ",idParentesco=" + Parentesco + ",Observaciones='" + Observaciones + "',Edad_letras='" + Edad_letras + "',NumPartidaLetras='"+NumPartidaLetras+"',NumPartida='" + NumPartida + "',Dui_letras='"+DUI_letras1+"',Rubrica='"+Rubrica+"',FechaNac='"+FechaNac+"',Edad_letras_actual='"+Edad_letras_actual+"' where idPadre=" + IdPadre + ";");
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
             try

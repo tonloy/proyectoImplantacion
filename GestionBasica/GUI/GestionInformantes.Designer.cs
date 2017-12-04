@@ -54,6 +54,8 @@
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rubrica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -163,7 +165,9 @@
             this.IdProfesion,
             this.Profesion,
             this.Parentesco,
-            this.Observaciones});
+            this.Observaciones,
+            this.Rubrica,
+            this.FechaNac});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.MultiSelect = false;
@@ -292,6 +296,22 @@
             this.Observaciones.ReadOnly = true;
             this.Observaciones.Visible = false;
             // 
+            // Rubrica
+            // 
+            this.Rubrica.DataPropertyName = "Rubrica";
+            this.Rubrica.HeaderText = "Rubrica";
+            this.Rubrica.Name = "Rubrica";
+            this.Rubrica.ReadOnly = true;
+            this.Rubrica.Visible = false;
+            // 
+            // FechaNac
+            // 
+            this.FechaNac.DataPropertyName = "FechaNac";
+            this.FechaNac.HeaderText = "FechaNac";
+            this.FechaNac.Name = "FechaNac";
+            this.FechaNac.ReadOnly = true;
+            this.FechaNac.Visible = false;
+            // 
             // GestionInformantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,5 +364,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rubrica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNac;
     }
 }

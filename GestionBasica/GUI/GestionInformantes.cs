@@ -122,6 +122,11 @@ namespace GestionBasica.GUI
                     frm.cbxParentesco.SelectedIndex = frm.cbxParentesco.FindStringExact(dataGridView1.CurrentRow.Cells["Parentesco"].Value.ToString());
                     frm.txtObservaciones.Text = dataGridView1.CurrentRow.Cells["Observaciones"].Value.ToString();
                     frm.txtNumPartida.Text= dataGridView1.CurrentRow.Cells["Nit"].Value.ToString();
+                    frm.txtRubrica.Text = dataGridView1.CurrentRow.Cells["Rubrica"].Value.ToString();
+                    if (dataGridView1.CurrentRow.Cells["FechaNac"].Value.ToString() != "")
+                    {
+                        frm.dtpFecha.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["FechaNac"].Value.ToString());
+                    }
 
                     if (dataGridView1.CurrentRow.Cells["Nit"].Value.ToString() == "    -      -   -")
                     {
