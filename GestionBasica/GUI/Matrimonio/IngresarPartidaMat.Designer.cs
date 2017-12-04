@@ -622,9 +622,9 @@
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.TextBox txtID_Partida_cod;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox chbxRevisado;
         public System.Windows.Forms.Button btnDetalle;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.CheckBox cbxRespaldoPda;
+        public System.Windows.Forms.CheckBox chbxRevisado;
     }
 }

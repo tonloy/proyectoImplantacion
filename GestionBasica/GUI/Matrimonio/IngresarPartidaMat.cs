@@ -16,14 +16,12 @@ namespace GestionBasica.GUI.Matrimonio
         public static Boolean marginando = false;
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         Int32 _revisado = 0;
-        
         String ruta_imagen;
         public static string idpapaA= "";
         public static string idmapaA = "";
         public static string idpapaB = "";
         public static string idmapaB = "";
         public static string EF_Hombre, EF_Mujer;
-
 
         ErrorProvider Notificador = new ErrorProvider();
         BindingSource _Municipio = new BindingSource();
@@ -60,9 +58,19 @@ namespace GestionBasica.GUI.Matrimonio
 
         //imagen
         public void cambiarImagen(String ruta) { pictureBox1.ImageLocation = ruta; }
-        
-        
 
+        private void MarginarPartidaMat()
+        {
+            CLS.Marginacion mar = new CLS.Marginacion();
+            mar.Explicacion = "El señor " + txtEsposo.Text + " se casó con " + txtEsposa.Text + " el día " + dtpFecha.Value.ToString()+" en "+cbxMunicipio.Text;
+
+            mar.Marginar_por_Divorcio1(txtID_Esposo.Text);
+
+            CLS.Marginacion marg = new CLS.Marginacion();
+            marg.Explicacion = "La señora " + txtEsposa.Text + " se casó con " + txtEsposo.Text + " el día " + dtpFecha.Value.ToString() + " en " + cbxMunicipio.Text;
+
+            marg.Marginar_por_Divorcio2(txtIdEsposa.Text);
+        }
 
         private void IngresarPartidaMat_Load(object sender, EventArgs e)
         {
@@ -124,7 +132,6 @@ namespace GestionBasica.GUI.Matrimonio
             cbxMunicipio.ValueMember = "idMunicipio";
         }
 
-
         private void Procesar()
         {
             CLS.Partidas_Matrimonio oPdaMatrimonio = new CLS.Partidas_Matrimonio();
@@ -164,26 +171,29 @@ namespace GestionBasica.GUI.Matrimonio
             oPdaMatrimonio.Anio_insercion_letras = CLS.Conv.enletras(DateTime.Today.Year.ToString());
             oPdaMatrimonio.Fecha_insercion_letra1 = CLS.Hora.fecha_letras(DateTime.Now.TimeOfDay.ToString("yyyy-MM-dd"));
             oPdaMatrimonio.Hora_insercion1 = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
-            
             */
             CLS.Movimiento movi = new CLS.Movimiento();
             movi.IdUsuario = _SESION.IdUsuario;
 
-
             if (ValidarDatos())
                     {
-                        if (chbxRevisado.Checked)
-                        {
-                            _revisado = 1;
-                        }
+                    if (chbxRevisado.Checked)
+                    {
+                        _revisado = 1;
+                    }
+                    else {
+                        _revisado = 0;
+                    }
                         if (txtID_Partida_cod.TextLength > 0)
                         {
                             //Actualizando
                             try
                             {
-                                if (oPdaMatrimonio.Actualizar(_revisado))
-                        
+                                if (oPdaMatrimonio.Actualizar(_revisado))                        
                                 {
+                            movi.Accion = "El usuario " + _SESION.Usuario + " modificó la partida de matrimonio con número " + txbNumPartida.Text;
+                            
+                            movi.Guardar();
                                     MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
@@ -204,7 +214,10 @@ namespace GestionBasica.GUI.Matrimonio
                             {
                                 if (oPdaMatrimonio.Insertar(_revisado))
                                 {
-                                    MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MarginarPartidaMat();
+                            movi.Accion = "El usuario " + _SESION.Usuario + " registró una nueva partida de matrimonio con número " + txbNumPartida.Text;
+                            movi.Guardar();
+                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
                                 else
@@ -277,7 +290,6 @@ namespace GestionBasica.GUI.Matrimonio
             }
 
         }
-
 
         private void EstadoFam_Hombre()
         {
@@ -355,17 +367,25 @@ namespace GestionBasica.GUI.Matrimonio
                 Validado = false;
             }
 
-            if (EF_Hombre == "Casado/a" || EF_Mujer=="Casado/a")
+            if ((EF_Hombre == "Casado/a" || EF_Mujer=="Casado/a")&&txtID_Partida_cod.TextLength<0)
             {
                 MessageBox.Show("El estado Familiar del conyugue es: Casado/a", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Validado = false;
             }
-
+            if(cbxRespaldoPda.Checked && pictureBox1.ImageLocation == "") {
+                Notificador.SetError(pictureBox1, "Seleccione una imagen.");
+                Validado = false;
+            }
+            if (chbxRevisado.Checked && pictureBox1.ImageLocation == "")
+            {
+                pictureBox1.Visible = true;
+                cbxRespaldoPda.Checked = true;
+                Notificador.SetError(pictureBox1, "Seleccione una imagen.");
+                Validado = false;
+            }
 
             return Validado;
         }
-
-
 
         //botones de seleciion de sujeto 
         private void button7_Click(object sender, EventArgs e)
@@ -515,10 +535,6 @@ namespace GestionBasica.GUI.Matrimonio
                 Notificador.Clear();
             }
         }
-
-
-
-
 
         //no tienen nada
         private void textBox1_TextChanged(object sender, EventArgs e)

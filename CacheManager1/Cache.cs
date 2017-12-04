@@ -1099,6 +1099,7 @@ namespace CacheManager1
                             pda.idPadre_esposa as 'PM',
                             pda.idMadre_esposa as 'MM',
                             pda.Fecha_matrimonio,
+                            pda.Revisado,
                             pda.Regimen_patrimonial,
                             pda.detalle_hijos
                             from partidas_matrimonio pda, padres p, padres pa, padres pad, padres padr,padres pfun, departamentos d
@@ -1134,7 +1135,7 @@ namespace CacheManager1
                         Fecha_ejecutoriada, d.idTipo_partida, d.Imagen, d.Libro, d.Folio, 
                         Tutela, (select Regimen_patrimonial from partidas_matrimonio where idpartida_matrimonio=d.idMatrimonio)as Regimen_patrimonial,
                         (select Nombre from juzgados where idJuzgados=d.idJuzgado)as Juzgado,
-                        NombreNotario, Revisado FROM registro_familiar.divorcios d, partidas_matrimonio m
+                        NombreNotario, d.Revisado FROM registro_familiar.divorcios d, partidas_matrimonio m
                          where d.idMatrimonio=m.idpartida_matrimonio;";
 
             DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();

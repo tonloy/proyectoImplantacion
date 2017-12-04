@@ -109,7 +109,6 @@ namespace GestionBasica.GUI.Matrimonio
                 try
                 {
                     IngresarPartidaMat frm = new IngresarPartidaMat();
-
                    
                     frm.txtID_Partida_cod.Text = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
                     frm.txbFolio.Text = dtgPartidas.CurrentRow.Cells["folio"].Value.ToString();
@@ -142,14 +141,25 @@ namespace GestionBasica.GUI.Matrimonio
                     }
 
                     ///////////
-                    frm.txbFolio.ReadOnly = true;
-                    frm.txbNumPartida.ReadOnly = true;
-                    frm.button1.Enabled = false;
-                    frm.button2.Enabled = false;
-                    frm.button3.Enabled = false;
-                    frm.button4.Enabled = false;
-                    frm.button7.Enabled = false;
-
+                    if (dtgPartidas.CurrentRow.Cells["Revisado"].Value.ToString() == "True")
+                    {
+                        frm.txbFolio.ReadOnly = true;
+                        frm.txbNumPartida.ReadOnly = true;
+                        frm.button1.Enabled = false;
+                        frm.button2.Enabled = false;
+                        frm.button3.Enabled = false;
+                        frm.button4.Enabled = false;
+                        frm.button7.Enabled = false;
+                        frm.dtpFecha.Enabled = false;
+                        frm.txtApellidoCasada.ReadOnly = true;
+                        frm.txtHora.ReadOnly = true;
+                        frm.cbxDepartamentos.Enabled = false;
+                        frm.cbxMunicipio.Enabled = false;
+                        frm.cbxRegimenPatrimonial.Enabled = false;
+                        frm.btnDetalle.Enabled = false;
+                        frm.pictureBox1.Enabled = false;
+                        frm.chbxRevisado.Checked = true;
+                    }
 
                     frm.ShowDialog();
                     CargarPartidas();

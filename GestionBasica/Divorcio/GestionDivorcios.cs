@@ -142,6 +142,27 @@ namespace GestionBasica.Divorcio
                 frm.pictureBox1.ImageLocation = dtgPartidas.CurrentRow.Cells["Imagen"].Value.ToString();
                 frm.IdPartida = dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
                 frm.ShowDialog();
+                Operaciones();
+            }
+        }
+        private void Operaciones()
+        {
+            CLS.Operaciones oUsuario = new CLS.Operaciones();
+            oUsuario.IdPartida= dtgPartidas.CurrentRow.Cells["ID"].Value.ToString();
+            try
+            {
+                if (oUsuario.Guardar(6))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

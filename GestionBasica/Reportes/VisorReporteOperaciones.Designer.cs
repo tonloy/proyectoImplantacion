@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.rbtnDivorcios = new System.Windows.Forms.RadioButton();
+            this.rbtnDefunciones = new System.Windows.Forms.RadioButton();
+            this.rbtnMatrimonios = new System.Windows.Forms.RadioButton();
+            this.rbtnNacimientos = new System.Windows.Forms.RadioButton();
             this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpInicial = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.crvOperaciones = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.rbtnNacimientos = new System.Windows.Forms.RadioButton();
-            this.rbtnMatrimonios = new System.Windows.Forms.RadioButton();
-            this.rbtnDefunciones = new System.Windows.Forms.RadioButton();
-            this.rbtnDivorcios = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +70,51 @@
             this.splitContainer1.Size = new System.Drawing.Size(892, 537);
             this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // rbtnDivorcios
+            // 
+            this.rbtnDivorcios.AutoSize = true;
+            this.rbtnDivorcios.Location = new System.Drawing.Point(15, 215);
+            this.rbtnDivorcios.Name = "rbtnDivorcios";
+            this.rbtnDivorcios.Size = new System.Drawing.Size(118, 17);
+            this.rbtnDivorcios.TabIndex = 8;
+            this.rbtnDivorcios.Text = "Partidas de divorcio";
+            this.rbtnDivorcios.UseVisualStyleBackColor = true;
+            this.rbtnDivorcios.CheckedChanged += new System.EventHandler(this.rbtnDivorcios_CheckedChanged);
+            // 
+            // rbtnDefunciones
+            // 
+            this.rbtnDefunciones.AutoSize = true;
+            this.rbtnDefunciones.Location = new System.Drawing.Point(15, 169);
+            this.rbtnDefunciones.Name = "rbtnDefunciones";
+            this.rbtnDefunciones.Size = new System.Drawing.Size(128, 17);
+            this.rbtnDefunciones.TabIndex = 7;
+            this.rbtnDefunciones.Text = "Partidas de defunción";
+            this.rbtnDefunciones.UseVisualStyleBackColor = true;
+            this.rbtnDefunciones.CheckedChanged += new System.EventHandler(this.rbtnDefunciones_CheckedChanged);
+            // 
+            // rbtnMatrimonios
+            // 
+            this.rbtnMatrimonios.AutoSize = true;
+            this.rbtnMatrimonios.Location = new System.Drawing.Point(15, 192);
+            this.rbtnMatrimonios.Name = "rbtnMatrimonios";
+            this.rbtnMatrimonios.Size = new System.Drawing.Size(131, 17);
+            this.rbtnMatrimonios.TabIndex = 6;
+            this.rbtnMatrimonios.Text = "Partidas de matrimonio";
+            this.rbtnMatrimonios.UseVisualStyleBackColor = true;
+            this.rbtnMatrimonios.CheckedChanged += new System.EventHandler(this.rbtnMatrimonios_CheckedChanged);
+            // 
+            // rbtnNacimientos
+            // 
+            this.rbtnNacimientos.AutoSize = true;
+            this.rbtnNacimientos.Checked = true;
+            this.rbtnNacimientos.Location = new System.Drawing.Point(15, 146);
+            this.rbtnNacimientos.Name = "rbtnNacimientos";
+            this.rbtnNacimientos.Size = new System.Drawing.Size(132, 17);
+            this.rbtnNacimientos.TabIndex = 5;
+            this.rbtnNacimientos.TabStop = true;
+            this.rbtnNacimientos.Text = "Partidas de nacimiento";
+            this.rbtnNacimientos.UseVisualStyleBackColor = true;
             // 
             // dtpFinal
             // 
@@ -130,51 +175,6 @@
             this.crvOperaciones.Size = new System.Drawing.Size(641, 537);
             this.crvOperaciones.TabIndex = 0;
             this.crvOperaciones.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            // 
-            // rbtnNacimientos
-            // 
-            this.rbtnNacimientos.AutoSize = true;
-            this.rbtnNacimientos.Checked = true;
-            this.rbtnNacimientos.Location = new System.Drawing.Point(15, 146);
-            this.rbtnNacimientos.Name = "rbtnNacimientos";
-            this.rbtnNacimientos.Size = new System.Drawing.Size(132, 17);
-            this.rbtnNacimientos.TabIndex = 5;
-            this.rbtnNacimientos.TabStop = true;
-            this.rbtnNacimientos.Text = "Partidas de nacimiento";
-            this.rbtnNacimientos.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMatrimonios
-            // 
-            this.rbtnMatrimonios.AutoSize = true;
-            this.rbtnMatrimonios.Location = new System.Drawing.Point(15, 192);
-            this.rbtnMatrimonios.Name = "rbtnMatrimonios";
-            this.rbtnMatrimonios.Size = new System.Drawing.Size(131, 17);
-            this.rbtnMatrimonios.TabIndex = 6;
-            this.rbtnMatrimonios.Text = "Partidas de matrimonio";
-            this.rbtnMatrimonios.UseVisualStyleBackColor = true;
-            this.rbtnMatrimonios.CheckedChanged += new System.EventHandler(this.rbtnMatrimonios_CheckedChanged);
-            // 
-            // rbtnDefunciones
-            // 
-            this.rbtnDefunciones.AutoSize = true;
-            this.rbtnDefunciones.Location = new System.Drawing.Point(15, 169);
-            this.rbtnDefunciones.Name = "rbtnDefunciones";
-            this.rbtnDefunciones.Size = new System.Drawing.Size(128, 17);
-            this.rbtnDefunciones.TabIndex = 7;
-            this.rbtnDefunciones.Text = "Partidas de defunción";
-            this.rbtnDefunciones.UseVisualStyleBackColor = true;
-            this.rbtnDefunciones.CheckedChanged += new System.EventHandler(this.rbtnDefunciones_CheckedChanged);
-            // 
-            // rbtnDivorcios
-            // 
-            this.rbtnDivorcios.AutoSize = true;
-            this.rbtnDivorcios.Location = new System.Drawing.Point(15, 215);
-            this.rbtnDivorcios.Name = "rbtnDivorcios";
-            this.rbtnDivorcios.Size = new System.Drawing.Size(107, 17);
-            this.rbtnDivorcios.TabIndex = 8;
-            this.rbtnDivorcios.Text = "Actas de divorcio";
-            this.rbtnDivorcios.UseVisualStyleBackColor = true;
-            this.rbtnDivorcios.CheckedChanged += new System.EventHandler(this.rbtnDivorcios_CheckedChanged);
             // 
             // VisorReporteOperaciones
             // 

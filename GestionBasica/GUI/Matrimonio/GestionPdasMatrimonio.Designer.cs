@@ -67,6 +67,7 @@
             this.FechaMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegimenPatrimonial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Revisado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -98,8 +99,8 @@
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(83, 28);
-            this.btnModificar.Text = "Marginar";
+            this.btnModificar.Size = new System.Drawing.Size(86, 28);
+            this.btnModificar.Text = "Modificar";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // toolStripSeparator1
@@ -194,7 +195,8 @@
             this.Testigo2,
             this.FechaMat,
             this.RegimenPatrimonial,
-            this.Ruta});
+            this.Ruta,
+            this.Revisado});
             this.dtgPartidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgPartidas.Location = new System.Drawing.Point(0, 31);
             this.dtgPartidas.MultiSelect = false;
@@ -425,6 +427,14 @@
             this.Ruta.ReadOnly = true;
             this.Ruta.Visible = false;
             // 
+            // Revisado
+            // 
+            this.Revisado.DataPropertyName = "Revisado";
+            this.Revisado.HeaderText = "Revisado";
+            this.Revisado.Name = "Revisado";
+            this.Revisado.ReadOnly = true;
+            this.Revisado.Visible = false;
+            // 
             // GestionPdasMatrimonio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,5 +499,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaMat;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegimenPatrimonial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Revisado;
     }
 }

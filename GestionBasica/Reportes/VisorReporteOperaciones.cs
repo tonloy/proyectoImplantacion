@@ -51,7 +51,7 @@ namespace GestionBasica.Reportes
         {
             if (rbtnMatrimonios.Checked)
             {
-                tipo = "Impresión de partida de matrimonio";
+                tipo = "Impresión de partida de Matrimonio";
                 operacion = "Partidas de matrimonio";
             }
             else
@@ -65,8 +65,8 @@ namespace GestionBasica.Reportes
         {
             if (rbtnDivorcios.Checked)
             {
-                tipo = "Impresión de acta de divorcio";
-                operacion = "Actas de divorcio";
+                tipo = "Impresión de partida de divorcio";
+                operacion = "Partidas de divorcio";
             }
             else
             {
