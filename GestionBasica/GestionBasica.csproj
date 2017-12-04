@@ -81,6 +81,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosOperaciones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DAT\DatosPartidaMatrimonio.cs">
+      <DependentUpon>DatosPartidaMatrimonio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\DatosPartidaMatrimonio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosPartidaMatrimonio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\DatosPartidaNac.cs">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>
     </Compile>
@@ -422,6 +430,12 @@
     <Compile Include="Reportes\VisorPartidaDefNit.Designer.cs">
       <DependentUpon>VisorPartidaDefNit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\VisorPartidaMatrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VisorPartidaMatrimonio.Designer.cs">
+      <DependentUpon>VisorPartidaMatrimonio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\VisorPartidaNac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -468,6 +482,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PartidaNacNit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\PdaMatrimonio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PdaMatrimonio.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="REP\VistaPreviaPartidaDef.cs">
@@ -648,6 +668,9 @@
     <EmbeddedResource Include="Reportes\VisorPartidaDefNit.resx">
       <DependentUpon>VisorPartidaDefNit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VisorPartidaMatrimonio.resx">
+      <DependentUpon>VisorPartidaMatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VisorPartidaNac.resx">
       <DependentUpon>VisorPartidaNac.cs</DependentUpon>
     </EmbeddedResource>
@@ -676,6 +699,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PartidaNacNit.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REP\PdaMatrimonio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PdaMatrimonio.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REP\VistaPreviaPartidaDef.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VistaPreviaPartidaDef.cs</LastGenOutput>
@@ -700,6 +727,17 @@
     </None>
     <None Include="DAT\DatosOperaciones.xss">
       <DependentUpon>DatosOperaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\DatosPartidaMatrimonio.xsc">
+      <DependentUpon>DatosPartidaMatrimonio.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\DatosPartidaMatrimonio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosPartidaMatrimonio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\DatosPartidaMatrimonio.xss">
+      <DependentUpon>DatosPartidaMatrimonio.xsd</DependentUpon>
     </None>
     <None Include="DAT\DatosPartidaNac.xsc">
       <DependentUpon>DatosPartidaNac.xsd</DependentUpon>

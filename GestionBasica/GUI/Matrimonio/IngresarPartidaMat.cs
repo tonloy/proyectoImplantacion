@@ -14,6 +14,7 @@ namespace GestionBasica.GUI.Matrimonio
     public partial class IngresarPartidaMat : Form, IPadre, IInformante, IInfante, IFuncionario,IImagen
     {
         public static Boolean marginando = false;
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         Int32 _revisado = 0;
         SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         String ruta_imagen;
@@ -156,6 +157,8 @@ namespace GestionBasica.GUI.Matrimonio
 
             oPdaMatrimonio.Imagen1 = obtenerRuta(pictureBox1.ImageLocation);
             oPdaMatrimonio.Detalle_hijos = Detalle_Hijos.detalle_hijosfrm;
+            oPdaMatrimonio.Hora_inse_entero1 = CLS.Conv.enletras( DateTime.Now.Hour.ToString());
+            oPdaMatrimonio.Anio_insercion_letras = CLS.Conv.enletras(DateTime.Today.Year.ToString());
 
             /*
             oPdaMatrimonio.Anio_insercion_letras = CLS.Conv.enletras(DateTime.Today.Year.ToString());
@@ -165,6 +168,7 @@ namespace GestionBasica.GUI.Matrimonio
             */
             CLS.Movimiento movi = new CLS.Movimiento();
             movi.IdUsuario = _SESION.IdUsuario;
+
 
             if (ValidarDatos())
                     {
@@ -178,9 +182,8 @@ namespace GestionBasica.GUI.Matrimonio
                             try
                             {
                                 if (oPdaMatrimonio.Actualizar(_revisado))
+                        
                                 {
-                            movi.Accion = "El usuario " + _SESION.Usuario + " modificó la partida de matrimonio número " + oPdaMatrimonio.NumPartida1;
-                            movi.Guardar();
                                     MessageBox.Show("Registro actualizado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
@@ -201,9 +204,7 @@ namespace GestionBasica.GUI.Matrimonio
                             {
                                 if (oPdaMatrimonio.Insertar(_revisado))
                                 {
-                                     movi.Accion = "El usuario " + _SESION.Usuario + " insertó la partida de matrimonio número " + oPdaMatrimonio.NumPartida1;
-                                     movi.Guardar();
-                            MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro insertado correctamente", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Close();
                                 }
                                 else
@@ -219,6 +220,26 @@ namespace GestionBasica.GUI.Matrimonio
 
                     }
                 }
+
+        private void Operaciones()
+        {
+            CLS.Operaciones oUsuario = new CLS.Operaciones();
+            try
+            {
+                if (oUsuario.Guardar(3))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro no fue insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
         private String obtenerRuta(String rtpbx)
@@ -551,6 +572,7 @@ namespace GestionBasica.GUI.Matrimonio
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Procesar();
+            Operaciones();
 
         }
 

@@ -159,6 +159,7 @@
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(116, 28);
             this.btnGenerar.Text = "Generar partida";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // dtgPartidas
             // 
@@ -396,23 +397,6 @@
             this.RegimenPatrimonial.ReadOnly = true;
             this.RegimenPatrimonial.Width = 140;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 392);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(830, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblNumeroFilas
-            // 
-            this.lblNumeroFilas.Name = "lblNumeroFilas";
-            this.lblNumeroFilas.Size = new System.Drawing.Size(130, 17);
-            this.lblNumeroFilas.Text = "0 registros encontrados";
-            // 
             // GestionPdasMatrimonio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +411,7 @@
             this.Text = "GestionPdasMatrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GestionPdasMatrimonio_Load);
+            this.Click += new System.EventHandler(this.GestionPdasMatrimonio_Click);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidas)).EndInit();
