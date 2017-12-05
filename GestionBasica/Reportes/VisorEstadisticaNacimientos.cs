@@ -24,5 +24,10 @@ namespace GestionBasica.Reportes
             cReporte.SetDataSource(CacheManager1.Cache.EstadisticaNacimientos(dtpInicial.Text,dtpFinal.Text,_Sesion.Usuario));
             crvNacimientos.ReportSource = cReporte;
         }
+
+        private void VisorEstadisticaNacimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

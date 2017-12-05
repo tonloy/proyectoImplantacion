@@ -12,6 +12,7 @@ namespace GestionBasica.GUI
 {
     public partial class GestionTarifas : Form
     {
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
         BindingSource _EMPLEADOS = new BindingSource();
         public GestionTarifas()
         {
@@ -71,7 +72,7 @@ namespace GestionBasica.GUI
 
         private void txbModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea EDITAR la tarifa seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Desea EDITAR la tarifa seleccionada?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && _SESION.Grupo=="Administrador")
             {
                 try
                 {
@@ -86,6 +87,9 @@ namespace GestionBasica.GUI
                 {
                     MessageBox.Show("Por favor seleccione un registro");
                 }
+            }else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción");
             }
         }
     }

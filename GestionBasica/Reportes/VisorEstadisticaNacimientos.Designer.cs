@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpInicial = new System.Windows.Forms.DateTimePicker();
             this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtpInicial = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.crvNacimientos = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -63,38 +63,9 @@
             this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 0;
             // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Location = new System.Drawing.Point(140, 152);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerar.TabIndex = 0;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Fecha inicial:";
-            // 
-            // dtpInicial
-            // 
-            this.dtpInicial.CustomFormat = "yyyy-MM-dd";
-            this.dtpInicial.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpInicial.Location = new System.Drawing.Point(15, 55);
-            this.dtpInicial.Name = "dtpInicial";
-            this.dtpInicial.Size = new System.Drawing.Size(200, 20);
-            this.dtpInicial.TabIndex = 2;
-            this.dtpInicial.Value = new System.DateTime(2017, 11, 25, 0, 0, 0, 0);
-            // 
             // dtpFinal
             // 
-            this.dtpFinal.CustomFormat = "yyyy-MM-dd";
+            this.dtpFinal.CustomFormat = "yyyy-MM-dd H:mm:ss";
             this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFinal.Location = new System.Drawing.Point(15, 110);
             this.dtpFinal.Name = "dtpFinal";
@@ -110,6 +81,35 @@
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Fecha final:";
+            // 
+            // dtpInicial
+            // 
+            this.dtpInicial.CustomFormat = "yyyy-MM-dd H:mm:ss";
+            this.dtpInicial.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpInicial.Location = new System.Drawing.Point(15, 55);
+            this.dtpInicial.Name = "dtpInicial";
+            this.dtpInicial.Size = new System.Drawing.Size(200, 20);
+            this.dtpInicial.TabIndex = 2;
+            this.dtpInicial.Value = new System.DateTime(2017, 11, 25, 0, 0, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Fecha inicial:";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(140, 152);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 0;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // crvNacimientos
             // 
@@ -134,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visor Estadísticas de Partidas de Nacimientos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.VisorEstadisticaNacimientos_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

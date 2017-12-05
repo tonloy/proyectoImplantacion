@@ -31,7 +31,7 @@ namespace GestionBasica.GUI
 
         private void txbModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea EDITAR el usuario seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea EDITAR el usuario seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && _SESION.Grupo=="Administrador")
             {
                 try
                 {
@@ -48,6 +48,9 @@ namespace GestionBasica.GUI
                 {
                     MessageBox.Show(ex.ToString());
                 }
+            }else
+            {
+                MessageBox.Show("No posee permiso para realizar esta acción");
             }
         }
 
@@ -91,7 +94,7 @@ namespace GestionBasica.GUI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea ELIMINAR el registro seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea ELIMINAR el registro seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && _SESION.Grupo == "Administrador")
             {
                 try
                 {
@@ -118,6 +121,9 @@ namespace GestionBasica.GUI
                 {
                     MessageBox.Show("Por favor seleccione un usuario");
                 }
+            }else
+            {
+                MessageBox.Show("No posee permiso para realizar esta acción");
             }
         }
 
