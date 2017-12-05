@@ -1218,6 +1218,58 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
             return Datos;
         }
 
+        public static DataTable Reporte_defunciones1(String pFechaI, String pFechaF)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT d.NumPartida,(select count(*)from partidas_defuncion where Fecha_fallecimiento between '"+pFechaI+@"' and '"+pFechaF+ @"')as Cantidad,
+                        (select NombreCompleto from padres where idPadre=d.idFallecido)as Fallecido,
+                        (select DUI from padres where idPadre=d.idFallecido)as Dui,
+                        (select NumPartida from padres where idPadre=d.idFallecido)as Nit,
+                        (select Edad from padres where idPadre=d.idFallecido)as Edad,
+                        d.Fecha_fallecimiento,
+                        (select Causa from causas_muerte where idCausa=d.Causa_muerte) as Causa_muerte
+                         FROM registro_familiar.partidas_defuncion d where d.Fecha_fallecimiento between '" + pFechaI + @"' and '" + pFechaF + @"';";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+        public static DataTable Reporte_defunciones2(String pFechaI, String pFechaF,String pCausa)
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT d.NumPartida,(select count(*)from partidas_defuncion where Fecha_fallecimiento between '" + pFechaI + "' and '" + pFechaF + "' and Causa_muerte=" + pCausa + @")as Cantidad,
+                        (select NombreCompleto from padres where idPadre=d.idFallecido)as Fallecido,
+                        (select DUI from padres where idPadre=d.idFallecido)as Dui,
+                        (select NumPartida from padres where idPadre=d.idFallecido)as Nit,
+                        (select Edad from padres where idPadre=d.idFallecido)as Edad,
+                        d.Fecha_fallecimiento,
+                        (select Causa from causas_muerte where idCausa=d.Causa_muerte) as Causa_muerte
+                         FROM registro_familiar.partidas_defuncion d where d.Fecha_fallecimiento between '" + pFechaI + @"' and '" + pFechaF + @"' and Causa_muerte="+pCausa+";";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
         public static DataTable Reporte_Operaciones(String pFechaI, String pFechaF, String Tipo)
         {
             DataTable Datos = new DataTable();
