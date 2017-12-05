@@ -33,6 +33,8 @@ namespace GestionBasica.GUI.Matrimonio
             CargarDepartamentos();
             CargarMunicipios();
             CargarRegimenesMatrimoniales();
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
         }
 
         //Esposo
@@ -589,6 +591,11 @@ namespace GestionBasica.GUI.Matrimonio
         {
             GUI.Matrimonio.Detalle_Hijos frm = new Detalle_Hijos();
             frm.Show();
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox1, "Haga doble clic para seleccionar una imagen");
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)

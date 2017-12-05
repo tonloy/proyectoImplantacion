@@ -69,6 +69,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cbxJuzgados = new System.Windows.Forms.ComboBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +98,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // txbFolio
             // 
@@ -524,5 +526,6 @@
         public System.Windows.Forms.DateTimePicker dtpFechaSentencia;
         public System.Windows.Forms.DateTimePicker dtpFechaEjecutoriada;
         public System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

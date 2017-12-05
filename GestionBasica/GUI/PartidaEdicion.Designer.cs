@@ -58,6 +58,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.cbxRespaldoPda = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -304,6 +305,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // Notificador
             // 
@@ -313,7 +315,7 @@
             // 
             this.cbxRespaldoPda.AutoSize = true;
             this.cbxRespaldoPda.Location = new System.Drawing.Point(306, 132);
-            this.cbxRespaldoPda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxRespaldoPda.Margin = new System.Windows.Forms.Padding(2);
             this.cbxRespaldoPda.Name = "cbxRespaldoPda";
             this.cbxRespaldoPda.Size = new System.Drawing.Size(107, 17);
             this.cbxRespaldoPda.TabIndex = 24;
@@ -397,5 +399,6 @@
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.CheckBox cbxRespaldoPda;
         public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

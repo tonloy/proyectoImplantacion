@@ -26,6 +26,8 @@ namespace GestionBasica.Divorcio
         {
             InitializeComponent();
             CargarJuzgados();
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
         }
 
         //Imagen
@@ -319,6 +321,11 @@ namespace GestionBasica.Divorcio
             {
                 Notificador.Clear();
             }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox1, "Haga doble clic para seleccionar una imagen");
         }
     }
     }

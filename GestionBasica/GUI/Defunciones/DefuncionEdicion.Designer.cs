@@ -88,6 +88,7 @@
             this.chbxRevisado = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cbxCantones = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -592,6 +593,7 @@
             this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // chbxRevisado
             // 
@@ -758,5 +760,6 @@
         public System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.ComboBox cbxCantones;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -41,6 +41,8 @@ namespace GestionBasica.GUI.Defunciones
             CargarMunicipios();
             CargarCausas();
             CargarCantones();
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
         }
 
         //Imagen
@@ -537,6 +539,11 @@ namespace GestionBasica.GUI.Defunciones
             {
                 CargarCantones();
             }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox1, "Haga doble clic para seleccionar una imagen");
         }
     }
 }

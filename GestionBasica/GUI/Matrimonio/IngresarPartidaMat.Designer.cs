@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbxRespaldoPda = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txbFolio = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             this.txtID_Partida_cod = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.chbxRevisado = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,6 +106,7 @@
             this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // txbFolio
             // 
@@ -626,5 +629,6 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.CheckBox cbxRespaldoPda;
         public System.Windows.Forms.CheckBox chbxRevisado;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
