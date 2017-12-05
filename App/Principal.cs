@@ -261,5 +261,11 @@ namespace App
             GestionBasica.Divorcio.GestionDivorcios div = new GestionBasica.Divorcio.GestionDivorcios();
             div.ShowDialog();
         }
+
+        private void reporteDeDefuncionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.Reportes.VisorDefunciones vdef = new GestionBasica.Reportes.VisorDefunciones();
+            vdef.ShowDialog();
+        }
     }
 }

@@ -67,6 +67,7 @@
             this.SegundoPlano = new System.ComponentModel.BackgroundWorker();
             this.tmpConexion = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reporteDeDefuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -225,7 +226,8 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeOperacionesToolStripMenuItem,
-            this.reporteDeEstadísticasDeNacimientosToolStripMenuItem});
+            this.reporteDeEstadísticasDeNacimientosToolStripMenuItem,
+            this.reporteDeDefuncionesToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -385,6 +387,13 @@
             this.panel1.Size = new System.Drawing.Size(817, 445);
             this.panel1.TabIndex = 4;
             // 
+            // reporteDeDefuncionesToolStripMenuItem
+            // 
+            this.reporteDeDefuncionesToolStripMenuItem.Name = "reporteDeDefuncionesToolStripMenuItem";
+            this.reporteDeDefuncionesToolStripMenuItem.Size = new System.Drawing.Size(337, 24);
+            this.reporteDeDefuncionesToolStripMenuItem.Text = "Reporte de defunciones";
+            this.reporteDeDefuncionesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeDefuncionesToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,5 +461,6 @@
         private System.Windows.Forms.ToolStripMenuItem respaldarBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auditoríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeDefuncionesToolStripMenuItem;
     }
 }

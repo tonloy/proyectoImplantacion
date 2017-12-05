@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosDefunciones" targetNamespace="http://tempuri.org/DatosDefunciones.xsd" xmlns:mstns="http://tempuri.org/DatosDefunciones.xsd" xmlns="http://tempuri.org/DatosDefunciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosDefunciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosDefunciones" msprop:Generator_UserDSName="DatosDefunciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Defunciones" msprop:Generator_TableClassName="DefuncionesDataTable" msprop:Generator_TableVarName="tableDefunciones" msprop:Generator_TablePropName="Defunciones" msprop:Generator_RowDeletingName="DefuncionesRowDeleting" msprop:Generator_RowChangingName="DefuncionesRowChanging" msprop:Generator_RowEvHandlerName="DefuncionesRowChangeEventHandler" msprop:Generator_RowDeletedName="DefuncionesRowDeleted" msprop:Generator_UserTableName="Defunciones" msprop:Generator_RowChangedName="DefuncionesRowChanged" msprop:Generator_RowEvArgName="DefuncionesRowChangeEvent" msprop:Generator_RowClassName="DefuncionesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumPartida" msprop:Generator_ColumnVarNameInTable="columnNumPartida" msprop:Generator_ColumnPropNameInRow="NumPartida" msprop:Generator_ColumnPropNameInTable="NumPartidaColumn" msprop:Generator_UserColumnName="NumPartida" type="xs:string" minOccurs="0" />
+              <xs:element name="Fallecido" msprop:Generator_ColumnVarNameInTable="columnFallecido" msprop:Generator_ColumnPropNameInRow="Fallecido" msprop:Generator_ColumnPropNameInTable="FallecidoColumn" msprop:Generator_UserColumnName="Fallecido" type="xs:string" minOccurs="0" />
+              <xs:element name="Dui" msprop:Generator_ColumnVarNameInTable="columnDui" msprop:Generator_ColumnPropNameInRow="Dui" msprop:Generator_ColumnPropNameInTable="DuiColumn" msprop:Generator_UserColumnName="Dui" type="xs:string" minOccurs="0" />
+              <xs:element name="Nit" msprop:Generator_ColumnVarNameInTable="columnNit" msprop:Generator_ColumnPropNameInRow="Nit" msprop:Generator_ColumnPropNameInTable="NitColumn" msprop:Generator_UserColumnName="Nit" type="xs:string" minOccurs="0" />
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_fallecimiento" msprop:Generator_ColumnVarNameInTable="columnFecha_fallecimiento" msprop:Generator_ColumnPropNameInRow="Fecha_fallecimiento" msprop:Generator_ColumnPropNameInTable="Fecha_fallecimientoColumn" msprop:Generator_UserColumnName="Fecha_fallecimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="Causa_muerte" msprop:Generator_ColumnVarNameInTable="columnCausa_muerte" msprop:Generator_ColumnPropNameInRow="Causa_muerte" msprop:Generator_ColumnPropNameInTable="Causa_muerteColumn" msprop:Generator_UserColumnName="Causa_muerte" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
