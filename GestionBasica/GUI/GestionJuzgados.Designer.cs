@@ -66,7 +66,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1100, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1228, 32);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -136,10 +136,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNumeroFilas});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 596);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 614);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1100, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(1228, 30);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -168,7 +168,7 @@
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(1100, 564);
+            this.dtgEmpleados.Size = new System.Drawing.Size(1228, 582);
             this.dtgEmpleados.TabIndex = 11;
             // 
             // ID
@@ -207,11 +207,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 626);
+            this.ClientSize = new System.Drawing.Size(1228, 644);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "GestionJuzgados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Juzgados";
             this.Load += new System.EventHandler(this.GestionJuzgados_Load);
             this.toolStrip1.ResumeLayout(false);

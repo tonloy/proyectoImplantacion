@@ -190,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "EdicionJuzgado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edicion de Juzgado";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
