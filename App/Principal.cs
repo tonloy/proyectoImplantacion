@@ -261,5 +261,22 @@ namespace App
             GestionBasica.Divorcio.GestionDivorcios div = new GestionBasica.Divorcio.GestionDivorcios();
             div.ShowDialog();
         }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            oOperacion.Desconectar();
+            Application.Restart();
+
+            
+        }
+
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e) { }
+
+        private void juzgadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionBasica.GUI.GestionJuzgados frm = new GestionBasica.GUI.GestionJuzgados();
+            frm.Show();
+        }
     }
 }

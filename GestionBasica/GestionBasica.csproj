@@ -61,6 +61,7 @@
     <Compile Include="CLS\Hora.cs" />
     <Compile Include="CLS\Infante.cs" />
     <Compile Include="CLS\Informante.cs" />
+    <Compile Include="CLS\Juzgados.cs" />
     <Compile Include="CLS\Marginacion.cs" />
     <Compile Include="CLS\Movimiento.cs" />
     <Compile Include="CLS\Nit.cs" />
@@ -181,6 +182,12 @@
     <Compile Include="GUI\EdicionEmpleado.Designer.cs">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EdicionJuzgado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionJuzgado.Designer.cs">
+      <DependentUpon>EdicionJuzgado.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionMarginacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +265,12 @@
     </Compile>
     <Compile Include="GUI\GestionInformantes.Designer.cs">
       <DependentUpon>GestionInformantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionJuzgados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionJuzgados.Designer.cs">
+      <DependentUpon>GestionJuzgados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionMadres.cs">
       <SubType>Form</SubType>
@@ -541,6 +554,9 @@
     <EmbeddedResource Include="GUI\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionJuzgado.resx">
+      <DependentUpon>EdicionJuzgado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionMarginacion.resx">
       <DependentUpon>EdicionMarginacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -579,6 +595,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionInformantes.resx">
       <DependentUpon>GestionInformantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionJuzgados.resx">
+      <DependentUpon>GestionJuzgados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionMadres.resx">
       <DependentUpon>GestionMadres.cs</DependentUpon>

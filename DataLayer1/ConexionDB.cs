@@ -11,7 +11,7 @@ namespace DataLayer1
     {
         protected MySqlConnection _CONEXION;
 
-        protected Boolean Conectar()
+        public Boolean Conectar()
         {
             Boolean Conectado = false;
             String cadenaconexion = "Server = localhost; Port = 3306; Database = registro_familiar; Uid = root; Pwd = admin;";
@@ -29,7 +29,7 @@ namespace DataLayer1
             return Conectado;
         }
 
-        protected void Desconectar()
+        public void Desconectar()
         {
             try
             {

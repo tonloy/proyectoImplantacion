@@ -21,6 +21,7 @@ namespace App
                 }
             }
         }
+
         private Boolean Splash()
         {
             Boolean comprobacion = true;

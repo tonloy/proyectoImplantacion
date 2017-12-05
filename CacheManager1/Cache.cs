@@ -1352,6 +1352,32 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
 
             return Datos;
         }
+
+
+
+        public static DataTable TODOS_LOS_JUZGADOS_hoy_si()
+        {
+            DataTable Datos = new DataTable();
+            String Consulta;
+            Consulta = @"SELECT j.idJuzgados, j.Nombre, m.Municipio, Direccion 
+                        FROM juzgados j, municipios m 
+                        where j.idMunicipio = m.idMunicipio;";
+
+            DataLayer1.OperacionBD oOperacion = new DataLayer1.OperacionBD();
+            try
+            {
+                Datos = oOperacion.Consultar(Consulta);
+            }
+            catch
+            {
+                Datos = new DataTable();
+            }
+
+            return Datos;
+        }
+
+
+
         
 
 
