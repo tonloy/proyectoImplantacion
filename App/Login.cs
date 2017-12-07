@@ -16,6 +16,8 @@ namespace App
         Color miColor = Color.FromArgb(6,0,88);
         Boolean _Autorizado = false;
         int nIntentos=0;
+       
+        SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
 
         public Boolean Autorizado
         {
@@ -28,7 +30,7 @@ namespace App
             if (Datos.Rows.Count == 1)
             {
                 //El usuario existe
-                SessionManager.Sesion _SESION = SessionManager.Sesion.Instancia;
+                
                 _SESION.Usuario = Datos.Rows[0]["Usuario"].ToString();
                 _SESION.IdUsuario = Datos.Rows[0]["idUsuario"].ToString();
                 _SESION.IDEmpleado = Datos.Rows[0]["idEmpleado"].ToString();
@@ -82,6 +84,14 @@ namespace App
             {
                 MessageBox.Show("Ha superado el número de intentos permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 btnEntrar.Enabled = false;
+                GestionBasica.CLS.Movimiento nuevoMovi = new GestionBasica.CLS.Movimiento();
+                nuevoMovi.Accion = @"El usuario " + txbUsuario.Text + " supero el número de intentos permitidos para iniciar sesión";
+                nuevoMovi.IdUsuario = "null";
+                try
+                {
+                    nuevoMovi.Guardar();
+                }
+                catch { }
             }
         }
 

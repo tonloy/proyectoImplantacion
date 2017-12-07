@@ -1226,7 +1226,7 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
                         (select NombreCompleto from padres where idPadre=d.idFallecido)as Fallecido,
                         (select DUI from padres where idPadre=d.idFallecido)as Dui,
                         (select NumPartida from padres where idPadre=d.idFallecido)as Nit,
-                        (select Edad from padres where idPadre=d.idFallecido)as Edad,
+                        (SELECT TIMESTAMPDIFF(YEAR,FechaNac,CURDATE()) FROM padres where idPadre=d.idFallecido)as Edad,
                         d.Fecha_fallecimiento,
                         (select Causa from causas_muerte where idCausa=d.Causa_muerte) as Causa_muerte
                          FROM registro_familiar.partidas_defuncion d where d.Fecha_fallecimiento between '" + pFechaI + @"' and '" + pFechaF + @"';";
@@ -1252,7 +1252,7 @@ from empleados e,usuarios u where u.idEmpleado = e.idEmpleado and u.Usuario = '"
                         (select NombreCompleto from padres where idPadre=d.idFallecido)as Fallecido,
                         (select DUI from padres where idPadre=d.idFallecido)as Dui,
                         (select NumPartida from padres where idPadre=d.idFallecido)as Nit,
-                        (select Edad from padres where idPadre=d.idFallecido)as Edad,
+                        (SELECT TIMESTAMPDIFF(YEAR,FechaNac,CURDATE()) FROM padres where idPadre=d.idFallecido)as Edad,
                         d.Fecha_fallecimiento,
                         (select Causa from causas_muerte where idCausa=d.Causa_muerte) as Causa_muerte
                          FROM registro_familiar.partidas_defuncion d where d.Fecha_fallecimiento between '" + pFechaI + @"' and '" + pFechaF + @"' and Causa_muerte="+pCausa+";";

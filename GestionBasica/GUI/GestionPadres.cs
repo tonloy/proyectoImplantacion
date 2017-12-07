@@ -158,9 +158,9 @@ namespace GestionBasica.GUI
                     frm.ShowDialog();
                     CargarPadres();
                 }
-                catch
+                catch(Exception u)
                 {
-                    MessageBox.Show("Por favor seleccione un Padre");
+                    MessageBox.Show("Por favor seleccione un Padre "+u.Message);
                 }
             }
         }

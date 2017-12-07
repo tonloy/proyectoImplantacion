@@ -309,7 +309,7 @@
             // 
             // Rubrica
             // 
-            this.Rubrica.DataPropertyName = "Rubricada";
+            this.Rubrica.DataPropertyName = "Rubrica";
             this.Rubrica.HeaderText = "Rubrica";
             this.Rubrica.Name = "Rubrica";
             this.Rubrica.ReadOnly = true;

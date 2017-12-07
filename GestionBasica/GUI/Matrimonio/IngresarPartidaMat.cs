@@ -369,7 +369,7 @@ namespace GestionBasica.GUI.Matrimonio
                 Validado = false;
             }
 
-            if ((EF_Hombre == "Casado/a" || EF_Mujer=="Casado/a")&&txtID_Partida_cod.TextLength<0)
+            if ((EF_Hombre == "Casado/a" || EF_Mujer=="Casado/a")&&txtID_Partida_cod.Text=="")
             {
                 MessageBox.Show("El estado Familiar del conyugue es: Casado/a", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Validado = false;
